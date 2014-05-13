@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="0dp"
+    android:background="@color/background_app"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".HomeScreenActivity" >
+
+    <LinearLayout
+        style="@style/HomeScreenTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/layout_vertical_padding"
+        android:paddingLeft="@dimen/layout_vertical_padding"
+        android:paddingRight="@dimen/layout_horizontal_padding"
+        android:paddingTop="@dimen/layout_horizontal_padding" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_screen_title" />
+       
+	</LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+		<TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+	      <Button
+	          android:id="@+id/btn_indication_1"
+	          android:text="Button1"
+	          style="@style/ButtonIndicationLeft"
+	          android:drawableTop="@drawable/ic_indication_1"
+	          android:layout_weight="1" />
+
+	      <Button
+	          android:id="@+id/btn_indication_2"
+	          android:text="Button2"
+			  style="@style/ButtonIndicationRight"
+	          android:drawableTop="@drawable/ic_indication_2"
+			  android:layout_weight="1" />
+      	</TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+	      
+	      <Button
+	          android:id="@+id/btn_indication_3"
+	          android:text="Button3"
+			  style="@style/ButtonIndicationLeft"
+	          android:drawableTop="@drawable/ic_indication_3"
+			  android:layout_weight="1" />
+
+	      
+	      <Button
+	          android:id="@+id/btn_indication_4"
+	          android:text="Button4"
+			  style="@style/ButtonIndicationRight"
+	          android:drawableTop="@drawable/ic_indication_4"
+			  android:layout_weight="1" />
+        </TableRow>
+
+
+    </TableLayout>
+    
+</LinearLayout>
