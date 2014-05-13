@@ -6,6 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="home_screen">Home screen</string>
     <string name="settings">Settings</string>
+    <string name="seznam">Seznam</string>
     <string name="home_screen_title">Lorem Ipsum dolor sit amet, Lorem Ipsum dolor sit amet, Lorem Ipsum dolor sit amet, Lorem Ipsum dolor sit amet</string>
     <string name="drinking">Način pitja</string>
     <string name="interval">Trajanje</string>
@@ -51,6 +52,7 @@
     <string name="drinking_pred_spanjem">Pred spanjem</string>
     <string name="drinking_obcutek_lakote">Pri občutku lakote</string>
     <string name="drinking_3_4_dnevno">3-4 krat dnevno</string>
+    <string name="drinking_pred_jedjo">Pred jedjo</string>
     
     <string name="temperature_toplo">Toplo</string>
     <string name="temperature_mlacno">Mlačno</string>
