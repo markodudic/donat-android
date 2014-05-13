@@ -77,7 +77,70 @@
 			  android:layout_weight="1" />
         </TableRow>
 
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+	      
+	      <Button
+	          android:id="@+id/btn_indication_5"
+	          android:text="Button5"
+			  style="@style/ButtonIndicationLeft"
+	          android:drawableTop="@drawable/ic_indication_5"
+			  android:layout_weight="1" />
 
+	      
+	      <Button
+	          android:id="@+id/btn_indication_6"
+	          android:text="Button6"
+			  style="@style/ButtonIndicationRight"
+	          android:drawableTop="@drawable/ic_indication_6"
+			  android:layout_weight="1" />
+        </TableRow>
+        
+        
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+	      
+	      <Button
+	          android:id="@+id/btn_indication_7"
+	          android:text="Button7"
+			  style="@style/ButtonIndicationLeft"
+	          android:drawableTop="@drawable/ic_indication_7"
+			  android:layout_weight="1" />
+
+	      
+	      <Button
+	          android:id="@+id/btn_indication_8"
+	          android:text="Button8"
+			  style="@style/ButtonIndicationRight"
+	          android:drawableTop="@drawable/ic_indication_8"
+			  android:layout_weight="1" />
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+	      
+	      <Button
+	          android:id="@+id/btn_indication_9"
+	          android:text="Button9"
+			  style="@style/ButtonIndicationLeft"
+	          android:drawableTop="@drawable/ic_indication_9"
+			  android:layout_weight="1" />
+
+	      
+	      <Button
+	          android:id="@+id/btn_indication_10"
+	          android:text="Button10"
+			  style="@style/ButtonIndicationRight"
+	          android:drawableTop="@drawable/ic_indication_10"
+			  android:layout_weight="1" />
+        </TableRow>
+        
     </TableLayout>
     
 </LinearLayout>

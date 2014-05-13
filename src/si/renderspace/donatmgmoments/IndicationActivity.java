@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -31,15 +32,17 @@ public class IndicationActivity extends Activity {
 
 	private boolean isDrinkingData = false;
 	private boolean isIntervalData = false;
-	int indx;
+	private Date dtNow;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_indication);
 		
+		getActionBar().setHomeButtonEnabled(true);
+
 		Intent intent = getIntent();
-		indx = intent.getIntExtra("INDX", 1);
+		final int indx = intent.getIntExtra("INDX", 1);
 
 		ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
 		int id = getResources().getIdentifier("ic_indication_"+indx, "drawable", getPackageName());
@@ -106,17 +109,27 @@ public class IndicationActivity extends Activity {
 		
 		//date time picker
 		Calendar cal = Calendar.getInstance();
+		dtNow = cal.getTime();
 		cal.set(Calendar.HOUR_OF_DAY, 0);
 		cal.set(Calendar.MINUTE, 0);
 		cal.set(Calendar.SECOND, 0);
 		cal.set(Calendar.MILLISECOND, 0);
-		Date dtNow = cal.getTime();
-		System.out.println(Settings.indicationCurrentIndx+":"+Settings.indicationCurrentDate+":"+dtNow);
-		if (Settings.indicationCurrentIndx != -1 && (Settings.indicationCurrentDate.after(dtNow) || Settings.indicationCurrentDate.equals(dtNow))) {
-			Calendar calendar = Calendar.getInstance();
-			calendar.add(Calendar.DATE, 1);
-			dtNow = calendar.getTime();
-			System.out.println(dtNow);
+		Date dtNowDay = cal.getTime();
+		//if (Settings.indicationCurrentIndx != -1 && (Settings.indicationCurrentDate.after(dtNow) || Settings.indicationCurrentDate.equals(dtNow))) {
+		if (Settings.indicationCurrentIndx != -1) {
+			long indicationCurrentFirstNotification = dtNowDay.getTime() + Settings.notificationTimes[0].getTime() + Settings.NOTIFICATION_ALARM_MINUTES;
+			System.out.println(Settings.indicationCurrentIndx+":"+new Date(indicationCurrentFirstNotification)+":"+dtNow);
+			if (new Date(indicationCurrentFirstNotification).before(dtNow)) {
+				//ce obstaja aktivna indikacija, in je na danasnji dan ze bil notification, nastavim naslednjo indikacijo na naslednji dan
+				Calendar calendar = Calendar.getInstance();
+				calendar.set(Calendar.HOUR_OF_DAY, 0);
+				calendar.set(Calendar.MINUTE, 0);
+				calendar.set(Calendar.SECOND, 0);
+				calendar.set(Calendar.MILLISECOND, 0);
+				calendar.add(Calendar.DATE, 1);
+				dtNow = calendar.getTime();
+				System.out.println(dtNow);
+			}
 		}
 		
 		String timeStamp = new SimpleDateFormat("dd.MMM.yyyy").format(dtNow);
@@ -134,13 +147,17 @@ public class IndicationActivity extends Activity {
 				 
 				            @Override
 				            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-				            	String monthString = new DateFormatSymbols().getMonths()[monthOfYear];
-				        		startDateDate.setText(dayOfMonth + "." + monthString.substring(0,3) + "." + year);
+				            	Calendar calendar = Calendar.getInstance();
+								calendar.set(year, monthOfYear, dayOfMonth, 0, 0, 0);
+								if (dtNow.getTime() <= calendar.getTimeInMillis()) {
+								   	String monthString = new DateFormatSymbols().getMonths()[monthOfYear];
+								   	startDateDate.setText(dayOfMonth + "." + monthString.substring(0,3) + "." + year);
+								}
 				            }
 				        }, mYear, mMonth, mDay);
 				dpd.show();
 			}
-		});
+		}); 
 		
 		
 		// dialogConfirmation
@@ -187,6 +204,7 @@ public class IndicationActivity extends Activity {
 					} catch (ParseException e) {  
 					    e.printStackTrace();  
 					}
+					setNotificationTimes(indx);
 					dialogConfirmation.show();
 				}
 
@@ -206,4 +224,65 @@ public class IndicationActivity extends Activity {
 	    return super.onCreateOptionsMenu(menu);
 	}
 
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+	    if (item.getItemId() == android.R.id.home) {
+	    	finish();
+	    }
+	    
+	    return true;
+	}
+
+	
+	public void setNotificationTimes(int indx) {
+		switch (indx) {
+	        case 1: case 9: 
+	    		Settings.notificationTimes = new Date[2];
+	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+		        Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("SPANJE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 2: case 10: 
+	    		Settings.notificationTimes = new Date[3];
+	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("ZAJTRK").getTime() - 20*60*1000 - Settings.NOTIFICATION_ALARM_MINUTES);
+		        Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("KOSILO").getTime() - 20*60*1000 - Settings.NOTIFICATION_ALARM_MINUTES);
+		        Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - 20*60*1000 - Settings.NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 3: 
+	    		Settings.notificationTimes = new Date[3];
+	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+        		Settings.notificationTimes[1] = new Date(12*60*60*1000);
+        		Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 4: case 5: 
+	    		Settings.notificationTimes = new Date[3];
+	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+        		Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("KOSILO").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+        		Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 6: 
+	    		Settings.notificationTimes = new Date[4];
+	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+        		Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("KOSILO").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+        		Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+		        Settings.notificationTimes[3] = new Date(Settings.intervalHours.get("SPANJE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 7: 
+	    		Settings.notificationTimes = new Date[4];
+	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+        		Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("KOSILO").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+        		Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+		        break;
+	        case 8: 
+	        	long danDel = (Settings.intervalHours.get("SPANJE").getTime() - Settings.intervalHours.get("TESCE").getTime()) / 3;
+	    		Settings.notificationTimes = new Date[4];
+	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+	        	Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("TESCE").getTime() + danDel - Settings.NOTIFICATION_ALARM_MINUTES);
+	        	Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("TESCE").getTime() + (2 * danDel) -  Settings.NOTIFICATION_ALARM_MINUTES);
+	        	Settings.notificationTimes[3] = new Date(Settings.intervalHours.get("SPANJE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+	        	;
+	    }
+		
+	}
+	
+	
 }
