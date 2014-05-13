@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DonatMgMoments</string>
+    <string name="action_calendar">Calendar</string>
+    <string name="action_settings">Settings</string>
+    <string name="home_screen">Home screen</string>
+    <string name="settings">Settings</string>
+    <string name="home_screen_title">Lorem Ipsum dolor sit amet, Lorem Ipsum dolor sit amet, Lorem Ipsum dolor sit amet, Lorem Ipsum dolor sit amet</string>
+    <string name="drinking">Način pitja</string>
+    <string name="interval">Trajanje</string>
+    <string name="start_date">Izberite začetni dan pitja:</string>
+    <string name="button_indication_start">VKLOPI</string>
+    <string name="button_indication_stop">IZKLOPI</string>
+    <string name="confirmation_title">Uspešno ste nastavili opomnik</string>
+    <string name="confirmation_desc">Uspešno ste nastavili opomnik. Uspešno ste nastavili opomnik. Uspešno ste nastavili opomnik. Uspešno ste nastavili opomnik.</string>
+    <string name="confirmation_back">na vstopno stran</string>
+    
+    
+    <string name="indication_1">Zaprtost</string>
+    <string name="indication_2">Zgaga</string>
+    <string name="indication_3">Pomanjkanje magnezija</string>
+    <string name="indication_4">Sladkorna bolezen</string>
+    <string name="indication_5">Bolezni žolčnika in trebušne slinavke</string>
+    <string name="indication_6">Nastanek sečnih kamenov</string>
+    <string name="indication_7">Debelost in hujšanje</string>
+    <string name="indication_8">Bolezni srca in ožilja</string>
+    <string name="indication_9">Stres, glavoboli</string>
+    <string name="indication_10">Za boljše počutje</string>
+
+    <string name="indication_1_desc">Večina ljudi se ne zaveda pomena in vloge minerala Večina ljudi se ne zaveda pomena in vloge minerala Večina ljudi se ne zaveda pomena in vloge minerala </string>
+    <string name="indication_2_desc">Zgaga</string>
+    <string name="indication_3_desc">Pomanjkanje magnezija</string>
+    <string name="indication_4_desc">Sladkorna bolezen</string>
+    <string name="indication_5_desc">Bolezni žolčnika in trebušne slinavke</string>
+    <string name="indication_6_desc">Nastanek sečnih kamenov</string>
+    <string name="indication_7_desc">Debelost in hujšanje</string>
+    <string name="indication_8_desc">Bolezni srca in ožilja</string>
+    <string name="indication_9_desc">Stres, glavoboli</string>
+    <string name="indication_10_desc">Za boljše počutje</string>
+    
+    <string name="drinking_na_tesce">Na tešče</string>
+    <string name="drinking_pred_spanjem">Pred spanjem</string>
+    <string name="drinking_veckrat_dnevno">Večkrat dnevno</string>
+    <string name="drinking_20_min_pred">20 min pred jedjo</string>
+    <string name="drinking_med_obroki">Med obroki</string>
+    <string name="drinking_opoldne">Opoldne</string>
+    <string name="drinking_zvecer">Zvečer</string>
+    <string name="drinking_pred_kosilom">Pred kosilom</string>
+    <string name="drinking_pred_vecerjo">Pred večerjo</string>
+    <string name="drinking_pred_spanjem">Pred spanjem</string>
+    <string name="drinking_obcutek_lakote">Pri občutku lakote</string>
+    <string name="drinking_3_4_dnevno">3-4 krat dnevno</string>
+    
+    <string name="temperature_toplo">Toplo</string>
+    <string name="temperature_mlacno">Mlačno</string>
+    <string name="temperature_sobna">Sobna temp.</string>
+    <string name="temperature_hladno">Hladno</string>
+    <string name="temperature_suffix">dcl</string>
+  
+    <string name="spped_hitro">Hitro</string>
+    <string name="spped_razmeroma_hitro">Razmeroma hitro</string>
+    <string name="spped_pocasi">Počasi</string>
+
+    <string name="interval_stalno">Stalno ali s krajšimi prekinitvami</string>
+    <string name="interval_5_dni">5 dni. Prekinitev 2 dni</string>
+    <string name="interval_6_tednov">6 tednov, prekinitev 4 tedne, 3x letno</string>
+    <string name="interval_3_mesece">3 mesece, prekinitev 1 mesec, 3x letno</string>
+    <string name="interval_2_meseca">2 meseca, prekinitev 1 mesec, 3x letno</string>
+        
+</resources>
