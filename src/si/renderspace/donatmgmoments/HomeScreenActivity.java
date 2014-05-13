@@ -102,7 +102,7 @@ public class HomeScreenActivity extends Activity {
 			});
 	 
 		 
-	} 
+	}
 
 	@Override
 	public void onResume() {
