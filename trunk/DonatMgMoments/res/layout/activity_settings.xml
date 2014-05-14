@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,11 +6,153 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/background_app"
     tools:context=".HomeScreenActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/settings" />
+    <ImageView
+        android:id="@+id/iv_language"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:src="@drawable/ic_language" />
 
-</RelativeLayout>
+    <Spinner
+        android:id="@+id/sp_languages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/languages"
+        android:prompt="@string/choose_language" />
+        
+    <ImageView
+        android:id="@+id/iv_notification"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:src="@drawable/ic_notification" />
+	      
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
+		
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/zbujanje"
+			android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_zbujanje"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			android:layout_weight="3" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
+		
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/zajtrk"
+			android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_zajtrk"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			android:layout_weight="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
+		
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/kosilo"
+			android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_kosilo"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			android:layout_weight="3" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
+		
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/vecerja"
+			android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_vecerja"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			android:layout_weight="3" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
+		
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/spanje"
+			android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_spanje"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			android:layout_weight="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
+		
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/obrokov"
+			android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_obrokov"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/obrokov"
+	        android:prompt="@string/choose_obrokov"
+			android:layout_weight="3" />
+    </LinearLayout>
+        
+    <Button
+       android:id="@+id/btn_save"
+       android:text="@string/save"
+ 	   style="@style/ButtonIndicationStart"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/button_height" />    	        
+</LinearLayout>

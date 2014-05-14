@@ -8,6 +8,12 @@ import android.content.Context;
 
 
 public class Settings {
+	public static HashMap<Integer,String> languages = new HashMap<Integer,String>() {{
+																					    put(0, "en");
+																					    put(1, "ru");
+																					    put(2,  "it");
+																					    put(3,  "sr");
+																					}};
 	//nacini pitja
 	public static HashMap<Integer,String> indications = new HashMap<Integer,String>();
 	public static HashMap<Integer,String> indications_desc = new HashMap<Integer,String>();
@@ -49,7 +55,6 @@ public class Settings {
 		indications_desc.put(9,context.getResources().getString(R.string.indication_9_desc));
 		indications_desc.put(10,context.getResources().getString(R.string.indication_10_desc));
 	
-		
 		String[][] drinking_1 = new String[][]{	
 				{context.getResources().getString(R.string.drinking_na_tesce),context.getResources().getString(R.string.temperature_toplo)+" 3-8 "+context.getResources().getString(R.string.temperature_suffix),context.getResources().getString(R.string.spped_hitro)},
 				{context.getResources().getString(R.string.drinking_pred_spanjem),context.getResources().getString(R.string.temperature_mlacno)+" 2 "+context.getResources().getString(R.string.temperature_suffix),context.getResources().getString(R.string.spped_razmeroma_hitro)}
@@ -127,12 +132,28 @@ public class Settings {
 		interval.put(8,context.getResources().getString(R.string.interval_2_meseca));
 		interval.put(9,context.getResources().getString(R.string.interval_2_meseca));
 		interval.put(10,context.getResources().getString(R.string.interval_stalno));
-		
-		intervalHours.put("TESCE", new Date(7*60*60*1000+30*60*1000)); //zbujanje/tesce
-		intervalHours.put("ZAJTRK", new Date(8*60*60*1000+30*60*1000)); //zajtrk
-		intervalHours.put("KOSILO", new Date(12*60*60*1000)); //kosilo
-		intervalHours.put("VECERJA", new Date(19*60*60*1000+30*60*1000));  //vecerja
-		intervalHours.put("SPANJE", new Date(22*60*60*1000));  //spanje
-		intervalMeals = 5;  //stevilo obrokov
+
+		updateData(context);
 	}
+	
+	public static void updateData (Context context) {
+		setInterval(context, "ZBUJANJE");
+		setInterval(context, "TESCE");
+		setInterval(context, "ZAJTRK");
+		setInterval(context, "KOSILO");
+		setInterval(context, "VECERJA");
+		setInterval(context, "SPANJE");
+		
+		intervalMeals = Utils.getPrefernciesInt(context, "OBROKOV"); 
+	}
+	
+	public static void setInterval (Context context, String pref) {
+		String prefStr = Utils.getPrefernciesString(context, pref);
+		if (prefStr != null) {
+			String[] spl = prefStr.split(":");
+			long l = Integer.parseInt(spl[0])*60*60*1000+Integer.parseInt(spl[1])*60*1000;
+			intervalHours.put(pref, new Date(l));
+		}
+	}
+	
 }
