@@ -1,12 +1,12 @@
 package si.renderspace.donatmgmoments;
 
 
+import java.util.Locale;
+
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.net.Uri;
+import android.content.res.Configuration;
+import android.view.Menu;
 
 public class Utils {
     public static final String PREFS_NAME = "si.renderspace.donatmgmoments.PREFS_FILE";
@@ -32,7 +32,7 @@ public class Utils {
 
     public static int getPrefernciesInt(Context context, String paramString)
     {
-        return context.getSharedPreferences(PREFS_NAME, 0).getInt(paramString, 0);
+        return context.getSharedPreferences(PREFS_NAME, 0).getInt(paramString, -1);
     }
 
 
@@ -48,5 +48,33 @@ public class Utils {
         return context.getSharedPreferences(PREFS_NAME, 0).getBoolean(paramString, def);
     }
 
+    
+    public static void resetMenu(Menu mainMenu) {
+		for (int i = 0; i < mainMenu.size(); i++) {
+	        if (mainMenu.getItem(i).getItemId() == R.id.calendar) {
+	            mainMenu.getItem(i).setIcon(R.drawable.ic_calendar);
+	        } else if (mainMenu.getItem(i).getItemId() == R.id.settings) {
+	            mainMenu.getItem(i).setIcon(R.drawable.ic_settings);
+	        }
+	    }
+	}
+    
+    public static void setMenu(Menu mainMenu, int id) {
+		for (int i = 0; i < mainMenu.size(); i++) {
+	        if ((mainMenu.getItem(i).getItemId() == R.id.calendar) && (id == R.id.calendar)){
+	            mainMenu.getItem(i).setIcon(R.drawable.ic_calendar_pressed);
+	        } else if ((mainMenu.getItem(i).getItemId() == R.id.settings) && (id == R.id.settings)){
+	            mainMenu.getItem(i).setIcon(R.drawable.ic_settings_pressed);
+	        }
+	    }
+	}
+    
+    public static void setLanguage(Context context, String lang) {
+		Locale locale = new Locale(lang);
+	    Locale.setDefault(locale);
+	    Configuration config = new Configuration();
+	    config.locale = locale;
+	    context.getResources().updateConfiguration(config, null);
+    }
 
 }

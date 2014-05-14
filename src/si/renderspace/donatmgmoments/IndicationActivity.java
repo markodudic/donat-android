@@ -226,8 +226,12 @@ public class IndicationActivity extends Activity {
 
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-	    if (item.getItemId() == android.R.id.home) {
+		if (item.getItemId() == android.R.id.home) {
 	    	finish();
+	    } else if (item.getItemId() == R.id.calendar) {
+		} else if (item.getItemId() == R.id.settings) {
+			Intent intent = new Intent(this, SettingsActivity.class);
+			startActivity(intent);	    	
 	    }
 	    
 	    return true;

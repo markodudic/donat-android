@@ -1,5 +1,7 @@
 package si.renderspace.donatmgmoments;
 
+import java.util.Locale;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,10 +14,12 @@ import android.widget.Button;
 public class HomeScreenActivity extends Activity {
 	
 	int j;
+	Menu mainMenu;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_home_screen);
 		
 		getActionBar().setHomeButtonEnabled(true);
@@ -125,6 +129,7 @@ public class HomeScreenActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		//getMenuInflater().inflate(R.menu.home_screen, menu);
 		//return true;
+		mainMenu = menu;
 		MenuInflater inflater = getMenuInflater();
 	    inflater.inflate(R.menu.action_bar, menu);
 	    return super.onCreateOptionsMenu(menu);
@@ -133,8 +138,14 @@ public class HomeScreenActivity extends Activity {
 	
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-	    if (item.getItemId() == android.R.id.home) {
+		Utils.resetMenu(mainMenu);		
+
+		if (item.getItemId() == android.R.id.home) {
 	    	finish();
+	    } else if (item.getItemId() == R.id.calendar) {
+	    } else if (item.getItemId() == R.id.settings) {
+			Intent intent = new Intent(this, SettingsActivity.class);
+			startActivity(intent);	    	
 	    }
 	    
 	    return true;
