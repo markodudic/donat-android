@@ -1,22 +1,25 @@
 <resources>
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
+    
+    
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    	<item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>
+        <item name="android:spinnerItemStyle">@style/SettingsText</item> 
+        <item name="android:spinnerDropDownItemStyle">@style/SettingsText</item>
     </style>
-
+    
+	<style name="MyTheme.ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+	  <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+	</style>
+	
+	<style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+	  <item name="android:textColor">@color/button_text</item>
+	  <item name="android:textSize">18.0sp</item>
+	</style>
+  
+  
    <style name="Title">
        <item name="android:background">@color/background_title</item>
    </style> 
@@ -25,6 +28,44 @@
        <item name="android:background">@color/background_title</item>
    </style>
 
+   <style name="HomeScreenTitleText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+ 
+   <style name="SettingsText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+   
+   <style name="RulesTitleText">
+       <item name="android:textSize">22.0sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+
+   <style name="DialogTitleText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+
+   <style name="DialogText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+
+   <style name="DialogConfirmText">
+       <item name="android:textSize">20.0sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+      
+   <style name="RulesText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+   
    <style name="IndicationsTitle">
        <item name="android:background">@color/background_title</item>
        <item name="android:paddingTop">@dimen/layout_padding</item>
@@ -47,8 +88,8 @@
    </style>
    
    <style name="LayoutIndicationAlfa">
-       <item name="android:background">@color/background_button</item>
-       <item name="android:alpha">0.3</item>
+       <item name="android:background">@drawable/dr_item_unpressed</item>
+       <item name="android:alpha">0.5</item>
    </style>
       
    <style name="TextViewIndication">
@@ -78,7 +119,7 @@
    <style name="ButtonIndicationStart">
 	   <item name="android:layout_marginTop">@dimen/button_margin</item>
        <item name="android:textSize">18.0sp</item>
-       <item name="android:textColor">@color/button_text</item>
+       <item name="android:textColor">@color/button_text_light</item>
        <item name="android:background">@drawable/dr_button</item>
        <item name="android:gravity">center_vertical|center_horizontal</item>
    </style>   

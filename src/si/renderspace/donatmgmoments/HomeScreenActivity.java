@@ -2,6 +2,8 @@ package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,15 +23,17 @@ public class HomeScreenActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_home_screen);
-		
+		 
 		getActionBar().setHomeButtonEnabled(true);
+		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
+        getActionBar().setBackgroundDrawable(bg);
 
 		TextView tvIndication1 = (TextView) findViewById(R.id.indication_1);
 		tvIndication1.setText(Settings.indications.get(1));
 		LinearLayout lIndication1 = (LinearLayout) findViewById(R.id.l_indication_1);
 		lIndication1.setOnClickListener(new View.OnClickListener() {
 			    public void onClick(View v) {
-			    	showIndication(1);
+					showIndication(1);
 			    }
 			});
 
@@ -121,7 +125,12 @@ public class HomeScreenActivity extends Activity {
 	public void onResume() {
 	    super.onResume();
 	    
+    	Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_item_unpressed); 
 		for (j=1; j<=Settings.indications.size(); j++) {
+			int idd = getResources().getIdentifier("iv_indication_"+j, "id", getPackageName());
+			ImageView ivIndication1 = (ImageView) findViewById(idd);
+			ivIndication1.setBackgroundDrawable(bg);
+			
 			int id = getResources().getIdentifier("indication_"+j+"_selected", "id", getPackageName());
 			ImageView iv = (ImageView) findViewById(id);
 			iv.setVisibility(View.GONE);	
@@ -161,7 +170,12 @@ public class HomeScreenActivity extends Activity {
 	}
 	
 	public void showIndication(int indx) {
-		Intent intent = new Intent(this, IndicationActivity.class);
+		int id = getResources().getIdentifier("iv_indication_"+indx, "id", getPackageName());
+		ImageView ivIndication = (ImageView) findViewById(id);
+    	Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_item_pressed); 
+        ivIndication.setBackgroundDrawable(bg);
+
+        Intent intent = new Intent(this, IndicationActivity.class);
 		intent.putExtra("INDX", indx);
 		startActivity(intent);
 	}

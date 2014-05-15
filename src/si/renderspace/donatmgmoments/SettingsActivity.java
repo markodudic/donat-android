@@ -2,6 +2,7 @@ package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,6 +25,8 @@ public class SettingsActivity extends Activity {
 		setContentView(R.layout.activity_settings);
 
 		getActionBar().setHomeButtonEnabled(true);
+		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
+        getActionBar().setBackgroundDrawable(bg);
 		
 		spLanguages = (Spinner) findViewById(R.id.sp_languages);
 		spZbujanje = (Spinner) findViewById(R.id.sp_zbujanje);

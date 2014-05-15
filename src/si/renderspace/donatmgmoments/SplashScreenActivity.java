@@ -10,7 +10,7 @@ import android.os.Handler;
 
 public class SplashScreenActivity extends Activity {
  
-    private static int SPLASH_TIME_OUT = 2000;
+    private static int SPLASH_TIME_OUT = 1000;
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class SplashScreenActivity extends Activity {
 	            		Intent i = new Intent(SplashScreenActivity.this, HomeScreenActivity.class);
 	            		startActivity(i);
 		            } else {
-						Utils.savePrefernciesString(SplashScreenActivity.this, "TESCE", "7:00");
+		            	Utils.savePrefernciesString(SplashScreenActivity.this, "TESCE", "7:00");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "ZAJTRK", "7:30");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "KOSILO", "12:30");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "VECERJA", "19:30");

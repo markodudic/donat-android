@@ -2,58 +2,71 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    style="@style/DialogTitle"
-    android:padding="@dimen/layout_vertical_padding" >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:orientation="horizontal"
-		style="@style/DialogTitle" >
-	    
-		<TextView
-	        android:id="@+id/confirmation_title"
-	        android:layout_width="match_parent"
-			android:layout_height="@dimen/title_height"
-			android:text="@string/confirmation_title"
-			android:layout_weight="5" />
-			
-	    <ImageView
-	        android:id="@+id/close"
-	        android:layout_height="wrap_content"
-	        android:layout_width="@dimen/title_height"
-	        android:src="@drawable/ic_close"
-			android:layout_weight="1" />
-		
-	</LinearLayout>     
-		
+    android:orientation="vertical" >
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    style="@style/DialogTitle"
+	    android:padding="@dimen/layout_vertical_padding" >
 	
-	<TextView
-        android:id="@+id/confirmation_desc"
-        android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="@string/confirmation_desc" />
-     
+	    <LinearLayout
+	        android:id="@+id/close"
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			style="@style/DialogTitle" >
+		    
+			<TextView
+		        android:id="@+id/confirmation_title"
+		        android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/confirmation_title"
+				style="@style/DialogTitleText"
+	       		android:layout_weight="5" />
+				
+		    <ImageView
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:src="@drawable/ic_close"
+				android:layout_weight="1" />
+			
+		</LinearLayout>     
+			
+		<TextView
+		    android:id="@+id/confirmation_desc"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="@dimen/title_vertical_padding"
+		    style="@style/DialogText"
+	       	android:text="@string/confirmation_desc" />
+	 
+	</LinearLayout>
+
     <LinearLayout
         android:id="@+id/back"
 	    style="@style/Title"
         android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_height="@dimen/button_height"
 		android:orientation="horizontal" >
 			
 	    <ImageView
-	        android:layout_height="wrap_content"
 	        android:layout_width="@dimen/title_height"
-	        android:src="@drawable/ic_back" />
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="@dimen/title_vertical_padding"
+		    android:layout_marginRight="@dimen/title_vertical_padding"
+		    android:src="@drawable/ic_back" />
 	    
 		<TextView
-	        android:id="@+id/confirmation_back"
-	        android:layout_width="match_parent"
-			android:layout_height="@dimen/title_height"
-			android:text="@string/confirmation_back" />
+		    android:id="@+id/confirmation_back"
+		    style="@style/DialogConfirmText"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:text="@string/confirmation_back" />
 
-	    	    
-   </LinearLayout>     
- 
-</LinearLayout>
+   </LinearLayout> 
+   
+</LinearLayout>    
