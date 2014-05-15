@@ -6,23 +6,6 @@
     android:orientation="vertical"
     tools:context=".HomeScreenActivity" >
 
-    <LinearLayout
-        style="@style/HomeScreenTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/layout_vertical_padding"
-        android:paddingLeft="@dimen/layout_vertical_padding"
-        android:paddingRight="@dimen/layout_horizontal_padding"
-        android:paddingTop="@dimen/layout_horizontal_padding" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/home_screen_title" />
-       
-	</LinearLayout>
-
     <ScrollView
         android:id="@+id/scroll_page_step1"
 	    android:layout_width="match_parent"
@@ -33,12 +16,32 @@
         	android:layout_height="wrap_content"
         	android:orientation="vertical" >
         	
+		    <LinearLayout
+		        style="@style/HomeScreenTitle"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:paddingBottom="@dimen/layout_vertical_padding"
+		        android:paddingLeft="@dimen/layout_vertical_padding"
+		        android:paddingRight="@dimen/layout_horizontal_padding"
+		        android:paddingTop="@dimen/layout_horizontal_padding" >
+		
+		        <TextView
+		            style="@style/HomeScreenTitleText"
+		        	android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/home_screen_title" />
+		       
+			</LinearLayout>
+
+            	
             
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_1"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
 			    <LinearLayout
@@ -64,18 +67,16 @@
 				        
 			   	        <ImageView
 			   	            android:id="@+id/indication_1_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 				        
 			   	        <ImageView
-			   	            android:layout_width="wrap_content"
+			   	            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>
@@ -87,7 +88,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_2"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
                 <LinearLayout
@@ -113,18 +115,16 @@
 				        
 			   	        <ImageView
 			   	            android:id="@+id/indication_2_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected"/>
 				        
 				        <ImageView
-			   	            android:layout_width="wrap_content"
+			   	            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>
@@ -133,7 +133,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_3"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
                  				    
@@ -160,18 +161,16 @@
 				        
 			   	        <ImageView
 			   	            android:id="@+id/indication_3_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 			
 			   	        <ImageView
 			   	            android:layout_width="wrap_content"
-			   	            android:layout_height="wrap_content"
+			   	            android:layout_height="@dimen/image_width"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>
@@ -180,7 +179,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_4"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
 			    			    	    
@@ -207,18 +207,16 @@
 				        
 			   	        <ImageView
 			   	            android:id="@+id/indication_4_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 			   	        
 				        <ImageView
 			   	            android:layout_width="wrap_content"
-			   	            android:layout_height="wrap_content"
+			   	            android:layout_height="@dimen/image_width"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>
@@ -227,7 +225,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_5"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
 			    			    
@@ -254,19 +253,17 @@
 			   	        
 			   	        <ImageView
 			   	            android:id="@+id/indication_5_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 			
 				        	        
 			   	        <ImageView
-			   	            android:layout_width="wrap_content"
+			   	            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>
@@ -275,7 +272,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_6"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
 			    
@@ -302,19 +300,17 @@
 			
 				        <ImageView
 			   	            android:id="@+id/indication_6_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 			
 				        
 			   	        <ImageView
-			   	            android:layout_width="wrap_content"
+			   	            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>
@@ -324,7 +320,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_7"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
 			    			    	    
@@ -351,18 +348,16 @@
 			
 			   	        <ImageView
 			   	            android:id="@+id/indication_7_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 			
 				        <ImageView
-			   	            android:layout_width="wrap_content"
+			   	            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>
@@ -371,7 +366,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_8"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
 			    			    		    
@@ -398,19 +394,17 @@
 			
 				        <ImageView
 			   	            android:id="@+id/indication_8_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 			
 				        
 			   	        <ImageView
-			   	            android:layout_width="wrap_content"
+			   	            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>    
 			</FrameLayout>
@@ -419,7 +413,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_9"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
 			    		    
@@ -446,18 +441,16 @@
 			
 			   	        <ImageView
 			   	            android:id="@+id/indication_9_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 				        	        
 			   	        <ImageView
-			   	            android:layout_width="wrap_content"
+			   	            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>
@@ -466,7 +459,8 @@
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
-			        style="@style/LayoutIndicationAlfa"
+			        android:id="@+id/iv_indication_10"
+				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
 		    
@@ -494,18 +488,16 @@
 			
 			   	        <ImageView
 			   	            android:id="@+id/indication_10_selected"
-				            android:layout_width="wrap_content"
+				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_selected" />
 				        	        
 			   	        <ImageView
-			   	            android:layout_width="wrap_content"
+			   	            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_arrow_right"
-			   	            android:layout_weight="1" />
+			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
 			</FrameLayout>

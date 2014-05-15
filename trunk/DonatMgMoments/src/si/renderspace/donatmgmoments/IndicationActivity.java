@@ -11,6 +11,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.Menu;
@@ -40,6 +41,8 @@ public class IndicationActivity extends Activity {
 		setContentView(R.layout.activity_indication);
 		
 		getActionBar().setHomeButtonEnabled(true);
+		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
+        getActionBar().setBackgroundDrawable(bg);
 
 		Intent intent = getIntent();
 		final int indx = intent.getIntExtra("INDX", 1);
@@ -166,7 +169,7 @@ public class IndicationActivity extends Activity {
 		dialogConfirmation.getWindow().setBackgroundDrawable(new ColorDrawable(0));
     
 	    
-		ImageView close = (ImageView) dialogConfirmation.findViewById(R.id.close);
+		TextView close = (TextView) dialogConfirmation.findViewById(R.id.close);
 		close.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
