@@ -65,16 +65,47 @@ public class IndicationActivity extends Activity {
 		for (int i=0; i<drinking.length; i++) {
 			String[] drink = drinking[i];
 			TableRow tr = new TableRow(this);
+			if (i%2==0) {
+				tr.setBackgroundColor(this.getResources().getColor(R.color.table_row_1));
+			} else {
+				tr.setBackgroundColor(this.getResources().getColor(R.color.table_row_2));				
+			}
 			tr.setLayoutParams(new LayoutParams( LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
 			TextView textview1 = new TextView(this);
 			textview1.setText(drink[0]);
+			textview1.setTextAppearance(this, R.style.TabelFirst);
+			//textview1.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f));
+			TableRow.LayoutParams tableRowParams =  new TableRow.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f);
+			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
+			textview1.setLayoutParams(tableRowParams);
 			tr.addView(textview1);
+			
+			LinearLayout cell = new LinearLayout(this);
+			cell.setBackgroundColor(this.getResources().getColor(R.color.table_row_border));
+			cell.setLayoutParams(new TableRow.LayoutParams( 2,LayoutParams.MATCH_PARENT));//2px border on the right for the cell
+			tr.addView(cell);
+			
 			TextView textview2 = new TextView(this);
 			textview2.setText(drink[1]);
+			textview2.setTextAppearance(this, R.style.TabelSecond);
+			//textview2.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f));
+			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
+			textview2.setLayoutParams(tableRowParams);
 			tr.addView(textview2);
+			
+			LinearLayout cell1 = new LinearLayout(this);
+			cell1.setBackgroundColor(this.getResources().getColor(R.color.table_row_border));
+			cell1.setLayoutParams(new TableRow.LayoutParams( 2,LayoutParams.MATCH_PARENT));//2px border on the right for the cell
+			tr.addView(cell1);
+			
 			TextView textview3 = new TextView(this);
 			textview3.setText(drink[2]);
-			tr.addView(textview3);			
+			textview3.setTextAppearance(this, R.style.TabelSecond);
+			textview3.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f));
+			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
+			textview3.setLayoutParams(tableRowParams);
+			tr.addView(textview3);		
+			
 			lTable.addView(tr);
 		}
 		
@@ -135,9 +166,13 @@ public class IndicationActivity extends Activity {
 			}
 		}
 		
-		String timeStamp = new SimpleDateFormat("dd.MMM.yyyy").format(dtNow);
 		final TextView startDateDate = (TextView) findViewById(R.id.startDateDate);
-		startDateDate.setText(timeStamp);
+		startDateDate.setText(new SimpleDateFormat("dd").format(dtNow));
+		final TextView startDateMonth = (TextView) findViewById(R.id.startDateMonth);
+		startDateMonth.setText(new SimpleDateFormat("MMM").format(dtNow));
+		final TextView startDateYear = (TextView) findViewById(R.id.startDateYear);
+		startDateYear.setText(new SimpleDateFormat("yyyy").format(dtNow));
+		
 		startDateDate.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -154,7 +189,9 @@ public class IndicationActivity extends Activity {
 								calendar.set(year, monthOfYear, dayOfMonth, 0, 0, 0);
 								if (dtNow.getTime() <= calendar.getTimeInMillis()) {
 								   	String monthString = new DateFormatSymbols().getMonths()[monthOfYear];
-								   	startDateDate.setText(dayOfMonth + "." + monthString.substring(0,3) + "." + year);
+								   	startDateDate.setText(dayOfMonth);
+								   	startDateMonth.setText(monthString.substring(0,3));
+								   	startDateYear.setText(year);
 								}
 				            }
 				        }, mYear, mMonth, mDay);
@@ -169,7 +206,7 @@ public class IndicationActivity extends Activity {
 		dialogConfirmation.getWindow().setBackgroundDrawable(new ColorDrawable(0));
     
 	    
-		TextView close = (TextView) dialogConfirmation.findViewById(R.id.close);
+		LinearLayout close = (LinearLayout) dialogConfirmation.findViewById(R.id.close);
 		close.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

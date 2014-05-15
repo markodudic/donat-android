@@ -33,11 +33,29 @@
        <item name="android:textColor">@color/title_text</item>
    </style>
  
+   <style name="StartDate">
+       <item name="android:background">@drawable/ic_date</item>
+       <item name="android:padding">@dimen/button_margin</item>
+       <item name="android:textSize">40.0sp</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+   
    <style name="SettingsText">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/title_text</item>
    </style>
-   
+
+   <style name="TabelFirst">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+  
+   <style name="TabelSecond">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/title_text</item>
+   </style>
+      
    <style name="RulesTitleText">
        <item name="android:textSize">22.0sp</item>
        <item name="android:textStyle">bold</item>
@@ -70,10 +88,9 @@
        <item name="android:background">@color/background_title</item>
        <item name="android:paddingTop">@dimen/layout_padding</item>
        <item name="android:paddingBottom">@dimen/layout_padding</item>
-       <item name="android:paddingRight">@dimen/title_vertical_padding</item>
-       <item name="android:paddingLeft">@dimen/title_vertical_padding</item>
        <item name="android:gravity">center_vertical</item>
    </style>
+
    
    <style name="IndicationsDate">
        <item name="android:background">@color/background_date</item>
