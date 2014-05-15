@@ -18,9 +18,9 @@
 -->
 
 <resources>
-    <color name="background_app">#fff</color>
-    <color name="background_title">#aaa</color>
-    <color name="background_button">#ccc</color>
+    <color name="background_app">#CCffffff</color>
+    <color name="background_title">#CCaaaaaa</color>
+    <color name="background_button">#CC000000</color>
     <color name="background_date">#999</color>
     <color name="background_dialog">#fff</color>
     

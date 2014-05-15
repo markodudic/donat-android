@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class SettingsActivity extends Activity {
 
@@ -55,7 +56,18 @@ public class SettingsActivity extends Activity {
 	 			  Utils.resetMenu(mainMenu);
 	 			  finish();
 			  }
+	 	});	
+		
+		
+		TextView tvPravila = (TextView) findViewById(R.id.pravila);
+		tvPravila.setOnClickListener(new OnClickListener() {
+	 		  @Override
+			  public void onClick(View v) {
+	 			    Intent i = new Intent(SettingsActivity.this, RulesActivity.class);
+	 			    SettingsActivity.this.startActivity(i);
+			  }
 	 	});		
+		
 
 	}
 

@@ -137,7 +137,6 @@ public class Settings {
 	}
 	
 	public static void updateData (Context context) {
-		setInterval(context, "ZBUJANJE");
 		setInterval(context, "TESCE");
 		setInterval(context, "ZAJTRK");
 		setInterval(context, "KOSILO");

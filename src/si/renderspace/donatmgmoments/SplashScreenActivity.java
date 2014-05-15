@@ -37,7 +37,7 @@ public class SplashScreenActivity extends Activity {
 	            		Intent i = new Intent(SplashScreenActivity.this, HomeScreenActivity.class);
 	            		startActivity(i);
 		            } else {
-						Utils.savePrefernciesString(SplashScreenActivity.this, "ZBUJANJE", "7:00");
+						Utils.savePrefernciesString(SplashScreenActivity.this, "TESCE", "7:00");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "ZAJTRK", "7:30");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "KOSILO", "12:30");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "VECERJA", "19:30");

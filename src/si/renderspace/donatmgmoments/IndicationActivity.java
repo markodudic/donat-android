@@ -184,7 +184,7 @@ public class IndicationActivity extends Activity {
 		});		
 
 		//vklopi/izklopi
-		Button bIndicationStart = (Button) findViewById(R.id.btn_indication_start);
+		final Button bIndicationStart = (Button) findViewById(R.id.btn_indication_start);
 		if (Settings.indicationCurrentIndx == indx) {
 			bIndicationStart.setText(R.string.button_indication_stop);
 		}
@@ -204,6 +204,7 @@ public class IndicationActivity extends Activity {
 					} catch (ParseException e) {  
 					    e.printStackTrace();  
 					}
+					bIndicationStart.setText(R.string.button_indication_stop);
 					setNotificationTimes(indx);
 					dialogConfirmation.show();
 				}
@@ -240,9 +241,9 @@ public class IndicationActivity extends Activity {
 	
 	public void setNotificationTimes(int indx) {
 		switch (indx) {
-	        case 1: case 9: 
+	        case 1: case 9:
 	    		Settings.notificationTimes = new Date[2];
-	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
+	    		Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
 		        Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("SPANJE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
 	    		break;
 	        case 2: case 10: 

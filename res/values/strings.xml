@@ -144,4 +144,13 @@
     <string name="interval_3_mesece">3 mesece, prekinitev 1 mesec, 3x letno</string>
     <string name="interval_2_meseca">2 meseca, prekinitev 1 mesec, 3x letno</string>
         
+    
+    <string name="licence">Droga kolinska d.d. Vse pravice pridržane. Droga Kolinska je del Atlantic grupe.</string>
+    <string name="home">Domov</string>
+    <string name="rules">Pravila in pogoji uporabe</string>
+    <string name="rules_title">Pravila in pogoji uporabe</string>
+    <string name="rules_title_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe.\n\nPravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
+    <string name="rules_subtitle">Podnaslov</string>
+    <string name="rules_subtitle_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
+  
 </resources>

@@ -23,20 +23,42 @@
     
    <style name="HomeScreenTitle">
        <item name="android:background">@color/background_title</item>
-       <item name="android:layout_marginBottom">@dimen/layout_margin</item>
    </style>
 
    <style name="IndicationsTitle">
        <item name="android:background">@color/background_title</item>
-       <item name="android:layout_marginTop">@dimen/layout_margin</item>
+       <item name="android:paddingTop">@dimen/layout_padding</item>
+       <item name="android:paddingBottom">@dimen/layout_padding</item>
+       <item name="android:paddingRight">@dimen/title_vertical_padding</item>
+       <item name="android:paddingLeft">@dimen/title_vertical_padding</item>
+       <item name="android:gravity">center_vertical</item>
    </style>
    
    <style name="IndicationsDate">
        <item name="android:background">@color/background_date</item>
    </style>
    
+   <style name="LayoutIndication">
+        <item name="android:background">@drawable/dr_border</item>
+      	<item name="android:paddingTop">@dimen/button_margin</item>
+       <item name="android:paddingBottom">@dimen/button_margin</item>
+       <item name="android:paddingRight">@dimen/title_vertical_padding</item>
+       <item name="android:paddingLeft">@dimen/title_vertical_padding</item>
+   </style>
    
-   <style name="ButtonIndicationLeft">
+   <style name="LayoutIndicationAlfa">
+       <item name="android:background">@color/background_button</item>
+       <item name="android:alpha">0.3</item>
+   </style>
+      
+   <style name="TextViewIndication">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/button_text</item>
+       <item name="android:paddingRight">@dimen/title_vertical_padding</item>
+       <item name="android:gravity">center_vertical</item>
+   </style>
+	    
+   <!-- style name="ButtonIndicationLeft">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/button_text</item>
        <item name="android:background">@drawable/dr_unselected</item>
@@ -51,7 +73,7 @@
 
    <style name="ButtonIndicationRight" parent="ButtonIndicationLeft">
        <item name="android:layout_marginRight">0dp</item>
-   </style>
+   </style-->
    
    <style name="ButtonIndicationStart">
 	   <item name="android:layout_marginTop">@dimen/button_margin</item>
