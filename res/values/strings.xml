@@ -23,7 +23,8 @@
     <string name="vecerja">Večerja</string>
     <string name="spanje">Spanje</string>
     <string name="obrokov">Obrokov</string>
-    
+    <string name="close">ZAPRI</string>
+        
     <string name="choose_language">Izberi jezik</string>
     <string-array name="languages">
         <item>Angleščina</item>
@@ -131,7 +132,7 @@
     <string name="temperature_mlacno">Mlačno</string>
     <string name="temperature_sobna">Sobna temp.</string>
     <string name="temperature_hladno">Hladno</string>
-    <string name="temperature_suffix">dcl</string>
+    <string name="volume_suffix">dcl</string>
   
     <string name="spped_hitro">Hitro</string>
     <string name="spped_razmeroma_hitro">Razmeroma hitro</string>
