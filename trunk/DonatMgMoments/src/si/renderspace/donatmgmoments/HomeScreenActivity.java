@@ -1,14 +1,17 @@
 package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,7 +20,8 @@ public class HomeScreenActivity extends Activity {
 	
 	int j;
 	Menu mainMenu;
-	
+	//IndicationFragment fragment;
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,6 +31,7 @@ public class HomeScreenActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
+
 
 		TextView tvIndication1 = (TextView) findViewById(R.id.indication_1);
 		tvIndication1.setText(Settings.indications.get(1));
@@ -161,6 +166,10 @@ public class HomeScreenActivity extends Activity {
 		if (item.getItemId() == android.R.id.home) {
 	    	finish();
 	    } else if (item.getItemId() == R.id.calendar) {
+			Intent intent = new Intent(this, NotificationActivity.class);
+			intent.putExtra("INDX", 1);
+			intent.putExtra("PERIOD", 0);
+			startActivity(intent);	    	
 	    } else if (item.getItemId() == R.id.settings) {
 			Intent intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);	    	

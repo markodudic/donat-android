@@ -40,6 +40,24 @@
        <item name="android:textColor">@color/title_text</item>
    </style>
    
+   <style name="NotificationPeriod">
+       <item name="android:textSize">34.0sp</item>
+       <item name="android:textColor">@color/title_text</item>		        
+   </style>   
+
+   <style name="NotificationDate">
+       <item name="android:textSize">24.0sp</item>
+       <item name="android:textColor">@color/title_text</item>		        
+   </style>   
+
+   <style name="NotificationText">
+       <item name="android:background">@color/background_action_bar</item>
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/title_text</item>	
+       <item name="android:paddingLeft">@dimen/layout_padding</item>	
+       <item name="android:paddingRight">@dimen/layout_padding</item>	
+   </style>   
+      
    <style name="SettingsText">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/title_text</item>

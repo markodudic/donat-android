@@ -16,7 +16,6 @@ import android.widget.TextView;
 
 public class RulesActivity extends Activity {
 
-	private Spinner spLanguages, spZbujanje, spZajtrk, spKosilo, spVecerja, spSpanje, spObrokov;
 	Menu mainMenu;
 	
 	@Override
@@ -48,6 +47,8 @@ public class RulesActivity extends Activity {
 	    	finish();
 	    } else if (item.getItemId() == R.id.calendar) {
 	    } else if (item.getItemId() == R.id.settings) { 
+			Intent intent = new Intent(this, SettingsActivity.class);
+			startActivity(intent);	    	
 		}
 	    
 	    return true;
