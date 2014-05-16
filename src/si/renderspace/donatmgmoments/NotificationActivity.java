@@ -4,9 +4,14 @@ import java.text.DateFormatSymbols;
 import java.util.Calendar;
 
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,8 +21,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.TableLayout.LayoutParams;
+import android.widget.TextView;
 
 public class NotificationActivity extends Activity {
 
@@ -33,15 +38,14 @@ public class NotificationActivity extends Activity {
         getActionBar().setBackgroundDrawable(bg);
 		
 		Intent intent = getIntent();
-		final int indx = intent.getIntExtra("INDX", 1);
 		final int period = intent.getIntExtra("PERIOD", 0);
         
 		ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
-		int id = getResources().getIdentifier("ic_indication_"+indx, "drawable", getPackageName());
+		int id = getResources().getIdentifier("ic_indication_"+Settings.indicationCurrentIndx, "drawable", getPackageName());
 		indicationImage.setImageResource(id);
 		
 		TextView indicationTitle = (TextView) findViewById(R.id.indicationTitle);
-		indicationTitle.setText(Settings.indications.get(indx));
+		indicationTitle.setText(Settings.indications.get(Settings.indicationCurrentIndx));
 		
 		//datum
 		final Calendar c = Calendar.getInstance();
@@ -53,9 +57,16 @@ public class NotificationActivity extends Activity {
 	   	notificationDate.setText(mDay+". "+monthString);
 		
 		//drinks
-		String[][] drinks = Settings.drinking.get(indx);
+	   	if (Settings.drinking.size() == 0) {
+	   		Settings.prepareData(NotificationActivity.this);
+	   	}
+		String[][] drinks = Settings.drinking.get(Settings.indicationCurrentIndx);
 		String[] drink = drinks[period];
 
+		//system notification
+		showNotification(period, getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
+		
+		//texti
 		TextView notificationPeriod = (TextView) findViewById(R.id.notificationPeriod);
 		notificationPeriod.setText(drink[0]);
 
@@ -90,6 +101,7 @@ public class NotificationActivity extends Activity {
 		btnClose.setOnClickListener(new OnClickListener() {
 	 		  @Override
 			  public void onClick(View v) {
+	 			  ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancelAll();
 	 			  finish();
 			  }
 	 	});			
@@ -120,5 +132,22 @@ public class NotificationActivity extends Activity {
 	    return true;
 	}
 	
+	
+	private void showNotification(int period, String title, String text){
+		Intent resultIntent = new Intent(this, NotificationActivity.class);
+		resultIntent.putExtra("PERIOD", period);
+		PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, 0);
+		
+		NotificationCompat.Builder mBuilder =
+		        new NotificationCompat.Builder(this)
+		        .setSmallIcon(R.drawable.ic_notification)
+		        .setContentTitle(title)
+		        .setContentText(text)
+		        .setAutoCancel(true)
+		        .setContentIntent(pIntent);
+		
+		NotificationManager mNotificationManager =  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+		mNotificationManager.notify(0, mBuilder.build());
+	}
 
 }

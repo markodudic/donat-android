@@ -1,33 +1,44 @@
 package si.renderspace.donatmgmoments;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HomeScreenActivity extends Activity {
 	
 	int j;
 	Menu mainMenu;
 	//IndicationFragment fragment;
+	private Handler handler = new Handler();
+	private Runnable runnable;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_home_screen);
-		 
+		
+		runnable = new Runnable(){
+		    public void run() {
+				checkNotifications();
+		    }
+		};
+		
+		handler.postDelayed(runnable, Settings.TIMER);
+		
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
@@ -166,10 +177,6 @@ public class HomeScreenActivity extends Activity {
 		if (item.getItemId() == android.R.id.home) {
 	    	finish();
 	    } else if (item.getItemId() == R.id.calendar) {
-			Intent intent = new Intent(this, NotificationActivity.class);
-			intent.putExtra("INDX", 1);
-			intent.putExtra("PERIOD", 0);
-			startActivity(intent);	    	
 	    } else if (item.getItemId() == R.id.settings) {
 			Intent intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);	    	
@@ -188,4 +195,33 @@ public class HomeScreenActivity extends Activity {
 		intent.putExtra("INDX", indx);
 		startActivity(intent);
 	}
+	
+	private void checkNotifications() {
+		Calendar calendar = Calendar.getInstance();
+		int hourCurr = calendar.get(Calendar.HOUR_OF_DAY);
+		int minuteCurr = calendar.get(Calendar.MINUTE);
+		
+		Date[] notificationTimes = Settings.notificationTimes;
+		if (notificationTimes != null) {
+			for(int i=0; i<notificationTimes.length; i++) {
+				System.out.println(notificationTimes[i]);
+				calendar.setTime(notificationTimes[i]);
+				int hour = calendar.get(Calendar.HOUR_OF_DAY);
+				int minute = calendar.get(Calendar.MINUTE);
+				System.out.println(hourCurr+":"+minuteCurr+":"+hour+":"+minute);
+				if ((hourCurr<hour) && (minuteCurr!=minute)) {
+					//odprem okno
+					Intent intent = new Intent(this, NotificationActivity.class);
+					intent.putExtra("PERIOD", i);
+					startActivity(intent);	
+					break;
+				}
+			}
+		}
+        handler.postDelayed(runnable, Settings.TIMER);
+	}
+
 }
+
+
+

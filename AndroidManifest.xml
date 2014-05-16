@@ -52,6 +52,7 @@
         <activity
             android:name="si.renderspace.donatmgmoments.NotificationActivity"
             android:label="@string/home"
+            android:launchMode="singleTop"
             android:icon="@drawable/ic_action_bar_back" 
             android:screenOrientation="portrait">
         </activity>   

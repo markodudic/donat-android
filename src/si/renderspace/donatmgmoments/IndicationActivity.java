@@ -236,7 +236,7 @@ public class IndicationActivity extends Activity {
 					finish();
 				} else {
 					Settings.indicationCurrentIndx = indx;
-					String dtStart = startDateDate.getText().toString();  
+					String dtStart = startDateDate.getText().toString()+"."+startDateMonth.getText().toString()+"."+startDateYear.getText().toString();  
 					SimpleDateFormat  format = new SimpleDateFormat("dd.MMM.yyyy");  
 					try {  
 					    Date date = format.parse(dtStart);  
@@ -245,10 +245,10 @@ public class IndicationActivity extends Activity {
 					    e.printStackTrace();  
 					}
 					bIndicationStart.setText(R.string.button_indication_stop);
-					setNotificationTimes(indx);
+					Settings.setNotificationTimes(indx);
 					dialogConfirmation.show();
 				}
-
+				Utils.savePrefernciesInt(IndicationActivity.this, "INDX", indx);
 			}
 		});	
 		
@@ -278,56 +278,6 @@ public class IndicationActivity extends Activity {
 	    return true;
 	}
 
-	
-	public void setNotificationTimes(int indx) {
-		switch (indx) {
-	        case 1: case 9:
-	    		Settings.notificationTimes = new Date[2];
-	    		Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-		        Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("SPANJE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-	    		break;
-	        case 2: case 10: 
-	    		Settings.notificationTimes = new Date[3];
-	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("ZAJTRK").getTime() - 20*60*1000 - Settings.NOTIFICATION_ALARM_MINUTES);
-		        Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("KOSILO").getTime() - 20*60*1000 - Settings.NOTIFICATION_ALARM_MINUTES);
-		        Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - 20*60*1000 - Settings.NOTIFICATION_ALARM_MINUTES);
-	    		break;
-	        case 3: 
-	    		Settings.notificationTimes = new Date[3];
-	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-        		Settings.notificationTimes[1] = new Date(12*60*60*1000);
-        		Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-	    		break;
-	        case 4: case 5: 
-	    		Settings.notificationTimes = new Date[3];
-	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-        		Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("KOSILO").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-        		Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-	    		break;
-	        case 6: 
-	    		Settings.notificationTimes = new Date[4];
-	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-        		Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("KOSILO").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-        		Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-		        Settings.notificationTimes[3] = new Date(Settings.intervalHours.get("SPANJE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-	    		break;
-	        case 7: 
-	    		Settings.notificationTimes = new Date[4];
-	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-        		Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("KOSILO").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-        		Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("VECERJA").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-		        break;
-	        case 8: 
-	        	long danDel = (Settings.intervalHours.get("SPANJE").getTime() - Settings.intervalHours.get("TESCE").getTime()) / 3;
-	    		Settings.notificationTimes = new Date[4];
-	        	Settings.notificationTimes[0] = new Date(Settings.intervalHours.get("TESCE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-	        	Settings.notificationTimes[1] = new Date(Settings.intervalHours.get("TESCE").getTime() + danDel - Settings.NOTIFICATION_ALARM_MINUTES);
-	        	Settings.notificationTimes[2] = new Date(Settings.intervalHours.get("TESCE").getTime() + (2 * danDel) -  Settings.NOTIFICATION_ALARM_MINUTES);
-	        	Settings.notificationTimes[3] = new Date(Settings.intervalHours.get("SPANJE").getTime() - Settings.NOTIFICATION_ALARM_MINUTES);
-	        	;
-	    }
-		
-	}
 	
 	
 }

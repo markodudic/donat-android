@@ -32,6 +32,8 @@ public class Settings {
 	public static int NOTIFICATION_ALARM_MINUTES = 5*60*1000; //5 minut v milisec
 	public static Date[] notificationTimes;
 
+	public final static int TIMER = 10*1000; //1 minut v milisec
+
 	public static void prepareData (Context context) {
 		indications.put(1,context.getResources().getString(R.string.indication_1));
 		indications.put(2,context.getResources().getString(R.string.indication_2));
@@ -134,6 +136,10 @@ public class Settings {
 		interval.put(10,context.getResources().getString(R.string.interval_stalno));
 
 		updateData(context);
+		indicationCurrentIndx = Utils.getPrefernciesInt(context, "INDX");
+		if (indicationCurrentIndx != -1) {
+			setNotificationTimes(indicationCurrentIndx);
+		}
 	}
 	
 	public static void updateData (Context context) {
@@ -150,9 +156,61 @@ public class Settings {
 		String prefStr = Utils.getPrefernciesString(context, pref);
 		if (prefStr != null) {
 			String[] spl = prefStr.split(":");
-			long l = Integer.parseInt(spl[0])*60*60*1000+Integer.parseInt(spl[1])*60*1000;
+			long l = (Integer.parseInt(spl[0])-1)*60*60*1000+Integer.parseInt(spl[1])*60*1000;
 			intervalHours.put(pref, new Date(l));
 		}
 	}
+	
+	public static void setNotificationTimes(int indx) {
+		switch (indx) {
+	        case 1: case 9:
+	    		notificationTimes = new Date[2];
+	    		notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[1] = new Date(intervalHours.get("SPANJE").getTime() - NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 2: case 10: 
+	    		notificationTimes = new Date[3];
+	        	notificationTimes[0] = new Date(intervalHours.get("ZAJTRK").getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[1] = new Date(intervalHours.get("KOSILO").getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 3: 
+	    		notificationTimes = new Date[3];
+	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[1] = new Date(12*60*60*1000);
+        		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 4: case 5: 
+	    		notificationTimes = new Date[3];
+	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[1] = new Date(intervalHours.get("KOSILO").getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 6: 
+	    		notificationTimes = new Date[4];
+	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[1] = new Date(intervalHours.get("KOSILO").getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[3] = new Date(intervalHours.get("SPANJE").getTime() - NOTIFICATION_ALARM_MINUTES);
+	    		break;
+	        case 7: 
+	    		notificationTimes = new Date[4];
+	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[1] = new Date(intervalHours.get("KOSILO").getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);
+		        break;
+	        case 8: 
+	        	long danDel = (intervalHours.get("SPANJE").getTime() - intervalHours.get("TESCE").getTime()) / 3;
+	    		notificationTimes = new Date[4];
+	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime() - NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[1] = new Date(intervalHours.get("TESCE").getTime() + danDel - NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[2] = new Date(intervalHours.get("TESCE").getTime() + (2 * danDel) -  NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[3] = new Date(intervalHours.get("SPANJE").getTime() - NOTIFICATION_ALARM_MINUTES);
+	        	;
+	    }
+		
+	}
+	
+	
 	
 }
