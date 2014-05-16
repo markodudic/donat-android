@@ -1,10 +1,12 @@
 package si.renderspace.donatmgmoments;
 
-import java.sql.Time;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map.Entry;
 
 import android.content.Context;
+import android.content.res.Configuration;
 
 
 public class Settings {
@@ -211,6 +213,20 @@ public class Settings {
 		
 	}
 	
-	
+    public static void setLanguage(Context context, String lang) {
+		Locale locale = new Locale(lang);
+	    Locale.setDefault(locale);
+	    Configuration config = new Configuration();
+	    config.locale = locale;
+	    context.getResources().updateConfiguration(config, null);
+	    
+		for (Entry<Integer, String> entry : languages.entrySet()) {
+	        if (entry.getValue().equals(lang)) {
+	        	//System.out.println(entry.getKey());
+	            //Utils.savePrefernciesInt(context, "LANG", 0);
+	        }
+    	}
+
+    }	
 	
 }
