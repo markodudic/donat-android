@@ -52,7 +52,7 @@ public class SettingsActivity extends Activity {
 	 			  int langId = (int)spLanguages.getSelectedItemId();
 	 			  if (langId != Utils.getPrefernciesInt(SettingsActivity.this, "LANG")) {
 		 			Utils.savePrefernciesInt(SettingsActivity.this, "LANG", langId);
-	 			  	Utils.setLanguage(SettingsActivity.this, Settings.languages.get(langId));
+		 			Settings.setLanguage(SettingsActivity.this, Settings.languages.get(langId));
 	 			  	restartApplication();
 	 			  }
 	 			 

@@ -1,10 +1,10 @@
 package si.renderspace.donatmgmoments;
 
 import java.util.Locale;
+import java.util.Map.Entry;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -21,12 +21,12 @@ public class SplashScreenActivity extends Activity {
         if (lang == -1) {
         	String langDefault = Locale.getDefault().getLanguage();
         	if (langDefault.equals("ru") || (langDefault.equals("sr")) || (langDefault.equals("it"))){
-        		Utils.setLanguage(SplashScreenActivity.this, langDefault);
+        		Settings.setLanguage(SplashScreenActivity.this, langDefault);
             } else {
-        		Utils.setLanguage(SplashScreenActivity.this, "en"); 
+            	Settings.setLanguage(SplashScreenActivity.this, "en"); 
             };
         } else {
-        	Utils.setLanguage(SplashScreenActivity.this, Settings.languages.get(lang));
+        	Settings.setLanguage(SplashScreenActivity.this, Settings.languages.get(lang));
         }
         
         new Handler().postDelayed(new Runnable() {
