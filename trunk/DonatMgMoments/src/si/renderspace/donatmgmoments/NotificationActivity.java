@@ -36,16 +36,18 @@ public class NotificationActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
+        
+        int indx = Utils.getPrefernciesInt(this, "INDX");
 		
 		Intent intent = getIntent();
 		final int period = intent.getIntExtra("PERIOD", 0);
         
 		ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
-		int id = getResources().getIdentifier("ic_indication_"+Settings.indicationCurrentIndx, "drawable", getPackageName());
+		int id = getResources().getIdentifier("ic_indication_"+indx, "drawable", getPackageName());
 		indicationImage.setImageResource(id);
 		
 		TextView indicationTitle = (TextView) findViewById(R.id.indicationTitle);
-		indicationTitle.setText(Settings.indications.get(Settings.indicationCurrentIndx));
+		indicationTitle.setText(Settings.indications.get(indx));
 		
 		//datum
 		final Calendar c = Calendar.getInstance();
@@ -60,7 +62,7 @@ public class NotificationActivity extends Activity {
 	   	if (Settings.drinking.size() == 0) {
 	   		Settings.prepareData(NotificationActivity.this);
 	   	}
-		String[][] drinks = Settings.drinking.get(Settings.indicationCurrentIndx);
+		String[][] drinks = Settings.drinking.get(indx);
 		String[] drink = drinks[period];
 
 		//system notification

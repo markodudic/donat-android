@@ -5,6 +5,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,7 +16,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class HomeScreenActivity extends Activity {
 	
@@ -43,7 +43,14 @@ public class HomeScreenActivity extends Activity {
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
 
-
+        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
+        TextView yourTextView = (TextView) findViewById(titleId);
+        yourTextView.setTextColor(getResources().getColor(R.color.action_bar_text));
+        yourTextView.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
+        Typeface fontProxima=Typeface.createFromAsset(getAssets(), "fonts/ProximaNova-Bold.otf");
+        yourTextView.setTypeface(fontProxima);
+        
+        
 		TextView tvIndication1 = (TextView) findViewById(R.id.indication_1);
 		tvIndication1.setText(Settings.indications.get(1));
 		LinearLayout lIndication1 = (LinearLayout) findViewById(R.id.l_indication_1);
@@ -151,8 +158,8 @@ public class HomeScreenActivity extends Activity {
 			ImageView iv = (ImageView) findViewById(id);
 			iv.setVisibility(View.GONE);	
 		}
-	    if (Settings.indicationCurrentIndx != -1) {
-			int id = getResources().getIdentifier("indication_"+Settings.indicationCurrentIndx+"_selected", "id", getPackageName());
+		if (Utils.getPrefernciesInt(this, "INDX") != -1) {
+			int id = getResources().getIdentifier("indication_"+Utils.getPrefernciesInt(this, "INDX")+"_selected", "id", getPackageName());
 			ImageView iv = (ImageView) findViewById(id);
 			iv.setVisibility(View.VISIBLE);	
 		}
@@ -204,12 +211,12 @@ public class HomeScreenActivity extends Activity {
 		Date[] notificationTimes = Settings.notificationTimes;
 		if (notificationTimes != null) {
 			for(int i=0; i<notificationTimes.length; i++) {
-				System.out.println(notificationTimes[i]);
+				//System.out.println(notificationTimes[i]);
 				calendar.setTime(notificationTimes[i]);
 				int hour = calendar.get(Calendar.HOUR_OF_DAY);
 				int minute = calendar.get(Calendar.MINUTE);
-				System.out.println(hourCurr+":"+minuteCurr+":"+hour+":"+minute);
-				if ((hourCurr<hour) && (minuteCurr!=minute)) {
+				//System.out.println(hourCurr+":"+minuteCurr+":"+hour+":"+minute);
+				if ((hourCurr==hour) && (minuteCurr==minute)) {
 					//odprem okno
 					Intent intent = new Intent(this, NotificationActivity.class);
 					intent.putExtra("PERIOD", i);

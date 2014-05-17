@@ -37,16 +37,15 @@ public class SplashScreenActivity extends Activity {
 	            		Intent i = new Intent(SplashScreenActivity.this, HomeScreenActivity.class);
 	            		startActivity(i);
 		            } else {
-		            	Utils.savePrefernciesString(SplashScreenActivity.this, "TESCE", "7:00");
-						Utils.savePrefernciesString(SplashScreenActivity.this, "ZAJTRK", "7:30");
+		            	Utils.savePrefernciesString(SplashScreenActivity.this, "TESCE", "07:00");
+						Utils.savePrefernciesString(SplashScreenActivity.this, "ZAJTRK", "07:30");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "KOSILO", "12:30");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "VECERJA", "19:30");
 						Utils.savePrefernciesString(SplashScreenActivity.this, "SPANJE", "22:00");
 						Utils.savePrefernciesInt(SplashScreenActivity.this, "OBROKOV", 3);
 						
-						Utils.savePrefernciesBoolean(SplashScreenActivity.this, "firstStart", true); 
 						Intent i = new Intent(SplashScreenActivity.this, SettingsActivity.class);
-						startActivity(i);
+						startActivity(i);						
 		            }
                 finish();
             }

@@ -40,7 +40,7 @@ public class SettingsActivity extends Activity {
 		btnSave.setOnClickListener(new OnClickListener() {
 	 		  @Override
 			  public void onClick(View v) {
-	 			  Utils.savePrefernciesString(SettingsActivity.this, "ZBUJANJE", (String)spZbujanje.getSelectedItem());
+	 			  Utils.savePrefernciesString(SettingsActivity.this, "TESCE", (String)spZbujanje.getSelectedItem());
 	 			  Utils.savePrefernciesString(SettingsActivity.this, "ZAJTRK", (String)spZajtrk.getSelectedItem());
 	 			  Utils.savePrefernciesString(SettingsActivity.this, "KOSILO", (String)spKosilo.getSelectedItem());
 	 			  Utils.savePrefernciesString(SettingsActivity.this, "VECERJA", (String)spVecerja.getSelectedItem());
@@ -48,7 +48,7 @@ public class SettingsActivity extends Activity {
 	 			  Utils.savePrefernciesInt(SettingsActivity.this, "OBROKOV", Integer.parseInt((String)spObrokov.getSelectedItem()));
 		 	    
 	 			  Settings.updateData(SettingsActivity.this);
-	 			   			        
+	 			 			        
 	 			  int langId = (int)spLanguages.getSelectedItemId();
 	 			  if (langId != Utils.getPrefernciesInt(SettingsActivity.this, "LANG")) {
 		 			Utils.savePrefernciesInt(SettingsActivity.this, "LANG", langId);
@@ -57,7 +57,13 @@ public class SettingsActivity extends Activity {
 	 			  }
 	 			 
 	 			  Utils.resetMenu(mainMenu);
-	 			  finish();
+	 			 if (Utils.getPrefernciesBoolean(SettingsActivity.this, "firstStart", false)) {
+	 				 finish();
+	 			 } else {
+	 				Intent intent = new Intent(SettingsActivity.this, HomeScreenActivity.class);
+	 				startActivity(intent);
+					Utils.savePrefernciesBoolean(SettingsActivity.this, "firstStart", true); 
+	 			 }
 			  }
 	 	});	
 		
@@ -78,7 +84,7 @@ public class SettingsActivity extends Activity {
 	public void onResume() {
 	    super.onResume();
 	    setSpinnerIdSelection(spLanguages, "LANG");
-	    setSpinnerStringSelection(spZbujanje, "ZBUJANJE");
+	    setSpinnerStringSelection(spZbujanje, "TESCE");
 	    setSpinnerStringSelection(spZajtrk, "ZAJTRK");
 	    setSpinnerStringSelection(spKosilo, "KOSILO");
 	    setSpinnerStringSelection(spVecerja, "VECERJA");
@@ -88,8 +94,8 @@ public class SettingsActivity extends Activity {
 
 	public void setSpinnerStringSelection(Spinner sp, String pref) {
 		ArrayAdapter myAdap = (ArrayAdapter) sp.getAdapter();
-	    int spinnerPosition = myAdap.getPosition(Utils.getPrefernciesString(SettingsActivity.this, pref));
-	    sp.setSelection(spinnerPosition);
+		int spinnerPosition = myAdap.getPosition(Utils.getPrefernciesString(SettingsActivity.this, pref));
+		sp.setSelection(spinnerPosition);
 	}
 
 	public void setSpinnerIntSelection(Spinner sp, String pref) {
@@ -118,7 +124,12 @@ public class SettingsActivity extends Activity {
 		Utils.resetMenu(mainMenu);		
 		
 		if (item.getItemId() == android.R.id.home) {
-	    	finish();
+			 if (Utils.getPrefernciesBoolean(SettingsActivity.this, "firstStart", false)) {
+ 				 finish();
+ 			 } else {
+ 				Intent intent = new Intent(SettingsActivity.this, HomeScreenActivity.class);
+ 				startActivity(intent);
+ 			 }
 	    } else if (item.getItemId() == R.id.calendar) {
 	    } else if (item.getItemId() == R.id.settings) { 
 		}

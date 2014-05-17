@@ -141,6 +141,8 @@ public class IndicationActivity extends Activity {
 			}
 		});		
 		
+		final int indxCurr = Utils.getPrefernciesInt(this, "INDX");
+		
 		//date time picker
 		Calendar cal = Calendar.getInstance();
 		dtNow = cal.getTime();
@@ -150,9 +152,9 @@ public class IndicationActivity extends Activity {
 		cal.set(Calendar.MILLISECOND, 0);
 		Date dtNowDay = cal.getTime();
 		//if (Settings.indicationCurrentIndx != -1 && (Settings.indicationCurrentDate.after(dtNow) || Settings.indicationCurrentDate.equals(dtNow))) {
-		if (Settings.indicationCurrentIndx != -1) {
+		if (indxCurr != -1) {
 			long indicationCurrentFirstNotification = dtNowDay.getTime() + Settings.notificationTimes[0].getTime() + Settings.NOTIFICATION_ALARM_MINUTES;
-			System.out.println(Settings.indicationCurrentIndx+":"+new Date(indicationCurrentFirstNotification)+":"+dtNow);
+			System.out.println(indxCurr+":"+new Date(indicationCurrentFirstNotification)+":"+dtNow);
 			if (new Date(indicationCurrentFirstNotification).before(dtNow)) {
 				//ce obstaja aktivna indikacija, in je na danasnji dan ze bil notification, nastavim naslednjo indikacijo na naslednji dan
 				Calendar calendar = Calendar.getInstance();
@@ -173,7 +175,8 @@ public class IndicationActivity extends Activity {
 		final TextView startDateYear = (TextView) findViewById(R.id.startDateYear);
 		startDateYear.setText(new SimpleDateFormat("yyyy").format(dtNow));
 		
-		startDateDate.setOnClickListener(new View.OnClickListener() {
+		LinearLayout lStartDateDate = (LinearLayout) findViewById(R.id.start_date_date_layout);
+		lStartDateDate.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				final Calendar c = Calendar.getInstance();
@@ -189,15 +192,15 @@ public class IndicationActivity extends Activity {
 								calendar.set(year, monthOfYear, dayOfMonth, 0, 0, 0);
 								if (dtNow.getTime() <= calendar.getTimeInMillis()) {
 								   	String monthString = new DateFormatSymbols().getMonths()[monthOfYear];
-								   	startDateDate.setText(dayOfMonth);
+									startDateDate.setText(dayOfMonth+"");
 								   	startDateMonth.setText(monthString.substring(0,3));
-								   	startDateYear.setText(year);
+								   	startDateYear.setText(year+"");
 								}
 				            }
 				        }, mYear, mMonth, mDay);
 				dpd.show();
-			}
-		}); 
+			} 
+		});
 		
 		
 		// dialogConfirmation
@@ -225,22 +228,22 @@ public class IndicationActivity extends Activity {
 
 		//vklopi/izklopi
 		final Button bIndicationStart = (Button) findViewById(R.id.btn_indication_start);
-		if (Settings.indicationCurrentIndx == indx) {
+		if (indxCurr == indx) {
 			bIndicationStart.setText(R.string.button_indication_stop);
 		}
 		bIndicationStart.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (Settings.indicationCurrentIndx == indx) {
-					Settings.indicationCurrentIndx = -1;
+				if (indxCurr == indx) {
+					Utils.savePrefernciesInt(IndicationActivity.this, "INDX", -1);
 					finish();
 				} else {
-					Settings.indicationCurrentIndx = indx;
+					Utils.savePrefernciesInt(IndicationActivity.this, "INDX", indx);
 					String dtStart = startDateDate.getText().toString()+"."+startDateMonth.getText().toString()+"."+startDateYear.getText().toString();  
 					SimpleDateFormat  format = new SimpleDateFormat("dd.MMM.yyyy");  
 					try {  
 					    Date date = format.parse(dtStart);  
-						Settings.indicationCurrentDate = date;
+					    Utils.savePrefernciesLong(IndicationActivity.this, "DATE", date.getTime());
 					} catch (ParseException e) {  
 					    e.printStackTrace();  
 					}
@@ -248,7 +251,6 @@ public class IndicationActivity extends Activity {
 					Settings.setNotificationTimes(indx);
 					dialogConfirmation.show();
 				}
-				Utils.savePrefernciesInt(IndicationActivity.this, "INDX", indx);
 			}
 		});	
 		
