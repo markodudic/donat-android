@@ -23,8 +23,8 @@ public class Settings {
 	public static HashMap<Integer,String> interval = new HashMap<Integer,String>();
 	
 	//trenutna indikacija
-	public static int indicationCurrentIndx = -1; //-1 : ni trenutne indikacije
-	public static Date indicationCurrentDate;
+	//public static int indicationCurrentIndx = -1; //-1 : ni trenutne indikacije
+	//public static Date indicationCurrentDate;
 
 	//nastavitve ur za intervale
 	public static HashMap<String,Date> intervalHours = new HashMap<String,Date>();
@@ -138,9 +138,8 @@ public class Settings {
 		interval.put(10,context.getResources().getString(R.string.interval_stalno));
 
 		updateData(context);
-		indicationCurrentIndx = Utils.getPrefernciesInt(context, "INDX");
-		if (indicationCurrentIndx != -1) {
-			setNotificationTimes(indicationCurrentIndx);
+		if (Utils.getPrefernciesInt(context, "INDX") != -1) {
+			setNotificationTimes(Utils.getPrefernciesInt(context, "INDX"));
 		}
 	}
 	
@@ -214,16 +213,16 @@ public class Settings {
 	}
 	
     public static void setLanguage(Context context, String lang) {
-		Locale locale = new Locale(lang);
+    	System.out.println("LANG="+lang);
+        Locale locale = new Locale(lang);
 	    Locale.setDefault(locale);
 	    Configuration config = new Configuration();
 	    config.locale = locale;
 	    context.getResources().updateConfiguration(config, null);
 	    
-		for (Entry<Integer, String> entry : languages.entrySet()) {
+	    for (Entry<Integer, String> entry : languages.entrySet()) {
 	        if (entry.getValue().equals(lang)) {
-	        	//System.out.println(entry.getKey());
-	            //Utils.savePrefernciesInt(context, "LANG", 0);
+	        	Utils.savePrefernciesInt(context, "LANG", entry.getKey());
 	        }
     	}
 

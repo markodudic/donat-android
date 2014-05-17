@@ -35,7 +35,18 @@ public class Utils {
         return context.getSharedPreferences(PREFS_NAME, 0).getInt(paramString, -1);
     }
 
+    public static void savePrefernciesLong(Context context, String paramString1, long paramString2)
+    {
+        SharedPreferences.Editor localEditor = context.getSharedPreferences(PREFS_NAME, 0).edit();
+        localEditor.putLong(paramString1, paramString2);
+        localEditor.commit();
+    }
 
+    public static long getPrefernciesLong(Context context, String paramString)
+    {
+        return context.getSharedPreferences(PREFS_NAME, 0).getLong(paramString, -1);
+    }
+    
     public static void savePrefernciesBoolean(Context context, String paramString1, boolean paramString2)
     {
         SharedPreferences.Editor localEditor = context.getSharedPreferences(PREFS_NAME, 0).edit();

@@ -31,6 +31,7 @@
     <color name="button_text_light">#fff</color>
     <color name="button_border">#999</color>
     <color name="action_bar_border">#ff0000</color>
+    <color name="action_bar_text">#111</color>
     
     <color name="table_row_1">#aaa</color>
     <color name="table_row_2">#bbb</color>
