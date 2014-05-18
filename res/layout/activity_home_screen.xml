@@ -16,26 +16,34 @@
         	android:layout_height="wrap_content"
         	android:orientation="vertical" >
         	
-		    <LinearLayout
-		        style="@style/HomeScreenTitle"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:orientation="vertical"
-		        android:paddingBottom="@dimen/layout_vertical_padding"
-		        android:paddingLeft="@dimen/layout_vertical_padding"
-		        android:paddingRight="@dimen/layout_horizontal_padding"
-		        android:paddingTop="@dimen/layout_horizontal_padding" >
-		
-		        <TextView
-		            style="@style/HomeScreenTitleText"
-		        	android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:text="@string/home_screen_title" />
-		       
-			</LinearLayout>
-
-           	
-           	<FrameLayout
+            <FrameLayout
+                android:layout_width="match_parent"
+			    android:layout_height="wrap_content">
+			    <ImageView
+			        style="@style/LayoutIndicationAlfaTitle"
+			        android:layout_width="match_parent"
+			    	android:layout_height="match_parent" />
+           
+			   	<LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"
+			        android:paddingBottom="@dimen/layout_vertical_padding"
+			        android:paddingLeft="@dimen/layout_vertical_padding"
+			        android:paddingRight="@dimen/layout_horizontal_padding"
+			        android:paddingTop="@dimen/layout_horizontal_padding" >
+			
+			        <TextView
+			            style="@style/HomeScreenTitleText"
+			        	android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/home_screen_title" />
+			       
+				</LinearLayout>
+			</FrameLayout>
+            	
+            
+            <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
@@ -136,8 +144,7 @@
 				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
-                 				    
-			    <LinearLayout
+                <LinearLayout
 			        android:id="@+id/l_indication_3"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
@@ -163,11 +170,11 @@
 				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected" />
-			
-			   	        <ImageView
-			   	            android:layout_width="wrap_content"
-			   	            android:layout_height="@dimen/image_width"
+			   	            android:src="@drawable/ic_selected"/>
+				        
+				        <ImageView
+			   	            android:layout_width="@dimen/image_width"
+			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
 			   	            android:src="@drawable/ic_arrow_right" />
 				        
@@ -182,8 +189,7 @@
 				    style="@style/LayoutIndicationAlfa"
 			        android:layout_width="match_parent"
 			    	android:layout_height="match_parent" />
-			    			    	    
-			    <LinearLayout
+                <LinearLayout
 			        android:id="@+id/l_indication_4"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
@@ -209,16 +215,16 @@
 				            android:layout_width="@dimen/image_width"
 			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
-			   	            android:src="@drawable/ic_selected" />
-			   	        
+			   	            android:src="@drawable/ic_selected"/>
+				        
 				        <ImageView
-			   	            android:layout_width="wrap_content"
-			   	            android:layout_height="@dimen/image_width"
+			   	            android:layout_width="@dimen/image_width"
+			   	            android:layout_height="wrap_content"
 			   	            android:layout_gravity="center_vertical"
 			   	            android:src="@drawable/ic_arrow_right" />
 				        
 			    </LinearLayout>
-			</FrameLayout>
+			</FrameLayout>			
 			    		
             <FrameLayout
                 android:layout_width="match_parent"

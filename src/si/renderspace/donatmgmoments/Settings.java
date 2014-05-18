@@ -138,9 +138,6 @@ public class Settings {
 		interval.put(10,context.getResources().getString(R.string.interval_stalno));
 
 		updateData(context);
-		if (Utils.getPrefernciesInt(context, "INDX") != -1) {
-			setNotificationTimes(Utils.getPrefernciesInt(context, "INDX"));
-		}
 	}
 	
 	public static void updateData (Context context) {
@@ -151,6 +148,9 @@ public class Settings {
 		setInterval(context, "SPANJE");
 		
 		intervalMeals = Utils.getPrefernciesInt(context, "OBROKOV"); 
+		if (Utils.getPrefernciesInt(context, "INDX") != -1) {
+			setNotificationTimes(Utils.getPrefernciesInt(context, "INDX"));
+		}
 	}
 	
 	public static void setInterval (Context context, String pref) {
@@ -195,7 +195,7 @@ public class Settings {
 		        notificationTimes[3] = new Date(intervalHours.get("SPANJE").getTime() - NOTIFICATION_ALARM_MINUTES);
 	    		break;
 	        case 7: 
-	    		notificationTimes = new Date[4];
+	    		notificationTimes = new Date[3];
 	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[1] = new Date(intervalHours.get("KOSILO").getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);

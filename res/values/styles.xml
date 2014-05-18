@@ -114,18 +114,26 @@
        <item name="android:background">@color/background_date</item>
    </style>
    
-   <style name="LayoutIndication">
+   <style name="LayoutIndicationBackground">
         <item name="android:background">@drawable/dr_border</item>
-      	<item name="android:paddingTop">@dimen/button_margin</item>
+   </style>
+   
+   <style name="LayoutIndication">
+       <item name="android:paddingTop">@dimen/button_margin</item>
        <item name="android:paddingBottom">@dimen/button_margin</item>
        <item name="android:paddingRight">@dimen/title_vertical_padding</item>
        <item name="android:paddingLeft">@dimen/title_vertical_padding</item>
    </style>
    
    <style name="LayoutIndicationAlfa">
-       <item name="android:background">@drawable/dr_item_unpressed</item>
+       <item name="android:background">@drawable/dr_background_app</item>
        <item name="android:alpha">0.5</item>
    </style>
+   
+   <style name="LayoutIndicationAlfaTitle">
+       <item name="android:background">@color/background_title</item>
+       <item name="android:alpha">0.5</item>
+   </style>   
       
    <style name="TextViewIndication">
        <item name="android:textSize">18.0sp</item>
