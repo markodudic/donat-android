@@ -148,7 +148,7 @@ public class HomeScreenActivity extends Activity {
 	public void onResume() {
 	    super.onResume();
 	    
-    	Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_item_unpressed); 
+    	Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_background_app); 
 		for (j=1; j<=Settings.indications.size(); j++) {
 			int idd = getResources().getIdentifier("iv_indication_"+j, "id", getPackageName());
 			ImageView ivIndication1 = (ImageView) findViewById(idd);
@@ -210,15 +210,23 @@ public class HomeScreenActivity extends Activity {
 		Calendar calendar = Calendar.getInstance();
 		int hourCurr = calendar.get(Calendar.HOUR_OF_DAY);
 		int minuteCurr = calendar.get(Calendar.MINUTE);
+
+		calendar.set(Calendar.HOUR_OF_DAY, 0);
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.SECOND, 0);
+		calendar.set(Calendar.MILLISECOND, 0);
+		long dateCurr = calendar.getTimeInMillis();
 		
 		Date[] notificationTimes = Settings.notificationTimes;
-		if (notificationTimes != null) {
+		if ((notificationTimes != null) && 
+			(Utils.getPrefernciesInt(this, "INDX")!=-1) && 
+			(dateCurr >= Utils.getPrefernciesLong(this, "DATE"))) {
 			for(int i=0; i<notificationTimes.length; i++) {
 				//System.out.println(notificationTimes[i]);
-				calendar.setTime(notificationTimes[i]);
+				calendar.setTime(notificationTimes[i]); 
 				int hour = calendar.get(Calendar.HOUR_OF_DAY);
 				int minute = calendar.get(Calendar.MINUTE);
-				//System.out.println(hourCurr+":"+minuteCurr+":"+hour+":"+minute);
+				System.out.println(hourCurr+":"+minuteCurr+":"+hour+":"+minute);
 				if ((hourCurr==hour) && (minuteCurr==minute)) {
 					//odprem okno
 					Intent intent = new Intent(this, NotificationActivity.class);
