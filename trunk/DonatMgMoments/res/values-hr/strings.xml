@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Moments</string>
+    <string name="action_calendar">Calendar</string>
+    <string name="action_settings">Postavke</string>
+    <string name="home_screen">Početna stranica</string>
+    <string name="settings">Postavke</string>
+    <string name="seznam">Popis</string>
+    <string name="home_screen_title">Odvojite trenutak za svoje zdravlje. Aplikacija nudi smjernice za pijenje mineralne vode Donat Mg na čijoj osnovi Rogaška medical center već više od stoljeća provodi terapije. Odsad su smjernice za pijenje na raspolaganju i vama.</string>
+    <string name="drinking">Način pijenja</string>
+    <string name="interval">Trajanje</string>
+    <string name="start_date">Odabrani početni dan pijenja:</string>
+    <string name="button_indication_start">UKLJUČI</string>
+    <string name="button_indication_stop">IZKLJUČI</string>
+    <string name="confirmation_title">Uspješno ste postavili podsjetnik</string>
+    <string name="confirmation_desc">Podsjetnik za pijenje Donata Mg sada je postavljen. Nazdravlje!</string>
+    <string name="confirmation_back">Na početnu stranicu</string>
+    <string name="save">SPREMI</string>
+    <string name="zbujanje">Buđenje</string>
+    <string name="zajtrk">Doručak</string>
+    <string name="kosilo">Ručak</string>
+    <string name="vecerja">Večera</string>
+    <string name="spanje">Spavanje</string>
+    <string name="obrokov">Broj obroka</string>
+    <string name="close">ODUSTANI</string>
+    <string name="home">Početna</string>
+    <string name="licence">Droga kolinska d.d. Vse pravice pridržane. Droga Kolinska je del Atlantic grupe.</string>
+    <string name="rules">Pravila in pogoji uporabe</string>
+    <string name="rules_title">Pravila in pogoji uporabe</string>
+    <string name="rules_title_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe.\n\nPravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
+    <string name="rules_subtitle">Podnaslov</string>
+    <string name="rules_subtitle_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
+  
+    
+    <string name="choose_language">Izberi jezik</string>
+    <string-array name="languages">
+        <item>Angleščina</item>
+        <item>Ruščina</item>
+        <item>Italianščina</item>
+        <item>Srbščina</item>
+    </string-array>
+    
+    <string name="choose_hours">Izberi uro</string>
+    <string-array name="hours">
+        <item>00:00</item>
+        <item>00:30</item>
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+        <item>21:30</item>
+        <item>22:00</item>
+        <item>22:30</item>
+        <item>23:00</item>
+        <item>23:30</item>
+    </string-array>
+
+    <string name="choose_obrokov">Broj obroka</string>
+    <string-array name="obrokov">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    <string name="indication_1">Zatvor</string>
+    <string name="indication_2">Žgaravica</string>
+    <string name="indication_3">Nedostatak magnezija</string>
+    <string name="indication_4">Šećerna bolest </string>
+    <string name="indication_5">Bolesti žučnog mjehura i gušterače</string>
+    <string name="indication_6">Nastanak bubrežnih kamenaca</string>
+    <string name="indication_7">Pretilost i mršavljenje</string>
+    <string name="indication_8">Bolesti srca i krvožilnog sustava</string>
+    <string name="indication_9">Stres, glavobolje</string>
+    <string name="indication_10">Za bolje raspoloženje</string>
+
+    <string name="indication_1_desc">Donat Mg prirodni je osmotski laksativ. Sadržava sulfatne soli i približno 1000 mg/l magnezija. Sulfatni ioni imaju sposobnost vezivanja velikih količina vode, zato se volumen crijevnog sadržaja povećava od 3 do 5 puta, što izaziva kretanje crijeva.</string>
+    <string name="indication_2_desc">Zbog sadržaja od približno 7800 mg hidrogenkarbonata, Donat Mg ima sposobnost vezivanja kiselina i puferiranja slobodnih kiselina. Natrijev hidrogenkarbonat u Donatu Mg svojim alkalnim utjecajem djeluje protuupalno na želučanu sluznicu; a magnezij i kalcij, koji prate natrij, smanjuju njezino oticanje.</string>
+    <string name="indication_3_desc">Donat Mg prirodna je mineralna voda najbogatija magnezijem*. Čovjeku je svakodnevno potrebno prosječno 375 mg tog minerala. Potrebe za magnezijem dodatno se povećavaju u trudnoći i tijekom dojenja te brzog rasta u adolescenciji. Veći gubici, a time i veće dnevne potrebe pojavljuju se u starijoj dobi, kod nekih metaboličkih poremećaja, konzumiranju nekih lijekova, dijeta i u stresnim razdobljima. U tijelo ga je najbolje unositi vodom. Magnezij u mineralnoj vodi tijelu je odmah na raspolaganju i brzo se uključuje u metaboličke procese.\n\n*Pregledani usporedni podaci obuhvaćaju sve tržišno dostupne i priznate prirodne mineralne vode iz registra EU-a.</string>
+    <string name="indication_4_desc">Nedostatak magnezija kod osoba s dijabetesom tipa 2 nastupa zbog povećanih gubitaka tog minerala putem urina. Diabetes mellitus kod svih (i kod trudnica) koji su prvi put oboljeli od šećerne bolesti uzrokuje neravnotežu glukoze u krvi i sprečava djelovanje inzulina. Pijenjem Donata Mg nadoknadit ćete magnezij, šećerna će se bolest bolje regulirati, a oscilacije razine šećera bit će manje izražene.</string>
+    <string name="indication_5_desc">Žuč bolesnika operiranih zbog kamenaca sadržava previše kolesterola ili premalo žučnih kiselina i lecitina. U presavijenom žučnom mjehuru nakuplja se gušća žuč koja se potpuno ne prazni. Magnezijev sulfat u Donatu Mg pospješuje izlučivanje žuči. Redovito pražnjenje žučnog mjehura sprečava nastanak žučnih kamenaca.</string>
+    <string name="indication_6_desc">Donat Mg ima visoki sadržaj hidrogenkarbonata i magnezija, čime na prirodan način sprečava nastanak kalcijevih oksalatnih, uratnih i cistinskih kamenaca koji nastaju u kiseloj sredini. Oba sastojka utječu na regulaciju kiselinsko-bazne ravnoteže u tijelu. Hidrogenkarbonat posebno stvara snažnu bazičnu osnovu jer na sebe veže kiseline i time stvara alkalno okruženje koje sprečava stvaranje navedenih vrsta kamenaca.</string>
+    <string name="indication_7_desc">Donat Mg prilikom mršavljenja neutralizira nastale kiseline i nadoknađuje izgubljene minerale. Vrlo je koristan na početku mršavljenja jer kao prirodni laksativ čisti tijelo od toksina. Sulfatne soli u Donatu Mg povećavaju izlučivanje holecistokinina, što smanjuje apetit. Magnezij uspješno pospješuje metabolizam, jača otpornost i povećava zalihe energije.</string>
+    <string name="indication_8_desc">Donat Mg sadržava vrlo malo kuhinjske soli, zato ne utječe na krvni tlak. Sadržava veće količine magnezija (1000 mg/l). Magnezij je prijeko potreban element koji, između ostalog, pridonosi funkcioniranju mišićnog sustava. I naše je srce mišić koji za svoje normalno funkcioniranje treba magnezij. Treba ga unositi svaki dan ako ne želimo da dođe do zatajenja srca, poremećaja srčanog ritma i drugih neugodnosti koje prate nedostatak tog bitnog minerala.</string>
+    <string name="indication_9_desc">Stres utječe na naše tijelo i duh jer tijelo putem vode gubi više mineralnih tvari, stoga se u tom razdoblju povećava potreba za vitaminima i mineralima. Nedostatak magnezija može izazvati čak i neke vrste glavobolje. Donat Mg bogat je tim mineralom koji znanstvenici nazivaju i »antistresnim mineralom« te »balzamom za živce i mišiće«.</string>
+    <string name="indication_10_desc">Donat Mg bogat je ponajprije magnezijem, sulfatima, hirogenkarbonatima, sadržava i kalcij, natrij te druge mikroelemente. Naše tijelo obogaćuje mineralima, a istodobno zbog većeg sadržaja hidrogenkarbonata regulira kiselinsko-baznu ravnotežu tijela. Možemo ga piti cijeli život za zdravlje kao i za opće dobro raspoloženje.</string>
+    
+    <string name="drinking_na_tesce">Natašte</string>
+    <string name="drinking_pred_spanjem">Prije spavanja</string>
+    <string name="drinking_veckrat_dnevno">Više puta dnevno</string>
+    <string name="drinking_20_min_pred">20 minuta prije jela</string>
+    <string name="drinking_med_obroki">Između obroka i 1 – 2 sata nakon jela</string>
+    <string name="drinking_opoldne">U podne</string>
+    <string name="drinking_zvecer">Navečer</string>
+    <string name="drinking_pred_kosilom">Prije ručka</string>
+    <string name="drinking_pred_vecerjo">Prije večere</string>
+    <string name="drinking_obcutek_lakote">Kod osjećaja gladi između i prije obroka</string>
+    <string name="drinking_3_4_dnevno">3 – 4 puta dnevno</string>
+    <string name="drinking_pred_jedjo">Prije jela</string>
+    
+    <string name="temperature_toplo">30–37 °C (toplo)</string>
+    <string name="temperature_mlacno">23–25 °C (mlako)</string>
+    <string name="temperature_sobna">20 °C (sobna temp)</string>
+    <string name="temperature_hladno">17–18 °C (hladno)</string>
+    <string name="volume_suffix">dcl</string>
+  
+    <string name="spped_hitro">Brzo</string>
+    <string name="spped_razmeroma_hitro">Razmjerno brzo</string>
+    <string name="spped_pocasi">Polako</string>
+
+    <string name="interval_stalno">Stalno ili s kraćim prekidima</string>
+    <string name="interval_5_dni">5 dana, prekid 2 dana, stalno ponavljanje</string>
+    <string name="interval_6_tednov">6 tjedana, prekid 4 tjedna 3 puta godišnje</string>
+    <string name="interval_3_mesece">3 mjeseca, prekid 1 mjesec, 3 puta godišnje</string>
+    <string name="interval_2_meseca">2 mjeseca, prekid 1 mjesec, 3 puta godišnje</string>
+        
+    
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Moments</string>
+    <string name="action_calendar">Calendar</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="home_screen"></string>
+    <string name="settings">Impostazioni</string>
+    <string name="seznam">Elenco</string>
+    <string name="home_screen_title">Prendetevi un momento per la vostra salute. Questa applicazione vi propone le linee guida sul consumo dell’acqua minerale naturale Donat Mg sulle quali si basano, da più di un secolo, le terapie del Rogaška Medical Center. Queste linee guida su come bere Donat Mg sono adesso disponibili anche a voi.</string>
+    <string name="drinking">Come bere l’acqua</string>
+    <string name="interval">Durata</string>
+    <string name="start_date">Giorno di inizio cura prescelto:</string>
+    <string name="button_indication_start">ATTIVA</string>
+    <string name="button_indication_stop">DISATTIVA</string>
+    <string name="confirmation_title">Promemoria impostato</string>
+    <string name="confirmation_desc">Il promemoria per bere Donat Mg è impostato. Alla salute!</string>
+    <string name="confirmation_back">Alla pagina principale</string>
+    <string name="save">SALVA</string>
+    <string name="zbujanje">Risveglio</string>
+    <string name="zajtrk">Colazione</string>
+    <string name="kosilo">Pranzo</string>
+    <string name="vecerja">Cena</string>
+    <string name="spanje">Sonno</string>
+    <string name="obrokov">Numero di pasti</string>
+    <string name="close">ANNULA</string>
+    <string name="home">Home</string>
+    <string name="licence">Droga kolinska d.d. Vse pravice pridržane. Droga Kolinska je del Atlantic grupe.</string>
+    <string name="rules">Pravila in pogoji uporabe</string>
+    <string name="rules_title">Pravila in pogoji uporabe</string>
+    <string name="rules_title_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe.\n\nPravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
+    <string name="rules_subtitle">Podnaslov</string>
+    <string name="rules_subtitle_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
+  
+    
+    <string name="choose_language">Izberi jezik</string>
+    <string-array name="languages">
+        <item>Angleščina</item>
+        <item>Ruščina</item>
+        <item>Italianščina</item>
+        <item>Srbščina</item>
+    </string-array>
+    
+    <string name="choose_hours">Izberi uro</string>
+    <string-array name="hours">
+        <item>00:00</item>
+        <item>00:30</item>
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+        <item>21:30</item>
+        <item>22:00</item>
+        <item>22:30</item>
+        <item>23:00</item>
+        <item>23:30</item>
+    </string-array>
+
+    <string name="choose_obrokov">Numero di pasti</string>
+    <string-array name="obrokov">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    <string name="indication_1">Stitichezza</string>
+    <string name="indication_2">Bruciore di stomaco</string>
+    <string name="indication_3">Carenza di magnesio</string>
+    <string name="indication_4">Diabete</string>
+    <string name="indication_5">Malattie della cistifellea e del pancreas</string>
+    <string name="indication_6">Formazione di calcoli urinari</string>
+    <string name="indication_7">Obesità e dimagrimento</string>
+    <string name="indication_8">Malattie cardiovascolari</string>
+    <string name="indication_9">Stress e mal di testa</string>
+    <string name="indication_10">Per il benessere</string>
+
+    <string name="indication_1_desc">Donat Mg è un lassativo osmotico naturale. Contiene sali di solfato e circa 1000 mg/l di magnesio. Gli ioni solfato hanno una grande capacità di legare acqua, grazie alla quale aumentano da 3 a 5 volte il volume del contenuto dell’intestino, stimolando così la peristalsi.</string>
+    <string name="indication_2_desc">Grazie ai suoi circa 7.800 mg di bicarbonato, Donat Mg è capace di legare gli acidi e tamponare gli acidi liberi. La natura alcalina del bicarbonato di sodio presente in Donat Mg ha un effetto antinfiammatorio sulla mucosa gastrica; il magnesio e il calcio, che accompagnano il sodio, riducono inoltre il gonfiore della mucosa.</string>
+    <string name="indication_3_desc">Donat Mg è l’acqua minerale naturale più ricca di magnesio.* Ogni giorno abbiamo in media bisogno di 375 mg di questo minerale. Il fabbisogno di magnesio aumenta durante periodi di gravidanza e di allattamento nonché di crescita veloce in adolescenza. Maggiori perdite di magnesio e di conseguenza il suo aumentato fabbisogno giornaliero si verificano anche negli anziani o sono provocati da certi disturbi metabolici, alcuni farmaci, diete e periodi di stress. Il miglior modo per introdurre il magnesio nell’organismo è bevendo acqua. Il magnesio dell’acqua minerale è immediatamente disponibile all’organismo e può entrare velocemente in processi metabolici.\n\n*I dati comparativi esaminati comprendono tutte le acque minerali naturali riconosciute e disponibili sul mercato comprese nel registro dell’UE. </string>
+    <string name="indication_4_desc">La carenza di magnesio in persone affette da diabete mellito di tipo 2 si manifesta a causa dell’aumentata perdita di questo minerale attraverso l’urina. Nelle persone (anche nelle gestanti) affette per la prima volta, il diabete mellito provoca lo squilibrio di glucosio nel sangue e inibisce l’azione dell’insulina. Bevendo Donat Mg si recupera il magnesio, il che aiuta a controllare meglio il diabete e ridurre le oscillazioni di zucchero.</string>
+    <string name="indication_5_desc">La bile dei pazienti a cui sono stati rimossi i calcoli si presenta ricca di colesterolo o povera di acidi biliari e lecitina. Nella cistifellea si accumula della bile più densa, che non defluisce completamente. Il solfato di magnesio in Donat Mg stimola la secrezione della bile. Lo svuotamento regolare della cistifellea quindi previene l’insorgere dei calcoli biliari.</string>
+    <string name="indication_6_desc">Donat Mg ha un alto contenuto di bicarbonato e magnesio, grazie al quale previene in modo naturale la formazione di calcoli di ossalato di calcio, di acido urico e di cistina, che insorgono in un ambiente acido.  Ambedue le sostanze svolgono un ruolo importante nella regolazione dell’equilibrio acido-base. Specialmente il bicarbonato ha un forte effetto basico, legando gli acidi e creando un ambiente alcalino, che inibisce la formazione di questi tipi di calcoli.</string>
+    <string name="indication_7_desc">Durante il dimagrimento l’acqua minerale naturale Donat Mg neutralizza gli acidi e sostituisce i minerali persi. Quale lassativo naturale, è particolarmente utile all’inizio della dieta perché elimina le tossine dall’organismo. I sali di solfato in Donat Mg stimolano la produzione di colecistochinina, il che diminuisce l’appetito. Il magnesio inoltre stimola il metabolismo, rafforza il sistema immunitario e aumenta le riserve energetiche.</string>
+    <string name="indication_8_desc">Donat Mg contiene poco sale da cucina, perciò non altera la pressione sanguigna. D’altra parte ha un alto contenuto di magnesio (1000 mg/l). Il magnesio è un elemento indispensabile che, tra l’altro, contribuisce al funzionamento del sistema muscolare. Anche il nostro cuore è un muscolo che ha bisogno di magnesio per funzionare senza problemi. Per prevenire l’insufficienza cardiaca, i disturbi del ritmo cardiaco e altre complicazioni che possono essere provocate dalla carenza di questo importante minerale, è necessario introdurre il magnesio nell’organismo quotidianamente.</string>
+    <string name="indication_9_desc">Lo stress interessa sia la nostra salute fisica che psichica, poiché aumenta la perdita di sostanze minerali dall’organismo, aumentando così il fabbisogno di vitamine e minerali. La carenza di magnesio può persino provocare alcuni tipi di mal di testa. Donat Mg è ricca di questo minerale che gli scienziati chiamano anche “minerale anti-stress” o “balsamo per nervi e muscoli”.</string>
+    <string name="indication_10_desc">Donat Mg è ricca soprattutto di magnesio, solfati e bicarbonati, ma contiene anche calcio, sodio e altri microelementi. Apporta al nostro organismo preziosi minerali, e grazie al suo alto contenuto di bicarbonato, regola allo stesso tempo l’equilibrio acido-base. È possibile berla tutta la vita per mantenere la salute e sentirsi in forma.</string>
+    
+    <string name="drinking_na_tesce">A digiuno</string>
+    <string name="drinking_pred_spanjem">Prima di coricarsi (se necessario)</string>
+    <string name="drinking_veckrat_dnevno">Più volte al giorno</string>
+    <string name="drinking_20_min_pred">20 minuti prima dei pasti</string>
+    <string name="drinking_med_obroki">Durante i pasti e 1–2 ore dopo i pasti</string>
+    <string name="drinking_opoldne">A mezzogiorno</string>
+    <string name="drinking_zvecer">La sera</string>
+    <string name="drinking_pred_kosilom">Prima di pranzo</string>
+    <string name="drinking_pred_vecerjo">Prima di cena</string>
+    <string name="drinking_obcutek_lakote">Quando si avverte il senso di fame, durante e prima dei pasti</string>
+    <string name="drinking_3_4_dnevno">3–4 volte al giorno</string>
+    <string name="drinking_pred_jedjo">Prima dei pasti</string>
+    
+    <string name="temperature_toplo">30–37 °C (calda)</string>
+    <string name="temperature_mlacno">23–25 °C (mlako)</string>
+    <string name="temperature_sobna">20 °C (temperatura ambiente)</string>
+    <string name="temperature_hladno">17–18 °C (fredda)</string>
+    <string name="volume_suffix">dcl</string>
+  
+    <string name="spped_hitro">Velocemente</string>
+    <string name="spped_razmeroma_hitro">Abbastanza velocemente</string>
+    <string name="spped_pocasi">Lentamente</string>
+
+    <string name="interval_stalno">Continuamente o con brevi pause</string>
+    <string name="interval_5_dni">5 giorni, interrompere per 2 giorni ripetere continuamente</string>
+    <string name="interval_6_tednov">6 settimane, interrompere per 4 settimane, 3 volte all’anno</string>
+    <string name="interval_3_mesece">3 mesi, interrompere per 1 mese, 3 volte all’anno</string>
+    <string name="interval_2_meseca">2 mesi, interrompere per 1 mese, 3 volte all’anno</string>
+        
+    
+</resources>
