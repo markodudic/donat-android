@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Moments</string>
+    <string name="action_calendar">Calendar</string>
+    <string name="action_settings">Продолжить</string>
+    <string name="home_screen"></string>
+    <string name="settings">Продолжить</string>
+    <string name="seznam">Список</string>
+    <string name="home_screen_title">Уделите минутку своему здоровью. Приложение содержит рекомендации по употреблению природной минеральной воды Donat Mg, разработанные на основе столетнего опыта терапии в медицинском центре в Рогашке Слатине. Теперь рекомендации по употреблению минеральной воды доступны и вам.</string>
+    <string name="drinking">Способ употребления</string>
+    <string name="interval">Продолжительность курса</string>
+    <string name="start_date">Выбран первый день курса:</string>
+    <string name="button_indication_start">ВКЛЮЧИТЬ</string>
+    <string name="button_indication_stop">ВЫКЛЮЧИТЬ</string>
+    <string name="confirmation_title">Напоминание успешно установлено</string>
+    <string name="confirmation_desc">Напоминание о приеме воды Donat Mg установлено. На здоровье!</string>
+    <string name="confirmation_back">На главную страницу</string>
+    <string name="save">СОХРАНИТЬ</string>
+    <string name="zbujanje">Пробуждение</string>
+    <string name="zajtrk">Завтрак</string>
+    <string name="kosilo">Обед</string>
+    <string name="vecerja">Ужин</string>
+    <string name="spanje">Сон</string>
+    <string name="obrokov">Количество приемов пищи</string>
+    <string name="close">ОТМЕНА</string>
+    <string name="home">На главную</string>
+    <string name="licence">Droga kolinska d.d. Vse pravice pridržane. Droga Kolinska je del Atlantic grupe.</string>
+    <string name="rules">Pravila in pogoji uporabe</string>
+    <string name="rules_title">Pravila in pogoji uporabe</string>
+    <string name="rules_title_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe.\n\nPravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
+    <string name="rules_subtitle">Podnaslov</string>
+    <string name="rules_subtitle_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
+  
+    
+    <string name="choose_language">Izberi jezik</string>
+    <string-array name="languages">
+        <item>Angleščina</item>
+        <item>Ruščina</item>
+        <item>Italianščina</item>
+        <item>Srbščina</item>
+    </string-array>
+    
+    <string name="choose_hours">Izberi uro</string>
+    <string-array name="hours">
+        <item>00:00</item>
+        <item>00:30</item>
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+        <item>21:30</item>
+        <item>22:00</item>
+        <item>22:30</item>
+        <item>23:00</item>
+        <item>23:30</item>
+    </string-array>
+
+    <string name="choose_obrokov">Количество приемов пищи</string>
+    <string-array name="obrokov">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    <string name="indication_1">Запоры</string>
+    <string name="indication_2">Изжога</string>
+    <string name="indication_3">Дефицит магния</string>
+    <string name="indication_4">Сахарный диабет</string>
+    <string name="indication_5">Заболевания желчного пузыря и поджелудочной железы</string>
+    <string name="indication_6">Мочекаменная болезнь</string>
+    <string name="indication_7">Ожирение и похудение</string>
+    <string name="indication_8">Сердечно-сосудистые заболевания</string>
+    <string name="indication_9">Стресс, головные боли</string>
+    <string name="indication_10">Для улучшения самочувствия</string>
+
+    <string name="indication_1_desc">Минеральная вода Donat Mg является природным осмотическим слабительным. Она содержит сульфаты и около 1000 мг/л магния. Сульфат-ионы обладают способностью связывать большое количество воды, что увеличивает объем содержимого кишечника в 3-5 раз, стимулируя перистальтику кишечника.</string>
+    <string name="indication_2_desc">Donat Mg, благодаря своему уникальному составу с содержанием примерно 7800 мг гидрокарбоната, обладает способностью связывания и буферизации свободных кислот. Гидрокарбонат натрия в составе минеральной воды Donat Mg оказывают щелочное и противовоспалительное действие на слизистую оболочку желудка; магний и кальций нормализуют уровень натрия и уменьшают отечность слизистых оболочек.</string>
+    <string name="indication_3_desc">Donat Mg – природная минеральная вода с самым высоким содержанием магния*. Суточная потребность организма в этом минерале составляет в среднем 375 мг. Потребность в магнии возрастает во время беременности и лактации, а также при быстром росте в подростковом периоде. Значительные потери магния и, соответственно, рост суточной потребности в нем наблюдаются и в пожилом возрасте, а также при нарушениях обмена веществ, употреблении некоторых медикаментов, из-за диет или в стрессовом состоянии. Лучший способ обеспечить поступление магния в организм – с водой. Вот почему организм моментально усваивает магний, содержащийся в минеральной воде Donat Mg.\n\n*Рассматриваемые сравнительные данные включали все представленные на рынке природные минеральные воды, включенные в реестр ЕС.</string>
+    <string name="indication_4_desc">Дефицит магния у пациентов с сахарным диабетом второго типа происходит из-за увеличения потери этого минерала во время мочеиспускания. Сахарный диабет всех типов (в том числе диабет беременных) вызван дисбалансом глюкозы в крови и ингибирует действие инсулина. Употребление Donat Mg позволяет восполнить дефицит магния и сделать диабет более контролируемым, а колебания сахара менее выраженными.</string>
+    <string name="indication_5_desc">Желчь пациентов, перенесших операцию по удалению камней, содержит слишком много холестерина или слишком мало желчных кислот и лецитина. В сокращенном или спавшемся состоянии в желчном пузыре скапливается загустевшая желчь, которая практически не выводится. Сульфат магния, содержащийся в воде Donat Mg, стимулирует желчеотделение. Регулярное опорожнение желчного пузыря предотвращает образование желчных камней.</string>
+    <string name="indication_6_desc">Благодаря высокому содержанию гидрокарбоната и магния, минеральная вода Donat Mg естественным путем предотвращает образование кальций-оксалатов, уратов и цистинов, которому способствует кислая среда. Оба компонента влияют на регулирование кислотно-щелочного баланса в организме. Гидрокарбонат обеспечивает мощный прилив щелочей, которые связывают кислоты и тем самым создают щелочную среду, препятствующую образованию этих видов камней.</string>
+    <string name="indication_7_desc">Природная минеральная вода Donat Mg нейтрализует кислоту и возмещает утраченные минералы. В начале процесса похудения она очень полезна в качестве естественного слабительного и средства для очищения организма от токсинов. Сульфаты в составе минеральной воды Donat Mg повышают секрецию холецистокинина – гормона, снижающего аппетит. Магний способствует пищеварению, укрепляет иммунитет и увеличивает запасы энергии.</string>
+    <string name="indication_8_desc">Минеральная вода Donat Mg содержит незначительное количество поваренной соли и не влияет на кровяное давление. При этом она отличается высоким содержанием магния (1000 мг/л). Магний является жизненно необходимым элементом, который, среди прочего, способствует функционированию мышечной системы. Сердце человека – мышца, и для его нормального функционирования требуется магний. Поскольку дефицит этого минерала может вызвать сердечную недостаточность, аритмию и другие нарушения, необходимо обеспечить его ежедневное поступление в организм.</string>
+    <string name="indication_9_desc">Стресс влияет на наше физическое и психическое состояние, поскольку в состоянии стресса организм теряет жидкость, а вместе с ней – полезные вещества. Соответственно, его потребность в витаминах и минералах возрастает. Дефицит магния может стать причиной даже некоторых видов головной боли. Минеральная вода Donat Mg содержит магний, который ученые называют «антистрессовым минералом» и «бальзамом для нервов и мышц».</string>
+    <string name="indication_10_desc">Минеральная вода Donat Mg отличается высоким содержанием магния, сульфатов и гидрокарбонатов. Кроме того, она содержит кальций, натрий и другие микроэлементы. Donat Mg насыщает организм минералами и, в то же время, благодаря высокому уровню гидрокарбонатов регулирует кислотно-щелочной баланс в организме. Вы можете пить минеральную воду просто для улучшения здоровья и общего самочувствия.</string>
+    
+    <string name="drinking_na_tesce">Натощак</string>
+    <string name="drinking_pred_spanjem">Перед сном</string>
+    <string name="drinking_veckrat_dnevno">Несколько раз в день</string>
+    <string name="drinking_20_min_pred">за 20 мин. перед едой</string>
+    <string name="drinking_med_obroki">Между приемами пищи и через 1-2 часа после еды</string>
+    <string name="drinking_opoldne">В полдень</string>
+    <string name="drinking_zvecer">Вечером</string>
+    <string name="drinking_pred_kosilom">До обеда</string>
+    <string name="drinking_pred_vecerjo">Перед ужином</string>
+    <string name="drinking_obcutek_lakote">При чувстве голода между приемами пищи</string>
+    <string name="drinking_3_4_dnevno">3-4 раза в день</string>
+    <string name="drinking_pred_jedjo">Перед едой</string>
+    
+    <string name="temperature_toplo">30–37 °C (теплая)</string>
+    <string name="temperature_mlacno">23–25 °C (теплая)</string>
+    <string name="temperature_sobna">20 °C (комнатная темп.)</string>
+    <string name="temperature_hladno">17–18 °C (холодная)</string>
+    <string name="volume_suffix">dcl</string>
+  
+    <string name="spped_hitro">Быстро</string>
+    <string name="spped_razmeroma_hitro">Oтносительно быстро</string>
+    <string name="spped_pocasi">Mедленно</string>
+
+    <string name="interval_stalno">Постоянно или с небольшими перерывами</string>
+    <string name="interval_5_dni">5 дней, перерыв на 2 дня, регулярное повторение</string>
+    <string name="interval_6_tednov">6 недель, с перерывом на 4 недели, 3 раза в год</string>
+    <string name="interval_3_mesece">3 месяца с перерывом на 1 месяц, 3 раза в год</string>
+    <string name="interval_2_meseca">2 месяца с перерывом на 1 месяц, 3 раза в год</string>
+        
+    
+</resources>

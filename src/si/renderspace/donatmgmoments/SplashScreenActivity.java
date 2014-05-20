@@ -10,7 +10,7 @@ import android.os.Handler;
 
 public class SplashScreenActivity extends Activity {
  
-    private static int SPLASH_TIME_OUT = 10000;
+    private static int SPLASH_TIME_OUT = 1000;
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class SplashScreenActivity extends Activity {
         int lang = Utils.getPrefernciesInt(SplashScreenActivity.this, "LANG");
         if (lang == -1) {
         	String langDefault = Locale.getDefault().getLanguage();
-        	if (langDefault.equals("ru") || (langDefault.equals("sr")) || (langDefault.equals("it"))){
+        	if (langDefault.equals("ru") || (langDefault.equals("hr")) || (langDefault.equals("it"))){
         		Settings.setLanguage(SplashScreenActivity.this, langDefault);
             } else {
             	Settings.setLanguage(SplashScreenActivity.this, "en"); 
