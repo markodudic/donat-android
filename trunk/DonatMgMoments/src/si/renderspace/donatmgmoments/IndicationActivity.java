@@ -10,10 +10,10 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -44,7 +44,14 @@ public class IndicationActivity extends Activity {
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
 
-		Intent intent = getIntent();
+        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
+        TextView tvTitle = (TextView) findViewById(titleId);
+        tvTitle.setTextColor(getResources().getColor(R.color.action_bar_text));
+        tvTitle.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
+        Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+        tvTitle.setTypeface(ft);
+
+        Intent intent = getIntent();
 		final int indx = intent.getIntExtra("INDX", 1);
 
 		ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
@@ -60,9 +67,12 @@ public class IndicationActivity extends Activity {
 		TextView intervalDesc = (TextView) findViewById(R.id.intervalDesc);
 		intervalDesc.setText(Settings.interval.get(indx));
 
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
+		Typeface tfl = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+
 		TableLayout lTable = (TableLayout) findViewById(R.id.drinking_data_table);
 		String[][] drinking = Settings.drinking.get(indx);
-		for (int i=0; i<drinking.length; i++) {
+		for (int i=0; i<drinking.length; i++) { 
 			String[] drink = drinking[i];
 			TableRow tr = new TableRow(this);
 			if (i%2==0) {
@@ -78,6 +88,7 @@ public class IndicationActivity extends Activity {
 			TableRow.LayoutParams tableRowParams =  new TableRow.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,1f);
 			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview1.setLayoutParams(tableRowParams);
+			textview1.setTypeface(tf);
 			tr.addView(textview1);
 			
 			LinearLayout cell = new LinearLayout(this);
@@ -91,6 +102,7 @@ public class IndicationActivity extends Activity {
 			//textview2.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
 			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview2.setLayoutParams(tableRowParams);
+			textview2.setTypeface(tfl);
 			tr.addView(textview2);
 			
 			LinearLayout cell1 = new LinearLayout(this);
@@ -104,6 +116,7 @@ public class IndicationActivity extends Activity {
 			//textview3.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
 			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview3.setLayoutParams(tableRowParams);
+			textview3.setTypeface(tfl);
 			tr.addView(textview3);		
 			
 			lTable.addView(tr);
@@ -208,6 +221,9 @@ public class IndicationActivity extends Activity {
 		dialogConfirmation.setContentView(R.layout.dialog_confirmation); 
 		dialogConfirmation.getWindow().setBackgroundDrawable(new ColorDrawable(0));
     
+		TextView confirmationTitle = (TextView) dialogConfirmation.findViewById(R.id.confirmation_title);
+		confirmationTitle.setTypeface(tf);
+		
 	    
 		LinearLayout close = (LinearLayout) dialogConfirmation.findViewById(R.id.close);
 		close.setOnClickListener(new OnClickListener() {

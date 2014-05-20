@@ -47,7 +47,8 @@
 			
 				        <TextView
 				            android:id="@+id/indicationTitle"
-				            style="@style/DialogTitleText"
+				            style="@style/IndicationTitleText"
+				            android:fontFamily="sans-serif"
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
 				            android:layout_gravity="center_vertical"
@@ -62,7 +63,8 @@
 			            android:layout_height="wrap_content"
 			            android:layout_marginTop="5dp"
 			            style="@style/TabelSecond"
-				        android:text="@string/home_screen_title" />
+				        android:fontFamily="sans-serif-light"
+			            android:text="@string/home_screen_title" />
 		 		</LinearLayout>
 		
 	    </FrameLayout> 	
@@ -101,8 +103,9 @@
 			            android:id="@+id/drinking_title"
 			            android:layout_width="wrap_content"
 			            android:layout_height="wrap_content"
-			            style="@style/DialogTitleText"
-			            android:text="@string/drinking" />
+			            style="@style/IndicationSubTitle"
+				        android:fontFamily="sans-serif"
+				        android:text="@string/drinking" />
 			    	
 			    	<LinearLayout
 				        android:layout_width="0dip"
@@ -164,8 +167,9 @@
 			            android:id="@+id/interval_title"
 			            android:layout_width="wrap_content"
 			            android:layout_height="wrap_content"
-			            style="@style/DialogTitleText"
-			            android:text="@string/interval" />
+			            style="@style/IndicationSubTitle"
+				            android:fontFamily="sans-serif"
+				            android:text="@string/interval" />
 			    	
 			    	<LinearLayout
 				        android:layout_width="0dip"
@@ -189,7 +193,8 @@
 			        <TextView
 			            android:id="@+id/intervalDesc"
 			            style="@style/TabelSecond"
-			            android:layout_width="wrap_content"
+			            android:fontFamily="sans-serif-light"
+				        android:layout_width="wrap_content"
 			            android:layout_height="wrap_content"
 			            android:text="Interval opis" />
 	
@@ -226,8 +231,9 @@
 				    
 			        <TextView
 			            android:id="@+id/startDateTitle"
-			            style="@style/DialogTitleText"
-			            android:layout_width="wrap_content"
+			            style="@style/IndicationSubTitle"
+				        android:fontFamily="sans-serif"
+				        android:layout_width="wrap_content"
 			            android:layout_height="match_parent"
 			            android:layout_marginBottom="5dp"
 			            android:text="@string/start_date" />
@@ -277,7 +283,8 @@
 			           android:id="@+id/btn_indication_start"
 			           android:text="@string/button_indication_start"
 					   style="@style/ButtonIndicationStart"
-			           android:layout_width="match_parent"
+			           android:fontFamily="sans-serif"
+				       android:layout_width="match_parent"
 			           android:layout_height="@dimen/button_height"
 			           android:layout_weight="1" />
 			    </LinearLayout>

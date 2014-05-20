@@ -13,26 +13,30 @@
        	android:layout_width="match_parent"
        	android:layout_height="wrap_content"
        	android:paddingBottom="@dimen/activity_vertical_margin"
-    	style="@style/RulesTitleText"
-       	android:text="@string/rules_title" />
+    	style="@style/IndicationTitleText"
+		android:fontFamily="sans-serif"
+		android:text="@string/rules_title" />
      
    	<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/activity_vertical_margin"
-    	style="@style/RulesText"
-       	android:text="@string/rules_title_desc" />
+    	style="@style/TabelSecond"
+		android:fontFamily="sans-serif-light"
+		android:text="@string/rules_title_desc" />
    	
     <TextView
        	android:layout_width="match_parent"
        	android:layout_height="wrap_content"
        	android:paddingBottom="@dimen/activity_vertical_margin"
-    	style="@style/RulesTitleText"
-       	android:text="@string/rules_subtitle" />
+    	style="@style/IndicationTitleText"
+		android:fontFamily="sans-serif"
+		android:text="@string/rules_subtitle" />
      
    	<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/RulesText"
-       	android:text="@string/rules_subtitle_desc" />   	
+        style="@style/TabelSecond"
+		android:fontFamily="sans-serif-light"
+		android:text="@string/rules_subtitle_desc" />   	
 </LinearLayout>

@@ -2,6 +2,7 @@ package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,7 +28,13 @@ public class RulesActivity extends Activity {
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
 		
-	}
+        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
+        TextView tvTitle = (TextView) findViewById(titleId);
+        tvTitle.setTextColor(getResources().getColor(R.color.action_bar_text));
+        tvTitle.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
+        Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+        tvTitle.setTypeface(ft);
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

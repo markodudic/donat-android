@@ -40,29 +40,49 @@
        <item name="android:textColor">@color/title_text</item>
    </style>
    
+   <style name="NotificationTitle">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/title_text</item>		        
+   </style>  
+   
    <style name="NotificationPeriod">
-       <item name="android:textSize">34.0sp</item>
+       <item name="android:textSize">36.0sp</item>
        <item name="android:textColor">@color/title_text</item>		        
    </style>   
 
    <style name="NotificationDate">
-       <item name="android:textSize">24.0sp</item>
+       <item name="android:textSize">28.0sp</item>
        <item name="android:textColor">@color/title_text</item>		        
    </style>   
 
    <style name="NotificationText">
        <item name="android:background">@color/background_action_bar</item>
-       <item name="android:textSize">18.0sp</item>
+       <item name="android:textSize">21.0sp</item>
        <item name="android:textColor">@color/title_text</item>	
        <item name="android:paddingLeft">@dimen/layout_padding</item>	
        <item name="android:paddingRight">@dimen/layout_padding</item>	
    </style>   
       
    <style name="SettingsText">
+       <item name="android:textSize">26.0sp</item>
+       <item name="android:textColor">@color/title</item>
+   </style>
+
+   <style name="SettingsValue">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/title_text</item>
    </style>
+ 
+   <style name="SettingsLicence">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/button_text</item>
+   </style>
 
+   <style name="SettingsRules">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/title</item>
+   </style>
+   
    <style name="TabelFirst">
        <item name="android:textSize">16.0sp</item>
        <item name="android:textStyle">bold</item>
@@ -73,34 +93,37 @@
        <item name="android:textSize">16.0sp</item>
        <item name="android:textColor">@color/title_text</item>
    </style>
-      
-   <style name="RulesTitleText">
+   
+   <style name="IndicationTitleText">
        <item name="android:textSize">22.0sp</item>
        <item name="android:textStyle">bold</item>
-       <item name="android:textColor">@color/title_text</item>
+       <item name="android:textColor">@color/title</item>
    </style>
-
+      
    <style name="DialogTitleText">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textStyle">bold</item>
-       <item name="android:textColor">@color/title_text</item>
+       <item name="android:textColor">@color/background_button</item>
    </style>
 
+   <style name="DialogDescText" parent="DialogTitleText">
+       <item name="android:textSize">19.0sp</item>
+   </style>
+
+   <style name="IndicationSubTitle" parent="DialogTitleText">
+       <item name="android:textSize">19.0sp</item>
+   </style>
+   
    <style name="DialogText">
-       <item name="android:textSize">18.0sp</item>
+       <item name="android:textSize">17.0sp</item>
        <item name="android:textColor">@color/title_text</item>
    </style>
 
    <style name="DialogConfirmText">
-       <item name="android:textSize">20.0sp</item>
-       <item name="android:textStyle">bold</item>
-       <item name="android:textColor">@color/title_text</item>
+       <item name="android:textSize">23.0sp</item>
+       <item name="android:textColor">@color/background_button</item>
    </style>
-      
-   <style name="RulesText">
-       <item name="android:textSize">18.0sp</item>
-       <item name="android:textColor">@color/title_text</item>
-   </style>
+
    
    <style name="IndicationsTitle">
        <item name="android:background">@color/background_title</item>
@@ -120,7 +143,6 @@
    
    <style name="LayoutIndication">
        <item name="android:paddingTop">@dimen/button_margin</item>
-       <item name="android:paddingBottom">@dimen/button_margin</item>
        <item name="android:paddingRight">@dimen/title_vertical_padding</item>
        <item name="android:paddingLeft">@dimen/title_vertical_padding</item>
    </style>
