@@ -36,8 +36,7 @@ public class SettingsActivity extends Activity {
 		spVecerja = (Spinner) findViewById(R.id.sp_vecerja);
 		spSpanje = (Spinner) findViewById(R.id.sp_spanje);
 		spObrokov = (Spinner) findViewById(R.id.sp_obrokov); 
-
-		
+        
 		Button btnSave = (Button) findViewById(R.id.btn_save);
 		btnSave.setOnClickListener(new OnClickListener() {
 	 		  @Override

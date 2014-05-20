@@ -40,7 +40,7 @@ public class NotificationActivity extends Activity {
         
         int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView tvTitle = (TextView) findViewById(titleId);
-        tvTitle.setTextColor(getResources().getColor(R.color.action_bar_text));
+        tvTitle.setTextColor(getResources().getColor(R.color.text_green));
         tvTitle.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         tvTitle.setTypeface(ft);

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" 
-    android:background="@color/background_dialog" >
+    android:background="@color/background_white" >
     
 	<LinearLayout
 	    android:id="@+id/close"
@@ -48,7 +48,7 @@
 
     <LinearLayout
         android:id="@+id/back"
-	    style="@style/Title"
+	    style="@style/HomeScreenTitle"
         android:layout_width="match_parent"
 		android:layout_height="@dimen/button_height"
 		android:orientation="horizontal" >

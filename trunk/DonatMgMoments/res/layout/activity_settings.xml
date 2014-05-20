@@ -19,13 +19,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/languages"
-        android:prompt="@string/choose_language" />
+        style="@style/HomeScreenTitleText"
+		android:prompt="@string/choose_language" />
         
     <ImageView
         android:id="@+id/iv_notification"
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_height"
-        android:src="@drawable/ic_notification" />
+        android:src="@drawable/ic_times" />
 
    		      
     <LinearLayout
@@ -38,7 +39,8 @@
             android:layout_height="@dimen/title_height"
             android:text="@string/zbujanje"
 			style="@style/SettingsText"
-       		android:layout_weight="1" />
+		    android:fontFamily="sans-serif-light"
+			android:layout_weight="1" />
         
         <Spinner
 	        android:id="@+id/sp_zbujanje"
@@ -46,8 +48,8 @@
 	        android:layout_height="@dimen/title_height"
 	        android:entries="@array/hours"
 	        android:prompt="@string/choose_hours"
-			style="@style/SettingsText"
-       		android:layout_weight="3" />
+			style="@style/HomeScreenTitleText"
+		    android:layout_weight="3" />
     </LinearLayout>
     
     <LinearLayout
@@ -60,7 +62,8 @@
             android:layout_height="@dimen/title_height"
             android:text="@string/zajtrk"
 			style="@style/SettingsText"
-       		android:layout_weight="1" />
+       		android:fontFamily="sans-serif-light"
+			android:layout_weight="1" />
         
         <Spinner
 	        android:id="@+id/sp_zajtrk"
@@ -82,7 +85,8 @@
             android:layout_height="@dimen/title_height"
             android:text="@string/kosilo"
 			style="@style/SettingsText"
-       		android:layout_weight="1" />
+       		android:fontFamily="sans-serif-light"
+			android:layout_weight="1" />
         
         <Spinner
 	        android:id="@+id/sp_kosilo"
@@ -104,7 +108,8 @@
             android:layout_height="@dimen/title_height"
             android:text="@string/vecerja"
 			style="@style/SettingsText"
-       		android:layout_weight="1" />
+       		android:fontFamily="sans-serif-light"
+			android:layout_weight="1" />
         
         <Spinner
 	        android:id="@+id/sp_vecerja"
@@ -126,7 +131,8 @@
             android:layout_height="@dimen/title_height"
             android:text="@string/spanje"
 			style="@style/SettingsText"
-       		android:layout_weight="1" />
+       		android:fontFamily="sans-serif-light"
+			android:layout_weight="1" />
         
         <Spinner
 	        android:id="@+id/sp_spanje"
@@ -148,7 +154,8 @@
             android:layout_height="@dimen/title_height"
             android:text="@string/obrokov"
 			style="@style/SettingsText"
-       		android:layout_weight="1" />
+       		android:fontFamily="sans-serif-light"
+			android:layout_weight="1" />
         
         <Spinner
 	        android:id="@+id/sp_obrokov"
@@ -173,6 +180,8 @@
        	android:layout_width="match_parent"
        	android:layout_height="@dimen/title_height"
        	android:gravity="center_horizontal"
+		style="@style/SettingsLicence"
+		android:fontFamily="sans-serif-light"
 		android:text="@string/licence" />
      
    	<TextView

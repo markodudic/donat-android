@@ -6,8 +6,8 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
     	<item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>
-        <item name="android:spinnerItemStyle">@style/SettingsText</item> 
-        <item name="android:spinnerDropDownItemStyle">@style/SettingsText</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerText</item> 
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerText</item>
     </style>
     
 	<style name="MyTheme.ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
@@ -18,131 +18,78 @@
 	  <item name="android:textColor">@color/text_green</item>
 	  <item name="android:textSize">18.0sp</item>
 	</style>
-  
-  
-   <style name="Title">
-       <item name="android:background">@color/background_title</item>
-   </style> 
+ 
     
-   <style name="HomeScreenTitle">
-       <item name="android:background">@color/background_title</item>
-   </style>
-
-   <style name="HomeScreenTitleText">
+   <style name="ButtonIndicationStart">
+	   <item name="android:layout_marginTop">@dimen/button_margin</item>
        <item name="android:textSize">18.0sp</item>
-       <item name="android:textColor">@color/title_text</item>
-   </style>
- 
-   <style name="StartDate">
-       <item name="android:background">@drawable/ic_date</item>
-       <item name="android:padding">@dimen/button_margin</item>
-       <item name="android:textSize">40.0sp</item>
-       <item name="android:textColor">@color/title_text</item>
-   </style>
-   
-   <style name="NotificationTitle">
-       <item name="android:textSize">18.0sp</item>
-       <item name="android:textColor">@color/title_text</item>		        
-   </style>  
-   
-   <style name="NotificationPeriod">
-       <item name="android:textSize">36.0sp</item>
-       <item name="android:textColor">@color/title_text</item>		        
+       <item name="android:textColor">@color/background_white</item>
+       <item name="android:background">@drawable/dr_button</item>
+       <item name="android:gravity">center_vertical|center_horizontal</item>
    </style>   
-
-   <style name="NotificationDate">
-       <item name="android:textSize">28.0sp</item>
-       <item name="android:textColor">@color/title_text</item>		        
-   </style>   
-
-   <style name="NotificationText">
-       <item name="android:background">@color/background_action_bar</item>
-       <item name="android:textSize">21.0sp</item>
-       <item name="android:textColor">@color/title_text</item>	
-       <item name="android:paddingLeft">@dimen/layout_padding</item>	
-       <item name="android:paddingRight">@dimen/layout_padding</item>	
-   </style>   
-      
-   <style name="SettingsText">
-       <item name="android:textSize">26.0sp</item>
-       <item name="android:textColor">@color/title</item>
-   </style>
-
-   <style name="SettingsValue">
-       <item name="android:textSize">18.0sp</item>
-       <item name="android:textColor">@color/title_text</item>
-   </style>
- 
-   <style name="SettingsLicence">
-       <item name="android:textSize">16.0sp</item>
-       <item name="android:textColor">@color/button_text</item>
-   </style>
-
-   <style name="SettingsRules">
-       <item name="android:textSize">16.0sp</item>
-       <item name="android:textColor">@color/title</item>
-   </style>
-   
-   <style name="TabelFirst">
-       <item name="android:textSize">16.0sp</item>
-       <item name="android:textStyle">bold</item>
-       <item name="android:textColor">@color/title_text</item>
-   </style>
   
-   <style name="TabelSecond">
-       <item name="android:textSize">16.0sp</item>
-       <item name="android:textColor">@color/title_text</item>
+   <style name="Dialog" parent="@android:style/Theme.Dialog">
+	    <item name="android:windowNoTitle">true</item>
    </style>
-   
-   <style name="IndicationTitleText">
-       <item name="android:textSize">22.0sp</item>
-       <item name="android:textStyle">bold</item>
-       <item name="android:textColor">@color/title</item>
+	
+   <style name="DialogTitle">
+       <item name="android:background">@color/background_white</item>
    </style>
-      
+   	
    <style name="DialogTitleText">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textStyle">bold</item>
-       <item name="android:textColor">@color/background_button</item>
+       <item name="android:textColor">@color/text_green</item>
    </style>
 
    <style name="DialogDescText" parent="DialogTitleText">
        <item name="android:textSize">19.0sp</item>
    </style>
 
-   <style name="IndicationSubTitle" parent="DialogTitleText">
-       <item name="android:textSize">19.0sp</item>
-   </style>
-   
    <style name="DialogText">
        <item name="android:textSize">17.0sp</item>
-       <item name="android:textColor">@color/title_text</item>
+       <item name="android:textColor">@color/text_dark</item>
    </style>
 
    <style name="DialogConfirmText">
        <item name="android:textSize">23.0sp</item>
-       <item name="android:textColor">@color/background_button</item>
+       <item name="android:textColor">@color/text_green</item>
+   </style>
+   		
+   <style name="HomeScreenTitle">
+       <item name="android:background">@color/background_white_70</item>
+   </style>
+
+   <style name="HomeScreenTitleText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/text_dark</item>
    </style>
 
    
+   <style name="IndicationTitleText">
+       <item name="android:textSize">22.0sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">@color/text_green</item>
+   </style>
+      
+   <style name="IndicationSubTitle" parent="DialogTitleText">
+       <item name="android:textSize">19.0sp</item>
+   </style>
+   
    <style name="IndicationsTitle">
-       <item name="android:background">@color/background_title</item>
+       <item name="android:background">@color/background_white_70</item>
        <item name="android:paddingTop">@dimen/layout_padding</item>
        <item name="android:paddingBottom">@dimen/layout_padding</item>
        <item name="android:gravity">center_vertical</item>
    </style>
-
    
    <style name="IndicationsDate">
        <item name="android:background">@color/background_green_10</item>
    </style>
    
-   <style name="LayoutIndicationBackground">
-        <item name="android:background">@drawable/dr_border</item>
-   </style>
-   
    <style name="LayoutIndication">
        <item name="android:paddingTop">@dimen/button_margin</item>
+       <item name="android:paddingBottom">@dimen/button_margin</item>
        <item name="android:paddingRight">@dimen/title_vertical_padding</item>
        <item name="android:paddingLeft">@dimen/title_vertical_padding</item>
    </style>
@@ -157,45 +104,70 @@
    
    <style name="LayoutIndicationAlfaTitle">
        <item name="android:background">@color/background_white_70</item>
+   </style> 
+   
+   <style name="NotificationDate">
+       <item name="android:textSize">28.0sp</item>
+       <item name="android:textColor">@color/text_green</item>		        
    </style>   
+   
+   <style name="NotificationPeriod">
+       <item name="android:textSize">34.0sp</item>
+       <item name="android:textColor">@color/text_green</item>		        
+   </style> 
+
+   <style name="NotificationText">
+       <item name="android:background">@color/background_white_70</item>
+       <item name="android:textSize">21.0sp</item>
+       <item name="android:textColor">@color/text_light</item>	
+       <item name="android:paddingLeft">@dimen/layout_padding</item>	
+       <item name="android:paddingRight">@dimen/layout_padding</item>	
+   </style> 
+
+   <style name="SettingsText">
+       <item name="android:textSize">26.0sp</item>
+       <item name="android:textColor">@color/text_green</item>
+   </style>
+ 
+   <style name="SettingsLicence">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/text_light</item>
+   </style>
+
+   <style name="SettingsRules">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/text_green</item>
+   </style>   
+      
+   <style name="SpinnerText">
+       <item name="android:textSize">20.0sp</item>
+       <item name="android:textColor">@color/text_light</item>
+   </style>
+   
+   <style name="StartDate">
+       <item name="android:background">@drawable/ic_date</item>
+       <item name="android:padding">@dimen/button_margin</item>
+       <item name="android:textSize">40.0sp</item>
+       <item name="android:textColor">@color/text_dark</item>
+   </style>
+   
+   <style name="TabelFirst">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">@color/text_dark</item>
+   </style>
+  
+   <style name="TabelSecond">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/text_dark</item>
+   </style>
       
    <style name="TextViewIndication">
        <item name="android:textSize">18.0sp</item>
-       <item name="android:textColor">@color/button_text</item>
+       <item name="android:textColor">@color/text_light</item>
        <item name="android:paddingRight">@dimen/title_vertical_padding</item>
        <item name="android:gravity">center_vertical</item>
    </style>
-	    
-   <!-- style name="ButtonIndicationLeft">
-       <item name="android:textSize">18.0sp</item>
-       <item name="android:textColor">@color/button_text</item>
-       <item name="android:background">@drawable/dr_unselected</item>
-       <item name="android:layout_width">200dp</item>
-       <item name="android:layout_height">100dp</item>
-       <item name="android:layout_marginTop">0dp</item>
-       <item name="android:layout_marginBottom">@dimen/button_margin</item>
-       <item name="android:layout_marginRight">@dimen/button_margin</item>
-       <item name="android:gravity">center_vertical|center_horizontal</item>
-	   <item name="android:paddingTop">@dimen/button_margin</item>
-   </style>
-
-   <style name="ButtonIndicationRight" parent="ButtonIndicationLeft">
-       <item name="android:layout_marginRight">0dp</item>
-   </style-->
    
-   <style name="ButtonIndicationStart">
-	   <item name="android:layout_marginTop">@dimen/button_margin</item>
-       <item name="android:textSize">18.0sp</item>
-       <item name="android:textColor">@color/button_text_light</item>
-       <item name="android:background">@drawable/dr_button</item>
-       <item name="android:gravity">center_vertical|center_horizontal</item>
-   </style>   
-  
-   <style name="Dialog" parent="@android:style/Theme.Dialog">
-	    <item name="android:windowNoTitle">true</item>
-   </style>
-	
-   <style name="DialogTitle">
-       <item name="android:background">@color/background_dialog</item>
-   </style>   
+   
 </resources>

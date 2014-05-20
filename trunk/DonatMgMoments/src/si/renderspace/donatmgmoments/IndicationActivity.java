@@ -46,7 +46,7 @@ public class IndicationActivity extends Activity {
 
         int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView tvTitle = (TextView) findViewById(titleId);
-        tvTitle.setTextColor(getResources().getColor(R.color.action_bar_text));
+        tvTitle.setTextColor(getResources().getColor(R.color.text_green));
         tvTitle.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         tvTitle.setTypeface(ft);
@@ -85,14 +85,14 @@ public class IndicationActivity extends Activity {
 			textview1.setText(drink[0]);
 			textview1.setTextAppearance(this, R.style.TabelFirst);
 			//textview1.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f));
-			TableRow.LayoutParams tableRowParams =  new TableRow.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,1f);
+			TableRow.LayoutParams tableRowParams =  new TableRow.LayoutParams(100,LayoutParams.WRAP_CONTENT,1f);
 			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview1.setLayoutParams(tableRowParams);
 			textview1.setTypeface(tf);
 			tr.addView(textview1);
 			
 			LinearLayout cell = new LinearLayout(this);
-			cell.setBackgroundColor(this.getResources().getColor(R.color.table_row_border));
+			cell.setBackgroundColor(this.getResources().getColor(R.color.background_white));
 			cell.setLayoutParams(new TableRow.LayoutParams( 2,LayoutParams.MATCH_PARENT));//2px border on the right for the cell
 			tr.addView(cell);
 			
@@ -106,7 +106,7 @@ public class IndicationActivity extends Activity {
 			tr.addView(textview2);
 			
 			LinearLayout cell1 = new LinearLayout(this);
-			cell1.setBackgroundColor(this.getResources().getColor(R.color.table_row_border));
+			cell1.setBackgroundColor(this.getResources().getColor(R.color.background_white));
 			cell1.setLayoutParams(new TableRow.LayoutParams( 2,LayoutParams.MATCH_PARENT));//2px border on the right for the cell
 			tr.addView(cell1);
 			
