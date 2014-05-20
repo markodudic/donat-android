@@ -25,7 +25,7 @@
     <string name="obrokov">Количество приемов пищи</string>
     <string name="close">ОТМЕНА</string>
     <string name="home">На главную</string>
-    <string name="licence">Droga kolinska d.d. Vse pravice pridržane. Droga Kolinska je del Atlantic grupe.</string>
+    <string name="licence">© АО "Дрога Колинска" (Droga Kolinska d.d). Все права защищены. "Дрога Колинска" является частью Atlantic Grupe.</string>
     <string name="rules">Pravila in pogoji uporabe</string>
     <string name="rules_title">Pravila in pogoji uporabe</string>
     <string name="rules_title_desc">Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe.\n\nPravila in pogoji uporabe. Pravila in pogoji uporabe. Pravila in pogoji uporabe</string>
@@ -35,10 +35,10 @@
     
     <string name="choose_language">Izberi jezik</string>
     <string-array name="languages">
-        <item>Angleščina</item>
-        <item>Ruščina</item>
-        <item>Italianščina</item>
-        <item>Srbščina</item>
+        <item>English</item>
+        <item>Pусский</item>
+        <item>Hrvatski</item>
+        <item>Italiano</item>
     </string-array>
     
     <string name="choose_hours">Izberi uro</string>
@@ -95,7 +95,6 @@
 
     <string name="choose_obrokov">Количество приемов пищи</string>
     <string-array name="obrokov">
-        <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
