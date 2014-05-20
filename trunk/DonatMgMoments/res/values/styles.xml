@@ -15,7 +15,7 @@
 	</style>
 	
 	<style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-	  <item name="android:textColor">@color/button_text</item>
+	  <item name="android:textColor">@color/text_green</item>
 	  <item name="android:textSize">18.0sp</item>
 	</style>
   
@@ -111,7 +111,7 @@
 
    
    <style name="IndicationsDate">
-       <item name="android:background">@color/background_date</item>
+       <item name="android:background">@color/background_green_10</item>
    </style>
    
    <style name="LayoutIndicationBackground">
@@ -126,13 +126,15 @@
    </style>
    
    <style name="LayoutIndicationAlfa">
-       <item name="android:background">@drawable/dr_background_app</item>
-       <item name="android:alpha">0.5</item>
+       <item name="android:background">@color/list_unpressed_30</item>
+   </style>
+
+   <style name="LayoutIndicationBeta">
+       <item name="android:background">@color/background_white_50</item>
    </style>
    
    <style name="LayoutIndicationAlfaTitle">
-       <item name="android:background">@color/background_title</item>
-       <item name="android:alpha">0.5</item>
+       <item name="android:background">@color/background_white_70</item>
    </style>   
       
    <style name="TextViewIndication">

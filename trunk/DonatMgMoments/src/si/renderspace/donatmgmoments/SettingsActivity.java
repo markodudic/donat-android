@@ -1,7 +1,10 @@
 package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -23,7 +27,7 @@ public class SettingsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
-
+ 
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
@@ -35,6 +39,7 @@ public class SettingsActivity extends Activity {
 		spVecerja = (Spinner) findViewById(R.id.sp_vecerja);
 		spSpanje = (Spinner) findViewById(R.id.sp_spanje);
 		spObrokov = (Spinner) findViewById(R.id.sp_obrokov); 
+
 		
 		Button btnSave = (Button) findViewById(R.id.btn_save);
 		btnSave.setOnClickListener(new OnClickListener() {
@@ -144,5 +149,7 @@ public class SettingsActivity extends Activity {
 	    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 	    SettingsActivity.this.startActivity(i);
 	}	
+	
+
 
 }

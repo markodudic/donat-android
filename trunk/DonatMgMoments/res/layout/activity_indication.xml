@@ -6,24 +6,26 @@
     android:orientation="vertical"
     tools:context=".IndicationActivity" >
 
-    <FrameLayout
-         android:layout_width="match_parent"
-         android:layout_height="match_parent" >
 
-	    <ImageView
-	        style="@style/LayoutIndicationAlfa"
+    <ScrollView
+        android:id="@+id/scroll_page_step1"
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent" >        
+    	<LinearLayout
 	        android:layout_width="match_parent"
-	    	android:layout_height="match_parent" />
-	    <ScrollView
-	        android:id="@+id/scroll_page_step1"
-		    android:layout_width="match_parent"
-	        android:layout_height="match_parent" >        
-		    
-	        <LinearLayout
+        	android:layout_height="match_parent"
+        	style="@style/LayoutIndicationBackground"
+	        android:orientation="vertical" >
+	        		    
+	    <FrameLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent" >
+	
+		    <ImageView
+		        style="@style/LayoutIndicationAlfaTitle"
 		        android:layout_width="match_parent"
-	        	android:layout_height="match_parent"
-	        	style="@style/LayoutIndicationBackground"
-		        android:orientation="vertical" >
+		    	android:layout_height="match_parent" />
+		    
 	    
 			    <LinearLayout
 			        android:layout_width="match_parent"
@@ -63,182 +65,225 @@
 				        android:text="@string/home_screen_title" />
 		 		</LinearLayout>
 		
-			
+	    </FrameLayout> 	
+	    
+	   <LinearLayout
+	        android:layout_width="match_parent"
+			android:layout_height="2dip"
+			android:background="@color/transparent_color"
+	        android:orientation="vertical" />
+	    
+	    <FrameLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent" >
+
+		    <ImageView
+		        style="@style/LayoutIndicationBeta"
+		        android:layout_width="match_parent"
+		    	android:layout_height="match_parent" />		
+
+		    	    	
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        style="@style/LayoutIndication"
+		        android:orientation="vertical">
+		        	    	    
+		    			
 			    <LinearLayout
+			        android:id="@+id/drinking_title_layout"
 			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
-			        android:orientation="vertical">
-			        
-				    <LinearLayout
-				        android:id="@+id/drinking_title_layout"
-				        android:layout_width="match_parent"
-				        android:layout_height="@dimen/title_height"
-				        android:gravity="center_vertical"
-				        android:orientation="horizontal" >
-				
-				        <TextView
-				            android:id="@+id/drinking_title"
-				            android:layout_width="wrap_content"
-				            android:layout_height="wrap_content"
-				            style="@style/DialogTitleText"
-				            android:text="@string/drinking" />
-				    	
-				    	<LinearLayout
-					        android:layout_width="0dip"
-							android:layout_height="0dip"
-							android:layout_weight="1" />
-				    
-					    <ImageView
-					        android:id="@+id/drinking_arrow"
-					        android:layout_height="wrap_content"
-					        android:layout_width="@dimen/title_height"
-					        android:src="@drawable/ic_arrow_down" />
-				       </LinearLayout>
-				
-				    
-				    <LinearLayout
-				        android:id="@+id/drinking_data_layout"
-				      	android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:orientation="vertical" >
-					    
-					    <TableLayout
-					        android:id="@+id/drinking_data_table"
-				      		android:layout_width="match_parent"
-					        android:layout_height="wrap_content" >
-					        
-				        </TableLayout>
-				    </LinearLayout>
-		  		</LinearLayout>
-		
+			        android:layout_height="@dimen/title_height"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal" >
 			
+			        <TextView
+			            android:id="@+id/drinking_title"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            style="@style/DialogTitleText"
+			            android:text="@string/drinking" />
+			    	
+			    	<LinearLayout
+				        android:layout_width="0dip"
+						android:layout_height="0dip"
+						android:layout_weight="1" />
+			    
+				    <ImageView
+				        android:id="@+id/drinking_arrow"
+				        android:layout_height="wrap_content"
+				        android:layout_width="@dimen/title_height"
+				        android:src="@drawable/ic_arrow_down" />
+			    </LinearLayout>
+			
+			    
+			    <LinearLayout
+			        android:id="@+id/drinking_data_layout"
+			      	android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical" >
+				    
+				    <TableLayout
+				        android:id="@+id/drinking_data_table"
+			      		android:layout_width="match_parent"
+				        android:layout_height="wrap_content" >
+			        </TableLayout>
+			    </LinearLayout>
+			</LinearLayout>
+	    </FrameLayout> 	
+	    
+	   <LinearLayout
+	        android:layout_width="match_parent"
+			android:layout_height="2dip"
+			android:background="@color/transparent_color"
+	        android:orientation="vertical" />
+	    
+	    <FrameLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent" >
+				    
+		    <ImageView
+		        style="@style/LayoutIndicationBeta"
+		        android:layout_width="match_parent"
+		    	android:layout_height="match_parent" />		
+	        
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        style="@style/LayoutIndication"
+		        android:orientation="vertical">
 		    
-			    <LinearLayout
+		        <LinearLayout
+			        android:id="@+id/interval_title_layout"
+				    android:orientation="horizontal"
 			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+				    android:gravity="center_vertical"
+			        android:layout_height="@dimen/title_height" >
+			
+			        <TextView
+			            android:id="@+id/interval_title"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            style="@style/DialogTitleText"
+			            android:text="@string/interval" />
+			    	
+			    	<LinearLayout
+				        android:layout_width="0dip"
+						android:layout_height="0dip"
+						android:layout_weight="1" />
+			    
+				    <ImageView
+				        android:id="@+id/interval_arrow"
+				        android:layout_height="wrap_content"
+				        android:layout_width="@dimen/title_height"
+				        android:src="@drawable/ic_arrow_down" />
+			    </LinearLayout>
+			
+			    
+			    <LinearLayout
+			        android:id="@+id/interval_data_layout"
+			      	android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical" >
+				    
+			        <TextView
+			            android:id="@+id/intervalDesc"
+			            style="@style/TabelSecond"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="Interval opis" />
+	
+			    </LinearLayout>
+			</LinearLayout>
+	    </FrameLayout> 	
+	    
+	   <LinearLayout
+	        android:layout_width="match_parent"
+			android:layout_height="2dip"
+			android:background="@color/transparent_color"
+	        android:orientation="vertical" />
+	    
+	    <FrameLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent" >
+			    		
+		    <ImageView
+		        style="@style/LayoutIndicationBeta"
+		        android:layout_width="match_parent"
+		    	android:layout_height="match_parent" />		
+	        				    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        style="@style/LayoutIndication"
+		        android:orientation="vertical">
+		    			    
+		    	<LinearLayout
+			        android:id="@+id/start_date_layout"
+			      	android:layout_width="match_parent"
+					android:layout_height="wrap_content"
 			        android:orientation="vertical">
 				    
+			        <TextView
+			            android:id="@+id/startDateTitle"
+			            style="@style/DialogTitleText"
+			            android:layout_width="wrap_content"
+			            android:layout_height="match_parent"
+			            android:layout_marginBottom="5dp"
+			            android:text="@string/start_date" />
+			
 				    <LinearLayout
-				        android:id="@+id/interval_title_layout"
-					    android:orientation="horizontal"
-				        android:layout_width="match_parent"
-					    android:gravity="center_vertical"
-				        android:layout_height="@dimen/title_height" >
-				
+				        android:id="@+id/start_date_date_layout"
+				      	android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+				        android:padding="@dimen/button_margin"
+						style="@style/IndicationsDate"
+		        		android:orientation="horizontal">
+				        
 				        <TextView
-				            android:id="@+id/interval_title"
+				            android:id="@+id/startDateDate"
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            style="@style/DialogTitleText"
-				            android:text="@string/interval" />
-				    	
-				    	<LinearLayout
+				            style="@style/StartDate"
+		        			android:text="12" />
+	
+				        <LinearLayout
 					        android:layout_width="0dip"
 							android:layout_height="0dip"
 							android:layout_weight="1" />
-				    
-					    <ImageView
-					        android:id="@+id/interval_arrow"
-					        android:layout_height="wrap_content"
-					        android:layout_width="@dimen/title_height"
-					        android:src="@drawable/ic_arrow_down" />
-				    </LinearLayout>
-				
-				    
-				    <LinearLayout
-				        android:id="@+id/interval_data_layout"
-				      	android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:orientation="vertical" >
-					    
+			        
 				        <TextView
-				            android:id="@+id/intervalDesc"
-				            style="@style/TabelSecond"
+				            android:id="@+id/startDateMonth"
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:text="Interval opis" />
-		
-				    </LinearLayout>
-		 		</LinearLayout>
-		 
-		
-			    <LinearLayout
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
-			        android:orientation="vertical">
-				    
-				    <LinearLayout
-				        android:id="@+id/start_date_layout"
-				      	android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-				        android:orientation="vertical">
-					    
+				            style="@style/StartDate"
+		        			android:text="apr" />
+	
+				        <LinearLayout
+					        android:layout_width="0dip"
+							android:layout_height="0dip"
+							android:layout_weight="1" />
+				        			        			        
 				        <TextView
-				            android:id="@+id/startDateTitle"
-				            style="@style/DialogTitleText"
+				            android:id="@+id/startDateYear"
 				            android:layout_width="wrap_content"
-				            android:layout_height="match_parent"
-				            android:layout_marginBottom="5dp"
-				            android:text="@string/start_date" />
-				
-					    <LinearLayout
-					        android:id="@+id/start_date_date_layout"
-					      	android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-					        android:padding="@dimen/button_margin"
-							style="@style/IndicationsDate"
-			        		android:orientation="horizontal">
-					        
-					        <TextView
-					            android:id="@+id/startDateDate"
-					            android:layout_width="wrap_content"
-					            android:layout_height="wrap_content"
-					            style="@style/StartDate"
-			        			android:text="12" />
-		
-					        <LinearLayout
-						        android:layout_width="0dip"
-								android:layout_height="0dip"
-								android:layout_weight="1" />
-				        
-					        <TextView
-					            android:id="@+id/startDateMonth"
-					            android:layout_width="wrap_content"
-					            android:layout_height="wrap_content"
-					            style="@style/StartDate"
-			        			android:text="apr" />
-		
-					        <LinearLayout
-						        android:layout_width="0dip"
-								android:layout_height="0dip"
-								android:layout_weight="1" />
-					        			        			        
-					        <TextView
-					            android:id="@+id/startDateYear"
-					            android:layout_width="wrap_content"
-					            android:layout_height="wrap_content"
-					            style="@style/StartDate"
-			        			android:text="2014" />
-					        			        			        			        
-					    </LinearLayout>
-				        
-				        <Button
-				           android:id="@+id/btn_indication_start"
-				           android:text="@string/button_indication_start"
-						   style="@style/ButtonIndicationStart"
-				           android:layout_width="match_parent"
-				           android:layout_height="@dimen/button_height"
-				           android:layout_weight="1" />
+				            android:layout_height="wrap_content"
+				            style="@style/StartDate"
+		        			android:text="2014" />
+				        			        			        			        
 				    </LinearLayout>
-		 		</LinearLayout>
-	 	    
-	   		</LinearLayout>  		      
-	  
-		</ScrollView>     
-    
-    </FrameLayout>      	    
+			        
+			        <Button
+			           android:id="@+id/btn_indication_start"
+			           android:text="@string/button_indication_start"
+					   style="@style/ButtonIndicationStart"
+			           android:layout_width="match_parent"
+			           android:layout_height="@dimen/button_height"
+			           android:layout_weight="1" />
+			    </LinearLayout>
+	 	    </LinearLayout>
+   		</FrameLayout> 	  
+    </LinearLayout>
+</ScrollView>     
 	    
 </LinearLayout>

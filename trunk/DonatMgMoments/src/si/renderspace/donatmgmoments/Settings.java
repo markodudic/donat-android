@@ -13,8 +13,8 @@ public class Settings {
 	public static HashMap<Integer,String> languages = new HashMap<Integer,String>() {{
 																					    put(0, "en");
 																					    put(1, "ru");
-																					    put(2,  "it");
-																					    put(3,  "hr");
+																					    put(2, "it");
+																					    put(3, "hr");
 																					}};
 	//nacini pitja
 	public static HashMap<Integer,String> indications = new HashMap<Integer,String>();
@@ -34,7 +34,7 @@ public class Settings {
 	public static int NOTIFICATION_ALARM_MINUTES = 5*60*1000; //5 minut v milisec
 	public static Date[] notificationTimes;
  
-	public final static int TIMER = 10*1000; //1 minut v milisec
+	public final static int TIMER = 60*1000; //1 minut v milisec
  
 	public static void prepareData (Context context) {
 		indications.put(1,context.getResources().getString(R.string.indication_1));

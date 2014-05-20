@@ -2,201 +2,186 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     android:background="@drawable/ic_background"
+    style="@style/LayoutIndication"
     tools:context=".HomeScreenActivity" >
-   	
-    <FrameLayout
+
+  
+    <ImageView
+        android:id="@+id/iv_language"
         android:layout_width="match_parent"
-    	android:layout_height="wrap_content">
-	    <ImageView
-	        android:id="@+id/iv_indication_1"
-		    style="@style/LayoutIndicationAlfa"
+        android:layout_height="@dimen/title_height"
+        android:src="@drawable/ic_language" />
+
+    <Spinner
+        android:id="@+id/sp_languages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/languages"
+        android:prompt="@string/choose_language" />
+        
+    <ImageView
+        android:id="@+id/iv_notification"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:src="@drawable/ic_notification" />
+
+   		      
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
+		
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/zbujanje"
+			style="@style/SettingsText"
+       		android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_zbujanje"
 	        android:layout_width="match_parent"
-	    	android:layout_height="match_parent" />
-	    <LinearLayout
-	        android:id="@+id/l_indication_1"
-		    android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        style="@style/LayoutIndication"
-	        android:orientation="vertical">
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			style="@style/SettingsText"
+       		android:layout_weight="3" />
+    </LinearLayout>
     
-		    <ImageView
-		        android:id="@+id/iv_language"
-		        android:layout_width="match_parent"
-		        android:layout_height="@dimen/title_height"
-		        android:src="@drawable/ic_language" />
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
 		
-		    <Spinner
-		        android:id="@+id/sp_languages"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:entries="@array/languages"
-		        android:prompt="@string/choose_language" />
-		        
-		    <ImageView
-		        android:id="@+id/iv_notification"
-		        android:layout_width="match_parent"
-		        android:layout_height="@dimen/title_height"
-		        android:src="@drawable/ic_notification" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/zajtrk"
+			style="@style/SettingsText"
+       		android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_zajtrk"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			style="@style/SettingsText"
+       		android:layout_weight="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
 		
-		   		      
-		    <LinearLayout
-		        android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-		        android:orientation="horizontal">    
-				
-		        <TextView
-		            android:layout_width="match_parent"
-		            android:layout_height="@dimen/title_height"
-		            android:text="@string/zbujanje"
-					style="@style/SettingsText"
-		       		android:layout_weight="1" />
-		        
-		        <Spinner
-			        android:id="@+id/sp_zbujanje"
-			        android:layout_width="match_parent"
-			        android:layout_height="@dimen/title_height"
-			        android:entries="@array/hours"
-			        android:prompt="@string/choose_hours"
-					style="@style/SettingsText"
-		       		android:layout_weight="3" />
-		    </LinearLayout>
-		    
-		    <LinearLayout
-		        android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-		        android:orientation="horizontal">    
-				
-		        <TextView
-		            android:layout_width="match_parent"
-		            android:layout_height="@dimen/title_height"
-		            android:text="@string/zajtrk"
-					style="@style/SettingsText"
-		       		android:layout_weight="1" />
-		        
-		        <Spinner
-			        android:id="@+id/sp_zajtrk"
-			        android:layout_width="match_parent"
-			        android:layout_height="@dimen/title_height"
-			        android:entries="@array/hours"
-			        android:prompt="@string/choose_hours"
-					style="@style/SettingsText"
-		       		android:layout_weight="3" />
-		    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/kosilo"
+			style="@style/SettingsText"
+       		android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_kosilo"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			style="@style/SettingsText"
+       		android:layout_weight="3" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
 		
-		    <LinearLayout
-		        android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-		        android:orientation="horizontal">    
-				
-		        <TextView
-		            android:layout_width="match_parent"
-		            android:layout_height="@dimen/title_height"
-		            android:text="@string/kosilo"
-					style="@style/SettingsText"
-		       		android:layout_weight="1" />
-		        
-		        <Spinner
-			        android:id="@+id/sp_kosilo"
-			        android:layout_width="match_parent"
-			        android:layout_height="@dimen/title_height"
-			        android:entries="@array/hours"
-			        android:prompt="@string/choose_hours"
-					style="@style/SettingsText"
-		       		android:layout_weight="3" />
-		    </LinearLayout>
-		    
-		    <LinearLayout
-		        android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-		        android:orientation="horizontal">    
-				
-		        <TextView
-		            android:layout_width="match_parent"
-		            android:layout_height="@dimen/title_height"
-		            android:text="@string/vecerja"
-					style="@style/SettingsText"
-		       		android:layout_weight="1" />
-		        
-		        <Spinner
-			        android:id="@+id/sp_vecerja"
-			        android:layout_width="match_parent"
-			        android:layout_height="@dimen/title_height"
-			        android:entries="@array/hours"
-			        android:prompt="@string/choose_hours"
-					style="@style/SettingsText"
-		       		android:layout_weight="3" />
-		    </LinearLayout>
-		    
-		    <LinearLayout
-		        android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-		        android:orientation="horizontal">    
-				
-		        <TextView
-		            android:layout_width="match_parent"
-		            android:layout_height="@dimen/title_height"
-		            android:text="@string/spanje"
-					style="@style/SettingsText"
-		       		android:layout_weight="1" />
-		        
-		        <Spinner
-			        android:id="@+id/sp_spanje"
-			        android:layout_width="match_parent"
-			        android:layout_height="@dimen/title_height"
-			        android:entries="@array/hours"
-			        android:prompt="@string/choose_hours"
-					style="@style/SettingsText"
-		       		android:layout_weight="3" />
-		    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/vecerja"
+			style="@style/SettingsText"
+       		android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_vecerja"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			style="@style/SettingsText"
+       		android:layout_weight="3" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
 		
-		    <LinearLayout
-		        android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-		        android:orientation="horizontal">    
-				
-		        <TextView
-		            android:layout_width="match_parent"
-		            android:layout_height="@dimen/title_height"
-		            android:text="@string/obrokov"
-					style="@style/SettingsText"
-		       		android:layout_weight="1" />
-		        
-		        <Spinner
-			        android:id="@+id/sp_obrokov"
-			        android:layout_width="match_parent"
-			        android:layout_height="@dimen/title_height"
-			        android:entries="@array/obrokov"
-			        android:prompt="@string/choose_obrokov"
-					style="@style/SettingsText"
-		       		android:layout_weight="3" />
-		    </LinearLayout>
-		        
-		    <Button
-		       android:id="@+id/btn_save"
-		       android:text="@string/save"
-		 	   style="@style/ButtonIndicationStart"
-		       android:layout_marginBottom="@dimen/button_margin"
-		       	android:layout_width="match_parent"
-		       android:layout_height="@dimen/button_height" /> 
-		       
-		    
-		    <TextView
-		       	android:layout_width="match_parent"
-		       	android:layout_height="@dimen/title_height"
-		       	android:gravity="center_horizontal"
-				android:text="@string/licence" />
-		     
-		   	<TextView
-		        android:id="@+id/pravila"
-		        android:layout_width="match_parent"
-		        android:layout_height="@dimen/title_height"
-		        android:gravity="center_horizontal"
-		        android:textStyle="bold"
-		        android:text="@string/rules" />
-           	
-		</LinearLayout>
-	</FrameLayout>   	
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/spanje"
+			style="@style/SettingsText"
+       		android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_spanje"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/hours"
+	        android:prompt="@string/choose_hours"
+			style="@style/SettingsText"
+       		android:layout_weight="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:orientation="horizontal">    
+		
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:text="@string/obrokov"
+			style="@style/SettingsText"
+       		android:layout_weight="1" />
+        
+        <Spinner
+	        android:id="@+id/sp_obrokov"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/title_height"
+	        android:entries="@array/obrokov"
+	        android:prompt="@string/choose_obrokov"
+			style="@style/SettingsText"
+       		android:layout_weight="3" />
+    </LinearLayout>
+        
+    <Button
+       android:id="@+id/btn_save"
+       android:text="@string/save"
+ 	   style="@style/ButtonIndicationStart"
+       android:layout_marginBottom="@dimen/button_margin"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/button_height" /> 
+       
+    
+    <TextView
+       	android:layout_width="match_parent"
+       	android:layout_height="@dimen/title_height"
+       	android:gravity="center_horizontal"
+		android:text="@string/licence" />
+     
+   	<TextView
+        android:id="@+id/pravila"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:text="@string/rules" />
+         	
+ 	
 </LinearLayout>
