@@ -34,8 +34,8 @@
         
         <activity
             android:name="si.renderspace.donatmgmoments.SettingsActivity"
-            android:label="@string/app_name"
-            android:icon="@drawable/ic_launcher" 
+            android:label="@string/home"
+            android:icon="@drawable/ic_action_bar_back" 
             android:screenOrientation="portrait">
         </activity>        
 
