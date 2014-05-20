@@ -9,6 +9,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
@@ -37,6 +38,13 @@ public class NotificationActivity extends Activity {
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
         
+        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
+        TextView tvTitle = (TextView) findViewById(titleId);
+        tvTitle.setTextColor(getResources().getColor(R.color.action_bar_text));
+        tvTitle.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
+        Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+        tvTitle.setTypeface(ft);
+        
         int indx = Utils.getPrefernciesInt(this, "INDX");
 		
 		Intent intent = getIntent();
@@ -48,6 +56,8 @@ public class NotificationActivity extends Activity {
 		
 		TextView indicationTitle = (TextView) findViewById(R.id.indicationTitle);
 		indicationTitle.setText(Settings.indications.get(indx));
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
+		indicationTitle.setTypeface(tf);
 		
 		//datum
 		final Calendar c = Calendar.getInstance();
@@ -82,6 +92,8 @@ public class NotificationActivity extends Activity {
 		notificationSpeed.setText(drink[3]);
 
 		//ikone
+		Typeface tfl = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+
 		LinearLayout lNotificationIcons = (LinearLayout) findViewById(R.id.notificationIcons);
 		int resId;
 		for (int i=0; i<drinks.length; i++) {
@@ -95,6 +107,7 @@ public class NotificationActivity extends Activity {
 			iv.setCompoundDrawablesWithIntrinsicBounds(0, resId, 0, 0);
 			iv.setText(drinks[i][0].toLowerCase());
 			iv.setGravity(Gravity.CENTER_HORIZONTAL);
+			iv.setTypeface(tfl);
 			lNotificationIcons.addView(iv);
 
 		}

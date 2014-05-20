@@ -1,9 +1,7 @@
 package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -12,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -73,7 +70,10 @@ public class SettingsActivity extends Activity {
 	 	});	
 		
 		
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
+
 		TextView tvPravila = (TextView) findViewById(R.id.pravila);
+		tvPravila.setTypeface(tf);
 		tvPravila.setOnClickListener(new OnClickListener() {
 	 		  @Override
 			  public void onClick(View v) {

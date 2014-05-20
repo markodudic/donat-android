@@ -37,6 +37,7 @@
 			            style="@style/HomeScreenTitleText"
 			        	android:layout_width="wrap_content"
 			            android:layout_height="wrap_content"
+			            android:fontFamily="sans-serif-light"
 			            android:text="@string/home_screen_title" />
 			       
 				</LinearLayout>
@@ -73,6 +74,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			            	android:fontFamily="sans-serif" 
 			                android:text="Indikacija Indikacija Indikacija  Indikacija Indikacija"
 			                android:layout_weight="15" />
 				        
@@ -130,6 +132,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 				        
@@ -186,6 +189,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 				        
@@ -242,6 +246,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 				        
@@ -299,6 +304,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 			   	        
@@ -357,6 +363,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 			
@@ -416,6 +423,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 			
@@ -473,6 +481,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 			
@@ -531,6 +540,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 			
@@ -589,6 +599,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
 			                android:text="Indikacija"
 			                android:layout_weight="15" />
 			
