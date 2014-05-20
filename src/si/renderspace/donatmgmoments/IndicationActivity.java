@@ -66,16 +66,16 @@ public class IndicationActivity extends Activity {
 			String[] drink = drinking[i];
 			TableRow tr = new TableRow(this);
 			if (i%2==0) {
-				tr.setBackgroundColor(this.getResources().getColor(R.color.table_row_1));
+				tr.setBackgroundColor(this.getResources().getColor(R.color.background_green_10));
 			} else {
-				tr.setBackgroundColor(this.getResources().getColor(R.color.table_row_2));				
+				tr.setBackgroundColor(this.getResources().getColor(R.color.background_white_50));				
 			}
 			tr.setLayoutParams(new LayoutParams( LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
 			TextView textview1 = new TextView(this);
 			textview1.setText(drink[0]);
 			textview1.setTextAppearance(this, R.style.TabelFirst);
 			//textview1.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f));
-			TableRow.LayoutParams tableRowParams =  new TableRow.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f);
+			TableRow.LayoutParams tableRowParams =  new TableRow.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,1f);
 			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview1.setLayoutParams(tableRowParams);
 			tr.addView(textview1);
@@ -88,8 +88,8 @@ public class IndicationActivity extends Activity {
 			TextView textview2 = new TextView(this);
 			textview2.setText(drink[1]+drink[2]);
 			textview2.setTextAppearance(this, R.style.TabelSecond);
-			//textview2.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f));
-			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
+			//textview2.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview2.setLayoutParams(tableRowParams);
 			tr.addView(textview2);
 			
@@ -101,8 +101,8 @@ public class IndicationActivity extends Activity {
 			TextView textview3 = new TextView(this);
 			textview3.setText(drink[3]);
 			textview3.setTextAppearance(this, R.style.TabelSecond);
-			textview3.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f));
-			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
+			//textview3.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview3.setLayoutParams(tableRowParams);
 			tr.addView(textview3);		
 			

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/background_button" />
-    <corners android:radius="5dp" />
-</shape>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+	    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+		    <solid android:color="@color/button_pressed" />
+		    <corners android:radius="5dp" />
+		</shape>
+	</item>
+    <item>
+	    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+		    <solid android:color="@color/button_unpressed" />
+		    <corners android:radius="5dp" />
+		</shape>
+	</item>
+</selector>

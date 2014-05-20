@@ -21,7 +21,7 @@
     <color name="background_action_bar">#fff</color>
     <color name="background_app">#CCffffff</color>
     <color name="background_title">#CCaaaaaa</color>
-    <color name="background_button">#CC000000</color>
+    <color name="background_button">#023b2e</color>
     <color name="background_button_pressed">#CCff0000</color>
     <color name="background_date">#999</color>
     <color name="background_dialog">#fff</color>
@@ -38,5 +38,26 @@
     <color name="table_row_border">#ccc</color>
     
     <color name="transparent_color">#00000000</color>
+    
+    <color name="text_dark">#343534</color>
+    <color name="text_green">#023b2e</color>
+    <color name="text_light">#333333</color>
+    
+    <color name="background_white_50">#7fffffff</color>
+    <color name="background_white_70">#b2ffffff</color>
+    <color name="background_white">#ffffff</color>
+
+    <color name="background_green">#023b2e</color>
+    <color name="background_green_10">#1a023b2e</color>
+    
+    <color name="button_unpressed">#023b2e</color>
+    <color name="button_pressed">#00241b</color>
+
+    <color name="list_unpressed_30">#4c77a2e9</color>
+    <color name="list_pressed_20">#33023b2e</color>
+    
+    <color name="border_green_20">#33023b2e</color>
+    <color name="border_white_50">#7fffffff</color>
+
 </resources>
 

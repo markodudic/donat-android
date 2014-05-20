@@ -42,7 +42,11 @@
 				</LinearLayout>
 			</FrameLayout>
             	
-            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	          
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
@@ -89,7 +93,16 @@
 			</FrameLayout>
 
             
-		    
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
 		
             <FrameLayout
                 android:layout_width="match_parent"
@@ -136,6 +149,17 @@
 			    </LinearLayout>
 			</FrameLayout>
                 
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
@@ -181,6 +205,17 @@
 			    </LinearLayout>
 			</FrameLayout>
 			    	
+ 	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
@@ -226,6 +261,17 @@
 			    </LinearLayout>
 			</FrameLayout>			
 			    		
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
@@ -273,7 +319,18 @@
 			    </LinearLayout>
 			</FrameLayout>
 			    
-		    <FrameLayout
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
+            		    <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
 			    <ImageView
@@ -320,7 +377,18 @@
 			    </LinearLayout>
 			</FrameLayout>
 			    	
-			    
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
+            		    			    
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
@@ -367,6 +435,17 @@
 			    </LinearLayout>
 			</FrameLayout>
 			    
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
@@ -414,6 +493,17 @@
 			    </LinearLayout>    
 			</FrameLayout>
 			    		    
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">
@@ -460,6 +550,17 @@
 			    </LinearLayout>
 			</FrameLayout>
 			    		    
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
             <FrameLayout
                 android:layout_width="match_parent"
 			    android:layout_height="wrap_content">

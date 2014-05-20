@@ -43,12 +43,12 @@ public class HomeScreenActivity extends Activity {
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
 
-        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
+        /*int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView yourTextView = (TextView) findViewById(titleId);
         yourTextView.setTextColor(getResources().getColor(R.color.action_bar_text));
         yourTextView.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
         Typeface fontProxima=Typeface.createFromAsset(getAssets(), "fonts/ProximaNova-Bold.otf");
-        yourTextView.setTypeface(fontProxima);
+        yourTextView.setTypeface(fontProxima);*/
         
         
 		TextView tvIndication1 = (TextView) findViewById(R.id.indication_1);
@@ -148,7 +148,7 @@ public class HomeScreenActivity extends Activity {
 	public void onResume() {
 	    super.onResume();
 	    
-    	Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_background_app); 
+    	Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_item_unpressed); 
 		for (j=1; j<=Settings.indications.size(); j++) {
 			int idd = getResources().getIdentifier("iv_indication_"+j, "id", getPackageName());
 			ImageView ivIndication1 = (ImageView) findViewById(idd);
