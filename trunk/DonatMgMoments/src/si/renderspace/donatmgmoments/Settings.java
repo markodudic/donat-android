@@ -33,9 +33,9 @@ public class Settings {
 	//notifications glede na nacin pitja in nastvavitvah ur za intervale. Nastavi se po izbiri indikacije.
 	public static int NOTIFICATION_ALARM_MINUTES = 5*60*1000; //5 minut v milisec
 	public static Date[] notificationTimes;
-
+ 
 	public final static int TIMER = 10*1000; //1 minut v milisec
-
+ 
 	public static void prepareData (Context context) {
 		indications.put(1,context.getResources().getString(R.string.indication_1));
 		indications.put(2,context.getResources().getString(R.string.indication_2));
