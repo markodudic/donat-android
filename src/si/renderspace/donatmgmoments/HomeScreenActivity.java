@@ -42,16 +42,6 @@ public class HomeScreenActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
-
-        /*int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
-        TextView tvTitle = (TextView) findViewById(titleId);
-        tvTitle.setTextColor(getResources().getColor(R.color.action_bar_text));
-        tvTitle.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
-        Typeface fontProxima=Typeface.createFromAsset(getAssets(), "fonts/ProximaNova-Bold.otf");
-        tvTitle.setTypeface(fontProxima);
-        yourTextView.setTypeface(fontProxima);*/
-
-        
         
 		TextView tvIndication1 = (TextView) findViewById(R.id.indication_1);
 		tvIndication1.setText(Settings.indications.get(1));

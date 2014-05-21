@@ -36,6 +36,11 @@ public class SettingsActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
+
+        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
+        TextView tvTitle = (TextView) findViewById(titleId);
+        Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+        tvTitle.setTypeface(ft);
 		
 		spLanguages = (Spinner) findViewById(R.id.sp_languages);
 		tvZbujanje = (TextView) findViewById(R.id.tv_zbujanje);
@@ -171,6 +176,8 @@ public class SettingsActivity extends Activity {
  				startActivity(intent);
  			 }
 	    } else if (item.getItemId() == R.id.calendar) {
+			Intent intent = new Intent(this, CalendarActivity.class);
+			startActivity(intent);	    	
 	    } else if (item.getItemId() == R.id.settings) { 
 		}
 	    

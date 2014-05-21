@@ -40,8 +40,6 @@ public class NotificationActivity extends Activity {
         
         int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView tvTitle = (TextView) findViewById(titleId);
-        tvTitle.setTextColor(getResources().getColor(R.color.text_green));
-        tvTitle.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         tvTitle.setTypeface(ft);
         
@@ -139,6 +137,8 @@ public class NotificationActivity extends Activity {
 		if (item.getItemId() == android.R.id.home) {
 	    	finish();
 	    } else if (item.getItemId() == R.id.calendar) {
+			Intent intent = new Intent(this, CalendarActivity.class);
+			startActivity(intent);	    	
 	    } else if (item.getItemId() == R.id.settings) { 
 			Intent intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);	    	
