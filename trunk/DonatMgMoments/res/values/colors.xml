@@ -23,6 +23,8 @@
     
     <color name="text_dark">#343534</color>
     <color name="text_green">#023b2e</color>
+    <color name="text_green_40">#66023b2e</color>
+    <color name="text_green_50">#7f023b2e</color>
     <color name="text_light">#333333</color>
     
     <color name="background_white_50">#7fffffff</color>

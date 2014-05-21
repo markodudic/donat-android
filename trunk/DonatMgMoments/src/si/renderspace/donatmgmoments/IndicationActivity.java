@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
@@ -46,8 +47,6 @@ public class IndicationActivity extends Activity {
 
         int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView tvTitle = (TextView) findViewById(titleId);
-        tvTitle.setTextColor(getResources().getColor(R.color.text_green));
-        tvTitle.setTextSize(getResources().getDimension(R.dimen.action_bar_text));
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         tvTitle.setTypeface(ft);
 
@@ -188,7 +187,7 @@ public class IndicationActivity extends Activity {
 		final TextView startDateYear = (TextView) findViewById(R.id.startDateYear);
 		startDateYear.setText(new SimpleDateFormat("yyyy").format(dtNow));
 		
-		LinearLayout lStartDateDate = (LinearLayout) findViewById(R.id.start_date_date_layout);
+		FrameLayout lStartDateDate = (FrameLayout) findViewById(R.id.start_date_date_layout);
 		lStartDateDate.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -259,7 +258,7 @@ public class IndicationActivity extends Activity {
 					SimpleDateFormat  format = new SimpleDateFormat("dd.MMM.yyyy");  
 					try {  
 					    Date date = format.parse(dtStart);  
-					    Utils.savePrefernciesLong(IndicationActivity.this, "DATE", date.getTime());
+					    Utils.savePrefernciesLong(IndicationActivity.this, "DATE", date.getTime()-20000*60*1000);
 					} catch (ParseException e) {  
 					    e.printStackTrace();  
 					}
@@ -267,7 +266,7 @@ public class IndicationActivity extends Activity {
 					Settings.setNotificationTimes(indx);
 					dialogConfirmation.show();
 				}
-			}
+			} 
 		});	
 		
 
@@ -288,6 +287,8 @@ public class IndicationActivity extends Activity {
 		if (item.getItemId() == android.R.id.home) {
 	    	finish();
 	    } else if (item.getItemId() == R.id.calendar) {
+			Intent intent = new Intent(this, CalendarActivity.class);
+			startActivity(intent);	    	
 		} else if (item.getItemId() == R.id.settings) {
 			Intent intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);	    	

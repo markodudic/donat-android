@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -16,6 +17,8 @@ import android.widget.TextView;
  */
 public class WeekdayArrayAdapter extends ArrayAdapter<String> {
 	public static int textColor = Color.LTGRAY;
+	public static int textSize = 28;
+	public static Typeface typeFace = null;
 
 	public WeekdayArrayAdapter(Context context, int textViewResourceId,
 			List<String> objects) {
@@ -46,11 +49,13 @@ public class WeekdayArrayAdapter extends ArrayAdapter<String> {
 		// Show smaller text if the size of the text is 4 or more in some
 		// locale
 		if (item.length() <= 3) {
-			textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
+			textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
 		} else {
-			textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 11);
+			textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
 		}
-
+        if (typeFace != null) {
+        	textView.setTypeface(typeFace);
+        }
 		textView.setTextColor(textColor);
 		textView.setGravity(Gravity.CENTER);
 		return textView;

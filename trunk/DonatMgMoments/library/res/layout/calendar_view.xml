@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/caldroid_white"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -26,7 +25,9 @@
             android:layout_toRightOf="@+id/calendar_left_arrow"
             android:gravity="center_horizontal"
             android:textIsSelectable="true"
-            android:textSize="22sp" />
+            android:fontFamily="sans-serif-light"
+			android:textColor="#023b2e"
+			android:textSize="34sp" />
 
         <Button
             android:id="@+id/calendar_right_arrow"
@@ -49,6 +50,6 @@
         android:id="@+id/months_infinite_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp" />
+        android:layout_margin="10dp" />
 
 </LinearLayout>

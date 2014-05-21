@@ -37,15 +37,14 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 		TextView cellView = (TextView) cellLayout.getChildAt(0);
 		ImageView cellImage = (ImageView) cellLayout.getChildAt(1);
 
-		cellView.setTextColor(Color.BLACK);
+		cellView.setTextColor(resources.getColor(R.color.text_green));
 
 		// Get dateTime of this cell
 		DateTime dateTime = this.datetimeList.get(position);
 
 		// Set color of the dates in previous / next month
 		if (dateTime.getMonth() != month) {
-			cellView.setTextColor(resources
-					.getColor(R.color.caldroid_darker_gray));
+			cellView.setTextColor(resources.getColor(R.color.text_green_40));
 		}
 
 		boolean shouldResetDiabledView = false;
@@ -56,17 +55,23 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 				|| (maxDateTime != null && dateTime.gt(maxDateTime))
 				|| (disableDates != null && disableDatesMap.containsKey(dateTime))) {
 
-			cellView.setTextColor(CaldroidFragment.disabledTextColor);
-			if (CaldroidFragment.disabledBackgroundDrawable == -1) {
+			/*if (CaldroidFragment.disabledBackgroundDrawable == -1) {
 				cellView.setBackgroundResource(R.drawable.disable_cell);
 				cellLayout.setBackgroundResource(R.drawable.disable_cell);
-				cellImage.setImageResource(R.drawable.ic_cal_indicator_past);
 			} else {
 				cellView.setBackgroundResource(CaldroidFragment.disabledBackgroundDrawable);
 				cellLayout.setBackgroundResource(CaldroidFragment.disabledBackgroundDrawable);
+			}*/
+			cellView.setBackgroundColor(resources.getColor(R.color.background_green_10));
+			cellLayout.setBackgroundColor(resources.getColor(R.color.background_green_10));
+			if (dateTime.lt(getToday())) {
+				cellView.setTextColor(CaldroidFragment.disabledTextColor);
 				cellImage.setImageResource(R.drawable.ic_cal_indicator_past);
+			} else {
+				cellView.setTextColor(CaldroidFragment.selectedTextColor);
+				cellImage.setImageResource(R.drawable.ic_cal_indicator_future);				
 			}
-
+				
 			if (dateTime.equals(getToday())) {
 				//cellView.setBackgroundResource(R.drawable.red_border_gray_bg);
 				cellLayout.setBackgroundResource(R.drawable.red_border_gray_bg);
@@ -75,7 +80,7 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 		} else {
 			shouldResetDiabledView = true;
 		}
-
+/*
 		// Customize for selected dates
 		if (selectedDates != null && selectedDatesMap.containsKey(dateTime)) {
 			if (CaldroidFragment.selectedBackgroundDrawable != -1) {
@@ -92,7 +97,8 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 		} else {
 			shouldResetSelectedView = true;
 		}
-
+*/
+		/*
 		if (shouldResetDiabledView && shouldResetSelectedView) {
 			// Customize for today
 			if (dateTime.equals(getToday())) {
@@ -103,12 +109,17 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 				cellView.setBackgroundResource(R.drawable.cell_bg);
 				cellLayout.setBackgroundResource(R.drawable.cell_bg);
 			}
-		}
+		}*/
 
-		cellView.setText("" + dateTime.getDay());
 		if (dateTime.equals(getToday())) {
-			cellImage.setImageResource(R.drawable.ic_cal_indicator_curr);
+			if ((minDateTime != null && dateTime.lt(minDateTime))
+					|| (maxDateTime != null && dateTime.gt(maxDateTime))
+					|| (disableDates != null && disableDatesMap.containsKey(dateTime))) {
+				cellImage.setImageResource(R.drawable.ic_cal_indicator_curr);
+			}
 		}
+		
+		cellView.setText("" + dateTime.getDay());
 
 		// Set custom color if required
 		setCustomResources(dateTime, cellView, cellView);
