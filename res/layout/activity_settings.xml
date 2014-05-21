@@ -52,6 +52,7 @@
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center_vertical"
 	        android:fontFamily="sans-serif-light"
+	        android:paddingBottom="5dp"
 	        android:text="12:30" />
 
     </LinearLayout>

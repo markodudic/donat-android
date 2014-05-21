@@ -56,6 +56,13 @@
         </activity>   
         
          <activity
+            android:name="si.renderspace.donatmgmoments.CalendarActivity"
+            android:label="@string/home"
+            android:icon="@drawable/ic_action_bar_back" 
+            android:screenOrientation="portrait">
+        </activity>  
+                
+         <activity
             android:name="si.renderspace.donatmgmoments.RulesActivity"
             android:label="@string/home"
             android:icon="@drawable/ic_action_bar_back" 
