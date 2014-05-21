@@ -7,7 +7,8 @@
     style="@style/LayoutIndication"
     tools:context=".HomeScreenActivity" >
 
-  
+    
+				        
     <ImageView
         android:id="@+id/iv_language"
         android:layout_width="match_parent"
@@ -20,6 +21,8 @@
         android:layout_height="wrap_content"
         android:entries="@array/languages"
         style="@style/HomeScreenTitleText"
+		android:background="@drawable/ic_settings_text"
+	    android:layout_marginBottom="@dimen/layout_margin"
 		android:prompt="@string/choose_language" />
         
     <ImageView
@@ -28,130 +31,136 @@
         android:layout_height="@dimen/title_height"
         android:src="@drawable/ic_times" />
 
-   		      
     <LinearLayout
         android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:orientation="horizontal">    
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_margin"
+        android:orientation="horizontal" >
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/title_height"
+            android:layout_height="wrap_content"
             android:text="@string/zbujanje"
 			style="@style/SettingsText"
 		    android:fontFamily="sans-serif-light"
 			android:layout_weight="1" />
         
-        <Spinner
-	        android:id="@+id/sp_zbujanje"
-	        android:layout_width="match_parent"
-	        android:layout_height="@dimen/title_height"
-	        android:entries="@array/hours"
-	        android:prompt="@string/choose_hours"
-			style="@style/HomeScreenTitleText"
-		    android:layout_weight="3" />
+	    <TextView
+	        android:id="@+id/tv_zbujanje"
+	        style="@style/TimePickerText"
+	        android:layout_width="@dimen/settings_text"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:fontFamily="sans-serif-light"
+	        android:text="12:30" />
+
     </LinearLayout>
     
     <LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_margin"
         android:orientation="horizontal">    
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/title_height"
+            android:layout_height="wrap_content"
             android:text="@string/zajtrk"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
 			android:layout_weight="1" />
         
-        <Spinner
-	        android:id="@+id/sp_zajtrk"
-	        android:layout_width="match_parent"
-	        android:layout_height="@dimen/title_height"
-	        android:entries="@array/hours"
-	        android:prompt="@string/choose_hours"
-			style="@style/SettingsText"
-       		android:layout_weight="3" />
+	    <TextView
+	        android:id="@+id/tv_zajtrk"
+	        style="@style/TimePickerText"
+	        android:fontFamily="sans-serif-light"
+	        android:layout_width="@dimen/settings_text"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="12:30" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_margin"
         android:orientation="horizontal">    
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/title_height"
+            android:layout_height="wrap_content"
             android:text="@string/kosilo"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
 			android:layout_weight="1" />
         
-        <Spinner
-	        android:id="@+id/sp_kosilo"
-	        android:layout_width="match_parent"
-	        android:layout_height="@dimen/title_height"
-	        android:entries="@array/hours"
-	        android:prompt="@string/choose_hours"
-			style="@style/SettingsText"
-       		android:layout_weight="3" />
+	    <TextView
+	        android:id="@+id/tv_kosilo"
+	        style="@style/TimePickerText"
+	        android:fontFamily="sans-serif-light"
+	        android:layout_width="@dimen/settings_text"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="12:30" />
     </LinearLayout>
     
     <LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_margin"
         android:orientation="horizontal">    
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/title_height"
+            android:layout_height="wrap_content"
             android:text="@string/vecerja"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
 			android:layout_weight="1" />
         
-        <Spinner
-	        android:id="@+id/sp_vecerja"
-	        android:layout_width="match_parent"
-	        android:layout_height="@dimen/title_height"
-	        android:entries="@array/hours"
-	        android:prompt="@string/choose_hours"
-			style="@style/SettingsText"
-       		android:layout_weight="3" />
+	    <TextView
+	        android:id="@+id/tv_vecerja"
+	        style="@style/TimePickerText"
+	        android:fontFamily="sans-serif-light"
+	        android:layout_width="@dimen/settings_text"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="12:30" />
     </LinearLayout>
     
     <LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_margin"
         android:orientation="horizontal">    
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/title_height"
+            android:layout_height="wrap_content"
             android:text="@string/spanje"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
 			android:layout_weight="1" />
         
-        <Spinner
-	        android:id="@+id/sp_spanje"
-	        android:layout_width="match_parent"
-	        android:layout_height="@dimen/title_height"
-	        android:entries="@array/hours"
-	        android:prompt="@string/choose_hours"
-			style="@style/SettingsText"
-       		android:layout_weight="3" />
+	    <TextView
+	        android:id="@+id/tv_spanje"
+	        style="@style/TimePickerText"
+	        android:fontFamily="sans-serif-light"
+	        android:layout_width="@dimen/settings_text"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+       		android:text="12:30" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_margin"
         android:orientation="horizontal">    
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/title_height"
+            android:layout_height="wrap_content"
             android:text="@string/obrokov"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
@@ -159,12 +168,11 @@
         
         <Spinner
 	        android:id="@+id/sp_obrokov"
-	        android:layout_width="match_parent"
-	        android:layout_height="@dimen/title_height"
+	        android:layout_width="@dimen/settings_text"
+	        android:layout_height="wrap_content"
 	        android:entries="@array/obrokov"
-	        android:prompt="@string/choose_obrokov"
-			style="@style/SettingsText"
-       		android:layout_weight="3" />
+	        android:background="@drawable/ic_settings_text"
+	        android:prompt="@string/choose_obrokov" />
     </LinearLayout>
         
     <Button
@@ -189,8 +197,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_height"
         android:gravity="center_horizontal"
-        android:textStyle="bold"
-        android:text="@string/rules" />
+        style="@style/SettingsRules"
+		android:fontFamily="sans-serif-light"
+		android:text="@string/rules" />
          	
  	
 </LinearLayout>
