@@ -48,7 +48,7 @@
 
     <LinearLayout
         android:id="@+id/back"
-	    style="@style/HomeScreenTitle"
+	    style="@style/DialogButton"
         android:layout_width="match_parent"
 		android:layout_height="@dimen/button_height"
 		android:orientation="horizontal" >
