@@ -177,7 +177,7 @@ public class HomeScreenActivity extends Activity {
 	    inflater.inflate(R.menu.action_bar, menu);
 	    return super.onCreateOptionsMenu(menu);
 	}
-	
+
 	
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
@@ -186,8 +186,7 @@ public class HomeScreenActivity extends Activity {
 		if (item.getItemId() == android.R.id.home) {
 	    	finish();
 	    } else if (item.getItemId() == R.id.calendar) {
-			Intent intent = new Intent(this, NotificationActivity.class);
-			intent.putExtra("INDX", 1);
+			Intent intent = new Intent(this, CalendarActivity.class);
 			startActivity(intent);	    	
 	    } else if (item.getItemId() == R.id.settings) {
 			Intent intent = new Intent(this, SettingsActivity.class);
@@ -196,7 +195,7 @@ public class HomeScreenActivity extends Activity {
 	    
 	    return true;
 	}
-	
+	 
 	public void showIndication(int indx) {
 		int id = getResources().getIdentifier("iv_indication_"+indx, "id", getPackageName());
 		ImageView ivIndication = (ImageView) findViewById(id);

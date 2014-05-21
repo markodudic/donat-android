@@ -144,9 +144,19 @@
        <item name="android:textColor">@color/text_green</item>
    </style>   
 
+   <style name="SpinnerText">
+	   <item name="android:textSize">19.0sp</item>
+       <item name="android:textColor">@color/text_green</item>
+	   <item name="android:paddingLeft">6dp</item>
+	   <item name="android:paddingBottom">1dp</item>
+	   <item name="android:paddingTop">1dp</item>
+   </style>      
+   
+   <style name="Start">
+       <item name="android:background">@drawable/ic_date</item>
+   </style>
    
    <style name="StartDate">
-       <item name="android:background">@drawable/ic_date</item>
        <item name="android:padding">@dimen/button_margin</item>
        <item name="android:textSize">40.0sp</item>
        <item name="android:textColor">@color/text_dark</item>
@@ -179,12 +189,5 @@
 	   <item name="android:paddingTop">5dp</item>
    </style>   
    
-   <style name="SpinnerText">
-	   <item name="android:textSize">19.0sp</item>
-       <item name="android:textColor">@color/text_green</item>
-	   <item name="android:paddingLeft">6dp</item>
-	   <item name="android:paddingBottom">1dp</item>
-	   <item name="android:paddingTop">1dp</item>
-   </style>      
    
 </resources>
