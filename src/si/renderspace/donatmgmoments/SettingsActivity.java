@@ -101,13 +101,13 @@ public class SettingsActivity extends Activity {
 	 			  }
 	 			 
 	 			  Utils.resetMenu(mainMenu);
-	 			 if (Utils.getPrefernciesBoolean(SettingsActivity.this,  Settings.SETTING_FIRST_START, false)) {
+	 			  if (Utils.getPrefernciesBoolean(SettingsActivity.this,  Settings.SETTING_FIRST_START, false)) {
 	 				 finish();
-	 			 } else {
+	 			  } else {
 	 				Intent intent = new Intent(SettingsActivity.this, HomeScreenActivity.class);
 	 				startActivity(intent);
 					Utils.savePrefernciesBoolean(SettingsActivity.this,  Settings.SETTING_FIRST_START, true); 
-	 			 }
+	 			  }
 			  }
 	 	});	
 		
@@ -166,16 +166,16 @@ public class SettingsActivity extends Activity {
 
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-		Utils.resetMenu(mainMenu);		
-		
 		if (item.getItemId() == android.R.id.home) {
-			 if (Utils.getPrefernciesBoolean(SettingsActivity.this, Settings.SETTING_FIRST_START, false)) {
- 				 finish();
- 			 } else {
+			Utils.resetMenu(mainMenu);		
+			if (Utils.getPrefernciesBoolean(SettingsActivity.this, Settings.SETTING_FIRST_START, false)) {
+				 finish();
+ 			} else {
  				Intent intent = new Intent(SettingsActivity.this, HomeScreenActivity.class);
  				startActivity(intent);
- 			 }
+ 			}
 	    } else if (item.getItemId() == R.id.calendar) {
+			Utils.resetMenu(mainMenu);		
 			Intent intent = new Intent(this, CalendarActivity.class);
 			startActivity(intent);	    	
 	    } else if (item.getItemId() == R.id.settings) { 

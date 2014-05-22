@@ -54,16 +54,15 @@
 				            android:text="Indikacija" />
 					</LinearLayout>
 		
-		
-		        
 			        <TextView
 			            android:id="@+id/indicationDesc"
+			            style="@style/TabelSecond"
 			            android:layout_width="wrap_content"
 			            android:layout_height="wrap_content"
 			            android:layout_marginTop="5dp"
-			            style="@style/TabelSecond"
-				        android:fontFamily="sans-serif-light"
+			            android:fontFamily="sans-serif-light"
 			            android:text="@string/home_screen_title" />
+
 		 		</LinearLayout>
 		
 	    </FrameLayout> 	
@@ -254,10 +253,11 @@
 				        				        
 				        <TextView
 				            android:id="@+id/startDateDate"
+				            style="@style/StartDate"
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            style="@style/StartDate"
-		        			android:text="12" />
+				            android:paddingLeft="@dimen/activity_horizontal_margin"
+				            android:text="12" />
 	
 				        <LinearLayout
 					        android:layout_width="0dip"
@@ -278,10 +278,12 @@
 				        			        			        
 				        <TextView
 				            android:id="@+id/startDateYear"
+				            style="@style/StartDate"
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            style="@style/StartDate"
-		        			android:text="2014" />
+				            android:paddingRight="@dimen/activity_horizontal_margin"
+				            android:text="2014" />
+
 				        </LinearLayout>			        			        			        
 				    </FrameLayout>
 			        

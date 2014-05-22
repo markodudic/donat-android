@@ -10,7 +10,6 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AbsListView;
 
 /**
  * A {@link ViewPager} that allows pseudo-infinite paging with a wrap-around
@@ -141,6 +140,7 @@ public class InfiniteViewPager extends ViewPager {
 			 */
 			if (getChildCount() > 0) {
 				View firstChild = getChildAt(0);
+
 				/*
 				 * The child was previously measured with exactly the full
 				 * height. Allow it to wrap this time around.
@@ -149,9 +149,7 @@ public class InfiniteViewPager extends ViewPager {
 						.makeMeasureSpec(height, MeasureSpec.AT_MOST));
 
 				//height = firstChild.getMeasuredHeight();
-				//height=1000;
 				rowHeight = height / rows;
-				//rowHeight += 50;
 			}
 		}
 
@@ -167,7 +165,7 @@ public class InfiniteViewPager extends ViewPager {
 
 		// Prevent small vertical scroll
 		calHeight += 3;
-				
+
 		heightMeasureSpec = MeasureSpec.makeMeasureSpec(calHeight,
 				MeasureSpec.EXACTLY);
 

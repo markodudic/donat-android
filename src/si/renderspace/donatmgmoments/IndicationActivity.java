@@ -16,6 +16,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -118,7 +119,8 @@ public class IndicationActivity extends Activity {
 			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview3.setLayoutParams(tableRowParams);
 			textview3.setTypeface(tfl);
-			tr.addView(textview3);		
+			tr.addView(textview3);
+			tr.setGravity(Gravity.CENTER_VERTICAL);
 			
 			lTable.addView(tr);
 		}
@@ -265,7 +267,7 @@ public class IndicationActivity extends Activity {
 					SimpleDateFormat  format = new SimpleDateFormat("dd.MMM.yyyy");  
 					try {  
 					    Date date = format.parse(dtStart);  
-					    Utils.savePrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE, date.getTime()-20000*60*1000);
+					    Utils.savePrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE, date.getTime());
 					} catch (ParseException e) {  
 					    e.printStackTrace();  
 					}

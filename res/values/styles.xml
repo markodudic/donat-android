@@ -157,7 +157,8 @@
    </style>
    
    <style name="StartDate">
-       <item name="android:padding">@dimen/button_margin</item>
+       <item name="android:paddingTop">@dimen/layout_margin</item>
+       <item name="android:paddingBottom">@dimen/button_margin</item>
        <item name="android:textSize">40.0sp</item>
        <item name="android:textColor">@color/text_dark</item>
    </style>

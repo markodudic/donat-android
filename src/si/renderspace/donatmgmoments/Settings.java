@@ -31,8 +31,8 @@ public class Settings {
 	public static HashMap<Integer,String> languages = new HashMap<Integer,String>() {{
 																					    put(0, "en");
 																					    put(1, "ru");
-																					    put(2, "it");
-																					    put(3, "hr");
+																					    put(2, "hr");
+																					    put(3, "it");
 																					}};
 	//nacini pitja
 	public static HashMap<Integer,String> indications = new HashMap<Integer,String>();
@@ -170,8 +170,15 @@ public class Settings {
 		//za test
 		history = new JSONArray();
 		Calendar cc = Calendar.getInstance();
-		saveHistory (context, 10, cc.getTimeInMillis()-30000*60*1000, cc.getTimeInMillis()-20000*60*1000);
-		saveHistory (context, 8, cc.getTimeInMillis()-60000*60*1000, cc.getTimeInMillis()-40000*60*1000);
+		cc.add(Calendar.MONTH, -4);
+		Calendar cc1 = Calendar.getInstance();
+		cc1.add(Calendar.DATE, -15);
+		Calendar cc2 = Calendar.getInstance();
+		cc2.add(Calendar.MONTH, -8);
+		Calendar cc3 = Calendar.getInstance();
+		cc3.add(Calendar.MONTH, -5);
+		saveHistory (context, 4, cc2.getTimeInMillis(), cc3.getTimeInMillis());
+		saveHistory (context, 8, cc.getTimeInMillis(), cc1.getTimeInMillis());
 		//
 	}
 	
