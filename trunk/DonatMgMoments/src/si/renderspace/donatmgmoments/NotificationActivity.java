@@ -126,8 +126,7 @@ public class NotificationActivity extends Activity {
 		mainMenu = menu;
 		MenuInflater inflater = getMenuInflater();
 	    inflater.inflate(R.menu.action_bar, menu);
-	    Utils.setMenu(mainMenu, R.id.settings);		
-		return super.onCreateOptionsMenu(menu);
+	    return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override

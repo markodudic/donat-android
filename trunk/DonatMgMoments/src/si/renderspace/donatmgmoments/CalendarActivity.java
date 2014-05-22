@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.json.JSONObject;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -47,10 +49,9 @@ public class CalendarActivity extends FragmentActivity {
 		endDateCal.add(Calendar.YEAR, 1);
 		
 		ArrayList<Date> drinkingDates = new ArrayList<Date>();
-		//drinkingDates = addDrinkingDates(indx, startDateCal, endDateCal, drinkingDates);
+		drinkingDates = addDrinkingDates(indx, startDateCal, endDateCal);
 		
 		//history
-		/*
 		for (int i=0; i<Settings.history.length(); i++) {
 			try {
 				JSONObject historyEl = (JSONObject) Settings.history.get(i);
@@ -62,17 +63,17 @@ public class CalendarActivity extends FragmentActivity {
 				startDateCal.setTimeInMillis(startDate);
 				endDateCal.setTimeInMillis(endDate);
 				
-				//drinkingDates = addDrinkingDates(indx, startDateCal, endDateCal, drinkingDates);
+				drinkingDates.addAll(addDrinkingDates(indx, startDateCal, endDateCal));
 				
 			} catch (Exception e) {
 				System.out.println("CALENDAR ERROR="+e.getLocalizedMessage());
 			}
 			
-		}*/
+		}
 			
 		
 		//nastavitve
-		//caldroidFragment.setDisableDates(drinkingDates);
+		caldroidFragment.setDisableDates(drinkingDates);
 
 		WeekdayArrayAdapter.textColor = getResources().getColor(R.color.text_green);
 		WeekdayArrayAdapter.textSize = 28;
@@ -140,7 +141,11 @@ public class CalendarActivity extends FragmentActivity {
 			@Override
 			public void onSelectDate(Date date, View view) {
 				Intent intent = new Intent(CalendarActivity.this, IndicationActivity.class);
-		        intent.putExtra("INDX", Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX));
+				if (date.getTime() > Utils.getPrefernciesLong(CalendarActivity.this,  Settings.SETTING_START_DATE)) {
+		        	intent.putExtra("INDX", Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX));
+		        } else {
+		        	intent.putExtra("INDX", getIndxFromDate(date));  	
+		        }
 				startActivity(intent);
 			}
 		};
@@ -174,18 +179,18 @@ public class CalendarActivity extends FragmentActivity {
 		mainMenu = menu;
 		MenuInflater inflater = getMenuInflater();
 	    inflater.inflate(R.menu.action_bar, menu);
-	    Utils.setMenu(mainMenu, R.id.settings);		
+	    Utils.setMenu(mainMenu, R.id.calendar);		
 		return super.onCreateOptionsMenu(menu);
 	}
 	
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-		Utils.resetMenu(mainMenu);		
-		
 		if (item.getItemId() == android.R.id.home) {
+			Utils.resetMenu(mainMenu);		
 	    	finish();
 	    } else if (item.getItemId() == R.id.calendar) {
 	    } else if (item.getItemId() == R.id.settings) { 
+			Utils.resetMenu(mainMenu);		
 			Intent intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);	    	
 		}
@@ -193,7 +198,8 @@ public class CalendarActivity extends FragmentActivity {
 	    return true;
 	}
 	
-	private static ArrayList<Date> addDrinkingDates(int i, Calendar start, Calendar end, ArrayList<Date> dates) { 
+	private static ArrayList<Date> addDrinkingDates(int i, Calendar start, Calendar end) { 
+		ArrayList<Date> dates = new ArrayList<Date>();
 		switch (i) {
 		case 2: case 3: case 6: case 10:
 			while (start.before(end)) {  
@@ -241,5 +247,24 @@ public class CalendarActivity extends FragmentActivity {
 		}
     	return dates;  
 	} 
+	
+	private int getIndxFromDate(Date date) {
+		for (int i=0; i<Settings.history.length(); i++) {
+			try {
+				JSONObject historyEl = (JSONObject) Settings.history.get(i);
+				int indx = historyEl.getInt(Settings.SETTING_INDX);
+				long startDate = historyEl.getLong(Settings.SETTING_START_DATE);
+				long endDate = historyEl.getLong(Settings.SETTING_END_DATE);
+				if ((startDate < date.getTime()) && (endDate > date.getTime())) {
+					return indx;
+				}
+				
+			} catch (Exception e) {
+				System.out.println("CALENDAR ERROR="+e.getLocalizedMessage());
+			}
+			
+		}
+		return -1;		
+	}
 
 }

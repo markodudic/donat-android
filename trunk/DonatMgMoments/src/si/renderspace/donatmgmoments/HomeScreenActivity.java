@@ -35,7 +35,7 @@ public class HomeScreenActivity extends Activity {
 		    public void run() {
 				checkNotifications();
 		    }
-		};
+		}; 
 		
 		handler.postDelayed(runnable, Settings.TIMER);
 		
@@ -95,7 +95,7 @@ public class HomeScreenActivity extends Activity {
 			    public void onClick(View v) {
 			    	showIndication(6);
 			    }
-			});
+			}); 
 		
 		TextView tvIndication7 = (TextView) findViewById(R.id.indication_7);
 		tvIndication7.setText(Settings.indications.get(7));
