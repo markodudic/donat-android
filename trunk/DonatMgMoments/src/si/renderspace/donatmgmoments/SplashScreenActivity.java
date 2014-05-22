@@ -17,7 +17,7 @@ public class SplashScreenActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
  
-        int lang = Utils.getPrefernciesInt(SplashScreenActivity.this, "LANG");
+        int lang = Utils.getPrefernciesInt(SplashScreenActivity.this, Settings.SETTING_LANG);
         if (lang == -1) {
         	String langDefault = Locale.getDefault().getLanguage();
         	if (langDefault.equals("ru") || (langDefault.equals("hr")) || (langDefault.equals("it"))){
@@ -33,16 +33,16 @@ public class SplashScreenActivity extends Activity {
  
 	            @Override
 	            public void run() {
-	            	if (Utils.getPrefernciesBoolean(SplashScreenActivity.this, "firstStart", false)) {
+	            	if (Utils.getPrefernciesBoolean(SplashScreenActivity.this, Settings.SETTING_FIRST_START, false)) {
 	            		Intent i = new Intent(SplashScreenActivity.this, HomeScreenActivity.class);
 	            		startActivity(i);
 		            } else {
-		            	Utils.savePrefernciesString(SplashScreenActivity.this, "TESCE", "07:00");
-						Utils.savePrefernciesString(SplashScreenActivity.this, "ZAJTRK", "07:30");
-						Utils.savePrefernciesString(SplashScreenActivity.this, "KOSILO", "12:30");
-						Utils.savePrefernciesString(SplashScreenActivity.this, "VECERJA", "19:30");
-						Utils.savePrefernciesString(SplashScreenActivity.this, "SPANJE", "22:00");
-						Utils.savePrefernciesInt(SplashScreenActivity.this, "OBROKOV", 3);
+		            	Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_TESCE, "07:00");
+						Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_ZAJTRK, "07:30");
+						Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_KOSILO, "12:30");
+						Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_VECERJA, "19:30");
+						Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_SPANJE, "22:00");
+						Utils.savePrefernciesInt(SplashScreenActivity.this, Settings.SETTING_OBROKOV, 3);
 						
 						Intent i = new Intent(SplashScreenActivity.this, SettingsActivity.class);
 						startActivity(i);						

@@ -43,7 +43,7 @@ public class NotificationActivity extends Activity {
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         tvTitle.setTypeface(ft);
         
-        int indx = Utils.getPrefernciesInt(this, "INDX");
+        int indx = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
 		
 		Intent intent = getIntent();
 		final int period = intent.getIntExtra("PERIOD", 0);

@@ -150,8 +150,8 @@ public class HomeScreenActivity extends Activity {
 			ImageView iv = (ImageView) findViewById(id);
 			iv.setVisibility(View.GONE);	
 		}
-		if (Utils.getPrefernciesInt(this, "INDX") != -1) {
-			int id = getResources().getIdentifier("indication_"+Utils.getPrefernciesInt(this, "INDX")+"_selected", "id", getPackageName());
+		if (Utils.getPrefernciesInt(this,  Settings.SETTING_INDX) != -1) {
+			int id = getResources().getIdentifier("indication_"+Utils.getPrefernciesInt(this,  Settings.SETTING_INDX)+"_selected", "id", getPackageName());
 			ImageView iv = (ImageView) findViewById(id);
 			iv.setVisibility(View.VISIBLE);	
 		}
@@ -210,8 +210,8 @@ public class HomeScreenActivity extends Activity {
 		
 		Date[] notificationTimes = Settings.notificationTimes;
 		if ((notificationTimes != null) && 
-			(Utils.getPrefernciesInt(this, "INDX")!=-1) && 
-			(dateCurr >= Utils.getPrefernciesLong(this, "DATE"))) {
+			(Utils.getPrefernciesInt(this,  Settings.SETTING_INDX)!=-1) && 
+			(dateCurr >= Utils.getPrefernciesLong(this,  Settings.SETTING_START_DATE))) {
 			for(int i=0; i<notificationTimes.length; i++) {
 				//System.out.println(notificationTimes[i]);
 				calendar.setTime(notificationTimes[i]); 

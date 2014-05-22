@@ -6,9 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import android.annotation.SuppressLint;
-import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -18,7 +16,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
@@ -34,99 +31,49 @@ public class CalendarActivity extends FragmentActivity {
 
 	private void setCustomResourceForDates() {
 		Calendar cal = Calendar.getInstance();
-/*
-		// Min date is last 7 days
-		cal.add(Calendar.DATE, -18);
-		Date blueDate = cal.getTime();
 
-		// Max date is next 7 days
-		cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, 16);
-		Date greenDate = cal.getTime();
-
-		if (caldroidFragment != null) {
-			caldroidFragment.setBackgroundResourceForDate(R.color.blue, blueDate);
-			caldroidFragment.setBackgroundResourceForDate(R.color.green, greenDate);
-			caldroidFragment.setTextColorForDate(R.color.white, blueDate);
-			caldroidFragment.setTextColorForDate(R.color.white, greenDate);
-		}
-		*/
 		Bundle args = new Bundle();
 		args.putInt(CaldroidFragment.START_DAY_OF_WEEK, CaldroidFragment.MONDAY); // Tuesday
 		args.putBoolean(CaldroidFragment.ENABLE_CLICK_ON_DISABLED_DATES, true);
 		caldroidFragment.setArguments(args);		
-		/*
-		// Min date is last 7 days
-		cal.add(Calendar.DATE, -7);
-		Date minDate = cal.getTime(); 
 
-		// Max date is next 7 days
-		cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, 14);
-		Date maxDate = cal.getTime();
-*/
-		int indx = Utils.getPrefernciesInt(this, "INDX");
-		long startDate = Utils.getPrefernciesLong(this, "DATE");
+		//Trenutna indikacija
+		int indx = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
+		long startDate = Utils.getPrefernciesLong(this,  Settings.SETTING_START_DATE);
 		Calendar startDateCal = Calendar.getInstance();
 		Calendar endDateCal = Calendar.getInstance();
 		startDateCal.setTimeInMillis(startDate);
 		endDateCal.setTimeInMillis(startDate);
 		endDateCal.add(Calendar.YEAR, 1);
-		//long daysAfter = daysBetween(startDateCal, endDateCal);
-		//long daysBefore = daysBetween(startDateCal, cal);
+		
 		ArrayList<Date> drinkingDates = new ArrayList<Date>();
+		//drinkingDates = addDrinkingDates(indx, startDateCal, endDateCal, drinkingDates);
 		
-		switch (indx) {
-		case 2: case 3: case 6: case 10:
-			/*daysAfter = daysBetween(startDateCal, endDateCal);
-			daysBefore = daysBetween(startDateCal, cal);
-			for (int i = -(int)daysBefore; i < (int)daysAfter; i++) {
-				cal = Calendar.getInstance();
-				cal.add(Calendar.DATE, i);
-				drinkingDates.add(cal.getTime());
-			}*/
-			while (startDateCal.before(endDateCal)) {  
-				drinkingDates.add(startDateCal.getTime());
-		    	startDateCal.add(Calendar.DATE, 1);
-			}  
-
-			break;
-		case 1: case 4:
-			drinkingDates = calculateDrinkingDays(startDateCal, endDateCal, 5, 2, -1);
-			break;
-		case 5:
-			drinkingDates = calculateDrinkingDays(startDateCal, endDateCal, 42, 21, 3);
-			break;
-		case 7:
-			drinkingDates = calculateDrinkingDays(startDateCal, endDateCal, 90, 30, 3);
-			break;
-		case 8: case 9:
-			drinkingDates = calculateDrinkingDays(startDateCal, endDateCal, 60, 30, 3);
-			;
-		}
-
+		//history
 		/*
-		// Set selected dates
-		// From Date
-		cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, 0);
-		Date fromDate = cal.getTime();
-
-		// To Date
-		cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, (int)daysAfter);
-		Date toDate = cal.getTime();
-*/
-		// Set disabled dates
- 
-		// Customize
-		//caldroidFragment.setMinDate(minDate);
-		//caldroidFragment.setMaxDate(maxDate);
-		caldroidFragment.setDisableDates(drinkingDates);
-		//caldroidFragment.setSelectedDates(fromDate, toDate);
-		//caldroidFragment.setShowNavigationArrows(false);
-		//caldroidFragment.setEnableSwipe(false);
+		for (int i=0; i<Settings.history.length(); i++) {
+			try {
+				JSONObject historyEl = (JSONObject) Settings.history.get(i);
+				indx = historyEl.getInt(Settings.SETTING_INDX);
+				startDate = historyEl.getLong(Settings.SETTING_START_DATE);
+				long endDate = historyEl.getLong(Settings.SETTING_END_DATE);
+				startDateCal = Calendar.getInstance();
+				endDateCal = Calendar.getInstance();
+				startDateCal.setTimeInMillis(startDate);
+				endDateCal.setTimeInMillis(endDate);
+				
+				//drinkingDates = addDrinkingDates(indx, startDateCal, endDateCal, drinkingDates);
+				
+			} catch (Exception e) {
+				System.out.println("CALENDAR ERROR="+e.getLocalizedMessage());
+			}
+			
+		}*/
+			
 		
+		//nastavitve
+		//caldroidFragment.setDisableDates(drinkingDates);
+
 		WeekdayArrayAdapter.textColor = getResources().getColor(R.color.text_green);
 		WeekdayArrayAdapter.textSize = 28;
 		Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
@@ -135,8 +82,6 @@ public class CalendarActivity extends FragmentActivity {
 		CaldroidFragment.disabledTextColor = getResources().getColor(R.color.text_green_50);
 		
 		caldroidFragment.refreshView();
-		
-
 	}
 
 	@Override
@@ -195,7 +140,7 @@ public class CalendarActivity extends FragmentActivity {
 			@Override
 			public void onSelectDate(Date date, View view) {
 				Intent intent = new Intent(CalendarActivity.this, IndicationActivity.class);
-		        intent.putExtra("INDX", Utils.getPrefernciesInt(CalendarActivity.this, "INDX"));
+		        intent.putExtra("INDX", Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX));
 				startActivity(intent);
 			}
 		};
@@ -248,7 +193,31 @@ public class CalendarActivity extends FragmentActivity {
 	    return true;
 	}
 	
-	public static ArrayList<Date> calculateDrinkingDays(Calendar start, Calendar end, int drinkDays, int pauseDays, int cycles)
+	private static ArrayList<Date> addDrinkingDates(int i, Calendar start, Calendar end, ArrayList<Date> dates) { 
+		switch (i) {
+		case 2: case 3: case 6: case 10:
+			while (start.before(end)) {  
+				dates.add(start.getTime());
+				start.add(Calendar.DATE, 1);
+			}  
+			break;
+		case 1: case 4:
+			dates = calculateDrinkingDays(start, end, 5, 2, -1);
+			break;
+		case 5:
+			dates = calculateDrinkingDays(start, end, 42, 21, 3);
+			break;
+		case 7:
+			dates = calculateDrinkingDays(start, end, 90, 30, 3);
+			break;
+		case 8: case 9:
+			dates = calculateDrinkingDays(start, end, 60, 30, 3);
+			;
+		}
+		return dates;
+	}
+	
+	private static ArrayList<Date> calculateDrinkingDays(Calendar start, Calendar end, int drinkDays, int pauseDays, int cycles)
 	{
 		ArrayList<Date> dates = new ArrayList<Date>();
 		int drink = 0;

@@ -84,29 +84,29 @@ public class SettingsActivity extends Activity {
 		btnSave.setOnClickListener(new OnClickListener() {
 	 		  @Override
 			  public void onClick(View v) {
-	 			  Utils.savePrefernciesString(SettingsActivity.this, "TESCE", (String)tvZbujanje.getText());
-	 			  Utils.savePrefernciesString(SettingsActivity.this, "ZAJTRK", (String)tvZajtrk.getText());
-	 			  Utils.savePrefernciesString(SettingsActivity.this, "KOSILO", (String)tvKosilo.getText());
-	 			  Utils.savePrefernciesString(SettingsActivity.this, "VECERJA", (String)tvVecerja.getText());
-	 			  Utils.savePrefernciesString(SettingsActivity.this, "SPANJE", (String)tvSpanje.getText());
-	 			  Utils.savePrefernciesInt(SettingsActivity.this, "OBROKOV", Integer.parseInt((String)spObrokov.getSelectedItem()));
+	 			  Utils.savePrefernciesString(SettingsActivity.this, Settings.SETTING_TESCE, (String)tvZbujanje.getText());
+	 			  Utils.savePrefernciesString(SettingsActivity.this, Settings.SETTING_ZAJTRK, (String)tvZajtrk.getText());
+	 			  Utils.savePrefernciesString(SettingsActivity.this, Settings.SETTING_KOSILO, (String)tvKosilo.getText());
+	 			  Utils.savePrefernciesString(SettingsActivity.this, Settings.SETTING_VECERJA, (String)tvVecerja.getText());
+	 			  Utils.savePrefernciesString(SettingsActivity.this, Settings.SETTING_SPANJE, (String)tvSpanje.getText());
+	 			  Utils.savePrefernciesInt(SettingsActivity.this, Settings.SETTING_OBROKOV, Integer.parseInt((String)spObrokov.getSelectedItem()));
 		 	    
 	 			  Settings.updateData(SettingsActivity.this);
 	 			 			        
 	 			  int langId = (int)spLanguages.getSelectedItemId();
-	 			  if (langId != Utils.getPrefernciesInt(SettingsActivity.this, "LANG")) {
-		 			Utils.savePrefernciesInt(SettingsActivity.this, "LANG", langId);
+	 			  if (langId != Utils.getPrefernciesInt(SettingsActivity.this, Settings.SETTING_LANG)) {
+		 			Utils.savePrefernciesInt(SettingsActivity.this, Settings.SETTING_LANG, langId);
 		 			Settings.setLanguage(SettingsActivity.this, Settings.languages.get(langId));
 	 			  	restartApplication();
 	 			  }
 	 			 
 	 			  Utils.resetMenu(mainMenu);
-	 			 if (Utils.getPrefernciesBoolean(SettingsActivity.this, "firstStart", false)) {
+	 			 if (Utils.getPrefernciesBoolean(SettingsActivity.this,  Settings.SETTING_FIRST_START, false)) {
 	 				 finish();
 	 			 } else {
 	 				Intent intent = new Intent(SettingsActivity.this, HomeScreenActivity.class);
 	 				startActivity(intent);
-					Utils.savePrefernciesBoolean(SettingsActivity.this, "firstStart", true); 
+					Utils.savePrefernciesBoolean(SettingsActivity.this,  Settings.SETTING_FIRST_START, true); 
 	 			 }
 			  }
 	 	});	
@@ -130,14 +130,14 @@ public class SettingsActivity extends Activity {
 	@Override
 	public void onResume() {
 	    super.onResume();
-	    tvZbujanje.setText(Utils.getPrefernciesString(SettingsActivity.this, "TESCE"));
-	    tvZajtrk.setText(Utils.getPrefernciesString(SettingsActivity.this, "ZAJTRK"));
-	    tvKosilo.setText(Utils.getPrefernciesString(SettingsActivity.this, "KOSILO"));
-	    tvVecerja.setText(Utils.getPrefernciesString(SettingsActivity.this, "VECERJA"));
-	    tvSpanje.setText(Utils.getPrefernciesString(SettingsActivity.this, "SPANJE"));
+	    tvZbujanje.setText(Utils.getPrefernciesString(SettingsActivity.this, Settings.SETTING_TESCE));
+	    tvZajtrk.setText(Utils.getPrefernciesString(SettingsActivity.this, Settings.SETTING_ZAJTRK));
+	    tvKosilo.setText(Utils.getPrefernciesString(SettingsActivity.this, Settings.SETTING_KOSILO));
+	    tvVecerja.setText(Utils.getPrefernciesString(SettingsActivity.this, Settings.SETTING_VECERJA));
+	    tvSpanje.setText(Utils.getPrefernciesString(SettingsActivity.this, Settings.SETTING_SPANJE));
 
-		setSpinnerIdSelection(spLanguages, "LANG");
-	    setSpinnerIntSelection(spObrokov, "OBROKOV");
+		setSpinnerIdSelection(spLanguages,  Settings.SETTING_LANG);
+	    setSpinnerIntSelection(spObrokov,  Settings.SETTING_OBROKOV);
 	}	
 
 	public void setTimePickerStringSelection(TextView sp, String pref) {
@@ -169,7 +169,7 @@ public class SettingsActivity extends Activity {
 		Utils.resetMenu(mainMenu);		
 		
 		if (item.getItemId() == android.R.id.home) {
-			 if (Utils.getPrefernciesBoolean(SettingsActivity.this, "firstStart", false)) {
+			 if (Utils.getPrefernciesBoolean(SettingsActivity.this, Settings.SETTING_FIRST_START, false)) {
  				 finish();
  			 } else {
  				Intent intent = new Intent(SettingsActivity.this, HomeScreenActivity.class);

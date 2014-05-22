@@ -5,16 +5,17 @@ import hirondelle.date4j.DateTime;
 import java.util.HashMap;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.TableLayout.LayoutParams;
 
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidGridAdapter;
+import com.roomorama.caldroid.SquareTextView;
 
 public class CalendarCustomAdapter extends CaldroidGridAdapter {
 
@@ -34,14 +35,13 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 			cellLayout = (FrameLayout) inflater.inflate(R.layout.calendar_cell, null);
 		}
 
-		TextView cellView = (TextView) cellLayout.getChildAt(0);
+		SquareTextView cellView = (SquareTextView) cellLayout.getChildAt(0);
 		ImageView cellImage = (ImageView) cellLayout.getChildAt(1);
-
-		cellView.setTextColor(resources.getColor(R.color.text_green));
 
 		// Get dateTime of this cell
 		DateTime dateTime = this.datetimeList.get(position);
-
+		cellView.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,114));
+		
 		// Set color of the dates in previous / next month
 		if (dateTime.getMonth() != month) {
 			cellView.setTextColor(resources.getColor(R.color.text_green_40));
@@ -122,8 +122,10 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 		cellView.setText("" + dateTime.getDay());
 
 		// Set custom color if required
-		setCustomResources(dateTime, cellView, cellView);
-
+		//setCustomResources(dateTime, cellView, cellView);
+		//cellView.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,114));
+		cellLayout.setLayoutParams(new AbsListView.LayoutParams(LayoutParams.MATCH_PARENT,114));
+		parent.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
 		
 		return cellLayout;
 	}

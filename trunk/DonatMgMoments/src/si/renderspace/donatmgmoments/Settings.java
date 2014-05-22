@@ -1,15 +1,33 @@
 package si.renderspace.donatmgmoments;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map.Entry;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import android.content.Context;
 import android.content.res.Configuration;
 
 
 public class Settings {
+	
+	public static String SETTING_FIRST_START = "FIRST_START";
+	public static String SETTING_INDX = "INDX";
+	public static String SETTING_START_DATE = "START_DATE";
+	public static String SETTING_END_DATE = "END_DATE";
+	public static String SETTING_LANG = "LANG";
+	public static String SETTING_TESCE = "TESCE";
+	public static String SETTING_ZAJTRK = "ZAJTRK";
+	public static String SETTING_KOSILO = "KOSILO";
+	public static String SETTING_VECERJA = "VECERJA";
+	public static String SETTING_SPANJE = "SPANJE";
+	public static String SETTING_OBROKOV = "OBROKOV";
+	public static String SETTING_HISTORY = "HISTORY";
+
 	public static HashMap<Integer,String> languages = new HashMap<Integer,String>() {{
 																					    put(0, "en");
 																					    put(1, "ru");
@@ -35,7 +53,9 @@ public class Settings {
 	public static Date[] notificationTimes;
  
 	public final static int TIMER = 60*1000; //1 minut v milisec
- 
+
+	public static JSONArray history = new JSONArray();
+
 	public static void prepareData (Context context) {
 		indications.put(1,context.getResources().getString(R.string.indication_1));
 		indications.put(2,context.getResources().getString(R.string.indication_2));
@@ -138,18 +158,33 @@ public class Settings {
 		interval.put(10,context.getResources().getString(R.string.interval_stalno));
 
 		updateData(context);
+		
+		String h = Utils.getPrefernciesString(context, SETTING_HISTORY);
+		if (h != null) {
+			try {
+				System.out.println("HISTORY GET="+h);
+				history = new JSONArray(h);
+			} catch (Exception e) {}
+		}
+		
+		//za test
+		history = new JSONArray();
+		Calendar cc = Calendar.getInstance();
+		saveHistory (context, 10, cc.getTimeInMillis()-30000*60*1000, cc.getTimeInMillis()-20000*60*1000);
+		saveHistory (context, 8, cc.getTimeInMillis()-60000*60*1000, cc.getTimeInMillis()-40000*60*1000);
+		//
 	}
 	
 	public static void updateData (Context context) {
-		setInterval(context, "TESCE");
-		setInterval(context, "ZAJTRK");
-		setInterval(context, "KOSILO");
-		setInterval(context, "VECERJA");
-		setInterval(context, "SPANJE");
+		setInterval(context, Settings.SETTING_TESCE);
+		setInterval(context, Settings.SETTING_ZAJTRK);
+		setInterval(context, Settings.SETTING_KOSILO);
+		setInterval(context, Settings.SETTING_VECERJA);
+		setInterval(context, Settings.SETTING_SPANJE);
 		
-		intervalMeals = Utils.getPrefernciesInt(context, "OBROKOV"); 
-		if (Utils.getPrefernciesInt(context, "INDX") != -1) {
-			setNotificationTimes(Utils.getPrefernciesInt(context, "INDX"));
+		intervalMeals = Utils.getPrefernciesInt(context,  Settings.SETTING_OBROKOV); 
+		if (Utils.getPrefernciesInt(context,  Settings.SETTING_INDX) != -1) {
+			setNotificationTimes(Utils.getPrefernciesInt(context,  Settings.SETTING_INDX));
 		}
 	}
 	
@@ -163,60 +198,60 @@ public class Settings {
 	}
 
 	public static void setNotificationTimes(int indx) {
-		long danDel = (intervalHours.get("SPANJE").getTime() - intervalHours.get("TESCE").getTime()) / 3;
+		long danDel = (intervalHours.get(Settings.SETTING_SPANJE).getTime() - intervalHours.get(Settings.SETTING_TESCE).getTime()) / 3;
 		
 		switch (indx) {
 	        case 1: case 9:
 	    		notificationTimes = new Date[2];
-	    		notificationTimes[0] = new Date(intervalHours.get("ZAJTRK").getTime() - NOTIFICATION_ALARM_MINUTES);
-		        notificationTimes[1] = new Date(intervalHours.get("SPANJE").getTime() - NOTIFICATION_ALARM_MINUTES);
+	    		notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime() - NOTIFICATION_ALARM_MINUTES);
 	    		break;
 	        case 2: 
 	        	notificationTimes = new Date[10];
-	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime());
-	        	notificationTimes[1] = new Date(intervalHours.get("TESCE").getTime() + danDel);
-	        	notificationTimes[2] = new Date(intervalHours.get("TESCE").getTime() + (2 * danDel));
-	        	notificationTimes[3] = new Date(intervalHours.get("SPANJE").getTime());
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime());
+	        	notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() + danDel);
+	        	notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() + (2 * danDel));
+	        	notificationTimes[3] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime());
 	        	
-	        	notificationTimes[4] = new Date(intervalHours.get("ZAJTRK").getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
-		        notificationTimes[5] = new Date(intervalHours.get("KOSILO").getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
-		        notificationTimes[6] = new Date(intervalHours.get("VECERJA").getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[4] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[5] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[6] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
 		        
-	        	notificationTimes[7] = new Date(intervalHours.get("ZAJTRK").getTime() + 90*60*1000);
-		        notificationTimes[8] = new Date(intervalHours.get("KOSILO").getTime() + 90*60*1000);
-		        notificationTimes[9] = new Date(intervalHours.get("VECERJA").getTime() + 90*60*1000);
+	        	notificationTimes[7] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() + 90*60*1000);
+		        notificationTimes[8] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() + 90*60*1000);
+		        notificationTimes[9] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() + 90*60*1000);
 	    		break;
 	        case 3: 
 	    		notificationTimes = new Date[3];
-	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime() - NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[1] = new Date(12*60*60*1000 - NOTIFICATION_ALARM_MINUTES);
-        		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
 	    		break;
 	        case 4: case 5: case 10: 
 	    		notificationTimes = new Date[3];
-	        	notificationTimes[0] = new Date(intervalHours.get("ZAJTRK").getTime() - NOTIFICATION_ALARM_MINUTES);
-        		notificationTimes[1] = new Date(intervalHours.get("KOSILO").getTime() - NOTIFICATION_ALARM_MINUTES);
-        		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
 	    		break;
 	        case 6: 
 	    		notificationTimes = new Date[4];
-	        	notificationTimes[0] = new Date(intervalHours.get("ZAJTRK").getTime() - NOTIFICATION_ALARM_MINUTES);
-        		notificationTimes[1] = new Date(intervalHours.get("KOSILO").getTime() - NOTIFICATION_ALARM_MINUTES);
-        		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);
-		        notificationTimes[3] = new Date(intervalHours.get("SPANJE").getTime() - NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[3] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime() - NOTIFICATION_ALARM_MINUTES);
 	    		break;
 	        case 7: 
 	    		notificationTimes = new Date[3];
-	        	notificationTimes[0] = new Date(intervalHours.get("ZAJTRK").getTime() - NOTIFICATION_ALARM_MINUTES);
-        		notificationTimes[1] = new Date(intervalHours.get("KOSILO").getTime() - NOTIFICATION_ALARM_MINUTES);
-        		notificationTimes[2] = new Date(intervalHours.get("VECERJA").getTime() - NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
 		        break;
 	        case 8: 
 	        	notificationTimes = new Date[4];
-	        	notificationTimes[0] = new Date(intervalHours.get("TESCE").getTime());
-	        	notificationTimes[1] = new Date(intervalHours.get("TESCE").getTime() + danDel);
-	        	notificationTimes[2] = new Date(intervalHours.get("TESCE").getTime() + (2 * danDel));
-	        	notificationTimes[3] = new Date(intervalHours.get("SPANJE").getTime());
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime());
+	        	notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() + danDel);
+	        	notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() + (2 * danDel));
+	        	notificationTimes[3] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime());
 	        	;
 	    }
 		
@@ -232,10 +267,23 @@ public class Settings {
 	    
 	    for (Entry<Integer, String> entry : languages.entrySet()) {
 	        if (entry.getValue().equals(lang)) {
-	        	Utils.savePrefernciesInt(context, "LANG", entry.getKey());
+	        	Utils.savePrefernciesInt(context, Settings.SETTING_LANG, entry.getKey());
 	        }
     	}
 
     }	
 	
+	public static void saveHistory (Context context, int ind, long startDate, long endDate) {
+		try {
+			JSONObject historyEl = new JSONObject();
+			historyEl.put(SETTING_INDX, ind);
+			historyEl.put(SETTING_START_DATE, startDate);
+			historyEl.put(SETTING_END_DATE, endDate);
+			history.put(historyEl);
+			Utils.savePrefernciesString(context, SETTING_HISTORY, history.toString());
+			System.out.println("HISTORY SAVE="+history.toString());
+		} catch (Exception e) {
+			System.out.println("HISTORY ERROR="+e.getLocalizedMessage());
+		}
+	}    
 }

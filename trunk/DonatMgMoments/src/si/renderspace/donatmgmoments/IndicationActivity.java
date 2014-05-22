@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.json.JSONObject;
+
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -153,7 +155,7 @@ public class IndicationActivity extends Activity {
 			}
 		});		
 		
-		final int indxCurr = Utils.getPrefernciesInt(this, "INDX");
+		final int indxCurr = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
 		
 		//date time picker
 		Calendar cal = Calendar.getInstance();
@@ -230,18 +232,18 @@ public class IndicationActivity extends Activity {
 			public void onClick(View v) {
 				dialogConfirmation.dismiss();
 			}
-		});
+		}); 
 		 
 		LinearLayout back = (LinearLayout) dialogConfirmation.findViewById(R.id.back);
 		back.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View v) {
+			public void onClick(View v) { 
 				dialogConfirmation.dismiss();
 				finish();
 			}
 		});		
 
-		//vklopi/izklopi
+		//vklopi/izklopi 
 		final Button bIndicationStart = (Button) findViewById(R.id.btn_indication_start);
 		if (indxCurr == indx) {
 			bIndicationStart.setText(R.string.button_indication_stop);
@@ -249,16 +251,21 @@ public class IndicationActivity extends Activity {
 		bIndicationStart.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				Calendar cc = Calendar.getInstance();
 				if (indxCurr == indx) {
-					Utils.savePrefernciesInt(IndicationActivity.this, "INDX", -1);
+					Utils.savePrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX, -1);
+					Settings.saveHistory(IndicationActivity.this, indx, Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE), cc.getTimeInMillis());
 					finish();
 				} else {
-					Utils.savePrefernciesInt(IndicationActivity.this, "INDX", indx);
+					if (Utils.getPrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX) != -1) {
+						Settings.saveHistory(IndicationActivity.this, Utils.getPrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX), Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE), cc.getTimeInMillis());
+					}
+					Utils.savePrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX, indx);
 					String dtStart = startDateDate.getText().toString()+"."+startDateMonth.getText().toString()+"."+startDateYear.getText().toString();  
 					SimpleDateFormat  format = new SimpleDateFormat("dd.MMM.yyyy");  
 					try {  
 					    Date date = format.parse(dtStart);  
-					    Utils.savePrefernciesLong(IndicationActivity.this, "DATE", date.getTime()-20000*60*1000);
+					    Utils.savePrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE, date.getTime()-20000*60*1000);
 					} catch (ParseException e) {  
 					    e.printStackTrace();  
 					}
@@ -272,6 +279,8 @@ public class IndicationActivity extends Activity {
 
 	} 
 
+
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
