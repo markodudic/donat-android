@@ -1,11 +1,10 @@
 package si.renderspace.donatmgmoments;
 
 
-import java.util.Locale;
+import java.util.Set;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.view.Menu;
 
 public class Utils {
