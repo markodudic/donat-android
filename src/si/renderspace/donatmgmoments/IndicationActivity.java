@@ -180,8 +180,18 @@ public class IndicationActivity extends Activity {
 				calendar.set(Calendar.MILLISECOND, 0);
 				calendar.add(Calendar.DATE, 1);
 				dtNow = calendar.getTime();
-				System.out.println(dtNow);
 			}
+		} 
+		
+		if (indx == indxCurr) {
+			long date = Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE);
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTimeInMillis(date);
+			calendar.set(Calendar.HOUR_OF_DAY, 0);
+			calendar.set(Calendar.MINUTE, 0);
+			calendar.set(Calendar.SECOND, 0);
+			calendar.set(Calendar.MILLISECOND, 0);
+			dtNow = calendar.getTime();
 		}
 		
 		final TextView startDateDate = (TextView) findViewById(R.id.startDateDate);
