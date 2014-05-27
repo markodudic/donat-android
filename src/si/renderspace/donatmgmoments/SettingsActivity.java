@@ -43,6 +43,11 @@ public class SettingsActivity extends Activity {
         tvTitle.setTypeface(ft);
 		
 		spLanguages = (Spinner) findViewById(R.id.sp_languages);
+		
+		/*MyArrayAdapter mySpinnerArrayAdapter = new MyArrayAdapter(this, R.layout.spinner); 
+		mySpinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spLanguages.setAdapter(mySpinnerArrayAdapter);
+		*/
 		tvZbujanje = (TextView) findViewById(R.id.tv_zbujanje);
         tvZbujanje.setOnClickListener(new OnClickListener() {
 	 		  @Override

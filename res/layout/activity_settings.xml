@@ -18,7 +18,7 @@
     <Spinner
         android:id="@+id/sp_languages"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/spinner_height"
         android:entries="@array/languages"
         style="@style/HomeScreenTitleText"
 		android:background="@drawable/ic_settings_text"
@@ -39,7 +39,7 @@
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/spinner_height"
             android:text="@string/zbujanje"
 			style="@style/SettingsText"
 		    android:fontFamily="sans-serif-light"
@@ -49,7 +49,7 @@
 	        android:id="@+id/tv_zbujanje"
 	        style="@style/TimePickerText"
 	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="wrap_content"
+	        android:layout_height="@dimen/spinner_height"
 	        android:layout_gravity="center_vertical"
 	        android:fontFamily="sans-serif-light"
 	        android:paddingBottom="5dp"
@@ -65,7 +65,7 @@
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/spinner_height"
             android:text="@string/zajtrk"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
@@ -76,7 +76,7 @@
 	        style="@style/TimePickerText"
 	        android:fontFamily="sans-serif-light"
 	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="wrap_content"
+	        android:layout_height="@dimen/spinner_height"
 	        android:layout_gravity="center_vertical"
 	        android:text="12:30" />
     </LinearLayout>
@@ -89,7 +89,7 @@
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/spinner_height"
             android:text="@string/kosilo"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
@@ -100,7 +100,7 @@
 	        style="@style/TimePickerText"
 	        android:fontFamily="sans-serif-light"
 	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="wrap_content"
+	        android:layout_height="@dimen/spinner_height"
 	        android:layout_gravity="center_vertical"
 	        android:text="12:30" />
     </LinearLayout>
@@ -113,7 +113,7 @@
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/spinner_height"
             android:text="@string/vecerja"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
@@ -124,7 +124,7 @@
 	        style="@style/TimePickerText"
 	        android:fontFamily="sans-serif-light"
 	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="wrap_content"
+	        android:layout_height="@dimen/spinner_height"
 	        android:layout_gravity="center_vertical"
 	        android:text="12:30" />
     </LinearLayout>
@@ -137,7 +137,7 @@
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/spinner_height"
             android:text="@string/spanje"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
@@ -148,7 +148,7 @@
 	        style="@style/TimePickerText"
 	        android:fontFamily="sans-serif-light"
 	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="wrap_content"
+	        android:layout_height="@dimen/spinner_height"
 	        android:layout_gravity="center_vertical"
        		android:text="12:30" />
     </LinearLayout>
@@ -161,7 +161,7 @@
 		
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/spinner_height"
             android:text="@string/obrokov"
 			style="@style/SettingsText"
        		android:fontFamily="sans-serif-light"
@@ -170,7 +170,7 @@
         <Spinner
 	        android:id="@+id/sp_obrokov"
 	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="wrap_content"
+	        android:layout_height="@dimen/spinner_height"
 	        android:entries="@array/obrokov"
 	        android:background="@drawable/ic_settings_text"
 	        android:prompt="@string/choose_obrokov" />
