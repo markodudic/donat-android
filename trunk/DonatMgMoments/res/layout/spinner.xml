@@ -1,0 +1,11 @@
+    <Spinner
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sp_languages"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner_height"
+        android:entries="@array/languages"
+        style="@style/HomeScreenTitleText"
+		android:background="@drawable/ic_settings_text"
+	    android:layout_marginBottom="@dimen/layout_margin"
+		android:prompt="@string/choose_language" />
+        
