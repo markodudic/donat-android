@@ -5,6 +5,8 @@ import hirondelle.date4j.DateTime;
 import java.util.HashMap;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +42,7 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 
 		// Get dateTime of this cell
 		DateTime dateTime = this.datetimeList.get(position);
-		cellView.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,114));
+
 		
 		// Set color of the dates in previous / next month
 		if (dateTime.getMonth() != month) {
@@ -123,8 +125,29 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 
 		// Set custom color if required
 		//setCustomResources(dateTime, cellView, cellView);
-		//cellView.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,114));
-		cellLayout.setLayoutParams(new AbsListView.LayoutParams(LayoutParams.MATCH_PARENT,114));
+		
+		
+		DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+		int height = parent.getMeasuredHeight();
+		//System.out.println("HHHHHHHH="+parent.getHeight()+":"+parent.getMeasuredHeight());
+
+		//System.out.println("calHeight="+height);
+		int rH = (int)(((height-3)/6) - 0.5f);
+		//System.out.println("rowHeight2="+rH);
+		//float p = metrics.density * 7.5f;
+		//int cH = (int)(rH - p);
+		//System.out.println("cellHeight2="+cH);
+
+		/*
+		float dp = 57f;
+		float fpixels = metrics.density * dp;
+		int pixels = (int) (fpixels + 0.5f);
+		*/
+		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT,rH/4);
+	    lp.gravity= Gravity.RIGHT; 
+	    cellImage.setLayoutParams(lp);
+		cellView.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,rH));
+		cellLayout.setLayoutParams(new AbsListView.LayoutParams(LayoutParams.MATCH_PARENT,rH));
 		parent.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
 		
 		return cellLayout;
