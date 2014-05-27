@@ -8,8 +8,10 @@ import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AbsListView;
 
 /**
  * A {@link ViewPager} that allows pseudo-infinite paging with a wrap-around
@@ -140,7 +142,6 @@ public class InfiniteViewPager extends ViewPager {
 			 */
 			if (getChildCount() > 0) {
 				View firstChild = getChildAt(0);
-
 				/*
 				 * The child was previously measured with exactly the full
 				 * height. Allow it to wrap this time around.
@@ -149,25 +150,38 @@ public class InfiniteViewPager extends ViewPager {
 						.makeMeasureSpec(height, MeasureSpec.AT_MOST));
 
 				//height = firstChild.getMeasuredHeight();
-				rowHeight = height / rows;
+				
+				/*DisplayMetrics metrics = InfiniteViewPager.this.getResources().getDisplayMetrics();
+				float dp = 64.5f;
+				float fpixels = metrics.density * dp;
+				rowHeight = (int) (fpixels + 0.5f);
+				System.out.println("rowHeight1="+rowHeight);
+				 */
+				//rowHeight = height / rows;
 			}
 		}
 
 		// Calculate height of the calendar
-		int calHeight = 0;
+		//int calHeight = 0;
 
 		// If fit 6 weeks, we need 6 rows
-		if (sixWeeksInCalendar) {
+		/*if (sixWeeksInCalendar) {
 			calHeight = rowHeight * 6;
 		} else { // Otherwise we return correct number of rows
 			calHeight = rowHeight * rows;
-		}
+		}*/
 
 		// Prevent small vertical scroll
-		calHeight += 3;
-
-		heightMeasureSpec = MeasureSpec.makeMeasureSpec(calHeight,
-				MeasureSpec.EXACTLY);
+		/*calHeight += 3;
+		System.out.println("calHeight="+height);
+		int rH = ((height-3)/6);
+		System.out.println("rowHeight2="+rH);
+		DisplayMetrics metrics = InfiniteViewPager.this.getResources().getDisplayMetrics();
+		float p = metrics.density * 7.5f;
+		int cH = (int)(rH - p);
+		System.out.println("cellHeight2="+cH);
+		*/
+		//heightMeasureSpec = MeasureSpec.makeMeasureSpec(calHeight, MeasureSpec.EXACTLY);
 
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 	}

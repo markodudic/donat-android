@@ -23,11 +23,11 @@ public class SquareTextView extends TextView {
 	
 	@Override
 	public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-	    super.onMeasure(widthMeasureSpec, widthMeasureSpec);
+	    super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 	}
 	
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-	    super.onSizeChanged(w, w, oldw, oldh);
+		super.onSizeChanged(w, h, oldw, oldh);
 	}
 }
