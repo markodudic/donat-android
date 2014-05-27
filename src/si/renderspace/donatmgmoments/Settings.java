@@ -49,8 +49,9 @@ public class Settings {
 	public static int intervalMeals = 3;
 	
 	//notifications glede na nacin pitja in nastvavitvah ur za intervale. Nastavi se po izbiri indikacije.
-	public static int NOTIFICATION_ALARM_MINUTES = 1*60*1000; //1 minut v milisec
+	public static int NOTIFICATION_ALARM_MINUTES = 10*60*1000; //10 minut v milisec
 	public static Date[] notificationTimes;
+	public static int[] notificationIndex;
  
 	public final static int TIMER = 60*1000; //1 minut v milisec
 
@@ -212,6 +213,7 @@ public class Settings {
 	    		notificationTimes = new Date[2];
 	    		notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
 		        notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationIndex = new int[]{0,1};
 	    		break;
 	        case 2: 
 	        	notificationTimes = new Date[10];
@@ -227,18 +229,21 @@ public class Settings {
 	        	notificationTimes[7] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() + 90*60*1000);
 		        notificationTimes[8] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() + 90*60*1000);
 		        notificationTimes[9] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() + 90*60*1000);
+		        notificationIndex = new int[]{0,0,0,0,1,1,1,2,2,2};
 	    		break;
 	        case 3: 
 	    		notificationTimes = new Date[3];
 	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[1] = new Date(12*60*60*1000 - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationIndex = new int[]{0,1,2};
 	    		break;
-	        case 4: case 5: case 10: 
+	        case 4: case 5: 
 	    		notificationTimes = new Date[3];
 	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationIndex = new int[]{0,1,2};
 	    		break;
 	        case 6: 
 	    		notificationTimes = new Date[4];
@@ -246,12 +251,14 @@ public class Settings {
         		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
 		        notificationTimes[3] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationIndex = new int[]{0,1,2,3};
 	    		break;
 	        case 7: 
 	    		notificationTimes = new Date[3];
 	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationIndex = new int[]{0,1,1};
 		        break;
 	        case 8: 
 	        	notificationTimes = new Date[4];
@@ -259,7 +266,15 @@ public class Settings {
 	        	notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() + danDel);
 	        	notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() + (2 * danDel));
 	        	notificationTimes[3] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime());
-	        	;
+		        notificationIndex = new int[]{0,0,0,0};
+		        break;
+	        case 10: 
+	    		notificationTimes = new Date[3];
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationIndex = new int[]{0,0,0};
+	    		;
 	    }
 		
 	}

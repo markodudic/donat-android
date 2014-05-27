@@ -71,7 +71,7 @@ public class NotificationActivity extends Activity {
 	   		Settings.prepareData(NotificationActivity.this);
 	   	}
 		String[][] drinks = Settings.drinking.get(indx);
-		String[] drink = drinks[period];
+		String[] drink = drinks[Settings.notificationIndex[period]];
 
 		//system notification
 		showNotification(period, getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
