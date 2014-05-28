@@ -114,7 +114,7 @@
 				        android:id="@+id/drinking_arrow"
 				        android:layout_height="wrap_content"
 				        android:layout_width="@dimen/title_height"
-				        android:src="@drawable/ic_arrow_down" />
+				        android:src="@drawable/ic_menu_close" />
 			    </LinearLayout>
 			
 			    
@@ -178,7 +178,7 @@
 				        android:id="@+id/interval_arrow"
 				        android:layout_height="wrap_content"
 				        android:layout_width="@dimen/title_height"
-				        android:src="@drawable/ic_arrow_down" />
+				        android:src="@drawable/ic_menu_close" />
 			    </LinearLayout>
 			
 			    

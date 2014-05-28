@@ -126,31 +126,36 @@ public class IndicationActivity extends Activity {
 		}
 		
 
-		
+		final ImageView ivDrinkingArrow = (ImageView) findViewById(R.id.drinking_arrow);
 		final LinearLayout lDrinkingData = (LinearLayout) findViewById(R.id.drinking_data_layout);
 		LinearLayout lDrinkingTitle = (LinearLayout) findViewById(R.id.drinking_title_layout);
 		lDrinkingTitle.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				if (isDrinkingData) {
+					ivDrinkingArrow.setImageResource(R.drawable.ic_menu_open);
 					lDrinkingData.setVisibility(LinearLayout.GONE);
 					isDrinkingData = false;
 				} else {
+					ivDrinkingArrow.setImageResource(R.drawable.ic_menu_close);
 					lDrinkingData.setVisibility(LinearLayout.VISIBLE);
 					isDrinkingData = true;
 				}
 			}
 		});	
 		
+		final ImageView ivIntervalArrow = (ImageView) findViewById(R.id.interval_arrow);
 		final LinearLayout lIntervalData = (LinearLayout) findViewById(R.id.interval_data_layout);
 		LinearLayout lIntervalTitle = (LinearLayout) findViewById(R.id.interval_title_layout);
 		lIntervalTitle.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				if (isIntervalData) {
+					ivIntervalArrow.setImageResource(R.drawable.ic_menu_open);
 					lIntervalData.setVisibility(LinearLayout.GONE);
 					isIntervalData = false;
 				} else {
+					ivIntervalArrow.setImageResource(R.drawable.ic_menu_close);
 					lIntervalData.setVisibility(LinearLayout.VISIBLE);
 					isIntervalData = true;
 				}
