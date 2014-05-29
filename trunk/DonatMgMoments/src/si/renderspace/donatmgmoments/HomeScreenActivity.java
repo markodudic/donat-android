@@ -176,7 +176,7 @@ public class HomeScreenActivity extends Activity {
 		if (item.getItemId() == android.R.id.home) {
 	    	finish();
 	    } else if (item.getItemId() == R.id.calendar) {
-			Intent intent = new Intent(this, CalendarActivity.class);
+			Intent intent = new Intent(this, NotificationActivity.class);
 			startActivity(intent);	    	
 	    } else if (item.getItemId() == R.id.settings) {
 			Intent intent = new Intent(this, SettingsActivity.class);

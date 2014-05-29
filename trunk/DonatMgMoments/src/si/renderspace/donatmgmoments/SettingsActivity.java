@@ -26,6 +26,7 @@ public class SettingsActivity extends Activity {
 	Menu mainMenu;
 	private int hour;
 	private int minute;
+	private TimePickerDialog tpd;
  
 		
 	@Override
@@ -202,7 +203,8 @@ public class SettingsActivity extends Activity {
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
 		case TIME_DIALOG_ID:
-			return new TimePickerDialog(this, timePickerListener, hour, minute, true);
+			tpd = new TimePickerDialog(this, timePickerListener, hour, minute, true);
+			return tpd;
 		}
 		return null;
 	}
@@ -213,6 +215,7 @@ public class SettingsActivity extends Activity {
 		hour = Integer.parseInt(time[0]);
 		minute = Integer.parseInt(time[1]);
 		showDialog(TIME_DIALOG_ID);
+		tpd.updateTime(hour,  minute);
 	}
 	 
 	private TimePickerDialog.OnTimeSetListener timePickerListener = 
