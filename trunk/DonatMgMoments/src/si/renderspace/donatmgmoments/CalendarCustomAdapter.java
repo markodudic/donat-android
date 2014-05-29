@@ -113,11 +113,16 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 			}
 		}*/
 
+		DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+		float dp = 16f;
+		int p = (int) (metrics.density * dp);
 		if (dateTime.equals(getToday())) {
 			if ((minDateTime != null && dateTime.lt(minDateTime))
 					|| (maxDateTime != null && dateTime.gt(maxDateTime))
 					|| (disableDates != null && disableDatesMap.containsKey(dateTime))) {
 				cellImage.setImageResource(R.drawable.ic_cal_indicator_curr);
+				float dp_curr = 20f;
+				p = (int) (metrics.density * dp_curr);
 			}
 		}
 		
@@ -126,24 +131,11 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 		// Set custom color if required
 		//setCustomResources(dateTime, cellView, cellView);
 		
-		
-		DisplayMetrics metrics = context.getResources().getDisplayMetrics();
 		int height = parent.getMeasuredHeight();
-		//System.out.println("HHHHHHHH="+parent.getHeight()+":"+parent.getMeasuredHeight());
-
-		//System.out.println("calHeight="+height);
 		int rH = (int)(((height-3)/6) - 0.5f);
-		//System.out.println("rowHeight2="+rH);
-		//float p = metrics.density * 7.5f;
-		//int cH = (int)(rH - p);
-		//System.out.println("cellHeight2="+cH);
-
-		/*
-		float dp = 57f;
-		float fpixels = metrics.density * dp;
-		int pixels = (int) (fpixels + 0.5f);
-		*/
-		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT,rH/4);
+		
+		//FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT,rH/4);
+		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT,p);
 	    lp.gravity= Gravity.RIGHT; 
 	    cellImage.setLayoutParams(lp);
 		cellView.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,rH));
