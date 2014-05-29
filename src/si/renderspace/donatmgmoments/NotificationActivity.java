@@ -97,8 +97,8 @@ public class NotificationActivity extends Activity {
 		for (int i=0; i<drinks.length; i++) {
 			TextView iv = new TextView(this);
 			iv.setLayoutParams(new LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,1f));
-			if (i==period) {
-				resId = getResources().getIdentifier( drinks[i][4]+"_active", "drawable", getPackageName());
+			if (i < Settings.notificationIndex[period]) {
+				resId = getResources().getIdentifier( drinks[i][4]+"_inactive", "drawable", getPackageName());
 			} else {
 				resId = getResources().getIdentifier( drinks[i][4], "drawable", getPackageName());
 			}
