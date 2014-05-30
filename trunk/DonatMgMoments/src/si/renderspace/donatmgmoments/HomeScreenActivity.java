@@ -21,9 +21,8 @@ public class HomeScreenActivity extends Activity {
 	
 	int j;
 	Menu mainMenu;
-	//IndicationFragment fragment;
 	private Handler handler = new Handler();
-	private Runnable runnable;
+	//private Runnable runnable;
     
 	@Override 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +30,11 @@ public class HomeScreenActivity extends Activity {
 
 		setContentView(R.layout.activity_home_screen);
 		
-		runnable = new Runnable(){
+		/*runnable = new Runnable(){
 		    public void run() {
 				checkNotifications();
 		    }
-		}; 
+		};*/ 
 		
 		handler.postDelayed(runnable, Settings.TIMER);
 		
@@ -227,8 +226,16 @@ public class HomeScreenActivity extends Activity {
 				}
 			}
 		}
-        handler.postDelayed(runnable, Settings.TIMER);
+        //handler.postDelayed(runnable, Settings.TIMER);
 	}
+	
+	private Runnable runnable = new Runnable() {
+	   @Override
+	   public void run() {
+	      checkNotifications();
+	      handler.postDelayed(this, Settings.TIMER);
+	   }
+	};	
 
 }
 
