@@ -9,8 +9,14 @@ import java.util.Map.Entry;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Configuration;
+import android.widget.Toast;
 
 
 public class Settings {
@@ -57,6 +63,7 @@ public class Settings {
 
 	public static JSONArray history = new JSONArray();
 
+    
 	public static void prepareData (Context context) {
 		indications.put(1,context.getResources().getString(R.string.indication_1));
 		indications.put(2,context.getResources().getString(R.string.indication_2));
@@ -192,20 +199,21 @@ public class Settings {
 		
 		intervalMeals = Utils.getPrefernciesInt(context,  Settings.SETTING_OBROKOV); 
 		if (Utils.getPrefernciesInt(context,  Settings.SETTING_INDX) != -1) {
-			setNotificationTimes(Utils.getPrefernciesInt(context,  Settings.SETTING_INDX));
+			setNotificationTimes(context, Utils.getPrefernciesInt(context,  Settings.SETTING_INDX));
 		}
+		
 	}
 	
 	public static void setInterval (Context context, String pref) {
 		String prefStr = Utils.getPrefernciesString(context, pref);
 		if (prefStr != null) {
 			String[] spl = prefStr.split(":");
-			long l = (Integer.parseInt(spl[0])-1)*60*60*1000+Integer.parseInt(spl[1])*60*1000;
+			long l = Integer.parseInt(spl[0])*60*60*1000+Integer.parseInt(spl[1])*60*1000;
 			intervalHours.put(pref, new Date(l));
 		}
 	}
 
-	public static void setNotificationTimes(int indx) {
+	public static void setNotificationTimes(Context context, int indx) {
 		long danDel = (intervalHours.get(Settings.SETTING_SPANJE).getTime() - intervalHours.get(Settings.SETTING_TESCE).getTime()) / 3;
 		
 		switch (indx) {
@@ -276,7 +284,7 @@ public class Settings {
 		        notificationIndex = new int[]{0,0,0};
 	    		;
 	    }
-		
+		HomeScreenActivity.setNextNotification(context);				
 	}
 	
     public static void setLanguage(Context context, String lang) {
@@ -307,5 +315,6 @@ public class Settings {
 		} catch (Exception e) {
 			System.out.println("HISTORY ERROR="+e.getLocalizedMessage());
 		}
-	}    
+	}  
+
 }

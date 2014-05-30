@@ -117,7 +117,9 @@ public class NotificationActivity extends Activity {
 	 			  ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancelAll();
 	 			  finish();
 			  }
-	 	});			
+	 	});		
+		
+		HomeScreenActivity.setNextNotification(NotificationActivity.this);
 	}
 
 	@Override
