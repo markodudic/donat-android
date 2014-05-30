@@ -1,16 +1,18 @@
 package si.renderspace.donatmgmoments;
 
 import java.util.Calendar;
+import java.util.Date;
 
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,13 +27,17 @@ public class HomeScreenActivity extends Activity {
 	Menu mainMenu;
 	private Handler handler = new Handler();
 	//private Runnable runnable;
-	private AlarmManager alarmMgr;
-	private PendingIntent notificationIntent;
-    
+	private static AlarmManager alarmMgr;
+	private static PendingIntent notificationIntent;
+	private static BroadcastReceiver br;
+	private static int period_curr = 0;
+	static HomeScreenActivity ma;
+	
 	@Override 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		ma=this;
+		
 		setContentView(R.layout.activity_home_screen);
 		
 		/*runnable = new Runnable(){
@@ -136,19 +142,97 @@ public class HomeScreenActivity extends Activity {
 			    }
 			});		
 		
-		alarmMgr = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
-		Intent intent = new Intent(this, NotificationActivity.class);
-		intent.putExtra("PERIOD", 0);
-		notificationIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+	    br = new BroadcastReceiver() {
+               @Override
+               public void onReceive(Context c, Intent i) {
+                      	Intent intent = new Intent(HomeScreenActivity.this, NotificationActivity.class);
+              			intent.putExtra("PERIOD", period_curr);
+              			startActivity(intent);	
+                      }
+               };
+        registerReceiver(br, new IntentFilter("si.renderspace.donatmgmoments") );
+        notificationIntent = PendingIntent.getBroadcast( this, 0, new Intent("si.renderspace.donatmgmoments"), 0 );
 
-		Calendar calendar = Calendar.getInstance();
-		calendar.set(Calendar.HOUR_OF_DAY, 17);
-		calendar.set(Calendar.MINUTE, 30);
-		calendar.set(Calendar.SECOND, 0);
-		
-		alarmMgr.set(AlarmManager.RTC_WAKEUP,  calendar.getTimeInMillis(), notificationIntent); 
 	}
 
+	
+	public static void setNextNotification(Context context){
+        if (alarmMgr == null) {
+        	alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+        }
+		Calendar calendar = Calendar.getInstance();
+		long minNotificationInDay = -1;
+		long minNotificationTime = -1;
+		boolean alarmSet = false;
+
+		//preverim vse notifikatione za izbrano kuro
+		Date[] notificationTimes = Settings.notificationTimes;
+		if ((notificationTimes != null) &&
+			(Utils.getPrefernciesInt(context,  Settings.SETTING_INDX)!=-1)) {
+			for(int i=0; i<notificationTimes.length; i++) {
+				//System.out.println(notificationTimes[i]);
+				Calendar calendarNotification = Calendar.getInstance();
+				calendarNotification.setTime(notificationTimes[i]); 
+				if ((minNotificationTime == -1) || (minNotificationTime > calendarNotification.getTimeInMillis())) {
+					minNotificationTime = calendarNotification.getTimeInMillis();
+				}
+				
+				int hour = calendar.get(Calendar.HOUR_OF_DAY);
+				int minute = calendar.get(Calendar.MINUTE); 
+				long calendar_curr = hour*60*60*1000+minute*60*1000;
+			
+				//ce je ura notifikationa za trenutno uro je lahko ura alarma
+				System.out.println(calendarNotification.getTimeInMillis()+":"+calendar_curr);
+				if (calendarNotification.getTimeInMillis() > calendar_curr) {
+					Calendar calendarNewNotification = Calendar.getInstance();
+					calendarNewNotification.set(Calendar.HOUR_OF_DAY, 0);
+					calendarNewNotification.set(Calendar.MINUTE, 0);
+					calendarNewNotification.set(Calendar.SECOND, 0);
+					long newNotification = calendarNewNotification.getTimeInMillis() + calendarNotification.getTimeInMillis();
+					
+					//ce je alarm prej kot nastavljen alarm nastavim tistega prej
+					System.out.println(minNotificationInDay+"-"+newNotification);
+					if ((minNotificationInDay == -1) || (minNotificationInDay > newNotification)) {
+						period_curr = i;
+						alarmSet = true;
+						minNotificationInDay = newNotification;
+						Calendar c = Calendar.getInstance();
+						c.setTimeInMillis(newNotification);
+						System.out.println("**="+c);
+						alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent); 
+					}
+				}
+			}
+		}
+		
+		//ce ni nsatvljen alarm nastavim prvi alarm v naslednjem dnevu
+		if (!alarmSet) {
+			period_curr = 0;
+			Calendar calendarNewNotification = Calendar.getInstance();
+			calendarNewNotification.add(Calendar.DATE, 1);
+			calendarNewNotification.set(Calendar.HOUR_OF_DAY, 0);
+			calendarNewNotification.set(Calendar.MINUTE, 0);
+			calendarNewNotification.set(Calendar.SECOND, 0);
+			long newNotification = calendarNewNotification.getTimeInMillis() + minNotificationTime;
+			Calendar c = Calendar.getInstance();
+			c.setTimeInMillis(newNotification);
+			System.out.println("++="+c);
+			alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent); 			
+		}
+	}
+	
+	
+	@Override
+	protected void onDestroy() {
+		cancelNotifications();
+	    unregisterReceiver(br);
+	    super.onDestroy();
+	}
+	
+	public static void cancelNotifications(){
+		alarmMgr.cancel(notificationIntent);
+	}
+	
 	@Override
 	public void onResume() {
 	    super.onResume();

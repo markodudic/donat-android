@@ -143,7 +143,7 @@ public class IndicationActivity extends Activity {
 				}
 			}
 		});	
-		
+	
 		final ImageView ivIntervalArrow = (ImageView) findViewById(R.id.interval_arrow);
 		final LinearLayout lIntervalData = (LinearLayout) findViewById(R.id.interval_data_layout);
 		LinearLayout lIntervalTitle = (LinearLayout) findViewById(R.id.interval_title_layout);
@@ -272,6 +272,7 @@ public class IndicationActivity extends Activity {
 				if (indxCurr == indx) {
 					Utils.savePrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX, -1);
 					Settings.saveHistory(IndicationActivity.this, indx, Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE), cc.getTimeInMillis());
+					HomeScreenActivity.cancelNotifications();
 					finish();
 				} else {
 					if (Utils.getPrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX) != -1) {
@@ -287,7 +288,7 @@ public class IndicationActivity extends Activity {
 					    e.printStackTrace();  
 					}
 					bIndicationStart.setText(R.string.button_indication_stop);
-					Settings.setNotificationTimes(indx);
+					Settings.setNotificationTimes(IndicationActivity.this, indx);
 					dialogConfirmation.show();
 				}
 			} 
