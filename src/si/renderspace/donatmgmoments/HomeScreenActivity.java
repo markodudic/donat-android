@@ -1,14 +1,16 @@
 package si.renderspace.donatmgmoments;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,6 +25,8 @@ public class HomeScreenActivity extends Activity {
 	Menu mainMenu;
 	private Handler handler = new Handler();
 	//private Runnable runnable;
+	private AlarmManager alarmMgr;
+	private PendingIntent notificationIntent;
     
 	@Override 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,7 @@ public class HomeScreenActivity extends Activity {
 		    }
 		};*/ 
 		
-		handler.postDelayed(runnable, Settings.TIMER);
+		//handler.postDelayed(runnable, Settings.TIMER);
 		
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
@@ -132,7 +136,17 @@ public class HomeScreenActivity extends Activity {
 			    }
 			});		
 		
-		 
+		alarmMgr = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
+		Intent intent = new Intent(this, NotificationActivity.class);
+		intent.putExtra("PERIOD", 0);
+		notificationIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Calendar.HOUR_OF_DAY, 17);
+		calendar.set(Calendar.MINUTE, 30);
+		calendar.set(Calendar.SECOND, 0);
+		
+		alarmMgr.set(AlarmManager.RTC_WAKEUP,  calendar.getTimeInMillis(), notificationIntent); 
 	}
 
 	@Override
@@ -195,7 +209,7 @@ public class HomeScreenActivity extends Activity {
 		intent.putExtra("INDX", indx);
 		startActivity(intent);
 	}
-	
+	/*
 	private void checkNotifications() {
 		Calendar calendar = Calendar.getInstance();
 		int hourCurr = calendar.get(Calendar.HOUR_OF_DAY);
@@ -236,6 +250,7 @@ public class HomeScreenActivity extends Activity {
 	      handler.postDelayed(this, Settings.TIMER);
 	   }
 	};	
+	*/
 
 }
 
