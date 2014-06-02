@@ -4,7 +4,6 @@ import java.text.DateFormatSymbols;
 import java.util.Calendar;
 
 import android.app.Activity;
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -28,6 +27,7 @@ import android.widget.TextView;
 public class NotificationActivity extends Activity {
 
 	Menu mainMenu;
+	int period = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +43,32 @@ public class NotificationActivity extends Activity {
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         tvTitle.setTypeface(ft);
         
+        Intent intent = getIntent();
+		period = intent.getIntExtra("PERIOD", 0);
+
+		Button btnClose = (Button) findViewById(R.id.btn_close);
+		btnClose.setOnClickListener(new OnClickListener() {
+	 		  @Override
+			  public void onClick(View v) {
+	 			  ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancelAll();
+	 			  finish();
+			  }
+	 	});		
+	}
+
+	@Override
+	public void onNewIntent(Intent intent) {
+	    super.onNewIntent(intent);
+	    period = intent.getIntExtra("PERIOD", 0);
+	}
+	
+	@Override
+	public void onResume() {
+	    super.onResume();
+
         int indx = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
-		
-		Intent intent = getIntent();
-		final int period = intent.getIntExtra("PERIOD", 0);
-        
-		ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
+
+        ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
 		int id = getResources().getIdentifier("ic_indication_"+indx, "drawable", getPackageName());
 		indicationImage.setImageResource(id);
 		
@@ -56,15 +76,7 @@ public class NotificationActivity extends Activity {
 		indicationTitle.setText(Settings.indications.get(indx));
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
 		indicationTitle.setTypeface(tf);
-		
-		//datum
-		final Calendar c = Calendar.getInstance();
-		int mMonth = c.get(Calendar.MONTH);
-		int mDay = c.get(Calendar.DAY_OF_MONTH);
-		String monthString = new DateFormatSymbols().getMonths()[mMonth];
-	   	
-	   	TextView notificationDate = (TextView) findViewById(R.id.notificationDate);
-	   	notificationDate.setText(mDay+". "+monthString);
+
 		
 		//drinks
 	   	if (Settings.drinking.size() == 0) {
@@ -72,7 +84,7 @@ public class NotificationActivity extends Activity {
 	   	}
 		String[][] drinks = Settings.drinking.get(indx);
 		String[] drink = drinks[Settings.notificationIndex[period]];
-
+		
 		//system notification
 		showNotification(period, getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
 		
@@ -93,6 +105,7 @@ public class NotificationActivity extends Activity {
 		Typeface tfl = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 
 		LinearLayout lNotificationIcons = (LinearLayout) findViewById(R.id.notificationIcons);
+		lNotificationIcons.removeAllViews();
 		int resId;
 		for (int i=0; i<drinks.length; i++) {
 			TextView iv = new TextView(this);
@@ -109,19 +122,18 @@ public class NotificationActivity extends Activity {
 			lNotificationIcons.addView(iv);
 
 		}
-		
-		Button btnClose = (Button) findViewById(R.id.btn_close);
-		btnClose.setOnClickListener(new OnClickListener() {
-	 		  @Override
-			  public void onClick(View v) {
-	 			  ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancelAll();
-	 			  finish();
-			  }
-	 	});		
-		
-		HomeScreenActivity.setNextNotification(NotificationActivity.this);
+
+		//datum
+		final Calendar c = Calendar.getInstance();
+		int mMonth = c.get(Calendar.MONTH);
+		int mDay = c.get(Calendar.DAY_OF_MONTH);
+		String monthString = new DateFormatSymbols().getMonths()[mMonth];
+	   	
+	   	TextView notificationDate = (TextView) findViewById(R.id.notificationDate);
+	   	notificationDate.setText(mDay+". "+monthString);		
 	}
 
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -150,6 +162,7 @@ public class NotificationActivity extends Activity {
 	
 	
 	private void showNotification(int period, String title, String text){
+		System.out.println("SHOW NOTI="+period+":"+title+":"+text);
 		Intent resultIntent = new Intent(this, NotificationActivity.class);
 		resultIntent.putExtra("PERIOD", period);
 		PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, 0);
@@ -164,6 +177,8 @@ public class NotificationActivity extends Activity {
 		
 		NotificationManager mNotificationManager =  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 		mNotificationManager.notify(0, mBuilder.build());
+		
+		HomeScreenActivity.setNextNotification(NotificationActivity.this);		
 	}
 
 }
