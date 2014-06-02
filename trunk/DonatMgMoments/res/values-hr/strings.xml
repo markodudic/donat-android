@@ -6,7 +6,7 @@
     <string name="action_settings">Postavke</string>
     <string name="home_screen">Početna stranica</string>
     <string name="settings">Postavke</string>
-    <string name="seznam">Popis</string>
+    <string name="seznam">Spisak</string>
     <string name="home_screen_title">Odvojite trenutak za svoje zdravlje. Aplikacija nudi smjernice za pijenje mineralne vode Donat Mg na čijoj osnovi Rogaška medical center već više od stoljeća provodi terapije. Odsad su smjernice za pijenje na raspolaganju i vama.</string>
     <string name="drinking">Način pijenja</string>
     <string name="interval">Trajanje</string>
@@ -84,10 +84,10 @@
     <string name="drinking_3_4_dnevno">3 – 4 puta dnevno</string>
     <string name="drinking_pred_jedjo">Prije jela</string>
     
-    <string name="temperature_toplo">30–37 °C (toplo)</string>
-    <string name="temperature_mlacno">23–25 °C (mlako)</string>
-    <string name="temperature_sobna">20 °C (sobna temp)</string>
-    <string name="temperature_hladno">17–18 °C (hladno)</string>
+    <string name="temperature_toplo">30–37 °C</string>
+    <string name="temperature_mlacno">23–25 °C</string>
+    <string name="temperature_sobna">20 °C</string>
+    <string name="temperature_hladno">17–18 °C</string>
     <string name="volume_suffix">dcl</string>
   
     <string name="spped_hitro">Brzo</string>

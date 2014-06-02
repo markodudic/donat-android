@@ -37,6 +37,7 @@ public class SettingsActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
+        getActionBar().setTitle(R.string.home);
 
         int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView tvTitle = (TextView) findViewById(titleId);
@@ -130,7 +131,6 @@ public class SettingsActivity extends Activity {
 			  }
 	 	});		
 		
-
 	}
 
 	@Override
@@ -142,23 +142,20 @@ public class SettingsActivity extends Activity {
 	    tvVecerja.setText(Utils.getPrefernciesString(SettingsActivity.this, Settings.SETTING_VECERJA));
 	    tvSpanje.setText(Utils.getPrefernciesString(SettingsActivity.this, Settings.SETTING_SPANJE));
 
-		setSpinnerIdSelection(spLanguages,  Settings.SETTING_LANG);
-	    setSpinnerIntSelection(spObrokov,  Settings.SETTING_OBROKOV);
+		spLanguages.setSelection(Utils.getPrefernciesInt(SettingsActivity.this, Settings.SETTING_LANG));
+	    spObrokov.setSelection(getIndex(spObrokov,  Utils.getPrefernciesInt(SettingsActivity.this, Settings.SETTING_OBROKOV)+""));
 	}	
+	
+	private int getIndex(Spinner spinner, String myString)
+	{
+		for (int i=0;i<spinner.getCount();i++){
+			if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(myString)){
+				return i;
+	    	}
+	    }
+	    return -1;
+	} 	
 
-	public void setTimePickerStringSelection(TextView sp, String pref) {
-	}
-
-	public void setSpinnerIntSelection(Spinner sp, String pref) {
-		ArrayAdapter myAdap = (ArrayAdapter) sp.getAdapter();
-	    int spinnerPosition = myAdap.getPosition(Utils.getPrefernciesInt(SettingsActivity.this, pref));
-	    sp.setSelection(spinnerPosition);
-	}
-
-	public void setSpinnerIdSelection(Spinner sp, String pref) {
-		int spinnerPosition = Utils.getPrefernciesInt(SettingsActivity.this, pref);
-	    sp.setSelection(spinnerPosition);
-	}
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

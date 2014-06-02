@@ -187,7 +187,7 @@
     
     <TextView
        	android:layout_width="match_parent"
-       	android:layout_height="@dimen/title_height"
+       	android:layout_height="wrap_content"
        	android:gravity="center_horizontal"
 		style="@style/SettingsLicence"
 		android:fontFamily="sans-serif-light"
@@ -196,7 +196,7 @@
    	<TextView
         android:id="@+id/pravila"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/title_height"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         style="@style/SettingsRules"
 		android:fontFamily="sans-serif-light"
