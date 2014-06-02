@@ -37,7 +37,8 @@ public class NotificationActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
-        
+        getActionBar().setTitle(R.string.home);
+       
         int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView tvTitle = (TextView) findViewById(titleId);
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");

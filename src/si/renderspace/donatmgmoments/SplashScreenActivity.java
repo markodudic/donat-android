@@ -35,6 +35,8 @@ public class SplashScreenActivity extends Activity {
 	            public void run() {
 	            	if (Utils.getPrefernciesBoolean(SplashScreenActivity.this, Settings.SETTING_FIRST_START, false)) {
 	            		Intent i = new Intent(SplashScreenActivity.this, HomeScreenActivity.class);
+	            		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+	            		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 	            		startActivity(i);
 		            } else {
 		            	Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_TESCE, "07:00");

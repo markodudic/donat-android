@@ -6,8 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -16,12 +14,14 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.TextUtils.TruncateAt;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.FrameLayout;
@@ -35,8 +35,9 @@ import android.widget.TextView;
 
 public class IndicationActivity extends Activity {
 
-	private boolean isDrinkingData = false;
-	private boolean isIntervalData = false;
+	private boolean isDrinkingData = true;
+	private boolean isIntervalData = true;
+	private boolean isDescription = false;
 	private Date dtNow;
 	
 	@Override
@@ -47,6 +48,7 @@ public class IndicationActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
+        getActionBar().setTitle(R.string.seznam);
 
         int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView tvTitle = (TextView) findViewById(titleId);
@@ -63,8 +65,12 @@ public class IndicationActivity extends Activity {
 		TextView indicationTitle = (TextView) findViewById(R.id.indicationTitle);
 		indicationTitle.setText(Settings.indications.get(indx));
 
-		TextView indicationDesc = (TextView) findViewById(R.id.indicationDesc);
+		final TextView indicationDesc = (TextView) findViewById(R.id.indicationDesc);
 		indicationDesc.setText(Settings.indications_desc.get(indx));
+		indicationDesc.setMaxLines(5);
+		indicationDesc.setEllipsize(TruncateAt.END);
+		final TextView indicationDescLong = (TextView) findViewById(R.id.indicationDescLong);
+		indicationDescLong.setText(Settings.indications_desc.get(indx));
 
 		TextView intervalDesc = (TextView) findViewById(R.id.intervalDesc);
 		intervalDesc.setText(Settings.interval.get(indx));
@@ -125,42 +131,7 @@ public class IndicationActivity extends Activity {
 			lTable.addView(tr);
 		}
 		
-
-		final ImageView ivDrinkingArrow = (ImageView) findViewById(R.id.drinking_arrow);
-		final LinearLayout lDrinkingData = (LinearLayout) findViewById(R.id.drinking_data_layout);
-		LinearLayout lDrinkingTitle = (LinearLayout) findViewById(R.id.drinking_title_layout);
-		lDrinkingTitle.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if (isDrinkingData) {
-					ivDrinkingArrow.setImageResource(R.drawable.ic_menu_open);
-					lDrinkingData.setVisibility(LinearLayout.GONE);
-					isDrinkingData = false;
-				} else {
-					ivDrinkingArrow.setImageResource(R.drawable.ic_menu_close);
-					lDrinkingData.setVisibility(LinearLayout.VISIBLE);
-					isDrinkingData = true;
-				}
-			}
-		});	
-	
-		final ImageView ivIntervalArrow = (ImageView) findViewById(R.id.interval_arrow);
-		final LinearLayout lIntervalData = (LinearLayout) findViewById(R.id.interval_data_layout);
-		LinearLayout lIntervalTitle = (LinearLayout) findViewById(R.id.interval_title_layout);
-		lIntervalTitle.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if (isIntervalData) {
-					ivIntervalArrow.setImageResource(R.drawable.ic_menu_open);
-					lIntervalData.setVisibility(LinearLayout.GONE);
-					isIntervalData = false;
-				} else {
-					ivIntervalArrow.setImageResource(R.drawable.ic_menu_close);
-					lIntervalData.setVisibility(LinearLayout.VISIBLE);
-					isIntervalData = true;
-				}
-			}
-		});		
+		
 		
 		final int indxCurr = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
 		
@@ -295,8 +266,60 @@ public class IndicationActivity extends Activity {
 		});	
 		
 
+		final ImageView ivDrinkingArrow = (ImageView) findViewById(R.id.drinking_arrow);
+		final LinearLayout lDrinkingData = (LinearLayout) findViewById(R.id.drinking_data_layout);
+		//LinearLayout lDrinkingTitle = (LinearLayout) findViewById(R.id.drinking_title_layout);
+		ivDrinkingArrow.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (isDrinkingData) {
+					ivDrinkingArrow.setImageResource(R.drawable.ic_menu_open);
+					lDrinkingData.setVisibility(LinearLayout.GONE);
+					isDrinkingData = false;
+				} else {
+					ivDrinkingArrow.setImageResource(R.drawable.ic_menu_close);
+					lDrinkingData.setVisibility(LinearLayout.VISIBLE);
+					isDrinkingData = true;
+				}
+			}
+		});	
+	
+		final ImageView ivIntervalArrow = (ImageView) findViewById(R.id.interval_arrow);
+		final LinearLayout lIntervalData = (LinearLayout) findViewById(R.id.interval_data_layout);
+		//LinearLayout lIntervalTitle = (LinearLayout) findViewById(R.id.interval_title_layout);
+		ivIntervalArrow.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (isIntervalData) {
+					ivIntervalArrow.setImageResource(R.drawable.ic_menu_open);
+					lIntervalData.setVisibility(LinearLayout.GONE);
+					isIntervalData = false;
+				} else {
+					ivIntervalArrow.setImageResource(R.drawable.ic_menu_close);
+					lIntervalData.setVisibility(LinearLayout.VISIBLE);
+					isIntervalData = true;
+				}
+			}
+		});
+		
+		final ImageView ivDescriptionArrow = (ImageView) findViewById(R.id.description_arrow);
+		ivDescriptionArrow.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (isDescription) {
+					ivDescriptionArrow.setImageResource(R.drawable.ic_menu_open);
+					indicationDesc.setVisibility(LinearLayout.VISIBLE);
+					indicationDescLong.setVisibility(LinearLayout.GONE);
+					isDescription = false;
+				} else {
+					ivDescriptionArrow.setImageResource(R.drawable.ic_menu_close);
+					indicationDesc.setVisibility(LinearLayout.GONE);
+					indicationDescLong.setVisibility(LinearLayout.VISIBLE);
+					isDescription = true;
+				}
+			}
+		});		
 	} 
-
 
 	
 	@Override

@@ -83,10 +83,10 @@
     <string name="drinking_3_4_dnevno">3-4 times daily</string>
     <string name="drinking_pred_jedjo">Before meals</string>
     
-    <string name="temperature_toplo">30–37 °C (warm)</string>
-    <string name="temperature_mlacno">23–25 °C (lukewarm)</string>
-    <string name="temperature_sobna">20 °C (room temp)</string>
-    <string name="temperature_hladno">17–18 °C (cold)</string>
+    <string name="temperature_toplo">30–37 °C</string>
+    <string name="temperature_mlacno">23–25 °C</string>
+    <string name="temperature_sobna">20 °C</string>
+    <string name="temperature_hladno">17–18 °C</string>
     <string name="volume_suffix">dcl</string>
   
     <string name="spped_hitro">Quickly</string>
