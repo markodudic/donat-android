@@ -141,13 +141,17 @@ public class CalendarActivity extends FragmentActivity {
 		final CaldroidListener listener = new CaldroidListener() {
 			@Override
 			public void onSelectDate(Date date, View view) {
-				Intent intent = new Intent(CalendarActivity.this, IndicationActivity.class);
+				int indx = -1;
 				if (date.getTime() > Utils.getPrefernciesLong(CalendarActivity.this,  Settings.SETTING_START_DATE)) {
-		        	intent.putExtra("INDX", Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX));
+					indx = Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX);
 		        } else {
-		        	intent.putExtra("INDX", getIndxFromDate(date));  	
+		        	indx = getIndxFromDate(date);
 		        }
-				startActivity(intent);
+				if (indx != -1) {
+					Intent intent = new Intent(CalendarActivity.this, IndicationActivity.class);
+		        	intent.putExtra("INDX", indx);
+					startActivity(intent);
+				}
 			}
 		};
 

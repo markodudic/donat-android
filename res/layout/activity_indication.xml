@@ -51,11 +51,7 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
 				            android:layout_gravity="center_vertical"
-				            android:text="Indikacija" />
-				        
-				    	<LinearLayout
-					        android:layout_width="0dip"
-							android:layout_height="0dip"
+				            android:text="Indikacija"
 							android:layout_weight="1" />
 				        
 			    	    <ImageView
