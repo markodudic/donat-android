@@ -46,7 +46,7 @@ public class NotificationActivity extends Activity {
         
         Intent intent = getIntent();
 		period = intent.getIntExtra("PERIOD", 0);
-
+	    
 		Button btnClose = (Button) findViewById(R.id.btn_close);
 		btnClose.setOnClickListener(new OnClickListener() {
 	 		  @Override
@@ -68,7 +68,7 @@ public class NotificationActivity extends Activity {
 	    super.onResume();
 
         int indx = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
-
+        	
         ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
 		int id = getResources().getIdentifier("ic_indication_"+indx, "drawable", getPackageName());
 		indicationImage.setImageResource(id);
@@ -85,9 +85,6 @@ public class NotificationActivity extends Activity {
 	   	}
 		String[][] drinks = Settings.drinking.get(indx);
 		String[] drink = drinks[Settings.notificationIndex[period]];
-		
-		//system notification
-		showNotification(period, getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
 		
 		//texti
 		TextView notificationPeriod = (TextView) findViewById(R.id.notificationPeriod);
@@ -162,24 +159,6 @@ public class NotificationActivity extends Activity {
 	}
 	
 	
-	private void showNotification(int period, String title, String text){
-		System.out.println("SHOW NOTI="+period+":"+title+":"+text);
-		Intent resultIntent = new Intent(this, NotificationActivity.class);
-		resultIntent.putExtra("PERIOD", period);
-		PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, 0);
-		
-		NotificationCompat.Builder mBuilder =
-		        new NotificationCompat.Builder(this)
-		        .setSmallIcon(R.drawable.ic_notification)
-		        .setContentTitle(title)
-		        .setContentText(text)
-		        .setAutoCancel(true)
-		        .setContentIntent(pIntent);
-		
-		NotificationManager mNotificationManager =  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		mNotificationManager.notify(0, mBuilder.build());
-		
-		HomeScreenActivity.setNextNotification(NotificationActivity.this);		
-	}
+
 
 }

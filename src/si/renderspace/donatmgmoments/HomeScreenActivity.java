@@ -5,14 +5,18 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.NotificationCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -78,7 +82,7 @@ public class HomeScreenActivity extends Activity {
 			    	showIndication(3);
 			    }
 			});
-
+ 
 		TextView tvIndication4 = (TextView) findViewById(R.id.indication_4);
 		tvIndication4.setText(Settings.indications.get(4));
 		LinearLayout lIndication4 = (LinearLayout) findViewById(R.id.l_indication_4);
@@ -86,7 +90,7 @@ public class HomeScreenActivity extends Activity {
 			    public void onClick(View v) {
 			    	showIndication(4);
 			    }
-			});
+			}); 
 
 		TextView tvIndication5 = (TextView) findViewById(R.id.indication_5);
 		tvIndication5.setText(Settings.indications.get(5));
@@ -145,9 +149,21 @@ public class HomeScreenActivity extends Activity {
 	    br = new BroadcastReceiver() {
                @Override
                public void onReceive(Context c, Intent i) {
-                      	Intent intent = new Intent(HomeScreenActivity.this, NotificationActivity.class);
+            	   		System.out.println("BroadcastReceiver="+period_curr);
+            			//drinks
+            		   	if (Settings.drinking.size() == 0) {
+            		   		Settings.prepareData(HomeScreenActivity.this);
+            		   	}
+            		   	int indx = Utils.getPrefernciesInt(HomeScreenActivity.this,  Settings.SETTING_INDX);
+            	        String[][] drinks = Settings.drinking.get(indx);
+            			String[] drink = drinks[Settings.notificationIndex[period_curr]];
+            			
+            			//system notification
+            			showNotification(period_curr, getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
+
+   						/*Intent intent = new Intent(HomeScreenActivity.this, NotificationActivity.class);
                       	intent.putExtra("PERIOD", period_curr);
-              			startActivity(intent);	
+              			startActivity(intent);*/	
                       }
                };
         registerReceiver(br, new IntentFilter("si.renderspace.donatmgmoments") );
@@ -155,6 +171,26 @@ public class HomeScreenActivity extends Activity {
 
 	}
 
+	private void showNotification(int period, String title, String text){
+		System.out.println("SHOW NOTI="+period+":"+title+":"+text);
+		Intent resultIntent = new Intent(this, NotificationActivity.class);
+		resultIntent.putExtra("PERIOD", period);
+		PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		
+		NotificationCompat.Builder mBuilder =
+		        new NotificationCompat.Builder(this)
+		        .setSmallIcon(R.drawable.ic_notification)
+		        .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_notification_large))
+		        .setContentTitle(title)
+		        .setContentText(text)
+		        .setAutoCancel(true)
+		        .setContentIntent(pIntent);
+		
+		NotificationManager mNotificationManager =  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+		mNotificationManager.notify(0, mBuilder.build());
+		
+		HomeScreenActivity.setNextNotification(HomeScreenActivity.this);		
+	}
 	
 	public static void setNextNotification(Context context){
         if (alarmMgr == null) {
