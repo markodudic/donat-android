@@ -134,12 +134,12 @@
    </style>
  
    <style name="SettingsLicence">
-       <item name="android:textSize">15.0sp</item>
+       <item name="android:textSize">14.0sp</item>
        <item name="android:textColor">@color/text_light</item>
    </style>
 
    <style name="SettingsRules">
-       <item name="android:textSize">15.0sp</item>
+       <item name="android:textSize">14.0sp</item>
        <item name="android:textStyle">bold</item>
        <item name="android:textColor">@color/text_green</item>
    </style>   

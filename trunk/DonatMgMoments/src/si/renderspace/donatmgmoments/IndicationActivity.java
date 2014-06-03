@@ -67,7 +67,7 @@ public class IndicationActivity extends Activity {
 
 		final TextView indicationDesc = (TextView) findViewById(R.id.indicationDesc);
 		indicationDesc.setText(Settings.indications_desc.get(indx));
-		indicationDesc.setMaxLines(5);
+		indicationDesc.setMaxLines(3);
 		indicationDesc.setEllipsize(TruncateAt.END);
 		final TextView indicationDescLong = (TextView) findViewById(R.id.indicationDescLong);
 		indicationDescLong.setText(Settings.indications_desc.get(indx));
@@ -105,7 +105,7 @@ public class IndicationActivity extends Activity {
 			tr.addView(cell);
 			
 			TextView textview2 = new TextView(this);
-			textview2.setText(drink[1]+drink[2]);
+			textview2.setText(drink[1]+'\n'+drink[2]);
 			textview2.setTextAppearance(this, R.style.TabelSecond);
 			//textview2.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
 			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
