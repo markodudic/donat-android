@@ -132,7 +132,7 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 		//setCustomResources(dateTime, cellView, cellView);
 		
 		int height = parent.getMeasuredHeight();
-		int rH = (int)(((height-3)/6) - 0.5f);
+		int rH = (int)(((height-3)/6) - 1f);
 		
 		//FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT,rH/4);
 		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT,p);
