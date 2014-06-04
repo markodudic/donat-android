@@ -33,7 +33,8 @@ public class NotificationActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_notification);
-
+		System.out.println("CREATE");
+		
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
@@ -66,6 +67,7 @@ public class NotificationActivity extends Activity {
 	@Override
 	public void onResume() {
 	    super.onResume();
+		System.out.println("RESUME");
 
         int indx = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
         	
@@ -77,7 +79,6 @@ public class NotificationActivity extends Activity {
 		indicationTitle.setText(Settings.indications.get(indx));
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
 		indicationTitle.setTypeface(tf);
-
 		
 		//drinks
 	   	if (Settings.drinking.size() == 0) {

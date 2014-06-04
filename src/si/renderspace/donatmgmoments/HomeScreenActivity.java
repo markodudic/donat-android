@@ -175,6 +175,7 @@ public class HomeScreenActivity extends Activity {
 		System.out.println("SHOW NOTI="+period+":"+title+":"+text);
 		Intent resultIntent = new Intent(this, NotificationActivity.class);
 		resultIntent.putExtra("PERIOD", period);
+		//PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, 0);
 		PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		
 		NotificationCompat.Builder mBuilder =
@@ -183,7 +184,7 @@ public class HomeScreenActivity extends Activity {
 		        .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_notification_large))
 		        .setContentTitle(title)
 		        .setContentText(text)
-		        .setAutoCancel(true)
+		        //.setAutoCancel(true)
 		        .setContentIntent(pIntent);
 		
 		NotificationManager mNotificationManager =  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
