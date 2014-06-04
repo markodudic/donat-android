@@ -2,11 +2,16 @@ package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -142,6 +147,7 @@ public class SettingsActivity extends Activity {
 
 	}
 
+	
 	@Override
 	public void onResume() {
 	    super.onResume();
@@ -153,6 +159,7 @@ public class SettingsActivity extends Activity {
 
 		spLanguages.setSelection(Utils.getPrefernciesInt(SettingsActivity.this, Settings.SETTING_LANG));
 	    spObrokov.setSelection(getIndex(spObrokov,  Utils.getPrefernciesInt(SettingsActivity.this, Settings.SETTING_OBROKOV)+""));
+
 	}	
 	
 	private int getIndex(Spinner spinner, String myString)

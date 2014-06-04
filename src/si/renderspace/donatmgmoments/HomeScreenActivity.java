@@ -1,5 +1,7 @@
 package si.renderspace.donatmgmoments;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -11,7 +13,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -29,8 +30,6 @@ public class HomeScreenActivity extends Activity {
 	
 	int j;
 	Menu mainMenu;
-	private Handler handler = new Handler();
-	//private Runnable runnable;
 	private static AlarmManager alarmMgr;
 	private static PendingIntent notificationIntent;
 	private static BroadcastReceiver br;
@@ -43,14 +42,6 @@ public class HomeScreenActivity extends Activity {
 		ma=this;
 		
 		setContentView(R.layout.activity_home_screen);
-		
-		/*runnable = new Runnable(){
-		    public void run() {
-				checkNotifications();
-		    }
-		};*/ 
-		
-		//handler.postDelayed(runnable, Settings.TIMER);
 		
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
@@ -171,11 +162,12 @@ public class HomeScreenActivity extends Activity {
 
 	}
 
+	//@SuppressLint("NewApi")
 	private void showNotification(int period, String title, String text){
 		System.out.println("SHOW NOTI="+period+":"+title+":"+text);
-		Intent resultIntent = new Intent(this, NotificationActivity.class);
+		Intent resultIntent = new Intent(this, NotiActivity.class);
 		resultIntent.putExtra("PERIOD", period);
-		//PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, 0);
+		
 		PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		
 		NotificationCompat.Builder mBuilder =
@@ -184,11 +176,11 @@ public class HomeScreenActivity extends Activity {
 		        .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_notification_large))
 		        .setContentTitle(title)
 		        .setContentText(text)
-		        //.setAutoCancel(true)
+		        .setAutoCancel(true)
 		        .setContentIntent(pIntent);
 		
-		NotificationManager mNotificationManager =  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		mNotificationManager.notify(0, mBuilder.build());
+		NotificationManager mNotificationManager =  (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+		mNotificationManager.notify(001, mBuilder.build());
 		
 		HomeScreenActivity.setNextNotification(HomeScreenActivity.this);		
 	}
