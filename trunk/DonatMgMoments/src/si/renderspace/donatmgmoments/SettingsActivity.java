@@ -130,7 +130,16 @@ public class SettingsActivity extends Activity {
 	 			    SettingsActivity.this.startActivity(i);
 			  }
 	 	});		
-		
+
+		TextView tvPravice = (TextView) findViewById(R.id.pravice);
+		tvPravice.setOnClickListener(new OnClickListener() {
+	 		  @Override
+			  public void onClick(View v) {
+	 			    Intent i = new Intent(SettingsActivity.this, RulesActivity.class);
+	 			    SettingsActivity.this.startActivity(i);
+			  }
+	 	});		
+
 	}
 
 	@Override
