@@ -57,6 +57,7 @@ public class IndicationActivity extends Activity {
 
         Intent intent = getIntent();
 		final int indx = intent.getIntExtra("INDX", 1);
+		long startDate = intent.getLongExtra("START_DATE", 0);
 
 		ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
 		int id = getResources().getIdentifier("ic_indication_"+indx, "drawable", getPackageName());
@@ -159,10 +160,22 @@ public class IndicationActivity extends Activity {
 			}
 		} 
 		
+		//ce je trnutna indikacija
 		if (indx == indxCurr) {
 			long date = Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE);
 			Calendar calendar = Calendar.getInstance();
 			calendar.setTimeInMillis(date);
+			calendar.set(Calendar.HOUR_OF_DAY, 0);
+			calendar.set(Calendar.MINUTE, 0);
+			calendar.set(Calendar.SECOND, 0);
+			calendar.set(Calendar.MILLISECOND, 0);
+			dtNow = calendar.getTime();
+		}
+
+		//ce je iz zgodovine
+		if (startDate != 0) {
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTimeInMillis(startDate);
 			calendar.set(Calendar.HOUR_OF_DAY, 0);
 			calendar.set(Calendar.MINUTE, 0);
 			calendar.set(Calendar.SECOND, 0);
@@ -242,6 +255,7 @@ public class IndicationActivity extends Activity {
 				Calendar cc = Calendar.getInstance();
 				if (indxCurr == indx) {
 					Utils.savePrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX, -1);
+					System.out.println("INDX="+indx);
 					Settings.saveHistory(IndicationActivity.this, indx, Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE), cc.getTimeInMillis());
 					HomeScreenActivity.cancelNotifications();
 					finish();

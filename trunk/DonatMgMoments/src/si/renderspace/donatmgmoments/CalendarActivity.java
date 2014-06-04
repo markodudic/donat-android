@@ -142,14 +142,19 @@ public class CalendarActivity extends FragmentActivity {
 			@Override
 			public void onSelectDate(Date date, View view) {
 				int indx = -1;
-				if (date.getTime() > Utils.getPrefernciesLong(CalendarActivity.this,  Settings.SETTING_START_DATE)) {
+				long start = 0;
+				if ((Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX) != -1) && (date.getTime() > Utils.getPrefernciesLong(CalendarActivity.this,  Settings.SETTING_START_DATE))) {
 					indx = Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX);
-		        } else {
-		        	indx = getIndxFromDate(date);
+					start = Utils.getPrefernciesLong(CalendarActivity.this, Settings.SETTING_START_DATE);
+				} else {
+					long[] data = getIndxFromDate(date);
+		        	indx = (int)data[0]; 
+					start = data[1];
 		        }
 				if (indx != -1) {
 					Intent intent = new Intent(CalendarActivity.this, IndicationActivity.class);
 		        	intent.putExtra("INDX", indx);
+		        	intent.putExtra("START_DATE", start);
 					startActivity(intent);
 				}
 			}
@@ -253,7 +258,7 @@ public class CalendarActivity extends FragmentActivity {
     	return dates;  
 	} 
 	
-	private int getIndxFromDate(Date date) {
+	private long[] getIndxFromDate(Date date) {
 		for (int i=0; i<Settings.history.length(); i++) {
 			try {
 				JSONObject historyEl = (JSONObject) Settings.history.get(i);
@@ -261,15 +266,14 @@ public class CalendarActivity extends FragmentActivity {
 				long startDate = historyEl.getLong(Settings.SETTING_START_DATE);
 				long endDate = historyEl.getLong(Settings.SETTING_END_DATE);
 				if ((startDate < date.getTime()) && (endDate > date.getTime())) {
-					return indx;
+					return new long[] {(long)indx, startDate};
 				}
-				
 			} catch (Exception e) {
 				System.out.println("CALENDAR ERROR="+e.getLocalizedMessage());
 			}
 			
 		}
-		return -1;		
+		return new long[] {-1,-1};		
 	}
 
 }

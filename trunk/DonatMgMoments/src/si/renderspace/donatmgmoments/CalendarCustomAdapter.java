@@ -77,41 +77,11 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 			if (dateTime.equals(getToday())) {
 				//cellView.setBackgroundResource(R.drawable.red_border_gray_bg);
 				cellLayout.setBackgroundResource(R.drawable.red_border_gray_bg);
-				cellImage.setImageResource(R.drawable.ic_cal_indicator_curr);
+				//cellImage.setImageResource(R.drawable.ic_cal_indicator_curr);
 			}
 		} else {
 			shouldResetDiabledView = true;
 		}
-/*
-		// Customize for selected dates
-		if (selectedDates != null && selectedDatesMap.containsKey(dateTime)) {
-			if (CaldroidFragment.selectedBackgroundDrawable != -1) {
-				cellView.setBackgroundResource(CaldroidFragment.selectedBackgroundDrawable);
-				cellLayout.setBackgroundResource(CaldroidFragment.selectedBackgroundDrawable);
-				cellImage.setImageResource(R.drawable.ic_cal_indicator_future);
-			} else {
-				cellView.setBackgroundColor(resources.getColor(R.color.caldroid_sky_blue));
-				cellLayout.setBackgroundColor(resources.getColor(R.color.caldroid_sky_blue));
-				cellImage.setImageResource(R.drawable.ic_cal_indicator_future);
-			}
-
-			cellView.setTextColor(CaldroidFragment.selectedTextColor);
-		} else {
-			shouldResetSelectedView = true;
-		}
-*/
-		/*
-		if (shouldResetDiabledView && shouldResetSelectedView) {
-			// Customize for today
-			if (dateTime.equals(getToday())) {
-				//cellView.setBackgroundResource(R.drawable.red_border);
-				cellLayout.setBackgroundResource(R.drawable.red_border);
-				cellImage.setImageResource(R.drawable.ic_cal_indicator_curr);
-			} else {
-				cellView.setBackgroundResource(R.drawable.cell_bg);
-				cellLayout.setBackgroundResource(R.drawable.cell_bg);
-			}
-		}*/
 
 		DisplayMetrics metrics = context.getResources().getDisplayMetrics();
 		float dp = 16f;
@@ -120,9 +90,14 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 			if ((minDateTime != null && dateTime.lt(minDateTime))
 					|| (maxDateTime != null && dateTime.gt(maxDateTime))
 					|| (disableDates != null && disableDatesMap.containsKey(dateTime))) {
-				cellImage.setImageResource(R.drawable.ic_cal_indicator_curr);
-				float dp_curr = 20f;
-				p = (int) (metrics.density * dp_curr);
+				if (Utils.getPrefernciesInt(context, Settings.SETTING_INDX) != -1) {
+					cellImage.setImageResource(R.drawable.ic_cal_indicator_curr);
+					float dp_curr = 20f;
+					p = (int) (metrics.density * dp_curr);
+				} else {
+					cellView.setTextColor(CaldroidFragment.disabledTextColor);
+					cellImage.setImageResource(R.drawable.ic_cal_indicator_past);
+				}
 			}
 		}
 		

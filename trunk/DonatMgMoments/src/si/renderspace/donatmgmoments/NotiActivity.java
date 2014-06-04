@@ -5,26 +5,24 @@ import java.util.Calendar;
 
 import android.app.Activity;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TableLayout.LayoutParams;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TableLayout.LayoutParams;
 import android.widget.TextView;
 
-public class NotificationActivity extends Activity {
+public class NotiActivity extends Activity {
 
 	Menu mainMenu;
 	int period = 0;
@@ -33,13 +31,12 @@ public class NotificationActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_notification);
-		System.out.println("CREATE");
-		
+
 		getActionBar().setHomeButtonEnabled(true);
 		Drawable bg = (Drawable)getResources().getDrawable(R.drawable.dr_action_bar_border); 
         getActionBar().setBackgroundDrawable(bg);
         getActionBar().setTitle(R.string.home);
-       
+        
         int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
         TextView tvTitle = (TextView) findViewById(titleId);
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
@@ -55,12 +52,13 @@ public class NotificationActivity extends Activity {
 	 			  ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancelAll();
 	 			  finish();
 			  }
-	 	});		
-	}
+	 	});        
+    }
 
 	@Override
 	public void onNewIntent(Intent intent) {
 	    super.onNewIntent(intent);
+	    System.out.println("onNewIntent");
 	    period = intent.getIntExtra("PERIOD", 0);
 	}
 	
@@ -82,7 +80,7 @@ public class NotificationActivity extends Activity {
 		
 		//drinks
 	   	if (Settings.drinking.size() == 0) {
-	   		Settings.prepareData(NotificationActivity.this);
+	   		Settings.prepareData(this);
 	   	}
 		String[][] drinks = Settings.drinking.get(indx);
 		String[] drink = drinks[Settings.notificationIndex[period]];
@@ -159,7 +157,5 @@ public class NotificationActivity extends Activity {
 	    return true;
 	}
 	
-	
-
 
 }
