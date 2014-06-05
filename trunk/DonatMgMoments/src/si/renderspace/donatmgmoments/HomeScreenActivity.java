@@ -259,7 +259,9 @@ public class HomeScreenActivity extends Activity {
 	}
 	
 	public static void cancelNotifications(){
-		alarmMgr.cancel(notificationIntent);
+		if (alarmMgr != null) {
+			alarmMgr.cancel(notificationIntent);
+		}
 	}
 	
 	@Override
