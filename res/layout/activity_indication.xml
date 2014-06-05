@@ -132,7 +132,7 @@
 				        android:id="@+id/drinking_arrow"
 				        android:layout_height="wrap_content"
 				        android:layout_width="@dimen/title_height"
-				        android:src="@drawable/ic_menu_close"
+				        android:src="@drawable/ic_menu_open"
 				        android:clickable="true" />
 			    </LinearLayout>
 			
@@ -141,7 +141,8 @@
 			        android:id="@+id/drinking_data_layout"
 			      	android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:orientation="vertical" >
+					android:orientation="vertical"
+					android:visibility="gone" >
 				    
 				    <TableLayout
 				        android:id="@+id/drinking_data_table"
@@ -197,7 +198,7 @@
 				        android:id="@+id/interval_arrow"
 				        android:layout_height="wrap_content"
 				        android:layout_width="@dimen/title_height"
-				        android:src="@drawable/ic_menu_close"
+				        android:src="@drawable/ic_menu_open"
 				        android:clickable="true" />
 			    </LinearLayout>
 			
@@ -206,7 +207,8 @@
 			        android:id="@+id/interval_data_layout"
 			      	android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:orientation="vertical" >
+					android:orientation="vertical"
+					android:visibility="gone" >
 				    
 			        <TextView
 			            android:id="@+id/intervalDesc"
@@ -265,18 +267,16 @@
 		        		android:orientation="horizontal">
 
 					    <LinearLayout
-				        android:id="@+id/start_date_date_layout"
-				      	android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-				        style="@style/Start"
-		        		android:orientation="horizontal">
+					        android:id="@+id/start_date_date_layout"
+					      	android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+					        android:orientation="horizontal">
 				        				        
 				        <TextView
 				            android:id="@+id/startDateDate"
 				            style="@style/StartDate"
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingLeft="@dimen/activity_horizontal_margin"
 				            android:text="12" />
 	
 				        <LinearLayout
@@ -301,7 +301,6 @@
 				            style="@style/StartDate"
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/activity_horizontal_margin"
 				            android:text="2014" />
 
 				        </LinearLayout>			        			        			        
@@ -315,9 +314,11 @@
 				       android:layout_width="match_parent"
 			           android:layout_height="@dimen/button_height"
 			           android:layout_weight="1" />
+			        
 			    </LinearLayout>
 	 	    </LinearLayout>
-   		</FrameLayout> 	  
+   		</FrameLayout> 
+    	  
     </LinearLayout>
 </ScrollView>     
 	    

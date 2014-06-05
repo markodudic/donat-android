@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
+import android.text.Html;
 import android.widget.Toast;
 
 

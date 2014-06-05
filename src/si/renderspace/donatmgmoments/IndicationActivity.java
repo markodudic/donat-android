@@ -14,6 +14,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.TextUtils.TruncateAt;
 import android.view.Gravity;
 import android.view.Menu;
@@ -21,7 +22,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.FrameLayout;
@@ -35,8 +35,8 @@ import android.widget.TextView;
 
 public class IndicationActivity extends Activity {
 
-	private boolean isDrinkingData = true;
-	private boolean isIntervalData = true;
+	private boolean isDrinkingData = false;
+	private boolean isIntervalData = false;
 	private boolean isDescription = false;
 	private Date dtNow;
 	
@@ -67,11 +67,11 @@ public class IndicationActivity extends Activity {
 		indicationTitle.setText(Settings.indications.get(indx));
 
 		final TextView indicationDesc = (TextView) findViewById(R.id.indicationDesc);
-		indicationDesc.setText(Settings.indications_desc.get(indx));
+		indicationDesc.setText(Html.fromHtml(Settings.indications_desc.get(indx).substring(0, 200)));
 		indicationDesc.setMaxLines(3);
 		indicationDesc.setEllipsize(TruncateAt.END);
 		final TextView indicationDescLong = (TextView) findViewById(R.id.indicationDescLong);
-		indicationDescLong.setText(Settings.indications_desc.get(indx));
+		indicationDescLong.setText(Html.fromHtml(Settings.indications_desc.get(indx)));
 
 		TextView intervalDesc = (TextView) findViewById(R.id.intervalDesc);
 		intervalDesc.setText(Settings.interval.get(indx));
@@ -110,7 +110,8 @@ public class IndicationActivity extends Activity {
 			textview2.setTextAppearance(this, R.style.TabelSecond);
 			//textview2.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
 			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
-			textview2.setLayoutParams(tableRowParams);
+			TableRow.LayoutParams tableRowParams2 =  new TableRow.LayoutParams(50,LayoutParams.WRAP_CONTENT,1f);
+			textview2.setLayoutParams(tableRowParams2);
 			textview2.setTypeface(tfl);
 			tr.addView(textview2);
 			
@@ -124,7 +125,7 @@ public class IndicationActivity extends Activity {
 			textview3.setTextAppearance(this, R.style.TabelSecond);
 			//textview3.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
 			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
-			textview3.setLayoutParams(tableRowParams);
+			textview3.setLayoutParams(tableRowParams2);
 			textview3.setTypeface(tfl);
 			tr.addView(textview3);
 			tr.setGravity(Gravity.CENTER_VERTICAL);
