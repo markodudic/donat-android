@@ -56,7 +56,7 @@ public class Settings {
 	public static int intervalMeals = 3;
 	
 	//notifications glede na nacin pitja in nastvavitvah ur za intervale. Nastavi se po izbiri indikacije.
-	public static int NOTIFICATION_ALARM_MINUTES = 10*60*1000; //10 minut v milisec
+	public static int NOTIFICATION_ALARM_MINUTES = 5*60*1000; //5 minut v milisec
 	public static Date[] notificationTimes;
 	public static int[] notificationIndex;
  
