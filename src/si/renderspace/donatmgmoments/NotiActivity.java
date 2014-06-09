@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.TextUtils.TruncateAt;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -75,6 +76,8 @@ public class NotiActivity extends Activity {
 		
 		TextView indicationTitle = (TextView) findViewById(R.id.indicationTitle);
 		indicationTitle.setText(Settings.indications.get(indx));
+		indicationTitle.setMaxLines(1);
+		indicationTitle.setEllipsize(TruncateAt.END);
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
 		indicationTitle.setTypeface(tf);
 		
@@ -114,6 +117,8 @@ public class NotiActivity extends Activity {
 			}
 			iv.setCompoundDrawablesWithIntrinsicBounds(0, resId, 0, 0);
 			iv.setText(drinks[i][0].toLowerCase());
+			iv.setMaxLines(1);
+			iv.setEllipsize(TruncateAt.END);
 			iv.setGravity(Gravity.CENTER_HORIZONTAL);
 			iv.setTypeface(tfl);
 			lNotificationIcons.addView(iv);

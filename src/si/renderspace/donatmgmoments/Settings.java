@@ -177,7 +177,7 @@ public class Settings {
 		}
 		
 		//za test
-		history = new JSONArray();
+		/*history = new JSONArray();
 		Calendar cc = Calendar.getInstance();
 		cc.add(Calendar.MONTH, -4);
 		Calendar cc1 = Calendar.getInstance();
@@ -187,7 +187,7 @@ public class Settings {
 		Calendar cc3 = Calendar.getInstance();
 		cc3.add(Calendar.MONTH, -5);
 		saveHistory (context, 4, cc2.getTimeInMillis(), cc3.getTimeInMillis());
-		saveHistory (context, 8, cc.getTimeInMillis(), cc1.getTimeInMillis());
+		saveHistory (context, 8, cc.getTimeInMillis(), cc1.getTimeInMillis());*/
 		//
 	}
 	

@@ -1,13 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LayoutIndication"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/ic_background"
-    style="@style/LayoutIndication"
+    android:orientation="vertical"
     tools:context=".HomeScreenActivity" >
-
-    
 				        
     <ImageView
         android:id="@+id/iv_language"
