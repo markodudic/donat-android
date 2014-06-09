@@ -12,7 +12,7 @@
 	
 	<style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
 	  <item name="android:textColor">@color/text_green</item>
-	  <item name="android:textSize">18.0sp</item>
+	  <item name="android:textSize">22.0sp</item>
 	</style>
  
     
