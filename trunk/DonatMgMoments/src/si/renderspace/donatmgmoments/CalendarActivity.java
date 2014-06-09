@@ -143,7 +143,7 @@ public class CalendarActivity extends FragmentActivity {
 			public void onSelectDate(Date date, View view) {
 				int indx = -1;
 				long start = 0;
-				if ((Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX) != -1) && (date.getTime() > Utils.getPrefernciesLong(CalendarActivity.this,  Settings.SETTING_START_DATE))) {
+				if ((Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX) != -1) && (date.getTime() >= Utils.getPrefernciesLong(CalendarActivity.this,  Settings.SETTING_START_DATE))) {
 					indx = Utils.getPrefernciesInt(CalendarActivity.this, Settings.SETTING_INDX);
 					start = Utils.getPrefernciesLong(CalendarActivity.this, Settings.SETTING_START_DATE);
 				} else {
@@ -265,7 +265,7 @@ public class CalendarActivity extends FragmentActivity {
 				int indx = historyEl.getInt(Settings.SETTING_INDX);
 				long startDate = historyEl.getLong(Settings.SETTING_START_DATE);
 				long endDate = historyEl.getLong(Settings.SETTING_END_DATE);
-				if ((startDate < date.getTime()) && (endDate > date.getTime())) {
+				if ((startDate <= date.getTime()) && (endDate >= date.getTime())) {
 					return new long[] {(long)indx, startDate};
 				}
 			} catch (Exception e) {
