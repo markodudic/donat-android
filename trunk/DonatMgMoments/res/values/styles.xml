@@ -155,13 +155,11 @@
    
    <style name="StartDate">
        <item name="android:background">@drawable/ic_date_date</item>
-       <item name="android:paddingTop">@dimen/layout_margin</item>
-       <item name="android:paddingBottom">@dimen/button_margin</item>
        <item name="android:textSize">40.0sp</item>
        <item name="android:textColor">@color/text_dark</item>
-       <item name="android:gravity">center_horizontal</item>
-       <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
-       <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+       <item name="android:paddingRight">@dimen/layout_padding</item>
+       <item name="android:paddingLeft">@dimen/layout_padding</item>
+       <item name="android:gravity">center_horizontal|center_vertical</item>
    </style>
    
    <style name="TabelFirst">

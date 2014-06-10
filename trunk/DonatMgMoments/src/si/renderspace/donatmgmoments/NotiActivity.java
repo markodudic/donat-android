@@ -76,8 +76,6 @@ public class NotiActivity extends Activity {
 		
 		TextView indicationTitle = (TextView) findViewById(R.id.indicationTitle);
 		indicationTitle.setText(Settings.indications.get(indx));
-		indicationTitle.setMaxLines(1);
-		indicationTitle.setEllipsize(TruncateAt.END);
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
 		indicationTitle.setTypeface(tf);
 		
@@ -90,6 +88,8 @@ public class NotiActivity extends Activity {
 		
 		//texti
 		TextView notificationPeriod = (TextView) findViewById(R.id.notificationPeriod);
+		notificationPeriod.setMaxLines(1);
+		notificationPeriod.setEllipsize(TruncateAt.END);
 		notificationPeriod.setText(drink[0]);
 
 		TextView notificationVolume = (TextView) findViewById(R.id.notificationVolume);
