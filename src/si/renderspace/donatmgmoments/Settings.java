@@ -242,7 +242,7 @@ public class Settings {
 	    		break;
 	        case 3: 
 	    		notificationTimes = new Date[3];
-	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() - NOTIFICATION_ALARM_MINUTES);
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[1] = new Date(12*60*60*1000 - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
 		        notificationIndex = new int[]{0,1,2};
