@@ -144,8 +144,7 @@ public class IndicationActivity extends Activity {
 		cal.set(Calendar.MINUTE, 0);
 		cal.set(Calendar.SECOND, 0);
 		cal.set(Calendar.MILLISECOND, 0);
-		Date dtNowDay = cal.getTime();
-		//if (Settings.indicationCurrentIndx != -1 && (Settings.indicationCurrentDate.after(dtNow) || Settings.indicationCurrentDate.equals(dtNow))) {
+		/*Date dtNowDay = cal.getTime();
 		if (indxCurr != -1) {
 			long indicationCurrentFirstNotification = dtNowDay.getTime() + Settings.notificationTimes[0].getTime() + Settings.NOTIFICATION_ALARM_MINUTES;
 			System.out.println(indxCurr+":"+new Date(indicationCurrentFirstNotification)+":"+dtNow);
@@ -159,7 +158,7 @@ public class IndicationActivity extends Activity {
 				calendar.add(Calendar.DATE, 1);
 				dtNow = calendar.getTime();
 			}
-		} 
+		}*/
 		
 		//ce je trnutna indikacija
 		if (indx == indxCurr) {

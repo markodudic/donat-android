@@ -211,7 +211,7 @@ public class HomeScreenActivity extends Activity {
 				long calendar_curr = hour*60*60*1000+minute*60*1000;
 			
 				//ce je ura notifikationa za trenutno uro je lahko ura alarma
-				System.out.println("POSIBLE CANDIDATE="+calendarNotification.getTimeInMillis()+":"+calendar_curr);
+				//System.out.println("POSIBLE CANDIDATE="+calendarNotification.getTimeInMillis()+":"+calendar_curr);
 				if (calendarNotification.getTimeInMillis() > calendar_curr) {
 					Calendar calendarNewNotification = Calendar.getInstance();
 					calendarNewNotification.set(Calendar.HOUR_OF_DAY, 0);
@@ -220,14 +220,14 @@ public class HomeScreenActivity extends Activity {
 					long newNotification = calendarNewNotification.getTimeInMillis() + calendarNotification.getTimeInMillis();
 					
 					//ce je alarm prej kot nastavljen alarm nastavim tistega prej
-					System.out.println("CANDIADTE="+minNotificationInDay+"-"+newNotification);
+					//System.out.println("CANDIADTE="+minNotificationInDay+"-"+newNotification);
 					if ((minNotificationInDay == -1) || (minNotificationInDay > newNotification)) {
 						period_curr = i;
 						alarmSet = true;
 						minNotificationInDay = newNotification;
 						Calendar c = Calendar.getInstance();
 						c.setTimeInMillis(newNotification);
-						System.out.println("NEW="+period_curr+":"+c);
+						System.out.println(period_curr+":"+c);
 						alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent); 
 					}
 				}
