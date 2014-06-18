@@ -1,7 +1,5 @@
 package si.renderspace.donatmgmoments;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -16,7 +14,7 @@ import android.content.IntentFilter;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -226,9 +224,12 @@ public class HomeScreenActivity extends Activity {
 						alarmSet = true;
 						minNotificationInDay = newNotification;
 						Calendar c = Calendar.getInstance();
-						c.setTimeInMillis(newNotification);
+						//za elapsed time zracunam razliko med notijem in trenutnim casom
+						long newAlarm = newNotification - c.getTimeInMillis();
+						c.setTimeInMillis(newAlarm);
 						System.out.println(period_curr+":"+c);
-						alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent); 
+						//alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent);
+						alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + newAlarm, notificationIntent);
 					}
 				}
 			}
