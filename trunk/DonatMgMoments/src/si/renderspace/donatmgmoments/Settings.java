@@ -63,7 +63,9 @@ public class Settings {
 	public final static int TIMER = 60*1000; //1 minut v milisec
 
 	public static JSONArray history = new JSONArray();
-
+	 
+	public static AlarmManager alarmMgr;
+	public static PendingIntent notificationIntent;
     
 	public static void prepareData (Context context) {
 		indications.put(1,context.getResources().getString(R.string.indication_1));
@@ -285,7 +287,7 @@ public class Settings {
 		        notificationIndex = new int[]{0,0,0};
 	    		;
 	    }
-		HomeScreenActivity.setNextNotification(context);				
+		AlarmReceiver.setNextNotification(context);				
 	}
 	
     public static void setLanguage(Context context, String lang) {

@@ -27,9 +27,7 @@ import android.widget.TextView;
 public class HomeScreenActivity extends Activity {
 	
 	int j;
-	Menu mainMenu;
-	private static AlarmManager alarmMgr;
-	private static PendingIntent notificationIntent;
+	private Menu mainMenu;
 	private static BroadcastReceiver br;
 	private static int period_curr = 0;
 	static HomeScreenActivity ma;
@@ -135,7 +133,7 @@ public class HomeScreenActivity extends Activity {
 			    }
 			});		
 		
-	    br = new BroadcastReceiver() {
+	    /*br = new BroadcastReceiver() {
                @Override
                public void onReceive(Context c, Intent i) {
             	   		System.out.println("BroadcastReceiver="+period_curr);
@@ -148,18 +146,16 @@ public class HomeScreenActivity extends Activity {
             			String[] drink = drinks[Settings.notificationIndex[period_curr]];
             			
             			//system notification
-            			showNotification(period_curr, getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
-
-   						/*Intent intent = new Intent(HomeScreenActivity.this, NotificationActivity.class);
-                      	intent.putExtra("PERIOD", period_curr);
-              			startActivity(intent);*/	
+            			showNotification(period_curr, getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);	
                       }
                };
-        registerReceiver(br, new IntentFilter("si.renderspace.donatmgmoments") );
-        notificationIntent = PendingIntent.getBroadcast( this, 0, new Intent("si.renderspace.donatmgmoments"), 0 );
+        registerReceiver(br, new IntentFilter("si.renderspace.donatmgmoments") );*/
+		Intent bi=new Intent(new Intent("si.renderspace.donatmgmoments"));
+		bi.putExtra("period_curr", period_curr);
+		Settings.notificationIntent = PendingIntent.getBroadcast( this, 0, bi, 0 );
 
 	}
-
+/*
 	//@SuppressLint("NewApi")
 	private void showNotification(int period, String title, String text){
 		System.out.println("SHOW NOTI="+period+":"+title+":"+text);
@@ -184,8 +180,8 @@ public class HomeScreenActivity extends Activity {
 	}
 	
 	public static void setNextNotification(Context context){
-        if (alarmMgr == null) {
-        	alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+        if (Settings.alarmMgr == null) {
+        	Settings.alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         }
 		Calendar calendar = Calendar.getInstance();
 		long minNotificationInDay = -1;
@@ -250,21 +246,21 @@ public class HomeScreenActivity extends Activity {
 			alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent); 			
 		}
 	}
-	
+	*/
 	
 	@Override
 	protected void onDestroy() {
-		cancelNotifications();
-	    unregisterReceiver(br);
+		//cancelNotifications();
+	    //unregisterReceiver(br);
 	    super.onDestroy();
 	}
-	
+	/*
 	public static void cancelNotifications(){
 		if (alarmMgr != null) {
 			alarmMgr.cancel(notificationIntent);
 		}
 	}
-	
+	*/
 	@Override
 	public void onResume() {
 	    super.onResume();
@@ -325,48 +321,6 @@ public class HomeScreenActivity extends Activity {
 		intent.putExtra("INDX", indx);
 		startActivity(intent);
 	}
-	/*
-	private void checkNotifications() {
-		Calendar calendar = Calendar.getInstance();
-		int hourCurr = calendar.get(Calendar.HOUR_OF_DAY);
-		int minuteCurr = calendar.get(Calendar.MINUTE);
-
-		calendar.set(Calendar.HOUR_OF_DAY, 0);
-		calendar.set(Calendar.MINUTE, 0);
-		calendar.set(Calendar.SECOND, 0);
-		calendar.set(Calendar.MILLISECOND, 0);
-		long dateCurr = calendar.getTimeInMillis();
-		
-		Date[] notificationTimes = Settings.notificationTimes;
-		if ((notificationTimes != null) && 
-			(Utils.getPrefernciesInt(this,  Settings.SETTING_INDX)!=-1) && 
-			(dateCurr >= Utils.getPrefernciesLong(this,  Settings.SETTING_START_DATE))) {
-			for(int i=0; i<notificationTimes.length; i++) {
-				//System.out.println(notificationTimes[i]);
-				calendar.setTime(notificationTimes[i]); 
-				int hour = calendar.get(Calendar.HOUR_OF_DAY);
-				int minute = calendar.get(Calendar.MINUTE);
-				System.out.println(hourCurr+":"+minuteCurr+":"+hour+":"+minute);
-				if ((hourCurr==hour) && (minuteCurr==minute)) {
-					//odprem okno
-					Intent intent = new Intent(this, NotificationActivity.class);
-					intent.putExtra("PERIOD", i);
-					startActivity(intent);	
-					break;
-				}
-			}
-		}
-        //handler.postDelayed(runnable, Settings.TIMER);
-	}
-	
-	private Runnable runnable = new Runnable() {
-	   @Override
-	   public void run() {
-	      checkNotifications();
-	      handler.postDelayed(this, Settings.TIMER);
-	   }
-	};	
-	*/
 
 }
 

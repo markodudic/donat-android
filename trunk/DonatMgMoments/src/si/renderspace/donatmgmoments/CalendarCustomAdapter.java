@@ -57,13 +57,7 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 				|| (maxDateTime != null && dateTime.gt(maxDateTime))
 				|| (disableDates != null && disableDatesMap.containsKey(dateTime))) {
 
-			/*if (CaldroidFragment.disabledBackgroundDrawable == -1) {
-				cellView.setBackgroundResource(R.drawable.disable_cell);
-				cellLayout.setBackgroundResource(R.drawable.disable_cell);
-			} else {
-				cellView.setBackgroundResource(CaldroidFragment.disabledBackgroundDrawable);
-				cellLayout.setBackgroundResource(CaldroidFragment.disabledBackgroundDrawable);
-			}*/
+
 			cellView.setBackgroundColor(resources.getColor(R.color.background_green_10));
 			cellLayout.setBackgroundColor(resources.getColor(R.color.background_green_10));
 			if (dateTime.lt(getToday())) {
@@ -118,6 +112,7 @@ public class CalendarCustomAdapter extends CaldroidGridAdapter {
 		parent.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
 		
 		return cellLayout;
+		
 	}
 
 }

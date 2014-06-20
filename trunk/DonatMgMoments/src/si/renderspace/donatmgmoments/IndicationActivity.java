@@ -257,7 +257,10 @@ public class IndicationActivity extends Activity {
 					Utils.savePrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX, -1);
 					System.out.println("INDX="+indx);
 					Settings.saveHistory(IndicationActivity.this, indx, Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE), cc.getTimeInMillis());
-					HomeScreenActivity.cancelNotifications();
+					//HomeScreenActivity.cancelNotifications();
+					if (Settings.alarmMgr != null) {
+						Settings.alarmMgr.cancel(Settings.notificationIntent);
+					}
 					finish();
 				} else {
 					if (Utils.getPrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX) != -1) {
