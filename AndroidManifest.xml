@@ -69,6 +69,12 @@
             android:label="@string/home"
             android:icon="@drawable/ic_action_bar_back" 
             android:screenOrientation="portrait">
-        </activity>          
+        </activity>   
+        
+		<receiver android:name="si.renderspace.donatmgmoments.AlarmReceiver">
+		    <intent-filter>
+		        <action android:name="si.renderspace.donatmgmoments"/>
+		    </intent-filter>
+		</receiver>         
     </application>
 </manifest>
