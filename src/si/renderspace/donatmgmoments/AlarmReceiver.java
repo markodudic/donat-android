@@ -27,10 +27,10 @@ public class AlarmReceiver extends BroadcastReceiver {
 		   	}
 		   	int indx = Utils.getPrefernciesInt(context,  Settings.SETTING_INDX);
 	        String[][] drinks = Settings.drinking.get(indx);
-			String[] drink = drinks[Settings.notificationIndex[1]];
+			String[] drink = drinks[Settings.notificationIndex[period_curr]];
 			
 			//system notification
-			showNotification(context, 1, context.getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
+			showNotification(context, period_curr, context.getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
         }
     } 
     
