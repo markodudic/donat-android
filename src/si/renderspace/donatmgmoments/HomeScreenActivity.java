@@ -29,7 +29,7 @@ public class HomeScreenActivity extends Activity {
 	int j;
 	private Menu mainMenu;
 	private static BroadcastReceiver br;
-	private static int period_curr = 0;
+	//private static int period_curr = 0;
 	static HomeScreenActivity ma;
 	
 	@Override 
@@ -151,7 +151,6 @@ public class HomeScreenActivity extends Activity {
                };
         registerReceiver(br, new IntentFilter("si.renderspace.donatmgmoments") );*/
 		Intent bi=new Intent(new Intent("si.renderspace.donatmgmoments"));
-		bi.putExtra("period_curr", period_curr);
 		Settings.notificationIntent = PendingIntent.getBroadcast( this, 0, bi, 0 );
 
 	}
