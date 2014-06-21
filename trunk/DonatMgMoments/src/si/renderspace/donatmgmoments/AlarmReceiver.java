@@ -20,7 +20,6 @@ public class AlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
     	System.out.println(intent.getAction());
         if (intent.getAction().equals("si.renderspace.donatmgmoments")) {
-        	this.period_curr=intent.getIntExtra("period_curr", 0);
         	
 		   	if (Settings.drinking.size() == 0) {
 		   		Settings.prepareData(context);
@@ -118,9 +117,10 @@ public class AlarmReceiver extends BroadcastReceiver {
 			calendarNewNotification.set(Calendar.SECOND, 0);
 			long newNotification = calendarNewNotification.getTimeInMillis() + minNotificationTime;
 			Calendar c = Calendar.getInstance();
+			long newAlarm = newNotification - c.getTimeInMillis();
 			c.setTimeInMillis(newNotification);
 			System.out.println("++="+c);
-			Settings.alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, Settings.notificationIntent); 			
+			Settings.alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,  SystemClock.elapsedRealtime() + newAlarm, Settings.notificationIntent); 			
 		}
 	}
 	
