@@ -277,6 +277,7 @@ public class IndicationActivity extends Activity {
 					}
 					bIndicationStart.setText(R.string.button_indication_stop);
 					Settings.setNotificationTimes(IndicationActivity.this, indx);
+		 			AlarmReceiver.setNextNotification(IndicationActivity.this);				
 					dialogConfirmation.show();
 				}
 			} 
