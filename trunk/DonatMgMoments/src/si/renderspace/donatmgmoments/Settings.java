@@ -287,7 +287,6 @@ public class Settings {
 		        notificationIndex = new int[]{0,0,0};
 	    		;
 	    }
-		AlarmReceiver.setNextNotification(context);				
 	}
 	
     public static void setLanguage(Context context, String lang) {

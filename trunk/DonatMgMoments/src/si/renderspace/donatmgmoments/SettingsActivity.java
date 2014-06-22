@@ -104,6 +104,8 @@ public class SettingsActivity extends Activity {
 	 			  Utils.savePrefernciesInt(SettingsActivity.this, Settings.SETTING_OBROKOV, Integer.parseInt((String)spObrokov.getSelectedItem()));
 		 	    
 	 			  Settings.updateData(SettingsActivity.this);
+	 			  AlarmReceiver.setNextNotification(SettingsActivity.this);				
+
 	 			 			        
 	 			  int langId = (int)spLanguages.getSelectedItemId();
 	 			  if (langId != Utils.getPrefernciesInt(SettingsActivity.this, Settings.SETTING_LANG)) {
