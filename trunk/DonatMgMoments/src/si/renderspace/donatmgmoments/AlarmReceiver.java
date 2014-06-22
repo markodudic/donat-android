@@ -118,8 +118,8 @@ public class AlarmReceiver extends BroadcastReceiver {
 			long newNotification = calendarNewNotification.getTimeInMillis() + minNotificationTime;
 			Calendar c = Calendar.getInstance();
 			long newAlarm = newNotification - c.getTimeInMillis();
-			c.setTimeInMillis(newNotification);
-			System.out.println("++="+c);
+			c.setTimeInMillis(newAlarm);
+			System.out.println(period_curr+":"+c);
 			Settings.alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,  SystemClock.elapsedRealtime() + newAlarm, Settings.notificationIntent); 			
 		}
 	}
