@@ -34,6 +34,7 @@ public class Settings {
 	public static String SETTING_SPANJE = "SPANJE";
 	public static String SETTING_OBROKOV = "OBROKOV";
 	public static String SETTING_HISTORY = "HISTORY";
+	public static String SETTING_PERIOD_CURR = "PERIOD_CURR";
 
 	public static HashMap<Integer,String> languages = new HashMap<Integer,String>() {{
 																					    put(0, "en");
@@ -64,8 +65,8 @@ public class Settings {
 
 	public static JSONArray history = new JSONArray();
 	 
-	public static AlarmManager alarmMgr;
-	public static PendingIntent notificationIntent;
+	//public static AlarmManager alarmMgr;
+	//public static PendingIntent notificationIntent;
     
 	public static void prepareData (Context context) {
 		indications.put(1,context.getResources().getString(R.string.indication_1));

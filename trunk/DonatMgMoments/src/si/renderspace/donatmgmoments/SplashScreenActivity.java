@@ -54,6 +54,9 @@ public class SplashScreenActivity extends Activity {
         }, SPLASH_TIME_OUT);
         
         Settings.prepareData(SplashScreenActivity.this);
+		if (Utils.getPrefernciesInt(SplashScreenActivity.this,  Settings.SETTING_INDX) != -1) {
+			AlarmReceiver.setNextNotification(SplashScreenActivity.this);
+		}        
     }
  
 }

@@ -14,7 +14,9 @@ import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
 
 public class AlarmReceiver extends BroadcastReceiver {
-	private static int period_curr;
+	public static AlarmManager alarmMgr;
+	public static PendingIntent notificationIntent;
+
 	
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -26,10 +28,10 @@ public class AlarmReceiver extends BroadcastReceiver {
 		   	}
 		   	int indx = Utils.getPrefernciesInt(context,  Settings.SETTING_INDX);
 	        String[][] drinks = Settings.drinking.get(indx);
-			String[] drink = drinks[Settings.notificationIndex[period_curr]];
+			String[] drink = drinks[Settings.notificationIndex[Utils.getPrefernciesInt(context,  Settings.SETTING_PERIOD_CURR)]];
 			
 			//system notification
-			showNotification(context, period_curr, context.getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
+			showNotification(context, Utils.getPrefernciesInt(context,  Settings.SETTING_PERIOD_CURR), context.getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);
         }
     } 
     
@@ -56,9 +58,14 @@ public class AlarmReceiver extends BroadcastReceiver {
 	}
 	
 	public static void setNextNotification(Context context){
-        if (Settings.alarmMgr == null) {
-        	Settings.alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+		if (Utils.getPrefernciesInt(context,  Settings.SETTING_INDX)==-1) return;
+		
+        if (alarmMgr == null) {
+        	alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         }
+		Intent bi=new Intent(new Intent("si.renderspace.donatmgmoments"));
+		notificationIntent = PendingIntent.getBroadcast( context, 0, bi, 0 );
+		
 		Calendar calendar = Calendar.getInstance();
 		long minNotificationInDay = -1;
 		long minNotificationTime = -1;
@@ -66,8 +73,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
 		//preverim vse notifikatione za izbrano kuro
 		Date[] notificationTimes = Settings.notificationTimes;
-		if ((notificationTimes != null) &&
-			(Utils.getPrefernciesInt(context,  Settings.SETTING_INDX)!=-1)) {
+		if (notificationTimes != null) {
 			for(int i=0; i<notificationTimes.length; i++) {
 				//System.out.println(notificationTimes[i]);
 				Calendar calendarNotification = Calendar.getInstance();
@@ -92,16 +98,16 @@ public class AlarmReceiver extends BroadcastReceiver {
 					//ce je alarm prej kot nastavljen alarm nastavim tistega prej
 					//System.out.println("CANDIADTE="+minNotificationInDay+"-"+newNotification);
 					if ((minNotificationInDay == -1) || (minNotificationInDay > newNotification)) {
-						period_curr = i;
+						Utils.savePrefernciesInt(context,  Settings.SETTING_PERIOD_CURR, i);
 						alarmSet = true;
 						minNotificationInDay = newNotification;
 						Calendar c = Calendar.getInstance();
 						//za elapsed time zracunam razliko med notijem in trenutnim casom
 						long newAlarm = newNotification - c.getTimeInMillis();
 						c.setTimeInMillis(newAlarm);
-						System.out.println(period_curr+":"+c);
+						System.out.println(i+":"+c);
 						//alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent);
-						Settings.alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + newAlarm, Settings.notificationIntent);
+						alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + newAlarm, notificationIntent);
 					}
 				}
 			}
@@ -109,7 +115,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 		
 		//ce ni nsatvljen alarm nastavim prvi alarm v naslednjem dnevu
 		if (!alarmSet) {
-			period_curr = 0;
+			Utils.savePrefernciesInt(context,  Settings.SETTING_PERIOD_CURR, 0);
 			Calendar calendarNewNotification = Calendar.getInstance();
 			calendarNewNotification.add(Calendar.DATE, 1);
 			calendarNewNotification.set(Calendar.HOUR_OF_DAY, 0);
@@ -119,8 +125,8 @@ public class AlarmReceiver extends BroadcastReceiver {
 			Calendar c = Calendar.getInstance();
 			long newAlarm = newNotification - c.getTimeInMillis();
 			c.setTimeInMillis(newAlarm);
-			System.out.println(period_curr+":"+c);
-			Settings.alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,  SystemClock.elapsedRealtime() + newAlarm, Settings.notificationIntent); 			
+			System.out.println("0:"+c);
+			alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,  SystemClock.elapsedRealtime() + newAlarm, notificationIntent); 			
 		}
 	}
 	
