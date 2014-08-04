@@ -7,17 +7,17 @@
     <string name="home_screen"></string>
     <string name="settings">Impostazioni</string>
     <string name="seznam">Lista</string>
-    <string name="home_screen_title">Prendetevi un momento per la vostra salute. Questa applicazione vi propone le linee guida sul consumo dell’acqua minerale naturale Donat Mg sulle quali si basano, da più di un secolo, le terapie del Rogaška Medical Center. Queste linee guida su come bere Donat Mg sono adesso disponibili anche a voi.</string>
+    <string name="home_screen_title">Prendetevi un momento per la vostra salute. Questa applicazione vi propone le linee guida sul consumo dell’acqua minerale naturale Donat Mg sulle quali si basano, da più di due secoli, le terapie del Medical Center Rogaška. Il modo da consumare la Donat Mg sorgiva viene prescritto da un medico specialista di balneoterapia in seguito ad un’accurata visita ed eventuali analisi. Le linee guida generali per bere Donat Mg sono adesso disponibili anche a voi.</string>
     <string name="drinking">Come bere l’acqua</string>
     <string name="interval">Durata</string>
-    <string name="start_date">Giorno di inizio cura prescelto:</string>
+    <string name="start_date">Giorno scelto per iniziare la cura:</string>
     <string name="button_indication_start">ATTIVA</string>
     <string name="button_indication_stop">DISATTIVA</string>
-    <string name="confirmation_title">Promemoria impostato</string>
+    <string name="confirmation_title">Promemoria impostato con successo</string>
     <string name="confirmation_desc">Il promemoria per bere Donat Mg è impostato. Alla salute!</string>
-    <string name="confirmation_back">Alla pagina principale</string>
+    <string name="confirmation_back">All’inizio</string>
     <string name="save">SALVA</string>
-    <string name="zbujanje">Risveglio</string>
+    <string name="zbujanje">Sveglia</string>
     <string name="zajtrk">Colazione</string>
     <string name="kosilo">Pranzo</string>
     <string name="vecerja">Cena</string>
@@ -123,29 +123,29 @@ www.donatmg.eu
     <string name="indication_9">Stress e mal di testa</string>
     <string name="indication_10">Per il benessere</string>
 
-    <string name="indication_1_desc">Donat Mg è un lassativo osmotico naturale. Contiene sali di solfato e circa 1000 mg/l di magnesio. Gli ioni solfato hanno una grande capacità di legare acqua, grazie alla quale aumentano da 3 a 5 volte il volume del contenuto dell’intestino, stimolando così la peristalsi.</string>
-    <string name="indication_2_desc">Grazie ai suoi circa 7.800 mg di bicarbonato, Donat Mg è capace di legare gli acidi e tamponare gli acidi liberi. La natura alcalina del bicarbonato di sodio presente in Donat Mg ha un effetto antinfiammatorio sulla mucosa gastrica; il magnesio e il calcio, che accompagnano il sodio, riducono inoltre il gonfiore della mucosa.</string>
-    <string name="indication_3_desc">Donat Mg è l’acqua minerale naturale più ricca di magnesio.* Ogni giorno abbiamo in media bisogno di 375 mg di questo minerale. Il fabbisogno di magnesio aumenta durante periodi di gravidanza e di allattamento nonché di crescita veloce in adolescenza. Maggiori perdite di magnesio e di conseguenza il suo aumentato fabbisogno giornaliero si verificano anche negli anziani o sono provocati da certi disturbi metabolici, alcuni farmaci, diete e periodi di stress. Il miglior modo per introdurre il magnesio nell’organismo è bevendo acqua. Il magnesio dell’acqua minerale è immediatamente disponibile all’organismo e può entrare velocemente in processi metabolici.&lt;br>&lt;br>&lt;i>*I dati comparativi esaminati comprendono tutte le acque minerali naturali riconosciute e disponibili sul mercato comprese nel registro dell’UE.&lt;/i></string>
-    <string name="indication_4_desc">La carenza di magnesio in persone affette da diabete mellito di tipo 2 si manifesta a causa dell’aumentata perdita di questo minerale attraverso l’urina. Nelle persone (anche nelle gestanti) affette per la prima volta, il diabete mellito provoca lo squilibrio di glucosio nel sangue e inibisce l’azione dell’insulina. Bevendo Donat Mg si recupera il magnesio, il che aiuta a controllare meglio il diabete e ridurre le oscillazioni di zucchero.</string>
-    <string name="indication_5_desc">La bile dei pazienti a cui sono stati rimossi i calcoli si presenta ricca di colesterolo o povera di acidi biliari e lecitina. Nella cistifellea si accumula della bile più densa, che non defluisce completamente. Il solfato di magnesio in Donat Mg stimola la secrezione della bile. Lo svuotamento regolare della cistifellea quindi previene l’insorgere dei calcoli biliari.</string>
-    <string name="indication_6_desc">Donat Mg ha un alto contenuto di bicarbonato e magnesio, grazie al quale previene in modo naturale la formazione di calcoli di ossalato di calcio, di acido urico e di cistina, che insorgono in un ambiente acido.  Ambedue le sostanze svolgono un ruolo importante nella regolazione dell’equilibrio acido-base. Specialmente il bicarbonato ha un forte effetto basico, legando gli acidi e creando un ambiente alcalino, che inibisce la formazione di questi tipi di calcoli.</string>
-    <string name="indication_7_desc">Durante il dimagrimento l’acqua minerale naturale Donat Mg neutralizza gli acidi e sostituisce i minerali persi. Quale lassativo naturale, è particolarmente utile all’inizio della dieta perché elimina le tossine dall’organismo. I sali di solfato in Donat Mg stimolano la produzione di colecistochinina, il che diminuisce l’appetito. Il magnesio inoltre stimola il metabolismo, rafforza il sistema immunitario e aumenta le riserve energetiche.</string>
-    <string name="indication_8_desc">Donat Mg contiene poco sale da cucina, perciò non altera la pressione sanguigna. D’altra parte ha un alto contenuto di magnesio (1000 mg/l). Il magnesio è un elemento indispensabile che, tra l’altro, contribuisce al funzionamento del sistema muscolare. Anche il nostro cuore è un muscolo che ha bisogno di magnesio per funzionare senza problemi. Per prevenire l’insufficienza cardiaca, i disturbi del ritmo cardiaco e altre complicazioni che possono essere provocate dalla carenza di questo importante minerale, è necessario introdurre il magnesio nell’organismo quotidianamente.</string>
-    <string name="indication_9_desc">Lo stress interessa sia la nostra salute fisica che psichica, poiché aumenta la perdita di sostanze minerali dall’organismo, aumentando così il fabbisogno di vitamine e minerali. La carenza di magnesio può persino provocare alcuni tipi di mal di testa. Donat Mg è ricca di questo minerale che gli scienziati chiamano anche “minerale anti-stress” o “balsamo per nervi e muscoli”.</string>
-    <string name="indication_10_desc">Donat Mg è ricca soprattutto di magnesio, solfati e bicarbonati, ma contiene anche calcio, sodio e altri microelementi. Apporta al nostro organismo preziosi minerali, e grazie al suo alto contenuto di bicarbonato, regola allo stesso tempo l’equilibrio acido-base. È possibile berla tutta la vita per mantenere la salute e sentirsi in forma.</string>
+    <string name="indication_1_desc">Donat Mg è un lassativo osmotico naturale. Contiene sali di solfato e circa 1000 mg/l di magnesio. Gli ioni solfato hanno la grande capacità di legare l’acqua, questo fa sì che il volume dell’intestino aumenta da 3 a 5 volte (zbrisano od il volume do stimolando), stimolando così la peristalsi.</string>
+    <string name="indication_2_desc">Grazie ai suoi circa 7.800 mg di idrogenocarbonato, Donat Mg è in grado di legare gli acidi e tamponare gli acidi liberi. La natura alcalina dell’idrogenocarbonato di sodio presente nella Donat Mg ha un effetto antinfiammatorio sulla mucosa gastrica; il magnesio e il calcio, che accompagnano il sodio, riducono, inoltre, il gonfiore della mucosa.</string>
+    <string name="indication_3_desc">Donat Mg è l’acqua minerale naturale con il più alto contenuto di magnesio.* Ogni giorno abbiamo, in media, bisogno di 375 mg di questo minerale. Il fabbisogno di magnesio aumenta durante periodi di gravidanza e di allattamento, nonché di sviluppo e durante l’adolescenza. Maggiori perdite di magnesio e di conseguenza il suo aumentato fabbisogno giornaliero si manifestano anche negli anziani oppure possono essere provocati da certi disturbi metabolici, dall’assunzione di alcuni farmaci, dalle diete e durante i periodi particolarmente stressanti. Sebbene esistano molti integratori alimentari contenenti magnesio, il miglior modo per veicolarlo nell’organismo è proprio attraverso l’acqua poiché i minerali si trovano nella loro forma più naturale ovvero quella ionica; ciò consente loro di essere immediatamente fruibili dall’organismo.&lt;br>&lt;br>&lt;i>*L’indagine comparativa si basa sui dati di tutte le acque minerali commercializzate e registrate nella U.E.&lt;/i></string>
+    <string name="indication_4_desc">La carenza di magnesio nelle persone affette da diabete mellito di tipo 2 si manifesta a causa dell’aumentata perdita di questo minerale attraverso l’urina. Già dai primi stadi della malattia (anche nelle gestanti), il diabete mellito provoca lo squilibrio del glucosio nel sangue e inibisce l’azione dell’insulina. L’assunzione regolare di Donat Mg facilita il recupero del magnesio, il che aiuta a tenere meglio sotto controllo il diabete e a ridurre le oscillazioni degli zuccheri.</string>
+    <string name="indication_5_desc">La bile dei pazienti a cui sono stati rimossi i calcoli, è solitamente ricca di colesterolo o povera di acidi biliari e lecitina. Nella cistifellea si accumula una bile più densa, che non defluisce completamente. Il solfato di magnesio presente nella Donat Mg stimola la secrezione della bile. Il regolare svuotamento della cistifellea, quindi, previene l’insorgere dei calcoli biliari.</string>
+    <string name="indication_6_desc">Donat Mg ha un alto contenuto di idrogenocarbonato e magnesio, grazie al quale previene in modo naturale la formazione di calcoli di ossalato di calcio, uratici e cistinici, che si formano in un ambiente acido. Entrambe le sostanze svolgono un ruolo importante nella regolazione dell’equilibrio acido-base. L’idrogenocarbonato, in particolare, ha una forte carica basica, legando gli acidi e creando un ambiente alcalino, che inibisce la formazione di questi tipi di calcoli.</string>
+    <string name="indication_7_desc">Durante il dimagrimento l’acqua minerale naturale Donat Mg neutralizza gli acidi e reintegra i minerali persi. In quanto lassativo naturale, è particolarmente utile all’inizio della dieta perché aiuta ad eliminare le tossine dall’organismo. I sali di solfato contenuti nella Donat Mg stimolano la produzione di colecistochinina, che riduce l’appetito. Il magnesio, inoltre, stimola il metabolismo, rafforza il sistema immunitario e aumenta le riserve energetiche.</string>
+    <string name="indication_8_desc">Donat Mg ha un basso contenuto di sale da cucina, perciò non altera la pressione sanguigna. Ha, inoltre, un alto contenuto di magnesio (1000 mg/l). Il magnesio è un elemento indispensabile che, tra l’altro, contribuisce al funzionamento del sistema muscolare. Anche il nostro cuore è un muscolo che ha bisogno di magnesio per funzionare regolarmente. Per prevenire l’insufficienza cardiaca, i disturbi del ritmo cardiaco e altre complicazioni che possono essere provocate dalla carenza di questo importante minerale, è necessario un apporto quotidiano di magnesio.</string>
+    <string name="indication_9_desc">Lo stress ha ricadute sulla nostra salute fisica e psichica. In questa situazione il nostro corpo brucia una maggiore quantità di sostanze minerali e vitamine, quindi ne aumenta il loro fabbisogno. La carenza di magnesio può persino provocare alcuni tipi di mal di testa. Donat Mg è ricca di questo minerale che gli scienziati hanno ribattezzato in “minerale anti-stress” o “balsamo per nervi e muscoli”.</string>
+    <string name="indication_10_desc">Donat Mg è particolarmente ricca di magnesio, solfati e idrogenocarbonato, ma contiene anche calcio, sodio e altri microelementi. Apporta al nostro organismo preziosi minerali, e grazie al suo alto contenuto di idrogenocarbonato, regola contemporaneamente anche l’equilibrio acido-base. Per il benessere generale e per la salute, è un’acqua che può essere assunta giornalmente e per tutta la vita.</string>
     
     <string name="drinking_na_tesce">A digiuno</string>
     <string name="drinking_pred_spanjem">Prima di coricarsi</string>
     <string name="drinking_veckrat_dnevno">Più volte al giorno</string>
     <string name="drinking_20_min_pred">20 minuti prima dei pasti</string>
     <string name="drinking_med_obroki">Durante i pasti e 1–2 ore dopo i pasti</string>
-    <string name="drinking_opoldne">A mezzogiorno</string>
+    <string name="drinking_opoldne">All’ora di pranzo</string>
     <string name="drinking_zvecer">La sera</string>
     <string name="drinking_pred_kosilom">Prima di pranzo</string>
     <string name="drinking_pred_vecerjo">Prima di cena</string>
     <string name="drinking_obcutek_lakote">Quando si avverte il senso di fame, durante e prima dei pasti</string>
     <string name="drinking_3_4_dnevno">3–4 volte al giorno</string>
-    <string name="drinking_pred_jedjo">Prima dei pasti</string>
+    <string name="drinking_pred_jedjo">A sensazione di fame, prima i durante i pasti</string>
     
     <string name="temperature_toplo">30–37 °C</string>
     <string name="temperature_mlacno">23–25 °C</string>
@@ -157,11 +157,11 @@ www.donatmg.eu
     <string name="spped_razmeroma_hitro">Abbastanza velocemente</string>
     <string name="spped_pocasi">Lentamente</string>
 
-    <string name="interval_stalno">Continuamente o con brevi pause</string>
-    <string name="interval_5_dni">5 giorni, interrompere per 2 giorni ripetere continuamente</string>
-    <string name="interval_6_tednov">6 settimane, interrompere per 4 settimane, 3 volte all’anno</string>
-    <string name="interval_3_mesece">3 mesi, interrompere per 1 mese, 3 volte all’anno</string>
-    <string name="interval_2_meseca">2 mesi, interrompere per 1 mese, 3 volte all’anno</string>
+    <string name="interval_stalno">Continuamente o con brevi sospensioni</string>
+    <string name="interval_5_dni">Continuamente o 5 giorni e poi sospendere per 2 giorni</string>
+    <string name="interval_6_tednov">6 settimane e poi sospendere per 4 settimane; da ripetere 3 volte all’anno</string>
+    <string name="interval_3_mesece">3 mesi e poi sospendere per 1 mese; da ripetere 3 volte all’anno</string>
+    <string name="interval_2_meseca">2 mesi e poi sospendere per 1 mese; da ripetere 3 volte all’anno</string>
         
     
 </resources>
