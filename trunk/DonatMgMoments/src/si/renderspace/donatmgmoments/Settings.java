@@ -98,7 +98,7 @@ public class Settings {
 		drinking.put(1,drinking_1);
 
 		String[][] drinking_2 = new String[][]{	
-				{context.getResources().getString(R.string.drinking_veckrat_dnevno),context.getResources().getString(R.string.temperature_sobna),"1 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_veckrat_dnevno"},
+				//{context.getResources().getString(R.string.drinking_veckrat_dnevno),context.getResources().getString(R.string.temperature_sobna),"1 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_veckrat_dnevno"},
 				{context.getResources().getString(R.string.drinking_20_min_pred),context.getResources().getString(R.string.temperature_sobna),"1 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_pred_jedjo"},
 				{context.getResources().getString(R.string.drinking_med_obroki),context.getResources().getString(R.string.temperature_sobna),"1 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_med_obroki"}
 		};
@@ -228,20 +228,21 @@ public class Settings {
 		        notificationIndex = new int[]{0,1};
 	    		break;
 	        case 2: 
-	        	notificationTimes = new Date[10];
-	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime());
+	        	notificationTimes = new Date[6];
+	        	/*notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime());
 	        	notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() + danDel);
 	        	notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_TESCE).getTime() + (2 * danDel));
 	        	notificationTimes[3] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime());
-	        	
-	        	notificationTimes[4] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
-		        notificationTimes[5] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
-		        notificationTimes[6] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - 20*60*1000 - NOTIFICATION_ALARM_MINUTES);
+	        	*/
+	        	notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - 25*60*1000 - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - 25*60*1000 - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - 25*60*1000 - NOTIFICATION_ALARM_MINUTES);
 		        
-	        	notificationTimes[7] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() + 90*60*1000);
-		        notificationTimes[8] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() + 90*60*1000);
-		        notificationTimes[9] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() + 90*60*1000);
-		        notificationIndex = new int[]{0,0,0,0,1,1,1,2,2,2};
+	        	notificationTimes[3] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() + 90*60*1000);
+		        notificationTimes[4] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() + 90*60*1000);
+		        notificationTimes[5] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() + 90*60*1000);
+		        //notificationIndex = new int[]{0,0,0,0,1,1,1,2,2,2};
+		        notificationIndex = new int[]{0,0,0,1,1,1};
 	    		break;
 	        case 3: 
 	    		notificationTimes = new Date[3];
