@@ -255,7 +255,6 @@ public class IndicationActivity extends Activity {
 				Calendar cc = Calendar.getInstance();
 				if (indxCurr == indx) {
 					Utils.savePrefernciesInt(IndicationActivity.this, Settings.SETTING_INDX, -1);
-					System.out.println("INDX="+indx);
 					Settings.saveHistory(IndicationActivity.this, indx, Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE), cc.getTimeInMillis());
 					//HomeScreenActivity.cancelNotifications();
 					if (AlarmReceiver.alarmMgr != null) {
@@ -272,12 +271,15 @@ public class IndicationActivity extends Activity {
 					try {  
 					    Date date = format.parse(dtStart);  
 					    Utils.savePrefernciesLong(IndicationActivity.this, Settings.SETTING_START_DATE, date.getTime());
+					    if (Utils.getPrefernciesLong(IndicationActivity.this, Settings.SETTING_RATE_IT_START) == -1) {
+					    	Utils.savePrefernciesLong(IndicationActivity.this, Settings.SETTING_RATE_IT_START, date.getTime());
+					    }
 					} catch (ParseException e) {  
 					    e.printStackTrace();  
 					}
 					bIndicationStart.setText(R.string.button_indication_stop);
 					Settings.setNotificationTimes(IndicationActivity.this, indx);
-		 			AlarmReceiver.setNextNotification(IndicationActivity.this);				
+		 			AlarmReceiver.setNextNotification(IndicationActivity.this);	
 					dialogConfirmation.show();
 				}
 			} 

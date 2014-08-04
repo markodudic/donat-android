@@ -2,29 +2,26 @@ package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.TimePickerDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 public class SettingsActivity extends Activity {
-
+	
+	final static String APP_PNAME = "Donat MG Moments";
+	
 	private Spinner spLanguages, spObrokov;
 	private TextView tvZbujanje, tvZajtrk, tvKosilo, tvVecerja, tvSpanje, tvCurr;
 	static final int TIME_DIALOG_ID = 999;
@@ -147,6 +144,15 @@ public class SettingsActivity extends Activity {
 			  }
 	 	});		
 
+		TextView tvRate = (TextView) findViewById(R.id.rate);
+		tvRate.setTypeface(tf);
+		tvRate.setOnClickListener(new OnClickListener() {
+	 		  @Override
+			  public void onClick(View v) {
+	 			  	SettingsActivity.this.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + Settings.SETTING_APP_PNAME)));
+			  }
+	 	});		
+		
 	}
 
 	

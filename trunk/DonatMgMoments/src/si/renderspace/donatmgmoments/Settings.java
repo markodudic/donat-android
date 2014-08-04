@@ -36,6 +36,13 @@ public class Settings {
 	public static String SETTING_HISTORY = "HISTORY";
 	public static String SETTING_PERIOD_CURR = "PERIOD_CURR";
 
+	final static String SETTING_APP_PNAME = "Donat MG Moments";
+	public static String SETTING_RATE_IT_START = "RATE_IT_START";
+	public static String SETTING_RATE_IT_COUNT = "RATE_IT_COUNT";
+	public static String SETTING_RATE_IT_FINISHED = "RATE_IT_FINISHED";
+	public static int RATE_PERIOD = 7;
+	public static int RATE_COUNT = 1;
+
 	public static HashMap<Integer,String> languages = new HashMap<Integer,String>() {{
 																					    put(0, "en");
 																					    put(1, "ru");

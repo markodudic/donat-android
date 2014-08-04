@@ -1,205 +1,244 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/LayoutIndicationNoti"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_background"
     android:orientation="vertical"
     tools:context=".HomeScreenActivity" >
 				        
-    <ImageView
-        android:id="@+id/iv_language"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/title_height"
-        android:src="@drawable/ic_language" />
-
-    <Spinner
-        android:id="@+id/sp_languages"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/spinner_height"
-        android:entries="@array/languages"
-        style="@style/HomeScreenTitleText"
-		android:background="@drawable/ic_settings_text"
-	    android:layout_marginBottom="@dimen/layout_margin"
-		android:prompt="@string/choose_language" />
+    <ScrollView
+        android:id="@+id/scroll_page_step1"
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:fillViewport="true">        
         
-    <ImageView
-        android:id="@+id/iv_notification"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/title_height"
-        android:src="@drawable/ic_times" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/settings_margin"
-        android:orientation="horizontal" >
-		
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spinner_height"
-            android:text="@string/zbujanje"
-			style="@style/SettingsText"
-		    android:fontFamily="sans-serif-light"
-			android:layout_weight="1" />
-        
-	    <TextView
-	        android:id="@+id/tv_zbujanje"
-	        style="@style/TimePickerText"
-	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="@dimen/spinner_height"
-	        android:layout_gravity="center_vertical"
-	        android:fontFamily="sans-serif-light"
-	        android:paddingBottom="5dp"
-	        android:text="12:30" />
-
-    </LinearLayout>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/settings_margin"
-        android:orientation="horizontal">    
-		
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spinner_height"
-            android:text="@string/zajtrk"
-			style="@style/SettingsText"
-       		android:fontFamily="sans-serif-light"
-			android:layout_weight="1" />
-        
-	    <TextView
-	        android:id="@+id/tv_zajtrk"
-	        style="@style/TimePickerText"
-	        android:fontFamily="sans-serif-light"
-	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="@dimen/spinner_height"
-	        android:layout_gravity="center_vertical"
-	        android:text="12:30" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/settings_margin"
-        android:orientation="horizontal">    
-		
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spinner_height"
-            android:text="@string/kosilo"
-			style="@style/SettingsText"
-       		android:fontFamily="sans-serif-light"
-			android:layout_weight="1" />
-        
-	    <TextView
-	        android:id="@+id/tv_kosilo"
-	        style="@style/TimePickerText"
-	        android:fontFamily="sans-serif-light"
-	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="@dimen/spinner_height"
-	        android:layout_gravity="center_vertical"
-	        android:text="12:30" />
-    </LinearLayout>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/settings_margin"
-        android:orientation="horizontal">    
-		
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spinner_height"
-            android:text="@string/vecerja"
-			style="@style/SettingsText"
-       		android:fontFamily="sans-serif-light"
-			android:layout_weight="1" />
-        
-	    <TextView
-	        android:id="@+id/tv_vecerja"
-	        style="@style/TimePickerText"
-	        android:fontFamily="sans-serif-light"
-	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="@dimen/spinner_height"
-	        android:layout_gravity="center_vertical"
-	        android:text="12:30" />
-    </LinearLayout>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/settings_margin"
-        android:orientation="horizontal">    
-		
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spinner_height"
-            android:text="@string/spanje"
-			style="@style/SettingsText"
-       		android:fontFamily="sans-serif-light"
-			android:layout_weight="1" />
-        
-	    <TextView
-	        android:id="@+id/tv_spanje"
-	        style="@style/TimePickerText"
-	        android:fontFamily="sans-serif-light"
-	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="@dimen/spinner_height"
-	        android:layout_gravity="center_vertical"
-       		android:text="12:30" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/settings_margin"
-        android:orientation="horizontal">    
-		
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spinner_height"
-            android:text="@string/obrokov"
-			style="@style/SettingsText"
-       		android:fontFamily="sans-serif-light"
-			android:layout_weight="1" />
-        
-        <Spinner
-	        android:id="@+id/sp_obrokov"
-	        android:layout_width="@dimen/settings_text"
-	        android:layout_height="@dimen/spinner_height"
-	        android:entries="@array/obrokov"
-	        android:background="@drawable/ic_settings_text"
-	        android:prompt="@string/choose_obrokov" />
-    </LinearLayout>
-        
-    <Button
-       android:id="@+id/btn_save"
-       android:text="@string/save"
- 	   style="@style/ButtonIndicationStart"
-       android:layout_marginBottom="@dimen/button_margin"
-       android:layout_width="match_parent"
-       android:layout_height="@dimen/button_height" /> 
-       
-    
-    <TextView
-       	android:id="@+id/pravice"
-        android:layout_width="match_parent"
-       	android:layout_height="wrap_content"
-       	android:gravity="center_horizontal"
-		style="@style/SettingsLicence"
-		android:fontFamily="sans-serif-light"
-		android:text="@string/licence" />
-     
-   	<TextView
-        android:id="@+id/pravila"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        style="@style/SettingsRules"
-		android:fontFamily="sans-serif-light"
-		android:text="@string/rules" />
-         	
- 	
+    	<LinearLayout
+	        android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:orientation="vertical" >
+        	
+	    	<LinearLayout
+		        style="@style/LayoutIndication"
+	    		android:layout_width="match_parent"
+	        	android:layout_height="wrap_content"
+	        	android:orientation="vertical" >
+    	    
+  	    	    <ImageView
+			        android:id="@+id/iv_language"
+			        android:layout_width="match_parent"
+			        android:layout_height="@dimen/title_height"
+			        android:src="@drawable/ic_language" />
+			
+			    <Spinner
+			        android:id="@+id/sp_languages"
+			        android:layout_width="match_parent"
+			        android:layout_height="@dimen/spinner_height"
+			        android:entries="@array/languages"
+			        style="@style/HomeScreenTitleText"
+					android:background="@drawable/ic_settings_text"
+				    android:layout_marginBottom="@dimen/layout_margin"
+					android:prompt="@string/choose_language" />
+			        
+			    <ImageView
+			        android:id="@+id/iv_notification"
+			        android:layout_width="match_parent"
+			        android:layout_height="@dimen/title_height"
+			        android:src="@drawable/ic_times" />
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="@dimen/settings_margin"
+			        android:orientation="horizontal" >
+					
+			        <TextView
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/spinner_height"
+			            android:text="@string/zbujanje"
+						style="@style/SettingsText"
+					    android:fontFamily="sans-serif-light"
+						android:layout_weight="1" />
+			        
+				    <TextView
+				        android:id="@+id/tv_zbujanje"
+				        style="@style/TimePickerText"
+				        android:layout_width="@dimen/settings_text"
+				        android:layout_height="@dimen/spinner_height"
+				        android:layout_gravity="center_vertical"
+				        android:fontFamily="sans-serif-light"
+				        android:paddingBottom="5dp"
+				        android:text="12:30" />
+			
+			    </LinearLayout>
+			    
+			    <LinearLayout
+			        android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+			        android:layout_marginTop="@dimen/settings_margin"
+			        android:orientation="horizontal">    
+					
+			        <TextView
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/spinner_height"
+			            android:text="@string/zajtrk"
+						style="@style/SettingsText"
+			       		android:fontFamily="sans-serif-light"
+						android:layout_weight="1" />
+			        
+				    <TextView
+				        android:id="@+id/tv_zajtrk"
+				        style="@style/TimePickerText"
+				        android:fontFamily="sans-serif-light"
+				        android:layout_width="@dimen/settings_text"
+				        android:layout_height="@dimen/spinner_height"
+				        android:layout_gravity="center_vertical"
+				        android:text="12:30" />
+			    </LinearLayout>
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+			        android:layout_marginTop="@dimen/settings_margin"
+			        android:orientation="horizontal">    
+					
+			        <TextView
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/spinner_height"
+			            android:text="@string/kosilo"
+						style="@style/SettingsText"
+			       		android:fontFamily="sans-serif-light"
+						android:layout_weight="1" />
+			        
+				    <TextView
+				        android:id="@+id/tv_kosilo"
+				        style="@style/TimePickerText"
+				        android:fontFamily="sans-serif-light"
+				        android:layout_width="@dimen/settings_text"
+				        android:layout_height="@dimen/spinner_height"
+				        android:layout_gravity="center_vertical"
+				        android:text="12:30" />
+			    </LinearLayout>
+			    
+			    <LinearLayout
+			        android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+			        android:layout_marginTop="@dimen/settings_margin"
+			        android:orientation="horizontal">    
+					
+			        <TextView
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/spinner_height"
+			            android:text="@string/vecerja"
+						style="@style/SettingsText"
+			       		android:fontFamily="sans-serif-light"
+						android:layout_weight="1" />
+			        
+				    <TextView
+				        android:id="@+id/tv_vecerja"
+				        style="@style/TimePickerText"
+				        android:fontFamily="sans-serif-light"
+				        android:layout_width="@dimen/settings_text"
+				        android:layout_height="@dimen/spinner_height"
+				        android:layout_gravity="center_vertical"
+				        android:text="12:30" />
+			    </LinearLayout>
+			    
+			    <LinearLayout
+			        android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+			        android:layout_marginTop="@dimen/settings_margin"
+			        android:orientation="horizontal">    
+					
+			        <TextView
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/spinner_height"
+			            android:text="@string/spanje"
+						style="@style/SettingsText"
+			       		android:fontFamily="sans-serif-light"
+						android:layout_weight="1" />
+			        
+				    <TextView
+				        android:id="@+id/tv_spanje"
+				        style="@style/TimePickerText"
+				        android:fontFamily="sans-serif-light"
+				        android:layout_width="@dimen/settings_text"
+				        android:layout_height="@dimen/spinner_height"
+				        android:layout_gravity="center_vertical"
+			       		android:text="12:30" />
+			    </LinearLayout>
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+			        android:layout_marginTop="@dimen/settings_margin"
+			        android:orientation="horizontal">    
+					
+			        <TextView
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/spinner_height"
+			            android:text="@string/obrokov"
+						style="@style/SettingsText"
+			       		android:fontFamily="sans-serif-light"
+						android:layout_weight="1" />
+			        
+			        <Spinner
+				        android:id="@+id/sp_obrokov"
+				        android:layout_width="@dimen/settings_text"
+				        android:layout_height="@dimen/spinner_height"
+				        android:entries="@array/obrokov"
+				        android:background="@drawable/ic_settings_text"
+				        android:prompt="@string/choose_obrokov" />
+			    </LinearLayout>
+			        
+			    <Button
+			       android:id="@+id/btn_save"
+			       android:text="@string/save"
+			 	   style="@style/ButtonIndicationStart"
+			       android:layout_marginBottom="@dimen/button_margin"
+			       android:layout_width="match_parent"
+			       android:layout_height="@dimen/button_height" /> 
+    		</LinearLayout>     	
+		    		       
+		    
+		    <LinearLayout
+		        style="@style/LayoutIndication"
+	    		android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+		        android:background="@color/background_settings"
+		        android:orientation="vertical">    
+		    
+			   	<TextView
+			        android:id="@+id/rate"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        style="@style/SettingsRules"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/rate_it" />
+		       
+			   	<View
+			   	    style="@style/LineVertical"
+			   	    android:layout_width="fill_parent"
+			   	    android:layout_height="1dip" />
+			   	
+		        <TextView
+			       	android:id="@+id/pravice"
+			        android:layout_width="match_parent"
+			       	android:layout_height="wrap_content"
+			       	android:gravity="center_horizontal"
+					style="@style/SettingsLicence"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/licence" />
+			     
+			   	<TextView
+			        android:id="@+id/pravila"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        style="@style/SettingsRules"
+					android:fontFamily="sans-serif-light"
+					android:text="@string/rules" />
+			 </LinearLayout>
+    	</LinearLayout>     	
+ 	</ScrollView>
 </LinearLayout>
