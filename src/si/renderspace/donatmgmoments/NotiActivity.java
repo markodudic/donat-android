@@ -4,11 +4,14 @@ import java.text.DateFormatSymbols;
 import java.util.Calendar;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils.TruncateAt;
 import android.view.Gravity;
@@ -132,7 +135,29 @@ public class NotiActivity extends Activity {
 		String monthString = new DateFormatSymbols().getMonths()[mMonth];
 	   	
 	   	TextView notificationDate = (TextView) findViewById(R.id.notificationDate);
-	   	notificationDate.setText(mDay+". "+monthString);		
+	   	notificationDate.setText(mDay+". "+monthString);
+	   	
+	   	System.out.println("FINISHED="+Utils.getPrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, false));
+	   	System.out.println("COUNT="+Utils.getPrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT));
+	   	System.out.println("START="+Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START));
+	   	System.out.println("CURR="+(Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START) + Settings.RATE_PERIOD*24*60*60*1000));
+	    if (!Utils.getPrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, false)) {
+		    long rateStart = Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START);
+		    int rateCount = Utils.getPrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT);
+		    rateCount++;
+		    if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*60*60*1000 > c.getTime().getTime())) {
+		    //if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*1000 < c.getTime().getTime())) {
+			  	//odpri okno za rate
+		    	NotiActivity.this.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + Settings.SETTING_APP_PNAME)));
+		    	
+		    	Utils.savePrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, true);
+		    }
+		    else {
+		    	Utils.savePrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT, rateCount);
+		    }
+
+	    }
+
 	}
 
 	
