@@ -172,8 +172,8 @@ public class NotiActivity extends Activity {
 		    Calendar c = Calendar.getInstance();
 		    //if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*60*60*1000 > c.getTime().getTime())) {
 		    //za test dam 3 min
-		    //if ((rateCount >= Settings.RATE_COUNT) && (rateStart + 3*60*1000 > c.getTime().getTime())) {
-		    if (true) {
+		    if ((rateCount >= Settings.RATE_COUNT) && (rateStart + 3*60*1000 > c.getTime().getTime())) {
+		    //if (true) {
 			  	//odpri okno za rate
 				final Dialog dialogConfirmation = new Dialog(this,R.style.Dialog);
 				dialogConfirmation.setContentView(R.layout.dialog_rate_it); 
