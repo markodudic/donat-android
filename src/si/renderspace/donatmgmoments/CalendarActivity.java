@@ -66,7 +66,6 @@ public class CalendarActivity extends FragmentActivity {
 				drinkingDates.addAll(addDrinkingDates(indx, startDateCal, endDateCal));
 				
 			} catch (Exception e) {
-				System.out.println("CALENDAR ERROR="+e.getLocalizedMessage());
 			}
 			
 		}
@@ -269,7 +268,6 @@ public class CalendarActivity extends FragmentActivity {
 					return new long[] {(long)indx, startDate};
 				}
 			} catch (Exception e) {
-				System.out.println("CALENDAR ERROR="+e.getLocalizedMessage());
 			}
 			
 		}

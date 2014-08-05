@@ -20,8 +20,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 	
     @Override
     public void onReceive(Context context, Intent intent) {
-    	System.out.println(intent.getAction());
-        if (intent.getAction().equals("si.renderspace.donatmgmoments")) {
+    	if (intent.getAction().equals("si.renderspace.donatmgmoments")) {
         	
 		   	if (Settings.drinking.size() == 0) {
 		   		Settings.prepareData(context);
@@ -36,7 +35,6 @@ public class AlarmReceiver extends BroadcastReceiver {
     } 
     
 	private void showNotification(Context context, int period, String title, String text){
-		System.out.println("SHOW NOTI="+period+":"+title+":"+text);
 		Intent resultIntent = new Intent(context, NotiActivity.class);
 		resultIntent.putExtra("PERIOD", period);
 		
@@ -75,7 +73,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 		Date[] notificationTimes = Settings.notificationTimes;
 		if (notificationTimes != null) {
 			for(int i=0; i<notificationTimes.length; i++) {
-				//System.out.println(notificationTimes[i]);
 				Calendar calendarNotification = Calendar.getInstance();
 				calendarNotification.setTime(notificationTimes[i]); 
 				if ((minNotificationTime == -1) || (minNotificationTime > calendarNotification.getTimeInMillis())) {
@@ -87,7 +84,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 				long calendar_curr = hour*60*60*1000+minute*60*1000;
 			
 				//ce je ura notifikationa za trenutno uro je lahko ura alarma
-				//System.out.println("POSIBLE CANDIDATE="+calendarNotification.getTimeInMillis()+":"+calendar_curr);
 				if (calendarNotification.getTimeInMillis() > calendar_curr) {
 					Calendar calendarNewNotification = Calendar.getInstance();
 					calendarNewNotification.set(Calendar.HOUR_OF_DAY, 0);
@@ -96,7 +92,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 					long newNotification = calendarNewNotification.getTimeInMillis() + calendarNotification.getTimeInMillis();
 					
 					//ce je alarm prej kot nastavljen alarm nastavim tistega prej
-					//System.out.println("CANDIADTE="+minNotificationInDay+"-"+newNotification);
 					if ((minNotificationInDay == -1) || (minNotificationInDay > newNotification)) {
 						Utils.savePrefernciesInt(context,  Settings.SETTING_PERIOD_CURR, i);
 						alarmSet = true;
@@ -105,7 +100,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 						//za elapsed time zracunam razliko med notijem in trenutnim casom
 						long newAlarm = newNotification - c.getTimeInMillis();
 						c.setTimeInMillis(newAlarm);
-						System.out.println(i+":"+c);
 						//alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent);
 						alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + newAlarm, notificationIntent);
 					}
@@ -125,7 +119,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 			Calendar c = Calendar.getInstance();
 			long newAlarm = newNotification - c.getTimeInMillis();
 			c.setTimeInMillis(newAlarm);
-			System.out.println("0:"+c);
 			alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,  SystemClock.elapsedRealtime() + newAlarm, notificationIntent); 			
 		}
 	}

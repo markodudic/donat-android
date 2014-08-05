@@ -28,8 +28,6 @@ public class HomeScreenActivity extends Activity {
 	
 	int j;
 	private Menu mainMenu;
-	//private static BroadcastReceiver br;
-	//private static int period_curr = 0;
 	static HomeScreenActivity ma;
 	
 	@Override 
@@ -132,120 +130,7 @@ public class HomeScreenActivity extends Activity {
 			    	showIndication(10);
 			    }
 			});		
-		
-	    /*br = new BroadcastReceiver() {
-               @Override
-               public void onReceive(Context c, Intent i) {
-            	   		System.out.println("BroadcastReceiver="+period_curr);
-            			//drinks
-            		   	if (Settings.drinking.size() == 0) {
-            		   		Settings.prepareData(HomeScreenActivity.this);
-            		   	}
-            		   	int indx = Utils.getPrefernciesInt(HomeScreenActivity.this,  Settings.SETTING_INDX);
-            	        String[][] drinks = Settings.drinking.get(indx);
-            			String[] drink = drinks[Settings.notificationIndex[period_curr]];
-            			
-            			//system notification
-            			showNotification(period_curr, getResources().getString(R.string.app_name), drink[0]+", "+drink[2]+", "+drink[1]+", "+drink[3]);	
-                      }
-               };
-        registerReceiver(br, new IntentFilter("si.renderspace.donatmgmoments") );*/
-		//Intent bi=new Intent(new Intent("si.renderspace.donatmgmoments"));
-		//Settings.notificationIntent = PendingIntent.getBroadcast( this, 0, bi, 0 );
-
 	}
-/*
-	//@SuppressLint("NewApi")
-	private void showNotification(int period, String title, String text){
-		System.out.println("SHOW NOTI="+period+":"+title+":"+text);
-		Intent resultIntent = new Intent(this, NotiActivity.class);
-		resultIntent.putExtra("PERIOD", period);
-		
-		PendingIntent pIntent = PendingIntent.getActivity(this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-		
-		NotificationCompat.Builder mBuilder =
-		        new NotificationCompat.Builder(this)
-		        .setSmallIcon(R.drawable.ic_notification)
-		        .setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_notification_large))
-		        .setContentTitle(title)
-		        .setContentText(text)
-		        .setAutoCancel(true)
-		        .setContentIntent(pIntent);
-		
-		NotificationManager mNotificationManager =  (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
-		mNotificationManager.notify(001, mBuilder.build());
-		
-		HomeScreenActivity.setNextNotification(HomeScreenActivity.this);		
-	}
-	
-	public static void setNextNotification(Context context){
-        if (Settings.alarmMgr == null) {
-        	Settings.alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
-        }
-		Calendar calendar = Calendar.getInstance();
-		long minNotificationInDay = -1;
-		long minNotificationTime = -1;
-		boolean alarmSet = false;
-
-		//preverim vse notifikatione za izbrano kuro
-		Date[] notificationTimes = Settings.notificationTimes;
-		if ((notificationTimes != null) &&
-			(Utils.getPrefernciesInt(context,  Settings.SETTING_INDX)!=-1)) {
-			for(int i=0; i<notificationTimes.length; i++) {
-				//System.out.println(notificationTimes[i]);
-				Calendar calendarNotification = Calendar.getInstance();
-				calendarNotification.setTime(notificationTimes[i]); 
-				if ((minNotificationTime == -1) || (minNotificationTime > calendarNotification.getTimeInMillis())) {
-					minNotificationTime = calendarNotification.getTimeInMillis();
-				}
-				
-				int hour = calendar.get(Calendar.HOUR_OF_DAY);
-				int minute = calendar.get(Calendar.MINUTE); 
-				long calendar_curr = hour*60*60*1000+minute*60*1000;
-			
-				//ce je ura notifikationa za trenutno uro je lahko ura alarma
-				//System.out.println("POSIBLE CANDIDATE="+calendarNotification.getTimeInMillis()+":"+calendar_curr);
-				if (calendarNotification.getTimeInMillis() > calendar_curr) {
-					Calendar calendarNewNotification = Calendar.getInstance();
-					calendarNewNotification.set(Calendar.HOUR_OF_DAY, 0);
-					calendarNewNotification.set(Calendar.MINUTE, 0);
-					calendarNewNotification.set(Calendar.SECOND, 0);
-					long newNotification = calendarNewNotification.getTimeInMillis() + calendarNotification.getTimeInMillis();
-					
-					//ce je alarm prej kot nastavljen alarm nastavim tistega prej
-					//System.out.println("CANDIADTE="+minNotificationInDay+"-"+newNotification);
-					if ((minNotificationInDay == -1) || (minNotificationInDay > newNotification)) {
-						period_curr = i;
-						alarmSet = true;
-						minNotificationInDay = newNotification;
-						Calendar c = Calendar.getInstance();
-						//za elapsed time zracunam razliko med notijem in trenutnim casom
-						long newAlarm = newNotification - c.getTimeInMillis();
-						c.setTimeInMillis(newAlarm);
-						System.out.println(period_curr+":"+c);
-						//alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent);
-						alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + newAlarm, notificationIntent);
-					}
-				}
-			}
-		}
-		
-		//ce ni nsatvljen alarm nastavim prvi alarm v naslednjem dnevu
-		if (!alarmSet) {
-			period_curr = 0;
-			Calendar calendarNewNotification = Calendar.getInstance();
-			calendarNewNotification.add(Calendar.DATE, 1);
-			calendarNewNotification.set(Calendar.HOUR_OF_DAY, 0);
-			calendarNewNotification.set(Calendar.MINUTE, 0);
-			calendarNewNotification.set(Calendar.SECOND, 0);
-			long newNotification = calendarNewNotification.getTimeInMillis() + minNotificationTime;
-			Calendar c = Calendar.getInstance();
-			c.setTimeInMillis(newNotification);
-			System.out.println("++="+c);
-			alarmMgr.set(AlarmManager.RTC_WAKEUP,  newNotification, notificationIntent); 			
-		}
-	}
-	*/
 	
 	@Override
 	protected void onDestroy() {
@@ -253,13 +138,7 @@ public class HomeScreenActivity extends Activity {
 	    //unregisterReceiver(br);
 	    super.onDestroy();
 	}
-	/*
-	public static void cancelNotifications(){
-		if (alarmMgr != null) {
-			alarmMgr.cancel(notificationIntent);
-		}
-	}
-	*/
+
 	@Override
 	public void onResume() {
 	    super.onResume();

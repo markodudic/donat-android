@@ -25,6 +25,11 @@
     <string name="obrokov">Number of meals</string>
     <string name="close">CLOSE</string>
     <string name="home">Back</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="rate_it_title">Do you want to rate application?</string>
+    <string name="rate_it_desc">Do you want to rate application? Do you want to rate application?</string>
+    <string name="rate_it_later">REMMIND ME LATER</string>
     <string name="rate_it">Rate it</string>
     <string name="licence">© Droga Kolinska d.d. All rights reserved. Droga Kolinska is part of the Atlantic Group.</string>
     <string name="rules">Terms and conditions of use</string>

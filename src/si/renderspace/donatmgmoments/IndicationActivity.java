@@ -93,7 +93,6 @@ public class IndicationActivity extends Activity {
 			TextView textview1 = new TextView(this);
 			textview1.setText(drink[0]);
 			textview1.setTextAppearance(this, R.style.TabelFirst);
-			//textview1.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,3f));
 			TableRow.LayoutParams tableRowParams =  new TableRow.LayoutParams(100,LayoutParams.WRAP_CONTENT,1f);
 			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview1.setLayoutParams(tableRowParams);
@@ -108,8 +107,6 @@ public class IndicationActivity extends Activity {
 			TextView textview2 = new TextView(this);
 			textview2.setText(drink[1]+'\n'+drink[2]);
 			textview2.setTextAppearance(this, R.style.TabelSecond);
-			//textview2.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
-			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			TableRow.LayoutParams tableRowParams2 =  new TableRow.LayoutParams(50,LayoutParams.WRAP_CONTENT,1f);
 			textview2.setLayoutParams(tableRowParams2);
 			textview2.setTypeface(tfl);
@@ -123,8 +120,6 @@ public class IndicationActivity extends Activity {
 			TextView textview3 = new TextView(this);
 			textview3.setText(drink[3]);
 			textview3.setTextAppearance(this, R.style.TabelSecond);
-			//textview3.setLayoutParams(new TableRow.LayoutParams( LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
-			//tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview3.setLayoutParams(tableRowParams2);
 			textview3.setTypeface(tfl);
 			tr.addView(textview3);
@@ -144,21 +139,6 @@ public class IndicationActivity extends Activity {
 		cal.set(Calendar.MINUTE, 0);
 		cal.set(Calendar.SECOND, 0);
 		cal.set(Calendar.MILLISECOND, 0);
-		/*Date dtNowDay = cal.getTime();
-		if (indxCurr != -1) {
-			long indicationCurrentFirstNotification = dtNowDay.getTime() + Settings.notificationTimes[0].getTime() + Settings.NOTIFICATION_ALARM_MINUTES;
-			System.out.println(indxCurr+":"+new Date(indicationCurrentFirstNotification)+":"+dtNow);
-			if (new Date(indicationCurrentFirstNotification).before(dtNow)) {
-				//ce obstaja aktivna indikacija, in je na danasnji dan ze bil notification, nastavim naslednjo indikacijo na naslednji dan
-				Calendar calendar = Calendar.getInstance();
-				calendar.set(Calendar.HOUR_OF_DAY, 0);
-				calendar.set(Calendar.MINUTE, 0);
-				calendar.set(Calendar.SECOND, 0);
-				calendar.set(Calendar.MILLISECOND, 0);
-				calendar.add(Calendar.DATE, 1);
-				dtNow = calendar.getTime();
-			}
-		}*/
 		
 		//ce je trnutna indikacija
 		if (indx == indxCurr) {

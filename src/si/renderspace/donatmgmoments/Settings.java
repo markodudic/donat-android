@@ -41,7 +41,7 @@ public class Settings {
 	public static String SETTING_RATE_IT_COUNT = "RATE_IT_COUNT";
 	public static String SETTING_RATE_IT_FINISHED = "RATE_IT_FINISHED";
 	public static int RATE_PERIOD = 7;
-	public static int RATE_COUNT = 1;
+	public static int RATE_COUNT = 3;
 
 	public static HashMap<Integer,String> languages = new HashMap<Integer,String>() {{
 																					    put(0, "en");
@@ -181,7 +181,6 @@ public class Settings {
 		String h = Utils.getPrefernciesString(context, SETTING_HISTORY);
 		if (h != null) {
 			try {
-				System.out.println("HISTORY GET="+h);
 				history = new JSONArray(h);
 			} catch (Exception e) {}
 		}
@@ -299,8 +298,7 @@ public class Settings {
 	}
 	
     public static void setLanguage(Context context, String lang) {
-    	System.out.println("LANG="+lang);
-        Locale locale = new Locale(lang);
+    	Locale locale = new Locale(lang);
 	    Locale.setDefault(locale);
 	    Configuration config = new Configuration();
 	    config.locale = locale;
@@ -322,9 +320,7 @@ public class Settings {
 			historyEl.put(SETTING_END_DATE, endDate);
 			history.put(historyEl);
 			Utils.savePrefernciesString(context, SETTING_HISTORY, history.toString());
-			System.out.println("HISTORY SAVE="+history.toString());
 		} catch (Exception e) {
-			System.out.println("HISTORY ERROR="+e.getLocalizedMessage());
 		}
 	}  
 

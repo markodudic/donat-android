@@ -25,6 +25,11 @@
     <string name="obrokov">Broj obroka</string>
     <string name="close">ODUSTANI</string>
     <string name="home">Natrag</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="rate_it_title">Do you want to rate application?</string>
+    <string name="rate_it_desc">Do you want to rate application? Do you want to rate application?</string>
+    <string name="rate_it_later">REMMIND ME LATER</string>
     <string name="rate_it">Rate it</string>
     <string name="licence">© Droga Kolinska d.d. Sva prava pridržana. Droga Kolinska je dio Atlantic Grupe.</string>
     <string name="rules">Uvjeti i pravila upotrebe</string>
