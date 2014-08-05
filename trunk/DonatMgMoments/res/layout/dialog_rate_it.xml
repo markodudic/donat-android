@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/background_white" >
+    
+	<LinearLayout
+	    android:id="@+id/close"
+		android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    style="@style/DialogTitle"
+	    android:padding="@dimen/layout_vertical_padding" >
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			style="@style/DialogTitle" >
+		    
+			<TextView
+		        android:id="@+id/rate_it_title"
+		        android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/rate_it_title"
+				style="@style/DialogTitleText"
+	       		android:layout_weight="5" />
+				
+		    <ImageView
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:src="@drawable/ic_close"
+				android:layout_weight="1" />
+			
+		</LinearLayout>     
+			
+		<TextView
+		    android:id="@+id/rate_it_desc"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="@dimen/title_vertical_padding"
+		    style="@style/DialogText"
+	       	android:fontFamily="sans-serif-light"
+			android:text="@string/rate_it_desc" />
+	 
+        <Button
+           android:id="@+id/btn_rate_it_yes"
+           android:text="@string/yes"
+		   style="@style/ButtonIndicationStart"
+           android:fontFamily="sans-serif"
+	       android:layout_width="match_parent"
+           android:layout_height="@dimen/button_height"
+           android:layout_weight="1" />
+        
+        <Button
+           android:id="@+id/btn_rate_it_no"
+           android:text="@string/no"
+		   style="@style/ButtonIndicationStart"
+           android:fontFamily="sans-serif"
+	       android:layout_width="match_parent"
+           android:layout_height="@dimen/button_height"
+           android:layout_weight="1" />
+        
+        <Button
+           android:id="@+id/btn_rate_it_later"
+           android:text="@string/rate_it_later"
+		   style="@style/ButtonIndicationStart"
+           android:fontFamily="sans-serif"
+	       android:layout_width="match_parent"
+           android:layout_height="@dimen/button_height"
+           android:layout_weight="1" />        
+	</LinearLayout>
+
+   
+</LinearLayout>    

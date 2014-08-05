@@ -54,7 +54,8 @@ public class NotiActivity extends Activity {
 	 		  @Override
 			  public void onClick(View v) {
 	 			  ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancelAll();
-	 			  finish();
+	 			  if (checkRateIt())
+	 				  finish();
 			  }
 	 	});        
     }
@@ -62,16 +63,13 @@ public class NotiActivity extends Activity {
 	@Override
 	public void onNewIntent(Intent intent) {
 	    super.onNewIntent(intent);
-	    System.out.println("onNewIntent");
 	    period = intent.getIntExtra("PERIOD", 0);
 	}
 	
 	@Override
 	public void onResume() {
 	    super.onResume();
-		System.out.println("RESUME");
-
-        int indx = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
+		int indx = Utils.getPrefernciesInt(this,  Settings.SETTING_INDX);
         	
         ImageView indicationImage = (ImageView) findViewById(R.id.indicationImage);
 		int id = getResources().getIdentifier("ic_indication_"+indx, "drawable", getPackageName());
@@ -137,27 +135,6 @@ public class NotiActivity extends Activity {
 	   	TextView notificationDate = (TextView) findViewById(R.id.notificationDate);
 	   	notificationDate.setText(mDay+". "+monthString);
 	   	
-	   	System.out.println("FINISHED="+Utils.getPrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, false));
-	   	System.out.println("COUNT="+Utils.getPrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT));
-	   	System.out.println("START="+Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START));
-	   	System.out.println("CURR="+(Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START) + Settings.RATE_PERIOD*24*60*60*1000));
-	    if (!Utils.getPrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, false)) {
-		    long rateStart = Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START);
-		    int rateCount = Utils.getPrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT);
-		    rateCount++;
-		    if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*60*60*1000 > c.getTime().getTime())) {
-		    //if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*1000 < c.getTime().getTime())) {
-			  	//odpri okno za rate
-		    	NotiActivity.this.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + Settings.SETTING_APP_PNAME)));
-		    	
-		    	Utils.savePrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, true);
-		    }
-		    else {
-		    	Utils.savePrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT, rateCount);
-		    }
-
-	    }
-
 	}
 
 	
@@ -173,19 +150,92 @@ public class NotiActivity extends Activity {
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		Utils.resetMenu(mainMenu);		
-		
-		if (item.getItemId() == android.R.id.home) {
-	    	finish();
-	    } else if (item.getItemId() == R.id.calendar) {
-			Intent intent = new Intent(this, CalendarActivity.class);
-			startActivity(intent);	    	
-	    } else if (item.getItemId() == R.id.settings) { 
-			Intent intent = new Intent(this, SettingsActivity.class);
-			startActivity(intent);	    	
-		}
-	    
+		if (checkRateIt()) {
+			if (item.getItemId() == android.R.id.home) {
+		    	finish();
+		    } else if (item.getItemId() == R.id.calendar) {
+				Intent intent = new Intent(this, CalendarActivity.class);
+				startActivity(intent);	    	
+		    } else if (item.getItemId() == R.id.settings) { 
+				Intent intent = new Intent(this, SettingsActivity.class);
+				startActivity(intent);	    	
+			}
+		}	    
 	    return true;
 	}
+	
+	private boolean checkRateIt() {
+	   	if (!Utils.getPrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, false)) {
+	        long rateStart = Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START);
+		    int rateCount = Utils.getPrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT);
+		    rateCount++;
+		    Calendar c = Calendar.getInstance();
+		    //if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*60*60*1000 > c.getTime().getTime())) {
+		    //za test dam 3 min
+		    //if ((rateCount >= Settings.RATE_COUNT) && (rateStart + 3*60*1000 > c.getTime().getTime())) {
+		    if (true) {
+			  	//odpri okno za rate
+				final Dialog dialogConfirmation = new Dialog(this,R.style.Dialog);
+				dialogConfirmation.setContentView(R.layout.dialog_rate_it); 
+				dialogConfirmation.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+		    
+				Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
+				TextView confirmationTitle = (TextView) dialogConfirmation.findViewById(R.id.rate_it_title);
+				confirmationTitle.setTypeface(tf);
+				dialogConfirmation.show();				
+			    
+				LinearLayout close = (LinearLayout) dialogConfirmation.findViewById(R.id.close);
+				close.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						dialogConfirmation.dismiss();
+						finish();
+					}
+				}); 
+				
+				Button btnYes = (Button) dialogConfirmation.findViewById(R.id.btn_rate_it_yes);
+				btnYes.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+				    	Utils.savePrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, true);
+				    	dialogConfirmation.dismiss();
+				    	NotiActivity.this.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + Settings.SETTING_APP_PNAME)));
+					}
+				}); 
+				 
+				Button btnNo = (Button) dialogConfirmation.findViewById(R.id.btn_rate_it_no);
+				btnNo.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) { 
+				    	Utils.savePrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, true);
+				    	dialogConfirmation.dismiss();	
+				    	finish();
+				    }
+				});	
+				 
+				Button btnLater = (Button) dialogConfirmation.findViewById(R.id.btn_rate_it_later);
+				btnLater.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) { 
+						Utils.savePrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT, -1);
+						dialogConfirmation.dismiss();
+						finish();
+					}
+				});					
+		    }
+		    else {
+		    	Utils.savePrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT, rateCount);
+		    	return true;
+		    }
+	
+	    }
+	    else {
+	    	return true;
+	    }
+	    
+	    return false;
+	}
+
 	
 
 }
