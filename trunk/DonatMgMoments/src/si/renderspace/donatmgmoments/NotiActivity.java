@@ -165,6 +165,9 @@ public class NotiActivity extends Activity {
 	}
 	
 	private boolean checkRateIt() {
+		/*System.out.println("="+Utils.getPrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, false));
+		System.out.println("="+Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START));
+		System.out.println("="+Utils.getPrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT));*/
 	   	if (!Utils.getPrefernciesBoolean(NotiActivity.this, Settings.SETTING_RATE_IT_FINISHED, false)) {
 	        long rateStart = Utils.getPrefernciesLong(NotiActivity.this, Settings.SETTING_RATE_IT_START);
 		    int rateCount = Utils.getPrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT);
@@ -172,7 +175,7 @@ public class NotiActivity extends Activity {
 		    Calendar c = Calendar.getInstance();
 		    //if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*60*60*1000 > c.getTime().getTime())) {
 		    //za test dam 3 min
-		    if ((rateCount >= Settings.RATE_COUNT) && (rateStart + 3*60*1000 > c.getTime().getTime())) {
+		    if ((rateCount >= (Settings.RATE_COUNT-1)) && (rateStart + 3*60*1000 < c.getTime().getTime())) {
 		    //if (true) {
 			  	//odpri okno za rate
 				final Dialog dialogConfirmation = new Dialog(this,R.style.Dialog);
