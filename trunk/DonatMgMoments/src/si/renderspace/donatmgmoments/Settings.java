@@ -36,7 +36,7 @@ public class Settings {
 	public static String SETTING_HISTORY = "HISTORY";
 	public static String SETTING_PERIOD_CURR = "PERIOD_CURR";
 
-	final static String SETTING_APP_PNAME = "Donat MG Moments";
+	final static String SETTING_APP_PNAME = "si.renderspace.donatmgmoments";
 	public static String SETTING_RATE_IT_START = "RATE_IT_START";
 	public static String SETTING_RATE_IT_COUNT = "RATE_IT_COUNT";
 	public static String SETTING_RATE_IT_FINISHED = "RATE_IT_FINISHED";
