@@ -27,10 +27,10 @@
     <string name="home">Back</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
-    <string name="rate_it_title">Do you want to rate application?</string>
-    <string name="rate_it_desc">Do you want to rate application? Do you want to rate application?</string>
-    <string name="rate_it_later">REMMIND ME LATER</string>
-    <string name="rate_it">Rate it</string>
+    <string name="rate_it_title">Do you like the application?</string>
+    <string name="rate_it_desc">Please take a moment and assess your satisfaction with the Donat Mg Moments application. We value your opinion!</string>
+    <string name="rate_it_later">REMIND ME LATER</string>
+    <string name="rate_it">ASSESS THE APPLICATION</string>
     <string name="licence">© Droga Kolinska d.d. All rights reserved. Droga Kolinska is part of the Atlantic Group.</string>
     <string name="rules">Terms and conditions of use</string>
     <string name="rules_title">General terms and conditions of use for the Moments mobile application</string>
