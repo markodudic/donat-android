@@ -173,9 +173,9 @@ public class NotiActivity extends Activity {
 		    int rateCount = Utils.getPrefernciesInt(NotiActivity.this, Settings.SETTING_RATE_IT_COUNT);
 		    rateCount++;
 		    Calendar c = Calendar.getInstance();
-		    //if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*60*60*1000 > c.getTime().getTime())) {
+		    if ((rateCount >= Settings.RATE_COUNT) && (rateStart + Settings.RATE_PERIOD*24*60*60*1000 > c.getTime().getTime())) {
 		    //za test dam 3 min
-		    if ((rateCount >= (Settings.RATE_COUNT-1)) && (rateStart + 3*60*1000 < c.getTime().getTime())) {
+		    //if ((rateCount >= (Settings.RATE_COUNT-1)) && (rateStart + 3*60*1000 < c.getTime().getTime())) {
 		    //if (true) {
 			  	//odpri okno za rate
 				final Dialog dialogConfirmation = new Dialog(this,R.style.Dialog);
