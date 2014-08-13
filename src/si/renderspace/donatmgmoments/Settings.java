@@ -100,7 +100,7 @@ public class Settings {
 	
 		String[][] drinking_1 = new String[][]{	
 				{context.getResources().getString(R.string.drinking_na_tesce),context.getResources().getString(R.string.temperature_toplo),"3-8 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_hitro),"ic_tesce"},
-				{context.getResources().getString(R.string.drinking_pred_spanjem),context.getResources().getString(R.string.temperature_mlacno),"2 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_razmeroma_hitro),"ic_pred_spanjem"}
+				{context.getResources().getString(R.string.drinking_pred_spanjem2),context.getResources().getString(R.string.temperature_mlacno),"2 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_razmeroma_hitro),"ic_pred_spanjem"}
 		};
 		drinking.put(1,drinking_1);
 
@@ -136,13 +136,13 @@ public class Settings {
 				{context.getResources().getString(R.string.drinking_na_tesce),context.getResources().getString(R.string.temperature_mlacno),"2 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_tesce"},
 				{context.getResources().getString(R.string.drinking_pred_kosilom),context.getResources().getString(R.string.temperature_mlacno),"2 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_pred_jedjo"},
 				{context.getResources().getString(R.string.drinking_pred_vecerjo),context.getResources().getString(R.string.temperature_mlacno),"2 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_pred_jedjo"},
-				{context.getResources().getString(R.string.drinking_pred_spanjem),context.getResources().getString(R.string.temperature_mlacno),"2 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_pred_spanjem"}
+				{context.getResources().getString(R.string.drinking_pred_spanjem3),context.getResources().getString(R.string.temperature_mlacno),"2 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_pred_spanjem"}
 		};
 		drinking.put(6,drinking_6);
 
 		String[][] drinking_7 = new String[][]{	
 				{context.getResources().getString(R.string.drinking_na_tesce),context.getResources().getString(R.string.temperature_toplo),"3-5 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_hitro),"ic_tesce"},
-				{context.getResources().getString(R.string.drinking_pred_jedjo),context.getResources().getString(R.string.temperature_hladno),"1 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_pred_jedjo"}
+				{context.getResources().getString(R.string.drinking_obcutek_lakote),context.getResources().getString(R.string.temperature_hladno),"1 "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_pred_jedjo"}
 		};
 		drinking.put(7,drinking_7);
 
@@ -168,7 +168,7 @@ public class Settings {
 		interval.put(1,context.getResources().getString(R.string.interval_5_dni));
 		interval.put(2,context.getResources().getString(R.string.interval_stalno));
 		interval.put(3,context.getResources().getString(R.string.interval_stalno));
-		interval.put(4,context.getResources().getString(R.string.interval_5_dni));
+		interval.put(4,context.getResources().getString(R.string.interval_5_dni2));
 		interval.put(5,context.getResources().getString(R.string.interval_6_tednov));
 		interval.put(6,context.getResources().getString(R.string.interval_stalno));
 		interval.put(7,context.getResources().getString(R.string.interval_3_mesece));

@@ -143,6 +143,8 @@ www.donatmg.eu
     
     <string name="drinking_na_tesce">Natašte</string>
     <string name="drinking_pred_spanjem">Prije spavanja</string>
+    <string name="drinking_pred_spanjem2">Prije spavanja (prema potrebi)</string>
+    <string name="drinking_pred_spanjem3">Prije spavanja i noću prilikom buđenja</string>
     <string name="drinking_veckrat_dnevno">Više puta dnevno</string>
     <string name="drinking_20_min_pred">Večkrat dnevno 20 minut pred jedjo</string>
     <string name="drinking_med_obroki">Između obroka i 1 – 2 sata nakon jela</string>
@@ -154,18 +156,19 @@ www.donatmg.eu
     <string name="drinking_3_4_dnevno">3 – 4 puta dnevno</string>
     <string name="drinking_pred_jedjo">Prije jela</string>
     
-    <string name="temperature_toplo">30–37 °C</string>
-    <string name="temperature_mlacno">23–25 °C</string>
-    <string name="temperature_sobna">20 °C</string>
-    <string name="temperature_hladno">17–18 °C</string>
-    <string name="volume_suffix">dcl</string>
+    <string name="temperature_toplo">30–37 °C (toplo)</string>
+    <string name="temperature_mlacno">23–25 °C (mlako)</string>
+    <string name="temperature_sobna">20 °C (sobna temp.)</string>
+    <string name="temperature_hladno">17–18 °C (hladno)</string>
+    <string name="volume_suffix">dl</string>
   
     <string name="spped_hitro">Brzo</string>
     <string name="spped_razmeroma_hitro">Razmjerno brzo</string>
     <string name="spped_pocasi">Polako</string>
 
     <string name="interval_stalno">Stalno ili s kraćim prekidima</string>
-    <string name="interval_5_dni">5 dana, prekid 2 dana, stalno ponavljanje</string>
+    <string name="interval_5_dni">Stalno ili 5 dana, prekid 2 dana</string>
+    <string name="interval_5_dni2">5 dana, prekid 2 dana, stalno ponavljanje</string>
     <string name="interval_6_tednov">6 tjedana, prekid 4 tjedna 3 puta godišnje</string>
     <string name="interval_3_mesece">3 mjeseca, prekid 1 mjesec, 3 puta godišnje</string>
     <string name="interval_2_meseca">2 mjeseca, prekid 1 mjesec, 3 puta godišnje</string>

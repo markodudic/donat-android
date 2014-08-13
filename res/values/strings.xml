@@ -21,7 +21,7 @@
     <string name="zajtrk">Breakfast</string>
     <string name="kosilo">Lunch</string>
     <string name="vecerja">Dinner</string>
-    <string name="spanje">Bed time</string>
+    <string name="spanje">Sleeping</string>
     <string name="obrokov">Number of meals</string>
     <string name="close">CLOSE</string>
     <string name="home">Back</string>
@@ -141,6 +141,8 @@ www.donatmg.eu
     
     <string name="drinking_na_tesce">On an empty stomach</string>
     <string name="drinking_pred_spanjem">Before bed</string>
+    <string name="drinking_pred_spanjem2">Before bed (as requered)</string>
+    <string name="drinking_pred_spanjem3">Before bed and if you wake during the night</string>
     <string name="drinking_veckrat_dnevno">Several times a day</string>
     <string name="drinking_20_min_pred">Several times a day 20 min before meals</string>
     <string name="drinking_med_obroki">During meals and 1 to 2 hours after meals</string>
@@ -152,18 +154,19 @@ www.donatmg.eu
     <string name="drinking_3_4_dnevno">3-4 times daily</string>
     <string name="drinking_pred_jedjo">Before meals</string>
     
-    <string name="temperature_toplo">30–37 °C</string>
-    <string name="temperature_mlacno">23–25 °C</string>
-    <string name="temperature_sobna">20 °C</string>
-    <string name="temperature_hladno">17–18 °C</string>
-    <string name="volume_suffix">dcl</string>
+    <string name="temperature_toplo">30–37 °C (warm)</string>
+    <string name="temperature_mlacno">23–25 °C (lukewarm)</string>
+    <string name="temperature_sobna">20 °C (room temperature)</string>
+    <string name="temperature_hladno">17–18 °C (cold)</string>
+    <string name="volume_suffix">dl</string>
   
     <string name="spped_hitro">Quickly</string>
     <string name="spped_razmeroma_hitro">Relatively quickly</string>
     <string name="spped_pocasi">Slowly</string>
 
     <string name="interval_stalno">Continuously or with shorter breaks</string>
-    <string name="interval_5_dni">5 days, 2-day break, continuously</string>
+    <string name="interval_5_dni">Continuously or for 5 days, 2-day break</string>
+    <string name="interval_5_dni2">5 days, 2-day break, continuously</string>
     <string name="interval_6_tednov">6 weeks, 4-week break, 3 times a year</string>
     <string name="interval_3_mesece">3 months, 1-month break, 3 times a year</string>
     <string name="interval_2_meseca">2 months, 1-month break, 3 times a year</string>
