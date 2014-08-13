@@ -6,9 +6,9 @@
     <string name="action_settings">Impostazioni</string>
     <string name="home_screen"></string>
     <string name="settings">Impostazioni</string>
-    <string name="seznam">Lista</string>
+    <string name="seznam">Elenco</string>
     <string name="home_screen_title">Prendetevi un momento per la vostra salute. Questa applicazione vi propone le linee guida sul consumo dell’acqua minerale naturale Donat Mg sulle quali si basano, da più di due secoli, le terapie del Medical Center Rogaška. Il modo da consumare la Donat Mg sorgiva viene prescritto da un medico specialista di balneoterapia in seguito ad un’accurata visita ed eventuali analisi. Le linee guida generali per bere Donat Mg sono adesso disponibili anche a voi.</string>
-    <string name="drinking">Come bere l’acqua</string>
+    <string name="drinking">Come bere Donat Mg</string>
     <string name="interval">Durata</string>
     <string name="start_date">Giorno scelto per iniziare la cura:</string>
     <string name="button_indication_start">ATTIVA</string>
@@ -129,7 +129,7 @@ www.donatmg.eu
     <string name="indication_9">Stress e mal di testa</string>
     <string name="indication_10">Per il benessere</string>
 
-    <string name="indication_1_desc">Donat Mg è un lassativo osmotico naturale. Contiene sali di solfato e circa 1000 mg/l di magnesio. Gli ioni solfato hanno la grande capacità di legare l’acqua, questo fa sì che il volume dell’intestino aumenta da 3 a 5 volte (zbrisano od il volume do stimolando), stimolando così la peristalsi.</string>
+    <string name="indication_1_desc">Donat Mg è un lassativo osmotico naturale. Contiene sali di solfato e circa 1000 mg/l di magnesio. Gli ioni solfato hanno la grande capacità di legare l’acqua, questo fa sì che il volume dell’intestino aumenta da 3 a 5 volte, stimolando così la peristalsi.</string>
     <string name="indication_2_desc">Grazie ai suoi circa 7.800 mg di idrogenocarbonato, Donat Mg è in grado di legare gli acidi e tamponare gli acidi liberi. La natura alcalina dell’idrogenocarbonato di sodio presente nella Donat Mg ha un effetto antinfiammatorio sulla mucosa gastrica; il magnesio e il calcio, che accompagnano il sodio, riducono, inoltre, il gonfiore della mucosa.</string>
     <string name="indication_3_desc">Donat Mg è l’acqua minerale naturale con il più alto contenuto di magnesio.* Ogni giorno abbiamo, in media, bisogno di 375 mg di questo minerale. Il fabbisogno di magnesio aumenta durante periodi di gravidanza e di allattamento, nonché di sviluppo e durante l’adolescenza. Maggiori perdite di magnesio e di conseguenza il suo aumentato fabbisogno giornaliero si manifestano anche negli anziani oppure possono essere provocati da certi disturbi metabolici, dall’assunzione di alcuni farmaci, dalle diete e durante i periodi particolarmente stressanti. Sebbene esistano molti integratori alimentari contenenti magnesio, il miglior modo per veicolarlo nell’organismo è proprio attraverso l’acqua poiché i minerali si trovano nella loro forma più naturale ovvero quella ionica; ciò consente loro di essere immediatamente fruibili dall’organismo.&lt;br>&lt;br>&lt;i>*L’indagine comparativa si basa sui dati di tutte le acque minerali commercializzate e registrate nella U.E.&lt;/i></string>
     <string name="indication_4_desc">La carenza di magnesio nelle persone affette da diabete mellito di tipo 2 si manifesta a causa dell’aumentata perdita di questo minerale attraverso l’urina. Già dai primi stadi della malattia (anche nelle gestanti), il diabete mellito provoca lo squilibrio del glucosio nel sangue e inibisce l’azione dell’insulina. L’assunzione regolare di Donat Mg facilita il recupero del magnesio, il che aiuta a tenere meglio sotto controllo il diabete e a ridurre le oscillazioni degli zuccheri.</string>
@@ -142,6 +142,8 @@ www.donatmg.eu
     
     <string name="drinking_na_tesce">A digiuno</string>
     <string name="drinking_pred_spanjem">Prima di coricarsi</string>
+    <string name="drinking_pred_spanjem2">Prima di coricarsi (se necessario)</string>
+    <string name="drinking_pred_spanjem3">Prima di coricarsi e durante la notte, se ci si sveglia</string>
     <string name="drinking_veckrat_dnevno">Più volte al giorno</string>
     <string name="drinking_20_min_pred">Più volte al giorno 20 minuti prima dei pasti</string>
     <string name="drinking_med_obroki">Durante i pasti e 1–2 ore dopo i pasti</string>
@@ -149,15 +151,15 @@ www.donatmg.eu
     <string name="drinking_zvecer">La sera</string>
     <string name="drinking_pred_kosilom">Prima di pranzo</string>
     <string name="drinking_pred_vecerjo">Prima di cena</string>
-    <string name="drinking_obcutek_lakote">Quando si avverte il senso di fame, durante e prima dei pasti</string>
+    <string name="drinking_obcutek_lakote">A sensazione di fame, prima i durante i pasti</string>
     <string name="drinking_3_4_dnevno">3–4 volte al giorno</string>
-    <string name="drinking_pred_jedjo">A sensazione di fame, prima i durante i pasti</string>
+    <string name="drinking_pred_jedjo">Prima dei pasti</string>
     
-    <string name="temperature_toplo">30–37 °C</string>
-    <string name="temperature_mlacno">23–25 °C</string>
-    <string name="temperature_sobna">20 °C</string>
-    <string name="temperature_hladno">17–18 °C</string>
-    <string name="volume_suffix">dcl</string>
+    <string name="temperature_toplo">30–37 °C (calda)</string>
+    <string name="temperature_mlacno">23–25 °C (tiepida)</string>
+    <string name="temperature_sobna">20 °C (a temperatura ambiente)</string>
+    <string name="temperature_hladno">17–18 °C (fredda)</string>
+    <string name="volume_suffix">dl</string>
   
     <string name="spped_hitro">Velocemente</string>
     <string name="spped_razmeroma_hitro">Abbastanza velocemente</string>
@@ -165,6 +167,7 @@ www.donatmg.eu
 
     <string name="interval_stalno">Continuamente o con brevi sospensioni</string>
     <string name="interval_5_dni">Continuamente o 5 giorni e poi sospendere per 2 giorni</string>
+    <string name="interval_5_dni2">5 giorni e poi sospendere per 2 giorni; da ripetere continuamente</string>
     <string name="interval_6_tednov">6 settimane e poi sospendere per 4 settimane; da ripetere 3 volte all’anno</string>
     <string name="interval_3_mesece">3 mesi e poi sospendere per 1 mese; da ripetere 3 volte all’anno</string>
     <string name="interval_2_meseca">2 mesi e poi sospendere per 1 mese; da ripetere 3 volte all’anno</string>

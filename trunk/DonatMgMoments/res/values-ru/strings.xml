@@ -142,6 +142,8 @@ www.donatmg.eu
     
     <string name="drinking_na_tesce">Натощак</string>
     <string name="drinking_pred_spanjem">Перед сном</string>
+    <string name="drinking_pred_spanjem2">Перед сном (если необходимо)</string>
+    <string name="drinking_pred_spanjem3">Перед сном и ночью, если проснулись</string>
     <string name="drinking_veckrat_dnevno">Несколько раз в день</string>
     <string name="drinking_20_min_pred">Несколько раз в день за 20 мин. перед едой</string>
     <string name="drinking_med_obroki">Между приемами пищи и через 1-2 часа после еды</string>
@@ -153,18 +155,19 @@ www.donatmg.eu
     <string name="drinking_3_4_dnevno">3-4 раза в день</string>
     <string name="drinking_pred_jedjo">Перед едой</string>
     
-    <string name="temperature_toplo">30–37 °C</string>
-    <string name="temperature_mlacno">23–25 °C</string>
-    <string name="temperature_sobna">20 °C</string>
-    <string name="temperature_hladno">17–18 °C</string>
-    <string name="volume_suffix">dcl</string>
+    <string name="temperature_toplo">30–37 °C (теплая)</string>
+    <string name="temperature_mlacno">23–25 °C (теплая)</string>
+    <string name="temperature_sobna">20 °C (комнатная темп.)</string>
+    <string name="temperature_hladno">17–18 °C (холодная)</string>
+    <string name="volume_suffix">дл</string>
   
     <string name="spped_hitro">Быстро</string>
     <string name="spped_razmeroma_hitro">Oтносительно быстро</string>
     <string name="spped_pocasi">Mедленно</string>
 
     <string name="interval_stalno">Постоянно или с небольшими перерывами</string>
-    <string name="interval_5_dni">5 дней, перерыв на 2 дня, регулярное повторение</string>
+    <string name="interval_5_dni">Постоянно, но через каждые 5 дней перерыв на 2 дня</string>
+    <string name="interval_5_dni2">5 дней, перерыв на 2 дня, регулярное повторение</string>
     <string name="interval_6_tednov">6 недель, с перерывом на 4 недели, 3 раза в год</string>
     <string name="interval_3_mesece">3 месяца с перерывом на 1 месяц, 3 раза в год</string>
     <string name="interval_2_meseca">2 месяца с перерывом на 1 месяц, 3 раза в год</string>

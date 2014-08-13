@@ -15,6 +15,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
 import android.view.Gravity;
 import android.view.Menu;
@@ -97,6 +98,7 @@ public class IndicationActivity extends Activity {
 			tableRowParams.setMargins(this.getResources().getDimensionPixelSize(R.dimen.layout_margin), 0, 0, 0);
 			textview1.setLayoutParams(tableRowParams);
 			textview1.setTypeface(tf);
+			textview1.setEllipsize(null);
 			tr.addView(textview1);
 			
 			LinearLayout cell = new LinearLayout(this);
@@ -105,11 +107,12 @@ public class IndicationActivity extends Activity {
 			tr.addView(cell);
 			
 			TextView textview2 = new TextView(this);
-			textview2.setText(drink[1]+'\n'+drink[2]);
+			textview2.setText(drink[2]+'\n'+drink[1]);
 			textview2.setTextAppearance(this, R.style.TabelSecond);
 			TableRow.LayoutParams tableRowParams2 =  new TableRow.LayoutParams(50,LayoutParams.WRAP_CONTENT,1f);
 			textview2.setLayoutParams(tableRowParams2);
 			textview2.setTypeface(tfl);
+			textview2.setEllipsize(null);
 			tr.addView(textview2);
 			
 			LinearLayout cell1 = new LinearLayout(this);
@@ -122,6 +125,7 @@ public class IndicationActivity extends Activity {
 			textview3.setTextAppearance(this, R.style.TabelSecond);
 			textview3.setLayoutParams(tableRowParams2);
 			textview3.setTypeface(tfl);
+			textview3.setEllipsize(null);
 			tr.addView(textview3);
 			tr.setGravity(Gravity.CENTER_VERTICAL);
 			
