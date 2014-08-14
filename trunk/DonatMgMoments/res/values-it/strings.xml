@@ -159,6 +159,13 @@ www.donatmg.eu
     <string name="temperature_mlacno">23–25 °C (tiepida)</string>
     <string name="temperature_sobna">20 °C (a temperatura ambiente)</string>
     <string name="temperature_hladno">17–18 °C (fredda)</string>
+    
+    <string name="volume_1">1</string>
+    <string name="volume_2">2</string>
+    <string name="volume_1_2">1-2</string>
+    <string name="volume_3">3</string>
+    <string name="volume_3_5">3-5</string>
+    <string name="volume_3_8">3-8</string>
     <string name="volume_suffix">dl</string>
   
     <string name="spped_hitro">Velocemente</string>
