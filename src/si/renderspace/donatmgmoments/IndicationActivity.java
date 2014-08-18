@@ -109,7 +109,7 @@ public class IndicationActivity extends Activity {
 			TextView textview2 = new TextView(this);
 			textview2.setText(drink[2]+'\n'+drink[1]);
 			textview2.setTextAppearance(this, R.style.TabelSecond);
-			TableRow.LayoutParams tableRowParams2 =  new TableRow.LayoutParams(50,LayoutParams.WRAP_CONTENT,1f);
+			TableRow.LayoutParams tableRowParams2 =  new TableRow.LayoutParams(100,LayoutParams.WRAP_CONTENT,1f);
 			textview2.setLayoutParams(tableRowParams2);
 			textview2.setTypeface(tfl);
 			textview2.setEllipsize(null);
