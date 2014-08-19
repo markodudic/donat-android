@@ -60,14 +60,14 @@
 			        android:id="@+id/l_indication_1"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
-				            android:src="@drawable/ic_indication_1" />
+				            style="@style/ImageViewIndication"
+			            	android:src="@drawable/ic_indication_1" />
 			
 				        <TextView
 				            android:id="@+id/indication_1"
@@ -75,7 +75,7 @@
 				            android:layout_height="match_parent"
 				            style="@style/TextViewIndication"
 			            	android:fontFamily="sans-serif" 
-			                android:text="Indikacija Indikacija Indikacija  Indikacija Indikacija"
+			                android:text="Indikacija Indikacija Indikacija  Indikacija Indikacija Indikacija"
 			                android:layout_weight="15" />
 				        
 			   	        <ImageView
@@ -118,13 +118,13 @@
 			        android:id="@+id/l_indication_2"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_2" />
 			
 				        <TextView
@@ -175,13 +175,13 @@
 			        android:id="@+id/l_indication_3"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_3" />
 			
 				        <TextView
@@ -232,13 +232,13 @@
 			        android:id="@+id/l_indication_4"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_4" />
 			
 				        <TextView
@@ -290,13 +290,13 @@
 			        android:id="@+id/l_indication_5"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_5" />
 			
 				        <TextView
@@ -349,13 +349,13 @@
 			        android:id="@+id/l_indication_6"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_6" />
 			
 				        <TextView
@@ -409,13 +409,13 @@
 			        android:id="@+id/l_indication_7"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_7" />
 			
 				        <TextView
@@ -467,13 +467,13 @@
 			        android:id="@+id/l_indication_8"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_8" />
 			
 				        <TextView
@@ -526,13 +526,13 @@
 			        android:id="@+id/l_indication_9"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_9" />
 			
 				        <TextView
@@ -585,13 +585,13 @@
 			        android:id="@+id/l_indication_10"
 				    android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        style="@style/LayoutIndication"
+			        style="@style/LayoutIndicationTitle"
 			        android:orientation="horizontal">
 			        
 			  	        <ImageView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:paddingRight="@dimen/title_vertical_padding"
+				            style="@style/ImageViewIndication"
 			        		android:src="@drawable/ic_indication_10" />
 			
 				        <TextView

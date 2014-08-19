@@ -66,6 +66,11 @@
        <item name="android:textColor">@color/text_dark</item>
    </style>
 
+   <style name="ImageViewIndication">
+       <item name="android:paddingTop">@dimen/button_margin</item>
+       <item name="android:paddingRight">@dimen/title_vertical_padding</item>
+       <item name="android:paddingBottom">@dimen/button_margin</item>
+   </style>
    
    <style name="IndicationTitleText">
        <item name="android:textSize">@dimen/text_size_4</item>
@@ -93,6 +98,11 @@
        <item name="android:paddingRight">@dimen/title_vertical_padding</item>
        <item name="android:paddingLeft">@dimen/title_vertical_padding</item>
        <item name="android:paddingBottom">@dimen/button_margin</item>
+   </style>
+   
+   <style name="LayoutIndicationTitle" parent="LayoutIndication">
+       <item name="android:paddingTop">0dp</item>
+       <item name="android:paddingBottom">0dp</item>
    </style>
    
    <style name="LayoutIndicationNoti" parent="LayoutIndication">
