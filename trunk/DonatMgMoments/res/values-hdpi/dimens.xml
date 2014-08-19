@@ -1,10 +1,11 @@
 <resources>
     <dimen name="text_size_1">12.0sp</dimen>
-    <dimen name="text_size_2">14.0sp</dimen>
-    <dimen name="text_size_3">16.0sp</dimen>
-    <dimen name="text_size_4">20.0sp</dimen>
-    <dimen name="text_size_5">23.0sp</dimen>
+    <dimen name="text_size_2">13.0sp</dimen>
+    <dimen name="text_size_3">13.0sp</dimen>
+    <dimen name="text_size_4">18.0sp</dimen>
+    <dimen name="text_size_5">19.0sp</dimen>
     <dimen name="text_size_6">25.0sp</dimen>
     <dimen name="text_size_7">29.0sp</dimen>
     <dimen name="text_size_8">36.0sp</dimen>
+    <dimen name="text_size_9">19.0sp</dimen>
 </resources>
