@@ -7,4 +7,5 @@
     <dimen name="text_size_6">31.0sp</dimen>
     <dimen name="text_size_7">35.0sp</dimen>
     <dimen name="text_size_8">44.0sp</dimen>
+    <dimen name="text_size_9">20.0sp</dimen>
 </resources>

@@ -158,7 +158,7 @@ www.donatmg.eu
     
     <string name="temperature_toplo">30–37 °C (toplo)</string>
     <string name="temperature_mlacno">23–25 °C (mlako)</string>
-    <string name="temperature_sobna">20 °C (sobna temp.)</string>
+    <string name="temperature_sobna">20 °C (sobna temperatura)</string>
     <string name="temperature_hladno">17–18 °C (hladno)</string>
 
     <string name="volume_1">1</string>

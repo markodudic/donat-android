@@ -152,7 +152,7 @@
    </style>   
 
    <style name="SpinnerText">
-	   <item name="android:textSize">@dimen/text_size_3</item>
+	   <item name="android:textSize">@dimen/text_size_9</item>
        <item name="android:textColor">@color/text_green</item>
 	   <item name="android:paddingLeft">6dp</item>
 	   <item name="android:paddingBottom">1dp</item>
@@ -188,7 +188,7 @@
    
    <style name="TimePickerText">
 	   <item name="android:background">@drawable/ic_settings_text</item>
-       <item name="android:textSize">@dimen/text_size_3</item>
+       <item name="android:textSize">@dimen/text_size_9</item>
        <item name="android:textColor">@color/text_green</item>
 	   <item name="android:paddingLeft">10dp</item>
 	   <item name="android:paddingBottom">5dp</item>
