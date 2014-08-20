@@ -33,9 +33,9 @@
     <string name="rate_it">OCIJENITE APLIKACIJU</string>
     <string name="licence">© Droga Kolinska d.d. Sva prava pridržana. Droga Kolinska je dio Atlantic Grupe.</string>
     <string name="rules">Uvjeti i pravila upotrebe</string>
-    <string name="rules_title">Opći uvjeti i pravila upotrebe mobilne aplikacije Moments</string>
-    <string name="rules_title_desc">Ovi Opći uvjeti i pravila upotrebe mobilne aplikacije Moments (u daljnjem tekstu: Opći uvjeti) određuju korisničke uvjete i upute za upotrebu mobilne aplikacije. 
-\n\nMobilna aplikacija Moments (u daljnjem tekstu: mobilna aplikacija) korisnicama omogućuje da:
+    <string name="rules_title">Opći uvjeti i pravila upotrebe mobilne aplikacije Donat Mg Moments</string>
+    <string name="rules_title_desc">Ovi Opći uvjeti i pravila upotrebe mobilne aplikacije Donat Mg Moments (u daljnjem tekstu: Opći uvjeti) određuju korisničke uvjete i upute za upotrebu mobilne aplikacije. 
+\n\nMobilna aplikacija Donat Mg Moments (u daljnjem tekstu: mobilna aplikacija) korisnicama omogućuje da:
 \ndobiju upute o načinima pijenja prirodne mineralne vode Donat Mg i
 \npostave podsjetnik pijenja Donata Mg s obzirom na izabranu (zdravstvenu) tegobu, na primjer kod zatvora, žgaravice, nedostatka magnezija, šećerne bolesti, bolesti žučnog mjehura i gušterače, nastanka bubrežnih kamenaca, pretilosti i mršavljenja, bolesti srca i krvnih žila, stresa i glavobolja te za bolje raspoloženje.
 \n\nKorisnici mogu potražiti mobilnu aplikaciju u mobilnim trgovinama na kojima je ona objavljena (npr. Google Play, Apple Store...) i instalirati je na svoj pametni telefon na način i pod uvjetima koje određuje ponuđač izabrane mobilne trgovine. 
@@ -87,7 +87,7 @@ www.donatmg.eu
 \nKontaktni podatak ponuđača za rješavanje reklamacija je e-adresa: info@donatmg.eu.
 \nAko se pojedina reklamacija odnosi na rad telekomunikacijske mreže i plaćanje usluga pojedinog ponuđača telekomunikacijskih usluga, korisnik je obvezan proslijediti svu potrebnu dokumentaciju odgovarajućoj službi ponuđača telekomunikacijskih usluga. Ponuđači telekomunikacijskih usluga rješavaju reklamacije u skladu sa svojim općim uvjetima za pružanje telekomunikacijskih usluga. 
 \n\n<b>Prestanak osiguravanja odnosno upotrebe mobilne aplikacije</b>
-\nMobilna aplikacija korisnicima će biti dostupna od 10. 6. 2014. Ponuđač bilo kada može prestati osiguravati mobilnu aplikaciju tako da o tome obavijesti korisnike na odgovarajući način (npr. objavom na svojoj internetskoj stranici wwww.donatmg.eu).
+\nMobilna aplikacija korisnicima će biti dostupna od 22. 8. 2014. Ponuđač bilo kada može prestati osiguravati mobilnu aplikaciju tako da o tome obavijesti korisnike na odgovarajući način (npr. objavom na svojoj internetskoj stranici wwww.donatmg.eu).
 \n\nKorisnik ima pravo bilo kada prestati s upotrebom mobilne aplikacije. To može učiniti tako da ukloni mobilnu aplikaciju sa svojega mobilnog uređaja.
 \n\nPonuđač ima pravo bez prethodnog upozorenja onemogućiti pristup mobilnoj aplikaciji odnosno njezinu upotrebu svakom korisniku koji prekrši ove Opće uvjete.
 \nU slučaju prestanka osiguravanja odnosno upotrebe mobilne aplikacije u skladu s ovim poglavljem, korisnik automatski gubi pravo na upotrebu mobilne aplikacije kako je određeno ovim Općim uvjetima, korisnik je nadalje obvezan odmah prestati s upotrebom mobilne aplikacije, a isto tako obvezan je uništiti odnosno izbrisati sve kopije mobilne aplikacije.
@@ -99,7 +99,7 @@ www.donatmg.eu
 \n\nOvi Opći uvjeti stupaju na snagu danom objave aplikacije.
 \n\nOvi Opći uvjeti u originalu su pripremljeni na slovenskom jeziku i prilagođeni za korisnike u inačicama na engleskom, talijanskom, ruskom i srpskom jeziku. Upotreba mobilne aplikacije moguća je na engleskom, talijanskom, ruskom i srpskom jeziku.
 \n\nZa rješavanje sporova koji nastanu u vezi s mobilnom aplikacijom i/ili ovim Općim uvjetima mjerodavan je sud u Ljubljani u Republici Sloveniji i dogovorena je primjena slovenskog zakona.
-\n\nU Ljubljani, 10. 6. 2014.
+\n\nU Ljubljani, 22. 8. 2014.
 </string>
   
     
@@ -152,7 +152,7 @@ www.donatmg.eu
     <string name="drinking_zvecer">Navečer</string>
     <string name="drinking_pred_kosilom">Prije ručka</string>
     <string name="drinking_pred_vecerjo">Prije večere</string>
-    <string name="drinking_obcutek_lakote">Kod osjećaja gladi između i prije obroka</string>
+    <string name="drinking_obcutek_lakote">Kod osjećaja gladi, između i prije obroka</string>
     <string name="drinking_3_4_dnevno">3 – 4 puta dnevno</string>
     <string name="drinking_pred_jedjo">Prije jela</string>
     
@@ -176,7 +176,7 @@ www.donatmg.eu
     <string name="interval_stalno">Stalno ili s kraćim prekidima</string>
     <string name="interval_5_dni">Stalno ili 5 dana, prekid 2 dana</string>
     <string name="interval_5_dni2">5 dana, prekid 2 dana, stalno ponavljanje</string>
-    <string name="interval_6_tednov">6 tjedana, prekid 4 tjedna 3 puta godišnje</string>
+    <string name="interval_6_tednov">6 tjedana, prekid 4 tjedna, 3 puta godišnje</string>
     <string name="interval_3_mesece">3 mjeseca, prekid 1 mjesec, 3 puta godišnje</string>
     <string name="interval_2_meseca">2 mjeseca, prekid 1 mjesec, 3 puta godišnje</string>
         

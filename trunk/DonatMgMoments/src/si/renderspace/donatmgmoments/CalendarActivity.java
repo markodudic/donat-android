@@ -231,7 +231,7 @@ public class CalendarActivity extends FragmentActivity {
 		}
 		return dates;
 	}
-	
+
 	private static ArrayList<Date> calculateDrinkingDays(Calendar start, Calendar end, int drinkDays, int pauseDays, int cycles)
 	{
 		ArrayList<Date> dates = new ArrayList<Date>();
