@@ -33,9 +33,9 @@
     <string name="rate_it">VALUTA L’APP</string>
     <string name="licence">© Droga Kolinska d.d. Tutti i diritti riservati. Droga Kolinska fa parte del gruppo Atlantic Grupa.</string>
     <string name="rules">Termini e condizioni d’uso</string>
-    <string name="rules_title">Condizioni generali e regole di utilizzo dell’applicazione mobile Moments</string>
-    <string name="rules_title_desc">Le presenti Condizioni generali e regole di utilizzo dell’applicazione mobile Moments (di seguito: Condizioni generali) stabiliscono le condizioni e le istruzioni per gli utenti relative all’utilizzo dell’applicazione mobile. 
-\n\nL’applicazione mobile Moments (di seguito: applicazione mobile) consente agli utenti di:
+    <string name="rules_title">Condizioni generali e regole di utilizzo dell’applicazione mobile Donat Mg Moments</string>
+    <string name="rules_title_desc">Le presenti Condizioni generali e regole di utilizzo dell’applicazione mobile Donat Mg Moments (di seguito: Condizioni generali) stabiliscono le condizioni e le istruzioni per gli utenti relative all’utilizzo dell’applicazione mobile. 
+\n\nL’applicazione mobile Donat Mg Moments (di seguito: applicazione mobile) consente agli utenti di:
 \nottenere indicazioni sul modo di bere l’acqua minerale naturale Donat Mg e
 \nimpostare un promemoria riguardo il bere Donat Mg a seconda del problema (di salute) selezionato, per esempio stitichezza, bruciori di stomaco, carenza di magnesio, diabete, malattie della cistifellea e del pancreas, formazione di calcoli urinari, obesità e perdita di peso, malattie cardiovascolari, stress e mal di testa nonchè per sentirsi meglio.
 \n\nGli utenti possono trovare l’applicazione mobile nei mercati di telefonia mobile, in cui è pubblicata l’applicazione mobile (ad esempio Google Play, Apple Store ...) e installarla sul proprio smartphone nei modi e alle condizioni imposte dal provider del mercato mobile selezionato. 
@@ -87,7 +87,7 @@ www.donatmg.eu
 \nContattare il provider per la risoluzione dei reclami all’indirizzo e-mail: info@donatmg.eu.
 \nSe un singolo reclamo riguarda il funzionamento della rete di telecomunicazione e il pagamento dei servizi di un particolare provider di servizi di telecomunicazione, l’utente è tenuto a fornire tutta la documentazione necessaria al relativo provider di servizi di telecomunicazioni. I provider di servizi di telecomunicazioni risolvono i reclami conformemente alle proprie condizioni generali per la fornitura di servizi di telecomunicazione. 
 \n\n<b>Interruzione della fornitura o dell’uso dell’applicazione mobile</b>
-\nL’applicazione mobile è disponibile gratuitamente dal 10/06/2014 in poi. Il provider può, in qualsiasi momento, interrompere la fornitura dell’applicazione mobile informandone gli utenti in modo appropriato (per esempio con la pubblicazione sul proprio sito internet (wwww.donatmg.eu)).
+\nL’applicazione mobile è disponibile gratuitamente dal 22/08/2014 in poi. Il provider può, in qualsiasi momento, interrompere la fornitura dell’applicazione mobile informandone gli utenti in modo appropriato (per esempio con la pubblicazione sul proprio sito internet (wwww.donatmg.eu)).
 \n\nL’utente ha il diritto, in qualunque momento, di interrompere l’utilizzo dell’applicazione mobile. Ciò viene fatto rimuovendo l’applicazione mobile dal proprio dispositivo mobile.
 \n\nIl provider ha il diritto, senza preavviso, di disabilitare l’accesso o l’uso dell’applicazione mobile per qualsiasi utente che violi le presenti Condizioni generali.
 \nIn caso di interruzione della fornitura o dell’uso dell’applicazione mobile conformemente al presente capitolo, l’utente perde automaticamente il diritto di utilizzarla come indicato nelle presenti Condizioni Generali; l’utente è inoltre obbligato a interromperne immediatamente l’uso ed è anche tenuto a distruggere o eliminare tutte le copie dell’applicazione mobile.
@@ -99,7 +99,7 @@ www.donatmg.eu
 \n\nLe presenti Condizioni generali entrano in vigore alla data della pubblicazione dell’applicazione.
 \n\nLe presenti Condizioni generali sono redatte in originale in lingua slovena e adattate per gli utenti in lingua inglese, italiana, russa e serba. L’uso dell’applicazione mobile è possibile in inglese, italiano, russo e serbo.
 \n\nPer la risoluzione delle controversie insorte relativamente all’applicazione mobile e/o alle presenti Condizioni Generali, è competente il giudice di Lubiana nella Repubblica di Slovenia ed è stabilito l’uso della normativa slovena.
-\n\nLubiana, 10/06/2014
+\n\nLubiana, 22/08/2014
 </string>  
   
     
@@ -123,11 +123,11 @@ www.donatmg.eu
     <string name="indication_3">Carenza di magnesio</string>
     <string name="indication_4">Diabete</string>
     <string name="indication_5">Malattie della cistifellea e del pancreas</string>
-    <string name="indication_6">Formazione di calcoli urinari</string>
+    <string name="indication_6">Formazione di calcoli uratici</string>
     <string name="indication_7">Obesità e dimagrimento</string>
     <string name="indication_8">Malattie cardiovascolari</string>
     <string name="indication_9">Stress e mal di testa</string>
-    <string name="indication_10">Per il benessere</string>
+    <string name="indication_10">Per il benessere generale</string>
 
     <string name="indication_1_desc">Donat Mg è un lassativo osmotico naturale. Contiene sali di solfato e circa 1000 mg/l di magnesio. Gli ioni solfato hanno la grande capacità di legare l’acqua, questo fa sì che il volume dell’intestino aumenta da 3 a 5 volte, stimolando così la peristalsi.</string>
     <string name="indication_2_desc">Grazie ai suoi circa 7.800 mg di idrogenocarbonato, Donat Mg è in grado di legare gli acidi e tamponare gli acidi liberi. La natura alcalina dell’idrogenocarbonato di sodio presente nella Donat Mg ha un effetto antinfiammatorio sulla mucosa gastrica; il magnesio e il calcio, che accompagnano il sodio, riducono, inoltre, il gonfiore della mucosa.</string>
