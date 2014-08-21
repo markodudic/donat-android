@@ -24,6 +24,7 @@
 		    android:text="@string/rules_title" />
 	
 	    <TextView
+	        android:id="@+id/tv_rules"
 	        style="@style/TabelSecond"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
