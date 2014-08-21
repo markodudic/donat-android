@@ -5,14 +5,10 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 public class RulesActivity extends Activity {
@@ -33,7 +29,10 @@ public class RulesActivity extends Activity {
         TextView tvTitle = (TextView) findViewById(titleId);
         Typeface ft=Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         tvTitle.setTypeface(ft);
-    }
+
+        TextView tvRules = (TextView) findViewById(R.id.tv_rules);
+        tvRules.setMovementMethod(LinkMovementMethod.getInstance());
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
