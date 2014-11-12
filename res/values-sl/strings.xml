@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Donat Mg Moments</string>
+    <string name="action_calendar">Kalendar</string>
+    <string name="action_settings">Nastavite</string>
+    <string name="home_screen">Domov</string>
+    <string name="settings">Nastavite</string>
+    <string name="seznam">Seznam</string>
+    <string name="home_screen_title">Vzemite si trenutek za svoje zdravje. Aplikacija ponuja napotke za pitje naravne mineralne vode Donat Mg, na osnovi katerih Medical center Rogaška že več kot 200 let izvaja terapije. Način pitja vode Donat Mg iz izvira po natančnem pregledu in morebitnih preiskavah predpiše zdravnik balneolog; splošni napotki za pitje pa so sedaj na voljo tudi vam.</string>
+    <string name="drinking">Način pitja</string>
+    <string name="interval">Trajanje</string>
+    <string name="start_date">Izbrani začetni dan pitja:</string>
+    <string name="button_indication_start">VKLOPI</string>
+    <string name="button_indication_stop">IZKLOPI</string>
+    <string name="confirmation_title">Uspešno ste nastavili opomnik</string>
+    <string name="confirmation_desc">Opomnik za pitje Donata Mg je sedaj nastavljen. Na zdravje!</string>
+    <string name="confirmation_back">Na vstopno stran</string>
+    <string name="save">SHRANI</string>
+    <string name="zbujanje">Zbujanje</string>
+    <string name="zajtrk">Zajtrk</string>
+    <string name="kosilo">Kosilo</string>
+    <string name="vecerja">Večerja</string>
+    <string name="spanje">Spanje</string>
+    <string name="obrokov">Število obrokov</string>
+    <string name="close">ZAPRI</string>
+    <string name="home">Nazaj</string>
+    <string name="yes">DA</string>
+    <string name="no">NE</string>
+    <string name="rate_it_title">Vam je aplikacija všeč?</string>
+    <string name="rate_it_desc">Vzemite si moment in ocenite svoje zadovoljstvo z aplikacijo Donat Mg Moments. Cenimo vaše mnenje!</string>
+    <string name="rate_it_later">OPOMNI ME POZNEJE</string>
+    <string name="rate_it">OCENITE APLIKACIJO</string>
+    <string name="licence">© Droga Kolinska d.d. Vse pravice pridržane. Droga Kolinska je del Atlantic Grupe.</string>
+    <string name="rules">Pogoji in pravila uporabe</string>
+    <string name="rules_title">Splošni pogoji in pravila uporabe mobilne aplikacije Donat Mg Moments</string>  
+    <string name="rules_title_desc">Ti Splošni pogoji in pravila uporabe mobilne aplikacije Donat Mg Moments (v nadaljevanju: Splošni pogoji) določajo pogoje ter navodila uporabnikom za uporabo mobilne aplikacije. 
+\n\nMobilna aplikacija Donat Mg Moments (v nadaljevanju mobilna aplikacija) uporabnikom omogoča, da:
+\n&#8226; pridobijo napotke glede načina pitja naravne mineralne vode Donat Mg  in
+\n&#8226; si nastavijo opomnik pitja Donat Mg glede na izbrano (zdravstveno) težavo  npr. pri zaprtosti, zgagi, pomanjkanju magnezija, sladkorni bolezni, boleznih žolčnika in trebušne slinavke, nastanku sečnih kamnov, debelosti in hujšanju, boleznih srca in ožilja, stresu in glavobolih ter za boljše počutje.
+\n\nMobilno aplikacijo uporabniki lahko poiščejo v mobilnih tržnicah, na katerih je mobilna aplikacija objavljena (npr. Google Play, Apple Store…) in si jo namestijo na svoj pametni telefon na način in pod pogoji, ki jih določa ponudnik izbrane mobilne tržnice. 
+\n\nPonudnik mobilne aplikacije je Droga Kolinska d.d., Kolinska ulica 1, 1000 Ljubljana, Slovenija (v nadaljevanju ponudnik).
+\n\nUporabnik je vsaka oseba, ki si namesti mobilno aplikacijo na svojo mobilno napravo.
+\n\n<b>Pogoji za uporabo mobilne aplikacije</b>
+\nŠteje se, da se uporabnik z namestitvijo mobilne aplikacije na svojo mobilno napravo, z uporabo mobilne aplikacije strinja s Splošnimi pogoji in jih potrjuje.
+\n\n<b>Vsebine mobilne aplikacije</b>
+\nVsebine in podatki, ki jih uporabnik pridobi v mobilni aplikaciji, so le informativne narave ter služijo kot informativni pripomoček. Ne predstavljajo in v nobenem primeru ne nadomeščajo zdravniške diagnoze, kliničnega posveta ali zdravljenja samega. Za vse dodatne informacije ali v primeru dvoma vam priporočamo, da se posvetujete z vašim zdravnikom in/ali nam pišete na: <a href="mailto:info@donatmg.eu">info@donatmg.eu</a>
+\nMobilna aplikacija uporablja napotke za pitne kure, ki so objavljene na <a href="http://www.rogaska-medical.com/">http://www.rogaska-medical.com/</a>, na podlagi katere mobilna aplikacija svetuje ustrezno količino in način pitja Donata Mg glede na različna indikativna stanja posameznika. Ponudnik ne odgovarja za napačno uporabo mobilne aplikacije (npr. izbira napačne indikacije, napačne nastavitve dnevnega ritma, …). 
+\nPonudnik ne more jamčiti popolnega zadovoljstva z nasveti, ki jih uporabnik dobi z uporabo aplikacije, in ne prevzema odgovornosti za njihovo uporabo.    
+\n\n<b>Cena mobilne aplikacije</b>
+\nMobilna aplikacija je uporabnikom na voljo brezplačno. Uporabnik plača prenos podatkov, ki mu ga zaračuna njegov ponudnik telekomunikacijskih storitev v skladu z veljavnim cenikom ponudnika.
+\n\n<b>Zasebnost in varstvo osebnih podatkov uporabnika</b>
+\nPonudnik v okviru dajanja mobilne aplikacije v uporabo uporabnikom ne pridobiva, zbira, hrani ali kako drugače obdeluje njihovih osebnih podatkov. 
+\n\n<b>Avtorske pravice</b>
+\nZ namestitvijo mobilne aplikacije na mobilno napravo uporabnik pridobi neprenosljivo in neizključno pravico do uporabe mobilne aplikacije izključno na svoji mobilni napravi, in sicer za osebno (nekomercialno) uporabo na način in v obsegu, ki sta določena v teh Splošnih pogojih. 
+Ponudnik na uporabnika ne prenaša nobene avtorske pravice ali druge pravice industrijske lastnine na in v zvezi z mobilno aplikacijo (med drugim tudi pravice do uporabe blagovne znamke, logotipa, imena, ...).
+\n\n<b>Uporabnik zlasti ne sme:</b>
+<ul>
+\n<li>izdelovati kopij mobilne aplikacije,</li>
+\n<li>namestiti mobilne aplikacije na strežnik ali drugo platformo,</li>
+\n<li>na kakršenkoli način distribuirati mobilne aplikacije ali omogočiti dostopa do mobilne aplikacije preko omrežja,</li>
+\n<li>dajati mobilne aplikacije v najem ali podeljevati podlicenc za uporabo mobilne aplikacije,</li>
+\n<li>mobilne aplikacije prevesti, prilagoditi, prirediti ali kako drugače predelati.</li>
+</ul>
+\n\nOmejitve pravic, določene v tem poglavju, ne omejujejo pravic, ki uporabniku pripadajo v skladu z Zakonom o avtorski in sorodnih pravicah (Uradni list RS, št. 16/2007 – ZASP - UPB3 in 68/2008) in predpisi s področja varstva potrošnikov, v primeru, ko ima uporabnik status potrošnika skladno z navedenimi predpisi.
+\n\n<b>Omejitev in izključitev odgovornosti ponudnika</b>
+\nUporabnik je seznanjen in se strinja, da:
+<ul>
+\n<li>so podatki in vsebine, ki jih uporabnik pridobi v mobilni aplikaciji, informativne narave ter ne predstavljajo, nadomeščajo ali pripomorejo k diagnosticiranju zdravstvenega stanja ali celo nadomeščajo zdravljenja samega. Ponudnik uporabniku svetuje, da se glede zdravniških in drugih priporočil ter navodil obrne na pooblaščene zavode, izvajalce storitev ali lekarne;</li> 
+\n<li>je v celoti odgovoren za vse podatke, ki jih posreduje za namestitev in uporabo mobilne aplikacije, pri čemer ponudnik pod nobenim pogojem ni odgovoren za kakršnokoli posledico, ki bi jo uporabnik utrpel;</li>
+\n<li>ponudnik ne prevzema nobene obveznosti in odgovornosti za stvarne napake in kakršnekoli druge pomanjkljivosti mobilne aplikacije kakor tudi za pravne napake;</li>
+\n<li>ponudnik ne more zagotavljati, da mobilna aplikacija ustreza vsem zahtevam in potrebam uporabnika;</li>
+\n<li>ponudnik ne more zagotavljati delovanja mobilne aplikacije in ne prevzema nobene obveznosti in odgovornosti v primeru izpada omrežij, izpada električne energije ali drugih tehničnih motenj, ki bi lahko začasno motile delovanje mobilne aplikacije, ter da ponudnik ne odgovarja za primere višje sile;</li>
+\n<li>ponudnik ne odgovarja za nedelovanje mobilne aplikacije v primeru, če uporabnik ne izpolnjuje tehničnih in drugih pogojev za uporabo mobilne aplikacije;</li>
+\n<li>sam nosi vso odgovornost za ustrezno zaščito vseh podatkov na nosilcih (npr. trdi disk, pametni telefon, tablični računalnik, idr.) ter da ponudnik ne odgovarja za kakršnokoli škodo v primeru izgube teh podatkov;</li>
+\n<li>ponudnik ne jamči, da mobilna aplikacija deluje brezhibno in brez prekinitev ter da ne vsebuje nobene škodljive oz. nevarne programske kode;</li>
+\n<li>ponudnik ne jamči, da mobilna aplikacije deluje na vseh aplikacijah in v kombinaciji z vsako strojno in programsko opremo; </li>
+\n<li>ponudnik ne prevzema nobene obveznosti in odgovornosti glede zanesljivosti in kvalitete  povezave  mobilne aplikacije z internetom oz. zanesljivosti in kvalitete prenosa na internetu ali kateremkoli drugem komunikacijskem kanalu.</li>
+</ul>
+\n\n<b>Odškodninska odgovornost ponudnika</b>
+\nOdškodninska odgovornost ponudnika za lahko malomarnost je izključena v najširšem obsegu, kot je dovoljen z veljavnimi prepisi. 
+\n\nPonudnik ne odgovarja za izgubo dohodka, izgubo podatkov in katerokoli drugo posledično in posredno škodo. 
+\n\nPonudnik ne odgovarja za škodo, ki nastane kot posledica neizpolnitve obveznosti ponudnika v primeru višje sile. 
+\n\n<b>Reklamacije</b>
+\nPonudnik je odgovoren za reševanje reklamacij v zvezi z delovanjem mobilne aplikacije. Ponudnik bo  reklamacije reševal v skladu s svojimi pravili, ki so uporabnikom dostopni na spletnem naslovu:
+<a href="http://www.donatmg.eu/">www.donatmg.eu</a>
+\nKontaktni podatek ponudnika za reševanje reklamacij je e-naslov: <a href="mailto:info@donatmg.eu">info@donatmg.eu</a>.
+\nČe se posamezna reklamacija nanaša na delovanje telekomunikacijskega omrežja in plačilo storitev posameznega ponudnika telekomunikacijskih storitev, je uporabnik dolžan posredovati vso potrebno dokumentacijo ustrezni službi ponudnika telekomunikacijskih storitev. Ponudniki telekomunikacijskih storitev reklamacije rešujejo v skladu s svojimi splošnimi pogoji za izvajanje telekomunikacijskih storitev. 
+\n\n<b>Prenehanje zagotavljanja oz. uporabe mobilne aplikacije</b>
+\nMobilna aplikacija je uporabnikom na voljo od 22. 8. 2014 naprej. Ponudnik lahko kadarkoli preneha zagotavljati mobilno aplikacijo tako, da o tem uporabnike obvesti na primeren način (npr. z objavo na svoji spletni strani (wwww.donatmg.eu).
+\n\nUporabnik ima pravico kadarkoli prenehati z uporabo mobilne aplikacije. To stori tako, da odstrani mobilno aplikacijo s svoje mobilne naprave.
+\n\nPonudnik imata pravico brez predhodnega opozorila onemogočiti dostop do oz. uporabo mobilne aplikacije vsakemu uporabniku, ki krši te Splošne pogoje.
+\nV primeru prenehanja zagotavljanja oz. uporabe mobilne aplikacije skladno s tem poglavjem, uporabniku avtomatično preneha pravica do uporabe mobilne aplikacije, kot je določena s temi Splošnimi pogoji, uporabnik je nadalje dolžan nemudoma prenehati z uporabo mobilne aplikacije, prav tako pa je dolžan uničiti oz. izbrisati vse kopije mobilne aplikacije.
+\n\n<b>Končne določbe</b>
+\nPonudnik ima pravico do objave nove verzije mobilne aplikacije zaradi tehničnih ali funkcionalnih nadgradenj mobilne aplikacije. Uporabnik bo o novi verziji mobilne aplikacije obveščen bodisi v sami mobilni aplikaciji bodisi bo posodobitev mobilne aplikacije izvedena avtomatično na mobilni napravi (odvisno od nastavitev uporabnika). Ti Splošni pogoji veljajo za vse morebitne kasnejše nadgradnje oz. nove verzije oz. kakršne koli druge spremembe mobilne aplikacije, če ponudnik za posamezni primer izrecno ne določi drugače. 
+\n\nV primeru nedovoljene uporabe mobilne aplikacije oz. v primeru kakršnihkoli drugih zlorab pri dostopu oz. uporabi mobilne aplikacije, ima ponudnik pravico izvesti vse ukrepe in druga dejanja, ki jih v skladu s svojo poslovno presojo šteje za potrebne zaradi varstva svojih pravic in interesov in/ali zaradi varstva pravic in interesov katere koli druge osebe (npr. preprečitev dostopa do mobilne aplikacije).
+\n\nPonudnik ima pravico te Splošne pogoje kadarkoli spremeniti. O spremembi teh Splošnih pogojev bo uporabnike obvestil na zanesljiv način (npr. z objavo na svoji spletni strani <a href="http://www.donatmg.eu/">www.donatmg.eu</a>). 
+\n\nUporabnik, ki se s spremembo Splošnih pogojev ne strinja, je dolžan nemudoma prenehati z uporabo mobilne aplikacije. Če z uporabo mobilne aplikacije ne preneha, se šteje, da se s spremembo Splošnih pogojev strinja. 
+\n\nTi Splošni pogoji začnejo veljati z dnem objave aplikacije.
+\n\nTi Splošni pogoji so v izvirniku pripravljeni v slovenskem jeziku in prilagojeni za uporabnike v angleški, italijanski, ruski in srbski jezikovni različici. Uporaba mobilne aplikacije je mogoča v angleškem, italijanskem, ruskem in srbskem jeziku.
+\n\nZa reševanje sporov, ki bi nastali v zvezi z mobilno aplikacijo in/ali temi Splošnimi pogoji, je pristojno sodišče v Ljubljani v Republiki Sloveniji in dogovorjena uporaba slovenskega prava.
+\n\nV Ljubljani, 22. 8. 2014
+</string>  
+    
+    <string name="choose_language">Izberi jezik</string>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Pусский</item>
+        <item>Hrvatski</item>
+        <item>Italiano</item>
+        <item>Slovensko</item>
+    </string-array>
+    
+    <string name="choose_obrokov">Število obrokov</string>
+    <string-array name="obrokov">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    <string name="indication_1">Zaprtost</string>
+    <string name="indication_2">Zgaga</string>
+    <string name="indication_3">Pomanjkanje magnezija</string>
+    <string name="indication_4">Sladkorna bolezen</string>
+    <string name="indication_5">Bolezni žolčnika in trebušne slinavke</string>
+    <string name="indication_6">Nastanek sečnih kamnov</string>
+    <string name="indication_7">Debelost in hujšanje</string>
+    <string name="indication_8">Bolezni srca in ožilja</string>
+    <string name="indication_9">Stres, glavoboli</string>
+    <string name="indication_10">Za boljše počutje</string>
+
+    <string name="indication_1_desc">Donat Mg je naravno ozmotsko odvajalo. Vsebuje sulfatne soli in okoli 1000 mg/L magnezija. Sulfatni ioni imajo sposobnost vezanja velikih količin vode, zato se poveča volumen črevesne vsebine od 3- do 5-krat, kar izzove gibanje črevesja.</string>
+    <string name="indication_2_desc">Donat Mg ima zaradi  vsebnosti okrog 7.800 mg hidrogenkarbonata sposobnost vezanja kislin in pufranja prostih kislin. Natrijev hidrogenkarbonat v Donatu Mg s svojim alkalnim vplivom deluje protivnetno na želodčno sluznico; magnezij in kalcij, ki spremljata natrij, pa zmanjšujeta njeno oteklost.</string>
+    <string name="indication_3_desc">Donat Mg je najbogatejša naravna mineralna voda z magnezijem*. Na dan potrebujemo povprečno 375 mg tega minerala. Potrebe po magneziju se povečajo v obdobju nosečnosti in dojenja ter hitre rasti v mladostništvu. Večje izgube in s tem večje dnevne potrebe se pojavijo v starosti, ob nekaterih metabolnih motnjah, uživanju nekaterih zdravil, dietah in v stresnih obdobjih. Najbolje ga je v telo vnašati z vodo. Magnezij v mineralni vodi je telesu takoj na razpolago in se lahko hitro vključi v presnovne procese.&lt;br>&lt;br>&lt;i>*Pregledani primerjalni podatki obsegajo vse na trgu dostopne, priznane, naravne mineralne vode iz registra EU.&lt;/i></string>
+    <string name="indication_4_desc">Pomanjkanje magnezija pri osebah z diabetesom tipa 2 nastopi zaradi povečanih izgub tega minerala preko urina. Diabetes mellitus pri vseh (tudi pri nosečnicah), ki so prvič zbolele za sladkorno boleznijo, povzroča neravnovesje glukoze v krvi in zavira delovanje inzulina. S pitjem Donata Mg nadoknadite magnezij in sladkorna bolezen bo bolj urejena, nihanja sladkorja pa manj izrazita.</string>
+    <string name="indication_5_desc">Žolč bolnikov, operiranih zaradi kamnov, vsebuje preveč holesterola ali premalo žolčnih kislin in lecitina. V prepognjenem žolčniku se nabira gostejši žolč, ki se ne izprazni povsem. Magnezijev sulfat v Donatu Mg pospešuje izločanje žolča. Redno praznjenje žolčnika tako preprečuje nastanek žolčnih kamnov.</string>
+    <string name="indication_6_desc">Donat Mg ima visoko vsebnost hidrogenkarbonata in magnezija, s čimer na naraven način preprečuje nastanek kalcijevih oksalatnih, uratnih in cistinskih kamnov, ki nastajajo v kislem miljeju. Obe sestavini vplivata na regulacijo bazo/kislega ravnovesja v telesu. Posebej hidrogenkarbonat ustvarja močan bazični pribitek, saj nase veže kisline in s tem ustvarja alkalno okolje, ki preprečuje tvorbo navedenih vrst kamnov.</string>
+    <string name="indication_7_desc">Donat Mg pri hujšanju nevtralizira nastale kisline in nadomešča izgubljene minerale. Na začetku hujšanja je zelo koristen, saj je naravno odvajalo in telo očisti strupov. Sulfatne soli v Donatu Mg povečujejo izločanje holecistokinina, kar zmanjšuje apetit. Magnezij pa pospešuje presnovo, krepi odpornost in poveča zaloge energije.</string>
+    <string name="indication_8_desc">Donat Mg vsebuje zelo malo kuhinjske soli, zato nima vpliva na krvni tlak. Vsebuje višje količine magnezija (1000 mg/L). Magnezij je nujno potreben element, ki med ostalim prispeva k delovanju mišičnega sistema. Tudi naše srce je mišica, ki za svoje normalno delovanje potrebuje magnezij. Potrebno ga je vnašati dnevno, če ne želimo, da pride do srčnega popuščanja, motenj srčnega ritma in drugih nevšečnosti, ki lahko spremljajo pomanjkanje tega pomembnega minerala.</string>
+    <string name="indication_9_desc">Stres vpliva na naše fizično telo in na duševnost, saj telo preko vode izgublja več mineralnih snovi, zato se v tem obdobju potreba po vitaminih in mineralih poveča. Pomanjkanje magnezija lahko sproži celo nekatere vrste glavobolov. Donat Mg je bogat s tem mineralom, ki ga znanstveniki imenujejo tudi »antistresni mineral« ter »balzam za živce in mišice«.</string>
+    <string name="indication_10_desc">Donat Mg je bogat predvsem z magnezijem, sulfati, hirogenkarbonati, vsebuje še kalcij, natrij in druge mikro elemente. Naše telo bogati z minerali, sočasno pa zaradi višje vsebnosti hidrogenkarbonata ureja kislo-bazično ravnovesje telesa. Lahko ga pijemo vse življenje tako za zdravje kot splošno dobro počutje.</string>
+    
+    <string name="drinking_na_tesce">Na tešče</string>
+    <string name="drinking_pred_spanjem">Pred spanjem</string>
+    <string name="drinking_pred_spanjem2">Pred spanjem (po potrebi)</string>
+    <string name="drinking_pred_spanjem3">Pred spanjem in ponoči ob prebujanju</string>
+    <string name="drinking_veckrat_dnevno">Večkrat dnevno</string>
+    <string name="drinking_20_min_pred">Večkrat dnevno 20 min pred jedjo</string>
+    <string name="drinking_med_obroki">Med obroki in 1-2 uri po jedi </string>
+    <string name="drinking_opoldne">Opoldne</string>
+    <string name="drinking_zvecer">Zvečer</string>
+    <string name="drinking_pred_kosilom">Pred kosilom</string>
+    <string name="drinking_pred_vecerjo">Pred večerjo</string>
+    <string name="drinking_obcutek_lakote">Pri občutku lakote med in pred obroki</string>
+    <string name="drinking_3_4_dnevno">3-4 krat dnevno</string>
+    <string name="drinking_pred_jedjo">Pred jedjo</string>
+    
+    <string name="temperature_toplo">30–37 °C (toplo)</string>
+    <string name="temperature_mlacno">23–25 °C (mlačno)</string>
+    <string name="temperature_sobna">20 °C (sobna temperatura)</string>
+    <string name="temperature_hladno">17–18 °C (hladno)</string>
+    
+    <string name="volume_1">1</string>
+    <string name="volume_2">2</string>
+    <string name="volume_1_2">1-2</string>
+    <string name="volume_3">3</string>
+    <string name="volume_3_5">3-5</string>
+    <string name="volume_3_8">3-8</string>
+    <string name="volume_suffix">dcl</string>
+  
+    <string name="spped_hitro">Hitro</string>
+    <string name="spped_razmeroma_hitro">Razmeroma hitro</string>
+    <string name="spped_pocasi">Počasi</string>
+
+    <string name="interval_stalno">Stalno ali s krajšimi prekinitvami</string>
+    <string name="interval_5_dni">Stalno ali 5 dni, prekinitev 2 dni</string>
+    <string name="interval_5_dni2">5 dni, prekinitev 2 dni, stalno ponavljanje</string>
+    <string name="interval_6_tednov">6 tednov, prekinitev 4 tedne, 3x letno</string>
+    <string name="interval_3_mesece">3 mesece, prekinitev 1 mesec, 3x letno</string>
+    <string name="interval_2_meseca">2 meseca, prekinitev 1 mesec, 3x letno</string>
+        
+    
+</resources>
