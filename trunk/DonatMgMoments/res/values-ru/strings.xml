@@ -109,7 +109,8 @@
         <item>Pусский</item>
         <item>Hrvatski</item>
         <item>Italiano</item>
-    </string-array>
+        <item>Slovensko</item>
+   	</string-array>
 
     <string name="choose_obrokov">Количество приемов пищи</string>
     <string-array name="obrokov">

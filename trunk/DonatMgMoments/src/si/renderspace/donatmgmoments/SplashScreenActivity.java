@@ -20,7 +20,7 @@ public class SplashScreenActivity extends Activity {
         int lang = Utils.getPrefernciesInt(SplashScreenActivity.this, Settings.SETTING_LANG);
         if (lang == -1) {
         	String langDefault = Locale.getDefault().getLanguage();
-        	if (langDefault.equals("ru") || (langDefault.equals("hr")) || (langDefault.equals("it"))){
+        	if (langDefault.equals("ru") || (langDefault.equals("hr")) || (langDefault.equals("it")) || (langDefault.equals("sl"))){
         		Settings.setLanguage(SplashScreenActivity.this, langDefault);
             } else {
             	Settings.setLanguage(SplashScreenActivity.this, "en"); 
@@ -28,7 +28,7 @@ public class SplashScreenActivity extends Activity {
         } else {
         	Settings.setLanguage(SplashScreenActivity.this, Settings.languages.get(lang));
         }
-        
+       
         new Handler().postDelayed(new Runnable() {
  
 	            @Override
