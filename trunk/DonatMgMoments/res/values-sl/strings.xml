@@ -105,10 +105,10 @@ Ponudnik na uporabnika ne prenaša nobene avtorske pravice ali druge pravice ind
     <string name="choose_language">Izberi jezik</string>
     <string-array name="languages">
         <item>English</item>
+        <item>Slovenščina</item>
         <item>Pусский</item>
         <item>Hrvatski</item>
         <item>Italiano</item>
-        <item>Slovensko</item>
     </string-array>
     
     <string name="choose_obrokov">Število obrokov</string>
