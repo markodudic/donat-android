@@ -45,10 +45,10 @@ public class Settings {
 
 	public static HashMap<Integer,String> languages = new HashMap<Integer,String>() {{
 																					    put(0, "en");
-																					    put(1, "ru");
-																					    put(2, "hr");
-																					    put(3, "it");
-																					    put(4, "sl");
+																					    put(1, "sl");
+																					    put(2, "ru");
+																					    put(3, "hr");
+																					    put(4, "it");
 																					}};
 	//nacini pitja
 	public static HashMap<Integer,String> indications = new HashMap<Integer,String>();
