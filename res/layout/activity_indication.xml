@@ -71,6 +71,7 @@
 			            android:layout_height="wrap_content"
 			            android:layout_marginTop="5dp"
 			            android:fontFamily="sans-serif-light"
+			            android:autoLink="web"
 			            android:text="desc" />
 
 			        <TextView
@@ -80,6 +81,7 @@
 			            android:layout_height="wrap_content"
 			            android:layout_marginTop="5dp"
 			            android:fontFamily="sans-serif-light"
+			            android:autoLink="web"
 			            android:visibility="gone" />
 			        
 		 		</LinearLayout>

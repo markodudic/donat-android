@@ -128,7 +128,8 @@ Ponudnik na uporabnika ne prenaša nobene avtorske pravice ali druge pravice ind
     <string name="indication_8">Bolezni srca in ožilja</string>
     <string name="indication_9">Stres, glavoboli</string>
     <string name="indication_10">Za boljše počutje</string>
-
+    <string name="indication_11">Detox Mg</string>
+    
     <string name="indication_1_desc">Donat Mg je naravno ozmotsko odvajalo. Vsebuje sulfatne soli in okoli 1000 mg/l magnezija. Sulfatni ioni imajo sposobnost vezanja velikih količin vode, zato se poveča volumen črevesne vsebine od 3- do 5-krat, kar izzove gibanje črevesja.</string>
     <string name="indication_2_desc">Donat Mg ima zaradi  vsebnosti okrog 7.800 mg hidrogenkarbonata sposobnost vezanja kislin in pufranja prostih kislin. Natrijev hidrogenkarbonat v Donatu Mg s svojim alkalnim vplivom deluje protivnetno na želodčno sluznico; magnezij in kalcij, ki spremljata natrij, pa zmanjšujeta njeno oteklost.</string>
     <string name="indication_3_desc">Donat Mg je najbogatejša naravna mineralna voda z magnezijem*. Na dan potrebujemo povprečno 375 mg tega minerala. Potrebe po magneziju se povečajo v obdobju nosečnosti in dojenja ter hitre rasti v mladostništvu. Večje izgube in s tem večje dnevne potrebe se pojavijo v starosti, ob nekaterih metabolnih motnjah, uživanju nekaterih zdravil, dietah in v stresnih obdobjih. Telo ga lažje absorbira iz vode, kot iz hrane. Magnezij v mineralni vodi je telesu takoj na razpolago in se lahko hitro vključi v presnovne procese.&lt;br>&lt;br>&lt;i>*Pregledani primerjalni podatki obsegajo vse na trgu dostopne, priznane, naravne mineralne vode iz registra EU.&lt;/i></string>
@@ -139,6 +140,7 @@ Ponudnik na uporabnika ne prenaša nobene avtorske pravice ali druge pravice ind
     <string name="indication_8_desc">Donat Mg vsebuje zelo malo kuhinjske soli, zato nima vpliva na krvni tlak. Vsebuje višje količine magnezija (1000 mg/l). Magnezij je nujno potreben element, ki med ostalim prispeva k delovanju mišičnega sistema. Tudi naše srce je mišica, ki za svoje normalno delovanje potrebuje magnezij. Potrebno ga je vnašati dnevno, če ne želimo, da pride do srčnega popuščanja, motenj srčnega ritma in drugih nevšečnosti, ki lahko spremljajo pomanjkanje tega pomembnega minerala.</string>
     <string name="indication_9_desc">Stres vpliva na naše fizično telo in na duševnost, saj telo preko vode izgublja več mineralnih snovi, zato se v tem obdobju potreba po vitaminih in mineralih poveča. Pomanjkanje magnezija lahko sproži celo nekatere vrste glavobolov. Donat Mg je bogat s tem mineralom, ki ga znanstveniki imenujejo tudi »antistresni mineral« ter »balzam za živce in mišice«.</string>
     <string name="indication_10_desc">Donat Mg je bogat predvsem z magnezijem, sulfati, hirogenkarbonati, vsebuje še kalcij, natrij in druge mikro elemente. Naše telo bogati z minerali, sočasno pa zaradi višje vsebnosti hidrogenkarbonata ureja bazno-kislo ravnovesje telesa. Lahko ga pijemo vse življenje tako za zdravje kot splošno dobro počutje.</string>
+    <string name="indication_11_desc">Pitje Donata Mg podpira razstrupljanje telesa po programu Detox Mg - celovitem programu razstrupljanja, ki vključuje prehrano, nego telesa in gibanje ter tehnike osvobajanja misli. Več o programu na &lt;a href="http://www.detox.eu/">www.detoxmg.eu&lt;/a>.&lt;br>&lt;br>Donat Mg vsebuje 7800 mg hidrogenkarbonata in več kot 1000 mg magnezija na liter. Hidrogenkarbonati s svojim bazičnim učinkom nevtralizirajo presežek kisline in tako pomagajo pri vzpostavitvi bazno-kislega ravnovesja v telesu. Sulfati v obliki magnezijevih in natrijevih soli pa lahko vežejo velike količine vode, kar daje Donatu Mg lastnost naravnega ozmotskega odvajala. Sulfatne snovi povečujejo tudi izločanje holecistokinina, kar zmanjšuje tek, s pomočjo Donata Mg pa se lažje držite prehranskih napotkov programa.</string>
     
     <string name="drinking_na_tesce">Na tešče</string>
     <string name="drinking_pred_spanjem">Pred spanjem</string>
@@ -178,6 +180,7 @@ Ponudnik na uporabnika ne prenaša nobene avtorske pravice ali druge pravice ind
     <string name="interval_6_tednov">6 tednov, prekinitev 4 tedne, 3x letno</string>
     <string name="interval_3_mesece">3 mesece, prekinitev 1 mesec, 3x letno</string>
     <string name="interval_2_meseca">2 meseca, prekinitev 1 mesec, 3x letno</string>
-        
+    <string name="interval_21_dni">21 dni, 3x letno, prekinitev vsaj 3 mesece</string>
+    
     
 </resources>

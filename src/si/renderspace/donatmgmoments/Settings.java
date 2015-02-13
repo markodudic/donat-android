@@ -87,6 +87,7 @@ public class Settings {
 		indications.put(8,context.getResources().getString(R.string.indication_8));
 		indications.put(9,context.getResources().getString(R.string.indication_9));
 		indications.put(10,context.getResources().getString(R.string.indication_10));
+		indications.put(11,context.getResources().getString(R.string.indication_11));
 
 		indications_desc.put(1,context.getResources().getString(R.string.indication_1_desc));
 		indications_desc.put(2,context.getResources().getString(R.string.indication_2_desc));
@@ -98,6 +99,7 @@ public class Settings {
 		indications_desc.put(8,context.getResources().getString(R.string.indication_8_desc));
 		indications_desc.put(9,context.getResources().getString(R.string.indication_9_desc));
 		indications_desc.put(10,context.getResources().getString(R.string.indication_10_desc));
+		indications_desc.put(11,context.getResources().getString(R.string.indication_11_desc));
 	
 		String[][] drinking_1 = new String[][]{	
 				{context.getResources().getString(R.string.drinking_na_tesce),context.getResources().getString(R.string.temperature_toplo),context.getResources().getString(R.string.volume_3_8)+" "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_hitro),"ic_tesce"},
@@ -166,6 +168,13 @@ public class Settings {
 		};
 		drinking.put(10,drinking_10);
 		
+		String[][] drinking_11 = new String[][]{	
+				{context.getResources().getString(R.string.drinking_na_tesce),context.getResources().getString(R.string.temperature_toplo),context.getResources().getString(R.string.volume_3_5)+" "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_pocasi),"ic_tesce"},
+				{context.getResources().getString(R.string.drinking_obcutek_lakote),context.getResources().getString(R.string.temperature_hladno),context.getResources().getString(R.string.volume_1)+" "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_hitro),"ic_pred_jedjo"},
+				{context.getResources().getString(R.string.drinking_pred_spanjem2),context.getResources().getString(R.string.temperature_mlacno),context.getResources().getString(R.string.volume_2)+" "+context.getResources().getString(R.string.volume_suffix),context.getResources().getString(R.string.spped_hitro),"ic_pred_spanjem"}
+		};
+		drinking.put(11,drinking_11);
+
 		interval.put(1,context.getResources().getString(R.string.interval_5_dni));
 		interval.put(2,context.getResources().getString(R.string.interval_stalno));
 		interval.put(3,context.getResources().getString(R.string.interval_stalno));
@@ -176,6 +185,7 @@ public class Settings {
 		interval.put(8,context.getResources().getString(R.string.interval_2_meseca));
 		interval.put(9,context.getResources().getString(R.string.interval_2_meseca));
 		interval.put(10,context.getResources().getString(R.string.interval_stalno));
+		interval.put(11,context.getResources().getString(R.string.interval_21_dni));
 
 		updateData(context);
 		
@@ -294,6 +304,14 @@ public class Settings {
         		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
         		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
 		        notificationIndex = new int[]{0,0,0};
+		        break;
+	        case 11:
+	    		notificationTimes = new Date[4];
+	    		notificationTimes[0] = new Date(intervalHours.get(Settings.SETTING_ZAJTRK).getTime() - NOTIFICATION_ALARM_MINUTES);
+	    		notificationTimes[1] = new Date(intervalHours.get(Settings.SETTING_KOSILO).getTime() - NOTIFICATION_ALARM_MINUTES);
+        		notificationTimes[2] = new Date(intervalHours.get(Settings.SETTING_VECERJA).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationTimes[3] = new Date(intervalHours.get(Settings.SETTING_SPANJE).getTime() - NOTIFICATION_ALARM_MINUTES);
+		        notificationIndex = new int[]{0,1,1,2};
 	    		;
 	    }
 	}
