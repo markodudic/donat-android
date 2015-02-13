@@ -1,25 +1,14 @@
 package si.renderspace.donatmgmoments;
 
-import java.util.Calendar;
-import java.util.Date;
-
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.support.v4.app.NotificationCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -130,6 +119,22 @@ public class HomeScreenActivity extends Activity {
 			    	showIndication(10);
 			    }
 			});		
+
+		TextView tvIndication11 = (TextView) findViewById(R.id.indication_11);
+		tvIndication11.setText(Settings.indications.get(11));
+		LinearLayout lIndication11 = (LinearLayout) findViewById(R.id.l_indication_11);
+		lIndication11.setOnClickListener(new View.OnClickListener() {
+			    public void onClick(View v) {
+			    	showIndication(11);
+			    }
+			});		
+		
+		int lang = Utils.getPrefernciesInt(this, Settings.SETTING_LANG);
+        if (lang == 2 || lang == 4) {
+        	((LinearLayout) findViewById(R.id.ll1_indication_11)).setVisibility(View.GONE);
+        	((LinearLayout) findViewById(R.id.ll2_indication_11)).setVisibility(View.GONE);
+        	((FrameLayout) findViewById(R.id.fl_indication_11)).setVisibility(View.GONE);
+        }
 	}
 	
 	@Override

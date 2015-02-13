@@ -210,6 +210,68 @@
 			</FrameLayout>
 			    	
  	    	<LinearLayout
+		        android:id="@+id/ll1_indication_11"
+				android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:orientation="horizontal"
+		        android:background="@color/border_white_50" />
+            
+	    	<LinearLayout
+		        android:id="@+id/ll2_indication_11"
+				android:layout_width="match_parent"
+				android:layout_height="1dip"
+		        android:orientation="horizontal"
+		        android:background="@color/border_green_20" />
+	    		    			    
+		
+            <FrameLayout
+                android:id="@+id/fl_indication_11"
+				android:layout_width="match_parent"
+			    android:layout_height="wrap_content">
+			    <ImageView
+			        android:id="@+id/iv_indication_11"
+				    style="@style/LayoutIndicationAlfa"
+			        android:layout_width="match_parent"
+			    	android:layout_height="match_parent" />
+                <LinearLayout
+			        android:id="@+id/l_indication_11"
+				    android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        style="@style/LayoutIndicationTitle"
+			        android:orientation="horizontal">
+			        
+			  	        <ImageView
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            style="@style/ImageViewIndication"
+			        		android:src="@drawable/ic_indication_11" />
+			
+				        <TextView
+				            android:id="@+id/indication_11"
+				            android:layout_width="wrap_content"
+				            android:layout_height="match_parent"
+				            style="@style/TextViewIndication"
+			                android:fontFamily="sans-serif" 
+			                android:text="Indikacija"
+			                android:layout_weight="15" />
+				        
+			   	        <ImageView
+			   	            android:id="@+id/indication_11_selected"
+				            android:layout_width="wrap_content"
+			   	            android:layout_height="wrap_content"
+			   	            android:layout_gravity="center_vertical"
+			   	            android:src="@drawable/ic_selected"/>
+				        
+				        <ImageView
+			   	            android:layout_width="wrap_content"
+			   	            android:layout_height="wrap_content"
+			   	            android:layout_gravity="center_vertical"
+			   	            android:src="@drawable/ic_arrow_right" />
+				        
+			    </LinearLayout>
+			</FrameLayout>			
+            
+  	    	<LinearLayout
 		        android:layout_width="match_parent"
 				android:layout_height="1dip"
 		        android:background="@color/border_white_50" />

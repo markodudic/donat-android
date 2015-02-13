@@ -16,7 +16,7 @@ public class SplashScreenActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
- 
+
         int lang = Utils.getPrefernciesInt(SplashScreenActivity.this, Settings.SETTING_LANG);
         if (lang == -1) {
         	String langDefault = Locale.getDefault().getLanguage();

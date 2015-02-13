@@ -129,7 +129,8 @@ Il provider non trasferisce all’utente alcun diritto d’autore o altro diritt
     <string name="indication_8">Malattie cardiovascolari</string>
     <string name="indication_9">Stress e mal di testa</string>
     <string name="indication_10">Per il benessere generale</string>
-
+    <string name="indication_11"></string>
+    
     <string name="indication_1_desc">Donat Mg è un lassativo osmotico naturale. Contiene sali di solfato e circa 1000 mg/l di magnesio. Gli ioni solfato hanno la grande capacità di legare l’acqua, questo fa sì che il volume dell’intestino aumenta da 3 a 5 volte, stimolando così la peristalsi.</string>
     <string name="indication_2_desc">Grazie ai suoi circa 7.800 mg di idrogenocarbonato, Donat Mg è in grado di legare gli acidi e tamponare gli acidi liberi. La natura alcalina dell’idrogenocarbonato di sodio presente nella Donat Mg ha un effetto antinfiammatorio sulla mucosa gastrica; il magnesio e il calcio, che accompagnano il sodio, riducono, inoltre, il gonfiore della mucosa.</string>
     <string name="indication_3_desc">Donat Mg è l’acqua minerale naturale con il più alto contenuto di magnesio.* Ogni giorno abbiamo, in media, bisogno di 375 mg di questo minerale. Il fabbisogno di magnesio aumenta durante periodi di gravidanza e di allattamento, nonché di sviluppo e durante l’adolescenza. Maggiori perdite di magnesio e di conseguenza il suo aumentato fabbisogno giornaliero si manifestano anche negli anziani oppure possono essere provocati da certi disturbi metabolici, dall’assunzione di alcuni farmaci, dalle diete e durante i periodi particolarmente stressanti. Sebbene esistano molti integratori alimentari contenenti magnesio, il miglior modo per veicolarlo nel corpo e attraverso l’acqua che dal cibo poiché i minerali si trovano nella loro forma più naturale ovvero quella ionica; ciò consente loro di essere immediatamente fruibili dall’organismo.&lt;br>&lt;br>&lt;i>*L’indagine comparativa si basa sui dati di tutte le acque minerali commercializzate e registrate nella U.E.&lt;/i></string>
@@ -140,6 +141,7 @@ Il provider non trasferisce all’utente alcun diritto d’autore o altro diritt
     <string name="indication_8_desc">Donat Mg ha un basso contenuto di sale da cucina, perciò non altera la pressione sanguigna. Ha, inoltre, un alto contenuto di magnesio (1000 mg/l). Il magnesio è un elemento indispensabile che, tra l’altro, contribuisce al funzionamento del sistema muscolare. Anche il nostro cuore è un muscolo che ha bisogno di magnesio per funzionare regolarmente. Per prevenire l’insufficienza cardiaca, i disturbi del ritmo cardiaco e altre complicazioni che possono essere provocate dalla carenza di questo importante minerale, è necessario un apporto quotidiano di magnesio.</string>
     <string name="indication_9_desc">Lo stress ha ricadute sulla nostra salute fisica e psichica. In questa situazione il nostro corpo brucia una maggiore quantità di sostanze minerali e vitamine, quindi ne aumenta il loro fabbisogno. La carenza di magnesio può persino provocare alcuni tipi di mal di testa. Donat Mg è ricca di questo minerale che gli scienziati hanno ribattezzato in “minerale anti-stress” o “balsamo per nervi e muscoli”.</string>
     <string name="indication_10_desc">Donat Mg è particolarmente ricca di magnesio, solfati e idrogenocarbonato, ma contiene anche calcio, sodio e altri microelementi. Arricchisce il nostro corpo con minerali, allo stesso tempo, grazie al maggiore contenuto di idrogenocarbonato, regola l’equilibrio acido-base del corpo. Si può bere tutta la vita sia per la salute che per il benessere generale.</string>
+    <string name="indication_11_desc"></string>
     
     <string name="drinking_na_tesce">A digiuno</string>
     <string name="drinking_pred_spanjem">Prima di coricarsi</string>
@@ -179,6 +181,7 @@ Il provider non trasferisce all’utente alcun diritto d’autore o altro diritt
     <string name="interval_6_tednov">6 settimane e poi sospendere per 4 settimane; da ripetere 3 volte all’anno</string>
     <string name="interval_3_mesece">3 mesi e poi sospendere per 1 mese; da ripetere 3 volte all’anno</string>
     <string name="interval_2_meseca">2 mesi e poi sospendere per 1 mese; da ripetere 3 volte all’anno</string>
-        
+    <string name="interval_21_dni"></string>
+    
     
 </resources>

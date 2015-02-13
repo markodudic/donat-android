@@ -227,6 +227,9 @@ public class CalendarActivity extends FragmentActivity {
 			break;
 		case 8: case 9:
 			dates = calculateDrinkingDays(start, end, 60, 30, 3);
+			break;
+		case 11:
+			dates = calculateDrinkingDays(start, end, 21, 90, 3);
 			;
 		}
 		return dates;

@@ -128,7 +128,8 @@ The Provider shall not transfer to the User any copyright or other industrial pr
     <string name="indication_8">Cardiovascular diseases</string>
     <string name="indication_9">Stress and headaches</string>
     <string name="indication_10">To feel better</string>
-
+    <string name="indication_11">Detox Mg</string>
+    
     <string name="indication_1_desc">Donat Mg is a natural osmotic laxative. It contains sulphate salts and about 1000 mg/l of magnesium. Sulphate ions have a considerable ability to bond with water, which increases the volume of intestinal content by 3 to 5 times, triggering intestinal peristalsis.</string>
     <string name="indication_2_desc">Thanks to its approximately 7800 mg of hydrogen carbonate, Donat Mg has a great capacity for bonding with acids and buffering free acids. With its alkaline effect, the sodium hydrogen carbonate in Donat Mg has an anti-inflammatory effect on the stomach lining. Furthermore, the magnesium and calcium found alongside the sodium reduce the swelling of the stomach lining.</string>
     <string name="indication_3_desc">Donat Mg is richer in magnesium than any other natural mineral water.* The recommended daily intake of this mineral is about 375 mg. An increased need for magnesium occurs during pregnancy and nursing as well as during the period of fast growth in adolescence. A greater lack of magnesium and, consequently, its increased need occur in elderly people, in people with metabolic disorders, in people taking certain medicines or following diets and in stressful periods. It is easier for the body to absorb it from water than from food. The magnesium in mineral water is immediately available to the body and is able to quickly participate in metabolic processes.&lt;br>&lt;br>&lt;i>*The examined comparative results include all recognised natural mineral waters available on the market and registered in the EU.&lt;/i></string>
@@ -139,6 +140,7 @@ The Provider shall not transfer to the User any copyright or other industrial pr
     <string name="indication_8_desc">Donat Mg contains very little table salt and has consequently no effects on blood pressure. On the other hand, it contains high levels of magnesium (1000 mg/l). Magnesium is an essential element that, among other things, regulates the entire muscular system. Our heart is also a muscle that needs magnesium for its normal functioning. In order to prevent heart failure, arrhythmia and other disturbances that may be a consequence of magnesium deficiency, this important mineral has to be consumed on a daily basis.</string>
     <string name="indication_9_desc">Stress affects our psychological and physical health as the body loses more minerals through water. Consequently, the need for vitamins and minerals increases in stressful periods. Magnesium deficiency may even trigger certain types of headaches. Donat Mg is rich in this mineral, which is also called the anti-stress mineral and a salve for the nerves and muscles by the scientist.</string>
     <string name="indication_10_desc">Donat Mg is particularly rich in magnesium, sulphates and hydrogen carbonates, but also contains calcium, sodium and other microelements. As well as enriching your body with minerals, Donat Mg helps regulate the body’s alkaline-acid balance thanks to a high hydrogen carbonate content. You can drink it all your life to improve your health and general well-being.</string>
+    <string name="indication_11_desc">Pijenje Donata Mg podupire detoksikaciju tijela prema programu Detox Mg – cjelovitom programu detoksikacije koji uključuje prehranu, njegu tijela i kretanje te tehnike oslobađanja misli. Više o programu na <a href="http://www.detox.eu/">www.detoxmg.eu</a>.&lt;br>&lt;br>Donat Mg sadržava 7800 mg hidrogenkarbonata i više od 1000 mg magnezija po litri. Hidrogenkarbonati svojim bazičnim učinkom neutraliziraju višak kiseline i tako pomažu uspostaviti ravnotežu kiselina i baza u tijelu. A sulfati u obliku magnezijevih i natrijevih soli mogu vezati velike količine vode, što Donatu Mg daje svojstvo prirodnog osmotskog laksativa. Sulfatne tvari povećavaju i izlučivanje kolecistokinina, što smanjuje apetit, a zahvaljujući Donatu Mg lakše ćete se držati prehrambenih smjernica programa.</string>
     
     <string name="drinking_na_tesce">On an empty stomach</string>
     <string name="drinking_pred_spanjem">Before bed</string>
@@ -178,6 +180,7 @@ The Provider shall not transfer to the User any copyright or other industrial pr
     <string name="interval_6_tednov">6 weeks, 4-week break, 3 times a year</string>
     <string name="interval_3_mesece">3 months, 1-month break, 3 times a year</string>
     <string name="interval_2_meseca">2 months, 1-month break, 3 times a year</string>
-        
+    <string name="interval_21_dni">21 dan, 3 puta godišnje, pauza najmanje 3 mjeseca</string>
+    
     
 </resources>

@@ -130,6 +130,7 @@ Ponuđač na korisnika ne prenosi nikakva autorska prava ili druga prava industr
     <string name="indication_8">Bolesti srca i krvožilnog sustava</string>
     <string name="indication_9">Stres, glavobolje</string>
     <string name="indication_10">Za bolje raspoloženje</string>
+    <string name="indication_11">Detox Mg</string>
 
     <string name="indication_1_desc">Donat Mg prirodni je osmotski laksativ. Sadržava sulfatne soli i približno 1000 mg/l magnezija. Sulfatni ioni imaju sposobnost vezivanja velikih količina vode, zato se volumen crijevnog sadržaja povećava od 3 do 5 puta, što izaziva kretanje crijeva.</string>
     <string name="indication_2_desc">Zbog sadržaja od približno 7800 mg hidrogenkarbonata, Donat Mg ima sposobnost vezivanja kiselina i puferiranja slobodnih kiselina. Natrijev hidrogenkarbonat u Donatu Mg svojim alkalnim utjecajem djeluje protuupalno na želučanu sluznicu; a magnezij i kalcij, koji prate natrij, smanjuju njezino oticanje.</string>
@@ -141,6 +142,7 @@ Ponuđač na korisnika ne prenosi nikakva autorska prava ili druga prava industr
     <string name="indication_8_desc">Donat Mg sadržava vrlo malo kuhinjske soli, zato ne utječe na krvni tlak. Sadržava veće količine magnezija (1000 mg/l). Magnezij je prijeko potreban element koji, između ostalog, pridonosi funkcioniranju mišićnog sustava. I naše je srce mišić koji za svoje normalno funkcioniranje treba magnezij. Treba ga unositi svaki dan ako ne želimo da dođe do zatajenja srca, poremećaja srčanog ritma i drugih neugodnosti koje prate nedostatak tog bitnog minerala.</string>
     <string name="indication_9_desc">Stres utječe na naše tijelo i duh jer tijelo putem vode gubi više mineralnih tvari, stoga se u tom razdoblju povećava potreba za vitaminima i mineralima. Nedostatak magnezija može izazvati čak i neke vrste glavobolje. Donat Mg bogat je tim mineralom koji znanstvenici nazivaju i »antistresnim mineralom« te »balzamom za živce i mišiće«.</string>
     <string name="indication_10_desc">Donat Mg bogat je ponajprije magnezijem, sulfatima, hirogenkarbonatima, sadržava i kalcij, natrij te druge mikroelemente. Naše tijelo obogaćuje mineralima, a istodobno zbog većeg sadržaja hidrogenkarbonata regulira kiselo-baznu ravnotežu organizma. Može se piti cijeli život, i za zdravlje i za opće dobro stanje organizma.</string>
+    <string name="indication_11_desc">When consumed in accordance with the Detox Mg programme - a comprehensive detox programme that includes diet, body care, physical activity and techniques for unlocking your thoughts - Donat Mg helps detoxify the body. Learn more about the programme at <a href="http://www.detox.eu/">www.detoxmg.eu</a>.&lt;br>&lt;br>Donat Mg contains 7800 mg of bicarbonate and over 1000 mg of magnesium per litre. Bicarbonates have a base effect and neutralise excess acid, thus helping establish acid-base balance in the body. Sulphates in the form of magnesium and sodium salts are able to bond with large quantities of water, giving Donat Mg the properties of a natural osmotic laxative. Sulphate matter also increases cholecystokinin secretion, which reduces appetite. Donat Mg therefore helps you to follow the dietary guidelines of the programme.</string>
     
     <string name="drinking_na_tesce">Natašte</string>
     <string name="drinking_pred_spanjem">Prije spavanja</string>
@@ -180,6 +182,7 @@ Ponuđač na korisnika ne prenosi nikakva autorska prava ili druga prava industr
     <string name="interval_6_tednov">6 tjedana, prekid 4 tjedna, 3 puta godišnje</string>
     <string name="interval_3_mesece">3 mjeseca, prekid 1 mjesec, 3 puta godišnje</string>
     <string name="interval_2_meseca">2 mjeseca, prekid 1 mjesec, 3 puta godišnje</string>
+    <string name="interval_21_dni">21 days, 3 times a year, minimum 3-month break</string>
         
     
 </resources>
