@@ -49,6 +49,7 @@ public class Settings {
 																					    put(2, "ru");
 																					    put(3, "hr");
 																					    put(4, "it");
+																					    put(5, "de");
 																					}};
 	//nacini pitja
 	public static HashMap<Integer,String> indications = new HashMap<Integer,String>();

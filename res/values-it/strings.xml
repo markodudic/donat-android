@@ -110,6 +110,7 @@ Il provider non trasferisce all’utente alcun diritto d’autore o altro diritt
         <item>Pусский</item>
         <item>Hrvatski</item>
         <item>Italiano</item>
+        <item>German</item>
     </string-array>
     
     <string name="choose_obrokov">Numero di pasti</string>

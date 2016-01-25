@@ -1,12 +1,12 @@
 package si.renderspace.donatmgmoments;
 
 import java.util.Locale;
-import java.util.Map.Entry;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
 
 public class SplashScreenActivity extends Activity {
  
@@ -17,16 +17,24 @@ public class SplashScreenActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        ImageView ivSplash = (ImageView) findViewById(R.id.iv_splash);
+		
         int lang = Utils.getPrefernciesInt(SplashScreenActivity.this, Settings.SETTING_LANG);
         if (lang == -1) {
         	String langDefault = Locale.getDefault().getLanguage();
-        	if (langDefault.equals("ru") || (langDefault.equals("hr")) || (langDefault.equals("it")) || (langDefault.equals("sl"))){
+        	if (langDefault.equals("de") || langDefault.equals("ru") || (langDefault.equals("hr")) || (langDefault.equals("it")) || (langDefault.equals("sl"))){
         		Settings.setLanguage(SplashScreenActivity.this, langDefault);
             } else {
             	Settings.setLanguage(SplashScreenActivity.this, "en"); 
             };
+            if (langDefault.equals("de")) {
+            	ivSplash.setBackgroundResource(R.drawable.splash_de);
+            }
         } else {
         	Settings.setLanguage(SplashScreenActivity.this, Settings.languages.get(lang));
+            if (Settings.languages.get(lang).equals("de")) {
+            	ivSplash.setBackgroundResource(R.drawable.splash_de);
+            }
         }
        
         new Handler().postDelayed(new Runnable() {

@@ -109,6 +109,7 @@ Ponudnik na uporabnika ne prenaša nobene avtorske pravice ali druge pravice ind
         <item>Pусский</item>
         <item>Hrvatski</item>
         <item>Italiano</item>
+        <item>German</item>
     </string-array>
     
     <string name="choose_obrokov">Število obrokov</string>

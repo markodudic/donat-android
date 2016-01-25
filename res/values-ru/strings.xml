@@ -110,6 +110,7 @@
         <item>Pусский</item>
         <item>Hrvatski</item>
         <item>Italiano</item>
+        <item>German</item>
    	</string-array>
 
     <string name="choose_obrokov">Количество приемов пищи</string>
