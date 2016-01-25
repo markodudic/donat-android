@@ -28,12 +28,12 @@ public class SplashScreenActivity extends Activity {
             	Settings.setLanguage(SplashScreenActivity.this, "en"); 
             };
             if (langDefault.equals("de")) {
-            	ivSplash.setBackgroundResource(R.drawable.splash_de);
+            	ivSplash.setImageResource(R.drawable.splash_de);
             }
         } else {
         	Settings.setLanguage(SplashScreenActivity.this, Settings.languages.get(lang));
             if (Settings.languages.get(lang).equals("de")) {
-            	ivSplash.setBackgroundResource(R.drawable.splash_de);
+            	ivSplash.setImageResource(R.drawable.splash_de);
             }
         }
        
