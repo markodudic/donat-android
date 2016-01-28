@@ -1,105 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Donat Mg Moments</string>
-    <string name="action_calendar">Calendar</string>
-    <string name="action_settings">Settings</string>
-    <string name="home_screen">Home screen</string>
-    <string name="settings">Settings</string>
-    <string name="seznam">List</string>
-    <string name="home_screen_title">Think of your health at the right moment. This app offers instructions for drinking Donat Mg, a natural mineral water that has served as the basis for treatments at the Rogaška Medical Centre for over 400 years. The regimen for drinking Donat Mg from the source is prescribed by a balneology specialist after a detailed examination and tests. The app will help you stick to the regimen at home.</string>
-    <string name="drinking">Method of drinking</string>
-    <string name="interval">Duration</string>
-    <string name="start_date">Selected starting date for drinking:</string>
-    <string name="button_indication_start">TURN ON</string>
-    <string name="button_indication_stop">TURN OFF</string>
-    <string name="confirmation_title">You have successfully set a reminder</string>
-    <string name="confirmation_desc">A reminder to drink Donat Mg is now set. To your health!</string>
-    <string name="confirmation_back">Back to entry page</string>
-    <string name="save">SAVE</string>
-    <string name="zbujanje">Waking up</string>
-    <string name="zajtrk">Breakfast</string>
-    <string name="kosilo">Lunch</string>
-    <string name="vecerja">Dinner</string>
-    <string name="spanje">Sleeping</string>
-    <string name="obrokov">Number of meals</string>
-    <string name="close">CLOSE</string>
-    <string name="home">Back</string>
-    <string name="yes">YES</string>
-    <string name="no">NO</string>
-    <string name="rate_it_title">Do you like the application?</string>
-    <string name="rate_it_desc">Please take a moment and assess your satisfaction with the Donat Mg Moments application. We value your opinion!</string>
-    <string name="rate_it_later">REMIND ME LATER</string>
-    <string name="rate_it">ASSESS THE APPLICATION</string>
-    <string name="licence">© Droga Kolinska d.d. All rights reserved. Droga Kolinska is part of the Atlantic Group.</string>
-    <string name="rules">Terms and conditions of use</string>
-    <string name="rules_title">General terms and conditions of use for the Donat Mg Moments mobile application</string>
-    <string name="rules_title_desc">These General terms and conditions of use for the Donat Mg Moments mobile application (hereinafter: General Conditions) set the conditions and user instructions for the use of the mobile application. 
-\n\nThe Donat Mg Moments mobile application (hereinafter: the Mobile Application) enables users to: 
-\n&#8226; get directions on drinking Donat Mg natural mineral water and 
-\n&#8226; set a Donat Mg drinking reminder based on the (health) issue selected, e.g. constipation, heartburn, magnesium deficiency, diabetes, gall bladder and pancreas disease, urinary tract stone formation, obesity and dieting, cardiovascular diseases, stress and headaches, and to increase the feeling of well-being.
-\n\nUsers can search for the Mobile Application in mobile marketplaces where it is published (such as Google Play, Apple Store, etc.) and install it on their smartphones in the manner and under the conditions set by the provider of the respective mobile marketplace. 
-\n\nThe Mobile Application provider is Droga Kolinska, d.d., Kolinska ulica 1, 1000 Ljubljana, Slovenia (hereinafter: the Provider).
-\n\nThe User is any person who installs the Mobile Application on their mobile device.
-\n\n<b>Conditions of use of the Mobile Application</b>
-\nIt shall be deemed that, by installing the Mobile Application on the mobile device and using it, the User acknowledges and agrees with the General Conditions.
-\n\n<b>Mobile application contents</b>
-\nThe contents and information obtained by the user in the Mobile Application are exclusively of an informative nature and serve as an informative tool. They do not represent and may in no way take precedence over a doctor’s diagnosis, clinical consultation or the treatment itself. For any further information, or when in doubt, we recommend you consult your doctor and/or write to: <a href="mailto:info@donatmg.eu">info@donatmg.eu</a>.
-\nThe Mobile Application uses directions for drinking courses of treatment published at <a href="http://www.rogaska-medical.com/">http://www.rogaska-medical.com/</a>, through which the Mobile Application recommends an appropriate quantity and mode for drinking Donat Mg based on the various indicative states of an individual. The Provider shall not be responsible for improper use of the Mobile Application (e.g. the selection of the wrong indication, incorrect settings of daily rhythm, etc.) 
-\nThe Provider is unable to guarantee total satisfaction for the advice obtained by the User while using the application and shall not undertake any responsibility for using the advice.
-\n\n<b>Mobile application price</b>
-\nThe Mobile Application is available to Users free of charge. The User shall pay for data transfer charged by their telecommunication services provider in accordance with the current price list of the provider.
-\n\n<b>Privacy and the protection of personal data of the User</b>
-\nIn the course of making the Mobile Application available for use by Users, the Provider shall not acquire, collect or otherwise process their personal data. 
-\n\n<b>Copyright</b>
-\nBy installing the Mobile Application on a mobile device, the User acquires a non-transferable and non-exclusive licence for the use of the Mobile Application exclusively on their mobile device for personal (non-commercial) use and in the manner and to the extent defined in these General Conditions. 
-The Provider shall not transfer to the User any copyright or other industrial property right in respect and in connection with the Mobile Application (including, but not limited to, the right to use the trademark, logo, name, etc.)
-\n\nThe User is particularly not allowed to:
+    <string name="app_name">Rogaska Donat Mg</string>
+    <string name="action_calendar">Kalender</string>
+    <string name="action_settings">Einstellen</string>
+    <string name="home_screen">Startseite</string>
+    <string name="settings">Einstellen</string>
+    <string name="seznam">Liste</string>
+    <string name="home_screen_title">Denken Sie zur richtigen Zeit an Ihre Gesundheit! Die App bietet Anleitungen zum richtigen Trinken des natürlichen Mineralwassers Rogaska Donat Mg, nach denen im Medical Center Rogaška seit mehr als 400 Jahren therapiert wird. Das richtige Trinken von Rogaska Donat Mg aus der Quelle wird von einem Balneologen anhand von genauen Tests und Untersuchungen verordnet. Zu Hause können Sie die Trinkkur mit Hilfe dieser App fortsetzen.</string>
+    <string name="drinking">Trinkweise</string>
+    <string name="interval">Dauer</string>
+    <string name="start_date">Ausgewählter Tag für den Beginn der Trinkkur:</string>
+    <string name="button_indication_start">EINSCHALTEN</string>
+    <string name="button_indication_stop">AUSSCHALTEN</string>
+    <string name="confirmation_title">Sie haben die Erinnerung erfolgreich gesetzt.</string>
+    <string name="confirmation_desc">Die Erinnerung für das Trinken von Rogaska Donat Mg ist jetzt gesetzt. Zum Wohl!</string>
+    <string name="confirmation_back">Zur Startseite</string>
+    <string name="save">SPEICHERN</string>
+    <string name="zbujanje">Aufwachen</string>
+    <string name="zajtrk">Frühstück</string>
+    <string name="kosilo">Mittagessen</string>
+    <string name="vecerja">Abendessen</string>
+    <string name="spanje">Schlafen</string>
+    <string name="obrokov">Anzahl der Mahlzeiten</string>
+    <string name="close">SCHLIEßEN</string>
+    <string name="home">Zurück</string>
+    <string name="yes">JA</string>
+    <string name="no">NEIN</string>
+    <string name="rate_it_title">Gefällt Ihnen die App?</string>
+    <string name="rate_it_desc">Bitte nehmen Sie sich einen Moment Zeit und bewerten Sie Ihre Zufriedenheit mit der App Donat Mg Moments. Wir legen Wert auf Ihre Meinung!</string>
+    <string name="rate_it_later">SPÄTER ERINNERN</string>
+    <string name="rate_it">APP BEWERTEN</string>
+    <string name="licence">© Droga Kolinska d.d. Alle Rechte vorbehalten. Droga Kolinska ist Teil der Atlantic Grupa.</string>
+    <string name="rules">Allgemeine Nutzungsbedingungen</string>
+    <string name="rules_title">Allgemeine Bedingungen für die Nutzung der mobilen Applikation Donat Mg Moments</string>
+    <string name="rules_title_desc">Diese allgemeinen Bedingungen für die Nutzung der mobilen Applikation Donat Mg Moments (im Weiteren: Allgemeine Nutzungsbedingungen) legen die Bedingungen und Anleitungen für die Nutzung der mobilen Applikation dar. 
+\n\nDie mobile Applikation Donat Mg Moments (im Weiteren: App) ermöglicht dem Nutzer:
+\n&#8226; Anleitungen für verschiedene Trinkweisen des natürlichen Mineralwassers Rogaska Donat Mg einzuholen und
+\n&#8226; entsprechende Trinkerinnerungen einzustellen, die auf die vom Nutzer ausgewählten (gesundheitlichen) Beschwerden (z. B. Verstopfung, Sodbrennen, Magnesiummangel, Diabetes, Erkrankungen von Gallenblase und Bauchspeicheldrüse, Harnsteinbildung, Übergewicht, Herz- und Kreislauferkrankungen, Stress und Kopfschmerzen) bzw. Ziele (z. B. Gewichtabnahme, Verbesserung des allgemeinen Wohlbefindens) abgestimmt sind.
+\n\nDer Nutzer kann die App von einem der App-Marktplätze, auf denen sie zugänglich ist (Google Play Store, Apple Store etc.) auf die Weise und unter den Bedingungen, die der Anbieter des ausgewählten App-Marktplatzes festgelegt hat, auf sein Smartphone herunterladen und installieren.
+\n\nAnbieter der App ist Droga Kolinska d.d., Kolinska ulica 1, 1000 Ljubljana, Slowenien (im Weiteren: Anbieter).
+\n\nUnter Nutzer versteht sich jede Person, die die mobile Applikation auf ihrem Mobilgerät installiert.
+\n\n<b>Nutzungsbedingungen für die Verwendung der App</b>
+\nMit der Installation der App auf seinem Mobilgerät und/oder der Nutzung der App bekundet der Nutzer, dass er den Allgemeinen Nutzungsbedingungen zustimmt.
+\n\n<b>Inhalte der App</b>
+\nAlle Inhalte und Daten, die der Nutzer bei der Verwendung der App erlangt, sind lediglich informativer Natur und dienen ausschließlich als informatives Hilfsmittel. Sie stellen keinen Ersatz für ärztliche Beratung, Diagnose, Beratung und Behandlung dar. Für zusätzliche Informationen oder im Zweifelsfall empfehlen wir Ihnen, sich mit Ihrem Arzt zu beraten und/oder sich über folgende E-Mail-Adresse an uns zu wenden: <a href="mailto:info@donatmg.eu">info@donatmg.eu</a>.
+\nDie App verwendet die auf <a href="http://www.rogaska-medical.com/">http://www.rogaska-medical.com/</a>, veröffentlichten Anweisungen für Trinkkuren, aufgrund derer sie je nach Indikation das Trinken entsprechender Mengen von Rogaska Donat Mg empfiehlt.  Der Anbieter haftet nicht für eine falsche Anwendung der App (z. B. Auswahl der falschen Indikation, falsche Einstellungen des Tagesablaufs etc.).
+\nDer Anbieter kann weder für die Zufriedenheit des Nutzers mit den durch die App gewonnenen Empfehlungen garantieren noch für ihre Anwendung zur Verantwortung gezogen werden.
+\n\n<b>Preis der App</b>
+\nDie App steht den Nutzern kostenlos zur Verfügung. Der Nutzer zahlt die Datenübertragung, die ihm sein Telekommunikationsleistungsanbieter gemäß der aktuellen Preisliste des Anbieters berechnet.
+\n\n<b>Privatsphäre und Datenschutz</b>
+\nIm Rahmen der Zurverfügungstellung der App werden vom Anbieter keine personenbezogenen Daten der Nutzer erworben, gesammelt, gespeichert oder anderweitig bearbeitet.
+\n\n<b>Urheberrechte</b>
+\nMit der Installation der App auf seinem Mobilgerät erwirbt der Nutzer das unübertragbare und nicht-ausschließliche Recht, die App ausschließlich auf seinem Mobilgerät zu verwenden, und zwar zum persönlichen (nicht-kommerziellen) Gebrauch und in der Weise und in dem Umfang, die in den Allgemeinen Nutzungsbedingungen dargelegt sind.
+Der Anbieter überträgt keine Urheberrechte oder anderen gewerblichen Schutzrechte an der App selbst und in Verbindung mit der App auf den Nutzer (unter anderem auch Rechte auf die Verwendung von Marke, Logo, Name etc.).
+\n\nEs ist dem Nutzer insbesondere untersagt:
 <ul>
-\n<li>make copies of the Mobile Application,</li>
-\n<li>install the Mobile Application on a server or another platform,</li>
-\n<li>distribute the Mobile Application in any way or enable network access to the Mobile Application,</li>
-\n<li>rent the Mobile Application or grant sublicenses for the use of the Mobile Application,</li>
-\n<li>translate, adapt, edit or otherwise remake the Mobile Application.</li>
+\n<li>Kopien der mobilen Applikation anzufertigen,</li>
+\n<li>die mobile Applikation auf einen Server oder eine andere Plattform zu laden,</li>
+\n<li>die mobile Applikation weiter zu verteilen oder einen Zugang zur mobilen Applikation über ein Netzwerk zu ermöglichen,</li>
+\n<li>die mobile Applikation zu vermieten oder Unterlizenzen für die Nutzung der mobilen Applikation zu vergeben,</li>
+\n<li>die mobile Applikation zu übersetzen, anzupassen, umzuarbeiten oder auf irgendeine andere Weise zu ändern.</li>
 </ul>
-\n\nThe limitations of rights defined in this chapter shall not limit the rights of the User, in accordance with the Copyright and Related Rights Act (Official Gazette RS, No. 16/2007 – ZASP - UPB3 and 68/2008), and consumer protection legislation if the User has the status of a consumer in accordance with the aforementioned legislation.
-\n\n<b>Limitation and exclusion of liability of the Provider</b>
-\nThe User acknowledges and accepts that:
+\n\nDie in diesem Kapitel festgelegten Rechtseinschränkungen betreffen nicht die Rechte, die dem Nutzer nach dem Gesetz über Urheberrecht und verwandte Schutzrechte [Zakon o avtorski in sorodnih pravicah; Amtsblatt RS, Nr. 16/2007 (ZASP–UPB3) und 68/2008 (ZASP-E)] und den Vorschriften im Bereich des Verbraucherschutzes zustehen, wenn der Nutzer gemäß diesen Vorschriften den Verbraucherstatus hat.
+\n\n<b>Begrenzung und Ausschluss der Haftung des Anbieters</b>
+\nDer Nutzer ist darüber informiert und erklärt sich damit einverstanden, dass:
 <ul>
-\n<li>the data and contents obtained by the User via the Mobile Application is of an informative nature and does not represent, substitute or support a diagnosis of a medical condition, nor does it replace treatment. The Provider suggests that the User contact authorised institutions, service providers or pharmacies with regards to medical and other recommendations and instructions;</li> 
-\n<li>The User shall be entirely responsible for all the data submitted in order to install and use the Mobile Application and that the Provider shall not under any circumstances be responsible for any consequences suffered by the User;</li>
-\n<li>The Provider shall not accept any obligation or responsibility for factual defects or any other deficiencies of the Mobile Application and legal errors;</li>
-\n<li>The Provider cannot guarantee that the Mobile Application fulfils all the requirements of the Users;</li>
-\n<li>The Provider cannot guarantee the functioning of the Mobile Application and shall not accept any obligation or responsibility in the event of network failures, power cuts or other technical disruptions which could temporarily interrupt the smooth functioning of the Mobile Application and that the Provider shall not be responsible in cases of force majeure;</li>
-\n<li>The Provider shall not be responsible for the functioning of the Mobile Application if the User has not fulfilled the technical and other conditions for the use of the Mobile Application;</li>
-\n<li>The User shall be fully responsible for appropriate protection of all data stored on media (e.g. hard disks, smartphones, tablet computers, etc.) and that the Provider shall not be responsible for any damages sustained in the event that this data is lost;</li>
-\n<li>The Provider does not guarantee the faultless and uninterrupted functioning of the Mobile Application, nor the absence of any malicious or dangerous programming code;</li>
-\n<li>The Provider does not guarantee the functioning of the Mobile Application on all platforms and in combination with all hardware and software; </li>
-\n<li>The Provider does not accept any obligation or responsibility in regards to the reliability and quality of the connection of the Mobile Application with the Internet or the reliability and quality of transfers via the Internet or any other communication channel.</li>
+\n<li>alle Inhalte und Daten, die der Nutzer bei der Verwendung der App erlangt, lediglich informativer Natur sind und keinen Ersatz für ärztliche Beratung, Diagnose, Beratung und Behandlung darstellen. Der Anbieter empfiehlt dem Nutzer, sich bezüglich ärztlicher und anderer Empfehlungen an autorisierte Einrichtungen, Dienstleistungserbringer oder Apotheken zu wenden;</li> 
+\n<li>er für die zum Zweck der Installation und Verwendung der App übermittelten Daten gänzlich selbst verantwortlich ist, wobei der Anbieter unter keinen Umständen für eventuelle vom Nutzer erlittene Folgen haftet;</li>
+\n<li>der Anbieter keinerlei Gewähr und Haftung für Sachschäden und andere Fehler der App sowie Rechtsfehler übernimmt;</li>
+\n<li>der Anbieter nicht garantieren kann, dass die App alle Ansprüche und Bedürfnisse des Nutzers erfüllt;</li>
+\n<li>der Anbieter keine Gewähr für den Betrieb der mobilen Applikation übernehmen kann und in keinem Fall für Netzwerkausfälle, Stromausfälle oder andere technische Störungen, die sich zeitweilig auf den Betrieb der App auswirken könnten, haftet. Dasselbe gilt in Fällen höherer Gewalt;</li>
+\n<li>der Anbieter nicht für die Nicht-Funktion der App haftet, wenn diese auf der Tatsache beruht, dass der Nutzer die technischen und anderen Bedingungen für die Nutzung der App nicht erfüllt;</li>
+\n<li>er selbst die volle Verantwortung für den entsprechenden Schutz aller auf Datenträgern (Festplatte, Smartphone, Tablet-PC etc.) befindlichen Daten trägt und dass der Anbieter für Schäden aufgrund des Verlustes solcher Daten keinerlei Haftung übernimmt;</li>
+\n<li>der Anbieter weder für einen fehler- und unterbrechungsfreien Betrieb der App noch für das Nichtvorhandensein schädlicher oder gefährlicher Programmcodes garantieren kann;</li>
+\n<li>der Anbieter nicht garantieren kann, dass die App auf allen Applikationen und in Kombination mit jeder Hardware und Software funktioniert;</li>
+\n<li>der Anbieter keinerlei Gewähr und Haftung in Bezug auf die Zuverlässigkeit und Qualität der Verbindung der App mit dem Internet oder einem anderen Kommunikationskanal übernimmt.</li>
 </ul>
-\n\n<b>The Provider’s liability for damages</b>
-\nThe Provider’s liability for damages for slight negligence shall be excluded to the widest extent permitted by the applicable legislation. 
-\n\nThe Provider shall not be responsible for any loss of income, loss of data or any other consequential and indirect damages. 
-\n\nThe Provider shall not be responsible for damages caused by non-performance of the Provider’s obligations in the event of force majeure. 
-\n\n<b>Complaints</b>
-\nThe Provider shall be responsible for solving complaints in regards to the functioning of the Mobile Application. The Provider shall solve complaints in accordance with its own rules which are made available to Users at the following web address:
+\n\n<b>Schadenersatzhaftung des Anbieters</b>
+\nDie Schadenersatzhaftung des Anbieters für leichte Fahrlässigkeit ist im weitesten, in den geltenden Vorschriften zulässigen Umfang ausgeschlossen. 
+\n\nDer Anbieter haftet nicht für Einkommensverluste, Datenverluste und jegliche anderen Folgeschäden und indirekten Schäden. 
+\n\nDer Verkäufer haftet nicht für die Nichterfüllung seiner Verpflichtungen, wenn diese auf einen Fall höherer Gewalt zurückzuführen ist. 
+\n\n<b>Beschwerden</b>
+\nDer Anbieter ist für die Lösung von Beschwerden in Bezug auf den Betrieb der mobilen Applikation zuständig. Der Anbieter wird die Beschwerden gemäß seinen Bestimmungen lösen. Diese sind für die Nutzer unter folgender Webadresse zugänglich:
 <a href="http://www.donatmg.eu/">www.donatmg.eu</a>
-\nE-mail contact of the Provider for resolving complaints is: <a href="mailto:info@donatmg.eu">info@donatmg.eu</a>.
-\nIf a complaint relates to the functioning of a telecommunication network and a payment for the services of an individual provider of telecommunication services, the User is obliged to provide all necessary documents to an appropriate department of the telecommunication service provider. Telecommunication service providers resolve complaints in accordance with their own general conditions for the provision of telecommunication services. 
-\n\n<b>Termination of provision or use of the Mobile Application</b>
-\nThe Mobile Application is available to Users as of 22/8/2014. The Provider may at any time terminate provision of the Mobile Application by informing Users in an appropriate manner (e.g. through a publication on its website <a href="http://www.donatmg.eu/">www.donatmg.eu</a>).
-\n\nThe User has the right to stop using the Mobile Application at any time. This is done by removing the Mobile Application from their mobile device.
-\n\nThe Provider has the right to disable access or prevent use of the Mobile Application without prior warning for any User violating these General Conditions.
-\nIf the provision or use of the Mobile Application is terminated in accordance with this chapter, the right of the User to use the Mobile Application as defined by these General Conditions automatically ceases, and the User shall further be obliged to immediately stop using the Mobile Application and to destroy or delete all copies of the Mobile Application.
-\n\n<b>Final provisions</b>
-\nThe Provider has the right to publish a new version of the Mobile Application for technical or functional upgrades to the Mobile Application. The User will be informed of the new version of the Mobile Application through either the Mobile Application itself or an automatic update of the Mobile Application on the mobile device (depending on the User’s settings).  These General Conditions shall apply for any future upgrades or new versions or any other changes to the Mobile Application unless specifically defined otherwise by the Provider in each individual case. 
-\n\nIn the event of unauthorised use of the Mobile Application or any other abuse of access or use of the Mobile Application the Provider has the right to implement all measures and other acts which, in accordance with its business judgement, it deems necessary for the protection of their rights and interests and/or those of any other person (e.g. preventing access to the Mobile Application).
-\n\nThe Provider may at any time change these General Conditions. The Provider will in appropriate manner (e.g. through a publication on its website <a href="http://www.donatmg.eu/">www.donatmg.eu</a>) inform Users of the change to these General Conditions. 
-\n\nAny User that does not agree with the change to the General Conditions must immediately stop using the Mobile Application. If the User continues to use the Mobile Application it shall be deemed that he/she agrees with the change to the General Conditions. 
-\n\nThese General Conditions shall enter into force on the day of the publication of the application.
-\n\nThese General Conditions are originally drawn up in the Slovenian language and adapted for users of English, Italian, Russian, Croatian and German versions. The Mobile Application can be used in the following languages: Slovenian, English, Italian, Russian, Croatian and German.
-\n\nThe settling of disputes which may arise in connection with the Mobile Application and/or these General Conditions shall fall within the jurisdiction of Ljubljana Court in the Republic of Slovenia. The use of Slovenian law shall be agreed upon.
-\n\nIn Ljubljana, 22/8/2014
+\nDie Kontaktadresse für die Bearbeitung von Beschwerden ist <a href="mailto:info@donatmg.eu">info@donatmg.eu</a>.
+\nBezieht sich eine Beschwerde auf den Betrieb des Telekommunikationsnetzes und die Bezahlung der Leistungen des jeweiligen Telekommunikationsleistungsanbieters, ist der Nutzer verpflichtet, alle nötigen Unterlagen an die entsprechende Dienststelle des Telekommunikationsleistungsanbieters zu übermitteln. Die Telekommunikationsleistungsanbieter behandeln die Beschwerde gemäß ihren eigenen allgemeinen Geschäftsbedingungen.
+\n\n<b>Beendigung der Bereitstellung bzw. Nutzung der App</b>
+\nDie App steht den Nutzern ab dem 22.8.2014 zur Verfügung. Der Anbieter kann die Zurverfügungstellung der App jederzeit beenden, indem er die Nutzer auf entsprechende Weise darüber informiert (z. B. durch Veröffentlichung auf seiner Website <a href="http://www.donatmg.eu/">www.donatmg.eu</a>).
+\n\nDer Nutzer hat das Recht, die Nutzung der App jederzeit zu beenden. Dies tut er, indem er die App von seinem Mobilgerät entfernt.
+\n\nDer Anbieter hat das Recht, jedem Nutzer ohne vorherige Ankündigung den Zugang zur bzw. die Nutzung der App zu verwehren, wenn dieser gegen diese Allgemeinen Nutzungsbedingungen verstoßen hat.
+\nIm Fall der Beendigung der Zurverfügungstellung bzw. Nutzung der App gemäß diesem Kapitel, erlischt das Recht des Nutzers zur Verwendung der App automatisch, wie es in diesen Allgemeinen Nutzungsbedingungen dargelegt ist. Der Nutzer ist des Weiteren verpflichtet, die Verwendung der App unverzüglich einzustellen und alle Kopien der App zu vernichten bzw. zu löschen.
+\n\n<b>Schlussbestimmungen</b>
+\nDer Anbieter hat das Recht, neue Versionen der App zu veröffentlichen, wenn dies aufgrund von technischen oder funktionellen Upgrades der App erforderlich ist. Der Nutzer wird entweder in der App selbst über die neue Version der App informiert, oder das Upgrade der App wird automatisch auf dem Mobilgerät durchgeführt (je nach Nutzereinstellungen). Soweit vom Anbieter nicht ausdrücklich anders bestimmt, gelten diese Allgemeinen Nutzungsbedingungen auch für alle eventuellen späteren Upgrades bzw. neuen Versionen bzw. anderen Änderungen der App.
+\n\nBei unerlaubter Nutzung der App oder bei anderen Arten von Missbrauch beim Zugang und bei der Nutzung der App hat der Anbieter das Recht, alle Maßnahmen zu ergreifen, die er nach vernünftiger kaufmännischer Beurteilung für nötig hält, um seine Rechte und Interessen und/oder die Rechte und Interessen anderer Personen zu wahren (z. B. Zugriffsverweigerung auf die App).
+\n\nDer Anbieter hat das Recht, diese Allgemeinen Nutzungsbedingungen jederzeit zu ändern. Über Änderungen der Allgemeinen Nutzungsbedingungen werden die Nutzer vom Anbieter auf zuverlässige Weise informiert (z. B. durch Veröffentlichung auf seiner Website <a href="http://www.donatmg.eu/">www.donatmg.eu</a>)
+\n\nStimmt der Nutzer den Änderungen der Allgemeinen Nutzungsbedingungen nicht zu, ist er verpflichtet, die Verwendung der mobilen Applikation umgehend einzustellen. Verwendet er die mobile Applikation auch weiterhin, wird dies als Bekundung seines Einverständnisses mit den Änderungen der Allgemeinen Nutzungsbedingungen gewertet.
+\n\nDiese allgemeinen Nutzungsbedingungen treten am Tag der Veröffentlichung der App in Kraft.
+\n\nDie Originalfassung dieser Allgemeinen Nutzungsbedingungen wurde in slowenischer Sprache verfasst und für die Nutzer in die englische, italienische, russische, kroatische und deutsche Sprache übersetzt. Die Verwendung der App ist in slowenischer, englischer, italienischer, russischer, kroatischer und deutscher Sprache möglich.
+\n\nFür die Beilegung eventueller Streitigkeiten, die aus der Nutzung der App und/oder aus diesen Allgemeinen Nutzungsbedingungen hervorgehen könnten, ist das Gericht in Ljubljana, Slowenien zuständig und gilt die Anwendung slowenischen Rechts als vereinbart.
+\n\nLjubljana, den 22.8.2014
 </string>  
     
     <string name="choose_language">Izberi jezik</string>
@@ -119,49 +119,49 @@ The Provider shall not transfer to the User any copyright or other industrial pr
         <item>5</item>
     </string-array>
     
-    <string name="indication_1">Constipation</string>
-    <string name="indication_2">Heartburn</string>
-    <string name="indication_3">Magnesium deficiency</string>
+    <string name="indication_1">Verstopfung</string>
+    <string name="indication_2">Sodbrennen</string>
+    <string name="indication_3">Magnesiummangel</string>
     <string name="indication_4">Diabetes</string>
-    <string name="indication_5">Diseases of the gallbladder and pancreas</string>
-    <string name="indication_6">Formation of urinary stones</string>
-    <string name="indication_7">Obesity and losing weight</string>
-    <string name="indication_8">Cardiovascular diseases</string>
-    <string name="indication_9">Stress and headaches</string>
-    <string name="indication_10">To feel better</string>
+    <string name="indication_5">Erkrankungen der Galle und Bauchspeicheldrüse</string>
+    <string name="indication_6">Harnsteinbildung</string>
+    <string name="indication_7">Übergewicht und Abnehmen</string>
+    <string name="indication_8">Herz- und Gefäßerkrankungen</string>
+    <string name="indication_9">Stress, Kopfschmerzen</string>
+    <string name="indication_10">Zur Verbesserung des Wohlbefindens</string>
     <string name="indication_11">Detox Mg</string>
     
-    <string name="indication_1_desc">Donat Mg is a natural osmotic laxative. It contains sulphate salts and about 1000 mg/l of magnesium. Sulphate ions have a considerable ability to bond with water, which increases the volume of intestinal content by 3 to 5 times, triggering intestinal peristalsis.</string>
-    <string name="indication_2_desc">Thanks to its approximately 7800 mg of hydrogen carbonate, Donat Mg has a great capacity for bonding with acids and buffering free acids. With its alkaline effect, the sodium hydrogen carbonate in Donat Mg has an anti-inflammatory effect on the stomach lining. Furthermore, the magnesium and calcium found alongside the sodium reduce the swelling of the stomach lining.</string>
-    <string name="indication_3_desc">Donat Mg is richer in magnesium than any other natural mineral water.* The recommended daily intake of this mineral is about 375 mg. An increased need for magnesium occurs during pregnancy and nursing as well as during the period of fast growth in adolescence. A greater lack of magnesium and, consequently, its increased need occur in elderly people, in people with metabolic disorders, in people taking certain medicines or following diets and in stressful periods. It is easier for the body to absorb it from water than from food. The magnesium in mineral water is immediately available to the body and is able to quickly participate in metabolic processes.&lt;br>&lt;br>&lt;i>*The examined comparative results include all recognised natural mineral waters available on the market and registered in the EU.&lt;/i></string>
-    <string name="indication_4_desc">A magnesium deficiency in people with type 2 diabetes occurs due to the increased loss of magnesium through urine. All patients (including pregnant women) affected by diabetes mellitus for the first time suffer from blood sugar imbalances and an improper functioning of insulin. By drinking Donat Mg, it is possible to compensate the magnesium and better manage the disease, reducing the oscillations in blood sugar levels. </string>
-    <string name="indication_5_desc">The bile of those whose stones have been surgically removed contains too much cholesterol or too few bile acids and lecithin. The bile that accumulates in the gallbladder is thicker, making it impossible for the gallbladder to empty completely. The magnesium sulphate in Donat Mg speeds up bile secretion. Regular evacuation of the gallbladder thus prevents the formation of gall stones.</string>
-    <string name="indication_6_desc">Thanks to its high levels of hydrogen carbonate and magnesium, Donat Mg prevents the formation of calcium oxalate stones, uric acid stones and cystine stones, which thrives in an acidic environment, in a natural way. Hydrogen carbonate and magnesium both have an impact on the regulation of the body’s alkaline-acid balance. The acid-binding hydrogen carbonate in particular provides a strong alkaline surplus, thus creating an alkaline environment that prevents the formation of these stones.</string>
-    <string name="indication_7_desc">When on a diet, Donat Mg neutralises acids and replaces the lost minerals. It is very beneficial when we begin losing weight because it is a natural laxative and cleanses the body of toxins. The sulphate salts found in Donat Mg increase the secretion of cholecystokinin, which reduces appetite. Magnesium speeds up the metabolism, boosts immunity and increases energy reserves.</string>
-    <string name="indication_8_desc">Donat Mg contains very little table salt and has consequently no effects on blood pressure. On the other hand, it contains high levels of magnesium (1000 mg/l). Magnesium is an essential element that, among other things, regulates the entire muscular system. Our heart is also a muscle that needs magnesium for its normal functioning. In order to prevent heart failure, arrhythmia and other disturbances that may be a consequence of magnesium deficiency, this important mineral has to be consumed on a daily basis.</string>
-    <string name="indication_9_desc">Stress affects our psychological and physical health as the body loses more minerals through water. Consequently, the need for vitamins and minerals increases in stressful periods. Magnesium deficiency may even trigger certain types of headaches. Donat Mg is rich in this mineral, which is also called the anti-stress mineral and a salve for the nerves and muscles by the scientist.</string>
-    <string name="indication_10_desc">Donat Mg is particularly rich in magnesium, sulphates and hydrogen carbonates, but also contains calcium, sodium and other microelements. As well as enriching your body with minerals, Donat Mg helps regulate the body’s alkaline-acid balance thanks to a high hydrogen carbonate content. You can drink it all your life to improve your health and general well-being.</string>
-    <string name="indication_11_desc">When consumed in accordance with the Detox Mg programme - a comprehensive detox programme that includes diet, body care, physical activity and techniques for unlocking your thoughts - Donat Mg helps detoxify the body. Learn more about the programme at &lt;a href="http://www.detox.eu/">www.detoxmg.eu&lt;/a>.&lt;br>&lt;br>Donat Mg contains 7800 mg of bicarbonate and over 1000 mg of magnesium per litre. Bicarbonates have a base effect and neutralise excess acid, thus helping establish acid-base balance in the body. Sulphates in the form of magnesium and sodium salts are able to bond with large quantities of water, giving Donat Mg the properties of a natural osmotic laxative. Sulphate matter also increases cholecystokinin secretion, which reduces appetite. Donat Mg therefore helps you to follow the dietary guidelines of the programme.</string>
-    
-    <string name="drinking_na_tesce">On an empty stomach</string>
-    <string name="drinking_pred_spanjem">Before bed</string>
-    <string name="drinking_pred_spanjem2">Before bed (as required)</string>
-    <string name="drinking_pred_spanjem3">Before bed and if you wake during the night</string>
-    <string name="drinking_veckrat_dnevno">Several times a day</string>
-    <string name="drinking_20_min_pred">Several times a day 20 min before meals</string>
-    <string name="drinking_med_obroki">During meals and 1 to 2 hours after meals</string>
-    <string name="drinking_opoldne">At noon</string>
-    <string name="drinking_zvecer">In the evening</string>
-    <string name="drinking_pred_kosilom">Before lunch</string>
-    <string name="drinking_pred_vecerjo">Before dinner</string>
-    <string name="drinking_obcutek_lakote">When hunger arises, during and before meals</string>
-    <string name="drinking_3_4_dnevno">3-4 times daily</string>
-    <string name="drinking_pred_jedjo">Before meals</string>
+    <string name="indication_1_desc">Rogaska Donat Mg ist ein natürliches osmotisch wirkendes Abführmittel. Es enthält Sulfatsalze und rund 1000 mg/l Magnesium. Die Sulfatione haben die Fähigkeit große Wassermengen zu binden, weshalb sich das Volumen des Darminhalts um das Drei- bis Fünffache vergrößert, was wiederum die Darmbewegung anregt.</string>
+    <string name="indication_2_desc">Aufgrund seines hohen Hydrogenkarbonatgehalts von rund 7.800 mg hat Rogaska Donat Mg die Fähigkeit Säuren zu binden und freie Säuren zu puffern. Das in Rogaska Donat Mg enthaltene Natriumhydrogenkarbonat wirkt mit seiner alkalischen Wirkung entzündungshemmend auf die Magenschleimhaut, während Magnesium und Calcium, die das Natrium begleiten, ihre Schwellung verringern.</string>
+    <string name="indication_3_desc">Rogaska Donat Mg ist das magnesiumreichste natürliche Mineralwasser*. Pro Tag braucht unser Organismus im Durchschnitt 375 mg dieses Mineralstoffs. Während der Schwangerschaft und Stillzeit sowie während der schnellen Wachstumsphase in der Jugend erhöht sich der Magnesiumbedarf. Durch den Alterungsprozess, Stoffwechselstörungen, die Einnahme bestimmter Medikamenten oder Diäten sowie in stressigen Zeiten kann es zu einem erhöhten Magnesiumverlust und somit zu einem größeren täglichen Magnesiumbedarf kommen. Der Körper kann das Magnesium leichter aus dem Wasser absorbieren als aus der Nahrung. Das im Mineralwasser enthaltene Magnesium steht dem Körper sofort zur Verfügung und kann schnell in die Stoffwechselprozesse integriert werden.&lt;br>&lt;br>&lt;i>*Die Vergleichsdaten umfassen alle auf dem Markt erhältlichen, anerkannten natürlichen Mineralwässer, die in der EU registriert sind.&lt;/i></string>
+    <string name="indication_4_desc">Bei Personen mit Typ-2-Diabetes kann es aufgrund des erhöhten Magnesiumverlustes über den Urin zu einem Magnesiummangel kommen. Diabetes mellitus verursacht bei allen, die zum ersten Mal an Diabetes erkrankt sind (auch bei Schwangeren), ein Glukose-Ungleichgewicht im Blut und eine Störung der Insulinfunktion. Durch das Trinken von Rogaska Donat Mg wird der Magnesiummangel ausgeglichen und der Blutzuckerspiegel besser reguliert.</string>
+    <string name="indication_5_desc">Bei Patienten, die aufgrund von Gallensteinen operiert wurden, enthält die Galle zu viel Cholesterin oder zu wenig Gallensäure und Lecithin. In einer geknickten Gallenblase sammelt sich dickere Galle an, die nicht gänzlich ausgeschieden wird. Das in Rogaska Donat Mg enthaltene Magnesiumsulfat fördert die Gallenausscheidung. Eine regelmäßige Gallenblasenentleerung verhindert somit die Entstehung von Gallensteinen.</string>
+    <string name="indication_6_desc">Rogaska Donat Mg hat einen hohen Hydrokarbonat- und Magnesiumgehalt, womit es auf natürliche Weise die Entstehung von Calciumoxalat-, Urat- und Zystinsteinen verhindert, die sich vorzugsweise im sauren Milieu bilden. Beide Inhaltsstoffe beeinflussen die Regulierung des Säure-Basen-Gleichgewichts im Körper. Insbesondere das Hydrogenkarbonat sorgt für einen hohen basischen Zuschlag und schafft damit eine alkalische Umgebung, welche die Bildung der genannten Harnsteinarten verhindert.</string>
+    <string name="indication_7_desc">Rogaska Donat Mg neutralisiert beim Abnehmen die entstandenen Säuren und ersetzt die verlorenen Mineralstoffe. Vor allem am Anfang ist es sehr nützlich, da es wie ein natürliches Abführmittel wirkt und den Körper von Giften befreit. Die in Rogaska Donat Mg enthaltenen Sulfatsalze erhöhen die Ausscheidung von Cholezystochinin, was den Appetit zügelt. Das enthaltene Magnesium regt den Stoffwechsel an, stärkt das Immunsystem und erhöht die Energiereserven.</string>
+    <string name="indication_8_desc">Da Rogaska Donat Mg sehr wenig Kochsalz enthält, hat es keinen Einfluss auf den Blutdruck. Es enthält größere Mengen an Magnesium (1000 mg/l). Magnesium ist ein dringend notwendiges Element, das unter anderem zur Funktion des Muskelsystems beiträgt. Auch unser Herz ist ein Muskel, der für seine normale Funktion Magnesium benötigt. Um ein Nachlassen der Herzfunktion, Herzrhythmusstörungen und andere unangenehme Begleiterscheinungen von Magnesiummangel zu verhindern, muss dem Körper täglich Magnesium zugeführt werden.</string>
+    <string name="indication_9_desc">Stress wirkt sich sowohl auf unseren Körper als auch auf unsere Psyche aus, da der Körper über das Wasser mehr Mineralstoffe verliert. Deshalb ist der Vitamin- und Mineralstoffbedarf in dieser Zeit erhöht. Ein Magnesiummangel kann sogar bestimmte Arten von Kopfschmerz auslösen. Rogaska Donat Mg ist reich an Magnesium, das die Wissenschaftler als „Antistressmineral“ und als „Balsam für Nerven und Muskeln“ bezeichnen.</string>
+    <string name="indication_10_desc">Neben einer großen Menge an Magnesium, Sulfaten und Hydrogenkarbonaten enthält Rogaska Donat Mg auch Calcium, Natrium und andere Spurenelemente. Es versorgt den Körper mit Mineralstoffen, während es dank seines hohen Hydrogenkarbonatgehalts das Säure-Basen-Gleichgewicht im Körpers reguliert. Es kann ein Leben lang zur Förderung der Gesundheit und des Wohlbefindens getrunken werden.</string>
+    <string name="indication_11_desc">Der Genuss von Donat Mg fördert die Entgiftung des Körpers nach dem Programm Detox Mg. Das ganzheitliche Entgiftungsprogramm umfasst Ernährung, Körperpflege und Bewegung sowie verschiedene Techniken zur mentalen Entspannung. Mehr zum Programm auf &lt;a href="http://www.detox.eu/">www.detoxmg.eu&lt;/a>.&lt;br>&lt;br>Donat Mg enthält 7800 mg Hydrogenkarbonat und mehr als 1000 mg Magnesium pro Liter. Mit ihrer basischen Wirkung neutralisieren die Hydrogenkarbonate den Säureüberschuss und helfen so, den Säure-Basen-Haushalt im Körper ins Gleichgewicht zu bringen. Sulfate in Form von Magnesium- und Natriumsalzen können große Wassermengen binden, was Donat Mg die Eigenschaft eines osmotischen Abführmittels verleiht. Die Sulfatstoffe erhöhen außerdem die Ausscheidung von Cholecystochinin, was den Appetit mindert, während Donat Mg dafür sorgt, dass Sie sich leichter an die Ernährungsanweisungen des Programmes halten.</string> 
+        
+    <string name="drinking_na_tesce">Auf nüchternen Magen</string>
+    <string name="drinking_pred_spanjem">Vor dem Schlafengehen</string>
+    <string name="drinking_pred_spanjem2">Vor dem Schlafen (nach Bedarf)</string>
+    <string name="drinking_pred_spanjem3">Vor dem Schlafengehen und bei nächtlichem Aufwachen</string>
+    <string name="drinking_veckrat_dnevno">Mehrmals täglich</string>
+    <string name="drinking_20_min_pred">Mehrmals täglich 20 Min. vor dem Essen</string>
+    <string name="drinking_med_obroki">Zwischen den Mahlzeiten und 1–2 Stunden nach dem Essen</string>
+    <string name="drinking_opoldne">Mittags</string>
+    <string name="drinking_zvecer">Abends</string>
+    <string name="drinking_pred_kosilom">Vor dem Mittagessen</string>
+    <string name="drinking_pred_vecerjo">Vor dem Abendessen</string>
+    <string name="drinking_obcutek_lakote">Bei Hungergefühl zwischen und vor den Mahlzeiten</string>
+    <string name="drinking_3_4_dnevno">3–4 mal täglich</string>
+    <string name="drinking_pred_jedjo">Vor dem Essen</string>
     
     <string name="temperature_toplo">30–37 °C (warm)</string>
-    <string name="temperature_mlacno">23–25 °C (lukewarm)</string>
-    <string name="temperature_sobna">20 °C (room temperature)</string>
-    <string name="temperature_hladno">17–18 °C (cold)</string>
+    <string name="temperature_mlacno">23–25 °C (lauwarm)</string>
+    <string name="temperature_sobna">20 °C (Zimmertemperatur)</string>
+    <string name="temperature_hladno">17–18 °C (kalt)</string>
     
     <string name="volume_1">1</string>
     <string name="volume_2">2</string>
@@ -171,17 +171,17 @@ The Provider shall not transfer to the User any copyright or other industrial pr
     <string name="volume_3_8">3-8</string>
     <string name="volume_suffix">dl</string>
   
-    <string name="spped_hitro">Quickly</string>
-    <string name="spped_razmeroma_hitro">Relatively quickly</string>
-    <string name="spped_pocasi">Slowly</string>
+    <string name="spped_hitro">Schnell</string>
+    <string name="spped_razmeroma_hitro">Relativ schnell</string>
+    <string name="spped_pocasi">Langsam</string>
 
-    <string name="interval_stalno">Continuously or with shorter breaks</string>
-    <string name="interval_5_dni">Continuously or for 5 days, 2-day break</string>
-    <string name="interval_5_dni2">5 days, 2-day break, continuously</string>
-    <string name="interval_6_tednov">6 weeks, 4-week break, 3 times a year</string>
-    <string name="interval_3_mesece">3 months, 1-month break, 3 times a year</string>
-    <string name="interval_2_meseca">2 months, 1-month break, 3 times a year</string>
-    <string name="interval_21_dni">21 days, 3 times a year, minimum 3-month break</string>
+    <string name="interval_stalno">Kontinuierlich oder mit kurzen Unterbrechungen</string>
+    <string name="interval_5_dni">Kontinuierlich oder 5 Tage lang, 2 Tage Unterbrechung</string>
+    <string name="interval_5_dni2">5 Tage, 2 Tage Unterbrechung, kontinuierlich</string>
+    <string name="interval_6_tednov">6 Wochen, 4 Wochen Unterbrechung 3 x pro Jahr</string>
+    <string name="interval_3_mesece">3 Monate, 1 Monat Unterbrechung, 3 x pro Jahr</string>
+    <string name="interval_2_meseca">2 Monate, 1 Monat Unterbrechung, 3 x pro Jahr</string>
+    <string name="interval_21_dni">21 Tage, 3 x pro Jahr, mindestens 3 Monate Unterbrechung</string>
     
     
 </resources>

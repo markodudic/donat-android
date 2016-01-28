@@ -130,7 +130,7 @@ public class HomeScreenActivity extends Activity {
 			});		
 		
 		int lang = Utils.getPrefernciesInt(this, Settings.SETTING_LANG);
-        if (lang == 2 || lang == 4) {
+        if (lang == 2 || lang == 4 || lang == 5) {
         	((LinearLayout) findViewById(R.id.ll1_indication_11)).setVisibility(View.GONE);
         	((LinearLayout) findViewById(R.id.ll2_indication_11)).setVisibility(View.GONE);
         	((FrameLayout) findViewById(R.id.fl_indication_11)).setVisibility(View.GONE);
