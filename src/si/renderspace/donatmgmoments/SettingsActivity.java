@@ -1,7 +1,9 @@
 package si.renderspace.donatmgmoments;
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.Dialog;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -107,6 +109,7 @@ public class SettingsActivity extends Activity {
 	 			  int langId = (int)spLanguages.getSelectedItemId();
 	 			  if (langId != Utils.getPrefernciesInt(SettingsActivity.this, Settings.SETTING_LANG)) {
 		 			Utils.savePrefernciesInt(SettingsActivity.this, Settings.SETTING_LANG, langId);
+		 			Utils.savePrefernciesBoolean(SettingsActivity.this,  Settings.SETTING_FIRST_START, true); 
 		 			Settings.setLanguage(SettingsActivity.this, Settings.languages.get(langId));
 	 			  	restartApplication();
 	 			  }
@@ -213,10 +216,15 @@ public class SettingsActivity extends Activity {
 	
 	void restartApplication()
 	{
-	    Intent i = new Intent(SettingsActivity.this, SplashScreenActivity.class);
+		/*Intent i = new Intent(SettingsActivity.this, SplashScreenActivity.class);
 	    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-	    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	    SettingsActivity.this.startActivity(i);
+	    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);*/
+
+		Intent launchIntent = new Intent(SettingsActivity.this, SplashScreenActivity.class);
+	    PendingIntent intent = PendingIntent.getActivity(getApplicationContext(), 0, launchIntent , 0);
+	    AlarmManager manager = (AlarmManager) this.getSystemService(SettingsActivity.this.ALARM_SERVICE);
+	    manager.set(AlarmManager.RTC, System.currentTimeMillis() + 10, intent);
+	    System.exit(0);
 	}	
 	
 

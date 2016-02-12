@@ -39,25 +39,25 @@ public class SplashScreenActivity extends Activity {
        
         new Handler().postDelayed(new Runnable() {
  
-	            @Override
-	            public void run() {
-	            	if (Utils.getPrefernciesBoolean(SplashScreenActivity.this, Settings.SETTING_FIRST_START, false)) {
-	            		Intent i = new Intent(SplashScreenActivity.this, HomeScreenActivity.class);
-	            		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-	            		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	            		startActivity(i);
-		            } else {
-		            	Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_TESCE, "07:00");
-						Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_ZAJTRK, "07:30");
-						Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_KOSILO, "12:30");
-						Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_VECERJA, "19:30");
-						Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_SPANJE, "22:00");
-						Utils.savePrefernciesInt(SplashScreenActivity.this, Settings.SETTING_OBROKOV, 3);
-						
-						Intent i = new Intent(SplashScreenActivity.this, SettingsActivity.class);
-						startActivity(i);						
-		            }
-                finish();
+            @Override
+            public void run() {
+            	if (Utils.getPrefernciesBoolean(SplashScreenActivity.this, Settings.SETTING_FIRST_START, false)) {
+            		Intent i = new Intent(SplashScreenActivity.this, HomeScreenActivity.class);
+            		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            		startActivity(i);
+	            } else {
+	            	Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_TESCE, "07:00");
+					Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_ZAJTRK, "07:30");
+					Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_KOSILO, "12:30");
+					Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_VECERJA, "19:30");
+					Utils.savePrefernciesString(SplashScreenActivity.this, Settings.SETTING_SPANJE, "22:00");
+					Utils.savePrefernciesInt(SplashScreenActivity.this, Settings.SETTING_OBROKOV, 3);
+					
+					Intent i = new Intent(SplashScreenActivity.this, SettingsActivity.class);
+					startActivity(i);						
+	            }
+            	finish();
             }
         }, SPLASH_TIME_OUT);
         
